@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+	<id>io.github.fsobolev.TimeSwitch</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<project_license>MIT</project_license>
+  <name>Time Switch</name>
+  <summary>Power off, reboot, suspend or send a notification on timer.</summary>
+	<description>
+	  <p>Time Switch is a simple program that allows you to power off, reboot or suspend your system, or send a notification (optionally with a sound signal) on timer.</p>
+	  <p>The app is built for GNOME and uses LibAdwaita, but it works in any desktop environment.</p>
+	</description>
+  <launchable type="desktop-id">io.github.fsobolev.TimeSwitch.desktop</launchable>
+  <url type="homepage">https://github.com/fsobolev/timeswitch</url>
+  <url type="bugtracker">https://github.com/fsobolev/timeswitch/issues</url>
+  <developer_name>Fyodor Sobolev</developer_name>
+  <translation type="gettext">timeswitch</translation>
+  <content_rating type="oars-1.1" />
+  <recommends>
+    <control>pointing</control>
+    <control>touch</control>
+  </recommends>
+  <requires>
+    <display_length compare="ge">300</display_length>
+  </requires>
+  <custom>
+    <value key="Purism::form_factor">workstation</value>
+    <value key="Purism::form_factor">mobile</value>
+  </custom>
+</component>

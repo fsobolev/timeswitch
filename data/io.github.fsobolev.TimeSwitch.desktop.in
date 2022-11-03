@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Time Switch
+Exec=timeswitch
+Icon=io.github.fsobolev.TimeSwitch
+Comment=Power off, reboot, suspend or send a notification on timer.
+Terminal=false
+Type=Application
+Categories=GTK;Utility;
+Keywords=timer;shutdown;poweroff;reboot;suspend;notification;
+StartupNotify=true
+DBusActivatable=true
+X-GNOME-UsesNotifications=true
+X-Purism-FormFactor=Workstation;Mobile;
