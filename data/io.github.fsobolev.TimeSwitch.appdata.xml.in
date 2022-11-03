@@ -14,6 +14,14 @@
   <url type="bugtracker">https://github.com/fsobolev/timeswitch/issues</url>
   <developer_name>Fyodor Sobolev</developer_name>
   <translation type="gettext">timeswitch</translation>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/fsobolev/timeswitch/master/data/screenshots/main.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/fsobolev/timeswitch/master/data/screenshots/running.png</image>
+    </screenshot>
+  </screenshots>
   <content_rating type="oars-1.1" />
   <recommends>
     <control>pointing</control>
