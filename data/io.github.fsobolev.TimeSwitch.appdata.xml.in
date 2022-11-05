@@ -23,6 +23,15 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="0.1.1" date="2022-11-06" type="stable">
+      <description>
+        <ul>
+          <li>Added Italian translation (thanks to @albanobattistella)</li>
+          <li>Added French translation (thanks to @rene-coty)</li>
+          <li>Ctrl+Q and Ctrl+W now close the window</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.1.0" date="2022-11-04" type="stable" />
   </releases>
   <content_rating type="oars-1.1" />
