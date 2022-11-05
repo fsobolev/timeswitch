@@ -1,0 +1,134 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: timeswitch\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-03 23:22+0300\n"
+"PO-Revision-Date: 2022-11-05 19:50+0100\n"
+"Last-Translator: Irénée Thirion <irenee.thirion@e.email>\n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.1.1\n"
+
+#: data/io.github.fsobolev.TimeSwitch.desktop.in:3
+#: data/io.github.fsobolev.TimeSwitch.appdata.xml.in:6
+msgid "Time Switch"
+msgstr "Time Switch"
+
+#: data/io.github.fsobolev.TimeSwitch.desktop.in:6
+#: data/io.github.fsobolev.TimeSwitch.appdata.xml.in:7
+msgid "Power off, reboot, suspend or send a notification on timer."
+msgstr ""
+"Éteignez, redémarrez, mettez en veille ou recevez une notification sur "
+"minuterie"
+
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/io.github.fsobolev.TimeSwitch.desktop.in:10
+msgid "timer;shutdown;poweroff;reboot;suspend;notification;"
+msgstr ""
+"minuteur;éteindre;redémarrer;mettre en veille;notification;reboot;arrêter;"
+
+#: data/io.github.fsobolev.TimeSwitch.appdata.xml.in:9
+msgid ""
+"Time Switch is a simple program that allows you to power off, reboot or "
+"suspend your system, or send a notification (optionally with a sound signal) "
+"on timer."
+msgstr ""
+"Time Switch est un programme simple qui vous permet d’éteindre, de "
+"redémarrer ou de mettre en veille votre système, ou d’envoyer une "
+"notification (éventuellement avec un signal sonore) sur minuterie."
+
+#: data/io.github.fsobolev.TimeSwitch.appdata.xml.in:10
+msgid ""
+"The app is built for GNOME and uses LibAdwaita, but it works in any desktop "
+"environment."
+msgstr ""
+"L’application est conçue pour GNOME et utilise LibAdwaita, mais elle "
+"fonctionne dans n’importe quel environnement de bureau."
+
+#: data/io.github.fsobolev.TimeSwitch.appdata.xml.in:15
+msgid "Fyodor Sobolev"
+msgstr "Fyodor Sobolev"
+
+#: src/actions.py:83
+msgid "Timer has finished!"
+msgstr "Le minuteur a terminé !"
+
+#: src/timer.py:42
+msgid "Your device will be powered off in"
+msgstr "Votre appareil sera éteint dans"
+
+#: src/timer.py:44
+msgid "Your device will be rebooted in"
+msgstr "Votre appareil sera redémarrer dans"
+
+#: src/timer.py:46
+msgid "Your device will be suspended in"
+msgstr "Votre appareil sera mis en veille dans"
+
+#: src/timer.py:48
+msgid "You will receive a notification in"
+msgstr "Vous recevrez une notification dans"
+
+#. Translators: Short fot "minutes"
+#: src/window.py:124
+msgid "min"
+msgstr "min"
+
+#. Translators: Short for "seconds"
+#: src/window.py:124
+msgid "sec"
+msgstr "sec"
+
+#: src/window.py:140
+msgid "Reset"
+msgstr "Réinitialiser"
+
+#: src/window.py:148
+msgid "Action"
+msgstr "Action"
+
+#: src/window.py:153
+msgid "Power Off"
+msgstr "Éteindre"
+
+#: src/window.py:162
+msgid "Reboot"
+msgstr "Redémarrer"
+
+#: src/window.py:171
+msgid "Suspend"
+msgstr "Mettre en veille"
+
+#: src/window.py:180
+msgid "Notification"
+msgstr "Notification"
+
+#: src/window.py:203
+msgid "Notification text"
+msgstr "Texte de la notification"
+
+#: src/window.py:207
+msgid "Play sound"
+msgstr "Jouer un son"
+
+#: src/window.py:224
+msgid "Start"
+msgstr "Commencer"
+
+#: src/window.py:265
+msgid "Stop"
+msgstr "Arrêter"
+
+#: src/window.py:278
+msgid "You can close the window, the timer will work in the background."
+msgstr ""
+"Vous pouvez fermer la fenêtre, le minuteur fonctionnera en arrière-plan."
