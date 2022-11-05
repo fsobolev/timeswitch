@@ -45,6 +45,8 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
 
         self.connect('show', self.on_window_show)
         self.connect('close-request', self.on_close_request)
+        self.get_application().set_accels_for_action('window.close',
+            ['<primary>q', '<primary>w'])
         self.build_ui()
 
     def build_ui(self):

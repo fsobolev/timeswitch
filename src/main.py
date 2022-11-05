@@ -44,7 +44,6 @@ class TimeSwitchApplication(Adw.Application):
     def __init__(self):
         super().__init__(application_id='io.github.fsobolev.TimeSwitch',
                          flags=Gio.ApplicationFlags.FLAGS_NONE)
-        self.create_action('quit', self.quit, ['<primary>q'])
         self.create_action('about', self.on_about_action)
 
     def do_activate(self):
