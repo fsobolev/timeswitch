@@ -67,7 +67,11 @@ class TimeSwitchApplication(Adw.Application):
                                 copyright='© 2022 Fyodor Sobolev',
                                 website='https://github.com/fsobolev/timeswitch',
                                 issue_url='https://github.com/fsobolev/timeswitch/issues',
-                                license_type=Gtk.License.MIT_X11)
+                                license_type=Gtk.License.MIT_X11,
+                                translator_credits='\n'.join([
+                                'Irénée Thirion (French) <irenee.thirion@e.email>',
+                                'Albano Battistella (Italian) <albano_battistella@hotmail.com>'
+                                ]))
         about.present()
 
     def create_action(self, name, callback, shortcuts=None):
