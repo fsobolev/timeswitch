@@ -70,7 +70,8 @@ class TimeSwitchApplication(Adw.Application):
                                 license_type=Gtk.License.MIT_X11,
                                 translator_credits='\n'.join([
                                 'Irénée Thirion (French) <irenee.thirion@e.email>',
-                                'Albano Battistella (Italian) <albano_battistella@hotmail.com>'
+                                'Albano Battistella (Italian) <albano_battistella@hotmail.com>',
+                                'Åke Engelbrektson (Swedish) <eson@svenskasprakfiler.se>'
                                 ]))
         about.present()
 
