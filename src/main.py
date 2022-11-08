@@ -36,6 +36,7 @@ gi.require_version('Adw', '1')
 
 from gi.repository import Gtk, Gio, Adw
 from .window import TimeSwitchWindow
+from .translator_credits import get_translator_credits
 
 
 class TimeSwitchApplication(Adw.Application):
@@ -68,11 +69,7 @@ class TimeSwitchApplication(Adw.Application):
                                 website='https://github.com/fsobolev/timeswitch',
                                 issue_url='https://github.com/fsobolev/timeswitch/issues',
                                 license_type=Gtk.License.MIT_X11,
-                                translator_credits='\n'.join([
-                                'Irénée Thirion (French) <irenee.thirion@e.email>',
-                                'Albano Battistella (Italian) <albano_battistella@hotmail.com>',
-                                'Åke Engelbrektson (Swedish) <eson@svenskasprakfiler.se>'
-                                ]))
+                                translator_credits=get_translator_credits())
         about.present()
 
     def create_action(self, name, callback, shortcuts=None):

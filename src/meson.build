@@ -34,3 +34,11 @@ timeswitch_sources = [
 ]
 
 install_data(timeswitch_sources, install_dir: moduledir)
+
+configure_file(
+  input: 'translator_credits.py.in',
+  output: 'translator_credits.py',
+  configuration: conf,
+  install: true,
+  install_dir: moduledir
+)
