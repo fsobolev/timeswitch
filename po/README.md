@@ -10,20 +10,18 @@ After editing a file with translation, add language code to `LINGUAS` file. Plea
 Now, it's time for the world to know your name, hero! Edit `CREDITS.json`. Here you need to specify your language, name and, optionally, email or URL. Example:
 
 ```
-"Mandalorian":
-    [
-        "Jango Fett <jango@galaxyfarfar.away>"
-    ]
+"Mandalorian": [
+    "Jango Fett <jango@galaxyfarfar.away>"
+]
 ```
 
 If you are contributing to existing translation, you can add your name like this:
 
 ```
-"Mandalorian":
-    [
-        "Jango Fett <jango@galaxyfarfar.away>",
-        "Boba Fett https://github.com/bobafromstarwars"
-    ]
+"Mandalorian": [
+    "Jango Fett <jango@galaxyfarfar.away>",
+    "Boba Fett https://github.com/bobafromstarwars"
+]
 ```
 
 While editing `CREDITS.json`, don't worry about the order, the app will sort it like it needs. But be aware of commas!
