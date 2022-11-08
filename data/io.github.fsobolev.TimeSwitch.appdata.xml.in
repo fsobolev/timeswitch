@@ -23,6 +23,14 @@
     </screenshot>
   </screenshots>
   <releases>
+      <release version="2022.11.8" date="2022-11-08" type="stable">
+      <description>
+        <ul>
+          <li>Added Swedish translation (thanks to @eson57)</li>
+          <li>All translators are now listed in about window</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.1.1" date="2022-11-06" type="stable">
       <description>
         <ul>
