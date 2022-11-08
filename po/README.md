@@ -22,7 +22,7 @@ If you are contributing to existing translation, you can add your name like this
 "Mandalorian":
     [
         "Jango Fett <jango@galaxyfarfar.away>",
-        "Boba Fett https://github.com/bobafromstarwars
+        "Boba Fett https://github.com/bobafromstarwars"
     ]
 ```
 
