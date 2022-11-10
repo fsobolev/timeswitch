@@ -4,9 +4,9 @@
 	<metadata_license>CC0-1.0</metadata_license>
 	<project_license>MIT</project_license>
   <name>Time Switch</name>
-  <summary>Power off, reboot, suspend or send a notification on timer.</summary>
+  <summary>Power off, reboot, suspend, send a notification or execute a command on timer.</summary>
 	<description>
-	  <p>Time Switch is a simple program that allows you to power off, reboot or suspend your system, or send a notification (optionally with a sound signal) on timer.</p>
+	  <p>Time Switch is a simple program that allows you to power off, reboot or suspend your system, send a notification (optionally with a sound signal) or execute a command on timer.</p>
 	  <p>The app is built for GNOME and uses LibAdwaita, but it works in any desktop environment.</p>
 	</description>
   <launchable type="desktop-id">io.github.fsobolev.TimeSwitch.desktop</launchable>
