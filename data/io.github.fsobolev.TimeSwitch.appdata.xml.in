@@ -23,7 +23,7 @@
     </screenshot>
   </screenshots>
   <releases>
-      <release version="2022.11.8" date="2022-11-08" type="stable">
+    <release version="2022.11.8" date="2022-11-08" type="stable">
       <description>
         <ul>
           <li>Added Swedish translation (thanks to @eson57)</li>
@@ -43,10 +43,11 @@
     <release version="0.1.0" date="2022-11-04" type="stable" />
   </releases>
   <content_rating type="oars-1.1" />
-  <recommends>
+  <supports>
     <control>pointing</control>
+    <control>keyboard</control>
     <control>touch</control>
-  </recommends>
+  </supports>
   <requires>
     <display_length compare="ge">300</display_length>
   </requires>
