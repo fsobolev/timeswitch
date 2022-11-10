@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-03 23:22+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2022-11-10 17:03+0100\n"
 "Last-Translator: Åke Engelbrektson <eson@svenskasprakfiler.se>\n"
 "Language-Team: \n"
 "Language: sv\n"
@@ -29,24 +29,29 @@ msgid ""
 "Power off, reboot, suspend, send a notification or execute any command on "
 "timer."
 msgstr ""
-#"Stäng av, starta om, vänteläge eller sänd ett tidsinställt meddelande."
+"Stäng av, starta om vänteläge, skicka tidsinställt meddelande eller "
+"exekverbart kommando"
 
+# "Stäng av, starta om, vänteläge eller sänd ett tidsinställt meddelande."
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:10
 msgid "timer;shutdown;poweroff;reboot;suspend;notification;prompt;cmd;command;"
-msgstr ""
-#"tidur;stäng av;starta om;vänteläge;meddelande;"
+msgstr "tidur;stäng av;starta om;vänteläge;meddelande;cmd;kommando;"
 
+# "tidur;stäng av;starta om;vänteläge;meddelande;"
 #: data/io.github.fsobolev.TimeSwitch.appdata.xml.in:9
 msgid ""
 "Time Switch is a simple program that allows you to power off, reboot or "
 "suspend your system, send a notification (optionally with a sound signal) or "
 "execute any command on timer."
 msgstr ""
-#"Time Switch är ett enkelt program som låter dig stänga av, starta om eller "
-#"försätta ditt system i vänteläge, eller skicka ett tidsinställt meddelande "
-#"(valfritt med ljudsignal)."
+"Time Switch är ett enkelt program som låter dig stänga av, starta om eller "
+"försätta ditt system i vänteläge, skicka ett meddelande (valfritt med en "
+"ljudsignal) eller köra något tidsinställt kommando."
 
+# "Time Switch är ett enkelt program som låter dig stänga av, starta om eller "
+# "försätta ditt system i vänteläge, eller skicka ett tidsinställt meddelande "
+# "(valfritt med ljudsignal)."
 #: data/io.github.fsobolev.TimeSwitch.appdata.xml.in:10
 msgid ""
 "The app is built for GNOME and uses LibAdwaita, but it works in any desktop "
@@ -81,11 +86,11 @@ msgstr "Du får ett meddelande om"
 
 #: src/timer.py:53
 msgid "The command <b>{}</b> will be executed in"
-msgstr ""
+msgstr "Kommandot <b>{}</b> körs om"
 
 #: src/window.py:78
 msgid "About"
-msgstr ""
+msgstr "Om"
 
 #. Translators: Short fot "minutes"
 #: src/window.py:139
@@ -123,7 +128,7 @@ msgstr "Meddelande"
 
 #: src/window.py:213
 msgid "Notification settings"
-msgstr ""
+msgstr "Meddelandeinställningar"
 
 #: src/window.py:226
 msgid "Notification text"
@@ -135,15 +140,15 @@ msgstr "Spela ljudsignal"
 
 #: src/window.py:241 src/window.py:263 src/window.py:459 src/window.py:534
 msgid "Command"
-msgstr ""
+msgstr "Kommando"
 
 #: src/window.py:271
 msgid "Back"
-msgstr ""
+msgstr "Tillbaka"
 
 #: src/window.py:288 src/window.py:467
 msgid "Add"
-msgstr ""
+msgstr "Lägg till"
 
 #: src/window.py:300
 msgid "Start"
@@ -160,11 +165,11 @@ msgstr "Du kan stänga fönstret, tiduret arbetar i bakgrunden."
 # Translators: make sure to have a space in the end of the line.
 #: src/window.py:399
 msgid "They will be executed outside of flatpak sandbox. "
-msgstr ""
+msgstr "De kommer att köras utanför flatpak-sandlådan. "
 
 #: src/window.py:402
 msgid "Warning"
-msgstr ""
+msgstr "Varning"
 
 # Translators: {} is used to pass "They will be executed outside of flatpak sandbox. "
 # in case the app is installed using flatpak. Make sure to have a space in front of it
@@ -176,47 +181,50 @@ msgid ""
 "successfully or not. Be careful, do not enter commands whose result is "
 "unknown to you."
 msgstr ""
+"Dina kommandon kommer att köras som om de kördes på en kommandotolk. {}Appen "
+"utför inga kontroller om ett kommando har körts korrekt eller inte. Var "
+"försiktig, ange inte kommandon vars resultat är okänt för dig."
 
 #: src/window.py:404
 msgid "Continue"
-msgstr ""
+msgstr "Fortsätt"
 
 #: src/window.py:409
 msgid "I understand"
-msgstr ""
+msgstr "Jag förstår"
 
 #: src/window.py:449
 msgid "Add command"
-msgstr ""
+msgstr "Lägg till kommando"
 
 #: src/window.py:453 src/window.py:527
 msgid "Name"
-msgstr ""
+msgstr "Namn"
 
 #: src/window.py:466 src/window.py:542 src/window.py:564
 msgid "Cancel"
-msgstr ""
+msgstr "Avbryt"
 
 #: src/window.py:498 src/window.py:523
 msgid "Edit command"
-msgstr ""
+msgstr "Redigera kommando"
 
 #: src/window.py:505
 msgid "Remove command"
-msgstr ""
+msgstr "Ta bort kommando"
 
 #: src/window.py:543
 msgid "Apply"
-msgstr ""
+msgstr "Tillämpa"
 
 #: src/window.py:561
 msgid "Remove command?"
-msgstr ""
+msgstr "Vill du ta bort kommandot?"
 
 #: src/window.py:562
 msgid "Are you sure you want to remove command \"{}\"?"
-msgstr ""
+msgstr "Vill du verkligen ta bort kommandot \"{}\"?"
 
 #: src/window.py:565
 msgid "Remove"
-msgstr ""
+msgstr "Ta bort"
