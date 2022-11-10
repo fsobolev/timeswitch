@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-03 23:22+0300\n"
-"PO-Revision-Date: 2022-11-07 09:05+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Åke Engelbrektson <eson@svenskasprakfiler.se>\n"
 "Language-Team: \n"
 "Language: sv\n"
@@ -25,23 +25,27 @@ msgstr "Time Switch"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:6
 #: data/io.github.fsobolev.TimeSwitch.appdata.xml.in:7
-msgid "Power off, reboot, suspend or send a notification on timer."
-msgstr "Stäng av, starta om, vänteläge eller sänd ett tidsinställt meddelande."
+msgid ""
+"Power off, reboot, suspend, send a notification or execute any command on "
+"timer."
+msgstr ""
+#"Stäng av, starta om, vänteläge eller sänd ett tidsinställt meddelande."
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:10
-msgid "timer;shutdown;poweroff;reboot;suspend;notification;"
-msgstr "tidur;stäng av;starta om;vänteläge;meddelande;"
+msgid "timer;shutdown;poweroff;reboot;suspend;notification;prompt;cmd;command;"
+msgstr ""
+#"tidur;stäng av;starta om;vänteläge;meddelande;"
 
 #: data/io.github.fsobolev.TimeSwitch.appdata.xml.in:9
 msgid ""
 "Time Switch is a simple program that allows you to power off, reboot or "
-"suspend your system, or send a notification (optionally with a sound signal) "
-"on timer."
+"suspend your system, send a notification (optionally with a sound signal) or "
+"execute any command on timer."
 msgstr ""
-"Time Switch är ett enkelt program som låter dig stänga av, starta om eller "
-"försätta ditt system i vänteläge, eller skicka ett tidsinställt meddelande "
-"(valfritt med ljudsignal)."
+#"Time Switch är ett enkelt program som låter dig stänga av, starta om eller "
+#"försätta ditt system i vänteläge, eller skicka ett tidsinställt meddelande "
+#"(valfritt med ljudsignal)."
 
 #: data/io.github.fsobolev.TimeSwitch.appdata.xml.in:10
 msgid ""
@@ -55,7 +59,7 @@ msgstr ""
 msgid "Fyodor Sobolev"
 msgstr "Fyodor Sobolev"
 
-#: src/actions.py:83
+#: src/actions.py:84
 msgid "Timer has finished!"
 msgstr "Tiduret är klart!"
 
@@ -75,56 +79,148 @@ msgstr "Din enhet försätts i vänteläge om"
 msgid "You will receive a notification in"
 msgstr "Du får ett meddelande om"
 
+#: src/timer.py:53
+msgid "The command <b>{}</b> will be executed in"
+msgstr ""
+
+#: src/window.py:78
+msgid "About"
+msgstr ""
+
 #. Translators: Short fot "minutes"
-#: src/window.py:124
+#: src/window.py:139
 msgid "min"
 msgstr "min"
 
 #. Translators: Short for "seconds"
-#: src/window.py:124
+#: src/window.py:139
 msgid "sec"
 msgstr "sek"
 
-#: src/window.py:140
+#: src/window.py:154
 msgid "Reset"
 msgstr "Återställ"
 
-#: src/window.py:148
+#: src/window.py:169
 msgid "Action"
 msgstr "Åtgärd"
 
-#: src/window.py:153
+#: src/window.py:174
 msgid "Power Off"
 msgstr "Stäng av"
 
-#: src/window.py:162
+#: src/window.py:183
 msgid "Reboot"
 msgstr "Starta om"
 
-#: src/window.py:171
+#: src/window.py:192
 msgid "Suspend"
 msgstr "Vänteläge"
 
-#: src/window.py:180
+#: src/window.py:201
 msgid "Notification"
 msgstr "Meddelande"
 
-#: src/window.py:203
+#: src/window.py:213
+msgid "Notification settings"
+msgstr ""
+
+#: src/window.py:226
 msgid "Notification text"
 msgstr "Meddelandetext"
 
-#: src/window.py:207
+#: src/window.py:230
 msgid "Play sound"
 msgstr "Spela ljudsignal"
 
-#: src/window.py:224
+#: src/window.py:241 src/window.py:459 src/window.py:534
+msgid "Command"
+msgstr ""
+
+#: src/window.py:263
+msgid "Commands"
+msgstr ""
+
+#: src/window.py:271
+msgid "Back"
+msgstr ""
+
+#: src/window.py:288 src/window.py:467
+msgid "Add"
+msgstr ""
+
+#: src/window.py:300
 msgid "Start"
 msgstr "Start"
 
-#: src/window.py:265
+#: src/window.py:339
 msgid "Stop"
 msgstr "Stopp"
 
-#: src/window.py:278
+#: src/window.py:351
 msgid "You can close the window, the timer will work in the background."
 msgstr "Du kan stänga fönstret, tiduret arbetar i bakgrunden."
+
+# Translators: make sure to have a space in the end of the line.
+#: src/window.py:399
+msgid "They will be executed outside of flatpak sandbox. "
+msgstr ""
+
+#: src/window.py:402
+msgid "Warning"
+msgstr ""
+
+# Translators: {} is used to pass "They will be executed outside of flatpak sandbox. "
+# in case the app is installed using flatpak. Make sure to have a space in front of it
+# (in the original text it's in the end of the first line)
+#: src/window.py:403
+msgid ""
+"Your commands will be executed as if they were executed on a command prompt. "
+"{}The app doesn't perform any checks whether a command was executed "
+"successfully or not. Be careful, do not enter commands whose result is "
+"unknown to you."
+msgstr ""
+
+#: src/window.py:404
+msgid "Continue"
+msgstr ""
+
+#: src/window.py:409
+msgid "I understand"
+msgstr ""
+
+#: src/window.py:449
+msgid "Add command"
+msgstr ""
+
+#: src/window.py:453 src/window.py:527
+msgid "Name"
+msgstr ""
+
+#: src/window.py:466 src/window.py:542 src/window.py:564
+msgid "Cancel"
+msgstr ""
+
+#: src/window.py:498 src/window.py:523
+msgid "Edit command"
+msgstr ""
+
+#: src/window.py:505
+msgid "Remove command"
+msgstr ""
+
+#: src/window.py:543
+msgid "Apply"
+msgstr ""
+
+#: src/window.py:561
+msgid "Remove command?"
+msgstr ""
+
+#: src/window.py:562
+msgid "Are you sure you want to remove command \"{}\"?"
+msgstr ""
+
+#: src/window.py:565
+msgid "Remove"
+msgstr ""
