@@ -136,12 +136,8 @@ msgstr "Benachrichtigungstext"
 msgid "Play sound"
 msgstr "Ton abspielen"
 
-#: src/window.py:241 src/window.py:459 src/window.py:534
+#: src/window.py:241 src/window.py:263 src/window.py:459 src/window.py:534
 msgid "Command"
-msgstr ""
-
-#: src/window.py:263
-msgid "Commands"
 msgstr ""
 
 #: src/window.py:271

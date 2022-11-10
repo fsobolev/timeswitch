@@ -260,7 +260,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.commands_box.append(self.commands_sw)
 
         self.commands_group = Adw.PreferencesGroup.new()
-        self.commands_group.set_title(_("Commands"))
+        self.commands_group.set_title(_('Command'))
         self.commands_sw.set_child(self.commands_group)
 
         self.back_button = Gtk.Button.new()

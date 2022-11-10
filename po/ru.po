@@ -126,13 +126,9 @@ msgstr "Текст уведомления"
 msgid "Play sound"
 msgstr "Звуковой сигнал"
 
-#: src/window.py:241 src/window.py:459 src/window.py:534
+#: src/window.py:241 src/window.py:263 src/window.py:459 src/window.py:534
 msgid "Command"
 msgstr "Команда"
-
-#: src/window.py:263
-msgid "Commands"
-msgstr "Команды"
 
 #: src/window.py:271
 msgid "Back"
