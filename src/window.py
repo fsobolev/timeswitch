@@ -49,7 +49,16 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.connect('close-request', self.on_close_request)
         self.get_application().set_accels_for_action('window.close',
             ['<primary>q', '<primary>w'])
+
+        if os.getenv('FLATPAK_ID'):
+            self.config_dir = os.getenv('XDG_CONFIG_HOME') + '/timeswitch'
+        else:
+            self.config_dir = os.getenv('HOME') + '/.config/timeswitch'
+        if not os.path.isdir(self.config_dir):
+            os.makedirs(self.config_dir)
+        self.config_file_path = self.config_dir + '/config.json'
         self.commands_list = self.load_commands()
+
         self.build_ui()
 
     def build_ui(self):
@@ -409,19 +418,23 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         msg.set_response_enabled('continue', state)
 
     def load_commands(self):
-        if os.getenv('FLATPAK_ID'):
-            config_dir = os.getenv('XDG_CONFIG_HOME')
-        else:
-            config_dir = os.getenv('HOME') + '/.config'
-        file_path = config_dir + '/timeswitch/config.json'
-        if os.path.exists(file_path):
+        if os.path.exists(self.config_file_path):
             self.show_cmd_warning = False
-            with open(file_path, 'r') as f:
+            with open(self.config_file_path, 'r') as f:
                 data = json.load(f)
                 return data['commands']
         else:
             self.show_cmd_warning = True
             return []
+
+    def save_commands(self):
+        try:
+            with open(self.config_file_path, 'w') as f:
+                data = {'commands': self.commands_list}
+                json.dump(data, f)
+        except Exception as e:
+            print("Can't save config file:")
+            print(e)
 
     def set_action_row_titles(self, row, title, subtitle, lines):
         row.set_title(title)
@@ -463,6 +476,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
             dict = {'name': name, 'cmd': cmd}
             self.commands_list.append(dict)
             self.create_command(dict)
+            self.save_commands()
 
     def create_command(self, command):
         self.commands_widgets['rows'].append(Adw.ActionRow.new())
@@ -494,7 +508,6 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
 
     def disable_single_checkbutton(self):
         l = len(self.commands_widgets['checks'])
-        print(l)
         if l > 1:
             self.commands_widgets['checks'][0].set_sensitive(True)
         elif l == 1:
@@ -536,6 +549,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
                 name, cmd, 1)
             self.commands_list[index]['name'] = name
             self.commands_list[index]['cmd'] = cmd
+            self.save_commands()
 
     def remove_command(self, w, action_row):
         index = self.commands_widgets['rows'].index(action_row)
@@ -557,6 +571,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
             if len(self.commands_widgets['rows']) > 0:
                 self.commands_widgets['rows'][0].activate()
             self.disable_single_checkbutton()
+            self.save_commands()
 
     def start_timer(self, w):
         if self.hour_spin.get_value_as_int() == \
