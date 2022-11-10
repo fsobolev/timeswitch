@@ -378,6 +378,35 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
 
     def show_commands(self, w):
         self.actions_stack.set_visible_child_name('commands')
+        if self.show_cmd_warning:
+            self.show_warning_message()
+
+    def show_warning_message(self):
+        if os.getenv('FLATPAK_ID'):
+            flatpak_warning = \
+                _('They will be executed outside of flatpak sandbox. ')
+        else:
+            flatpak_warning = ''
+        msg = Adw.MessageDialog.new(self, _('Warning'), \
+            _("Your commands will be executed as if they were executed on a command prompt. {}The app doesn't perform any checks whether a command was executed successfully or not. Be careful, do not enter commands whose result is unknown to you.").format(flatpak_warning))
+        msg.add_response('continue', _('Continue'))
+        msg.set_response_appearance('continue', \
+            Adw.ResponseAppearance.SUGGESTED)
+        msg.set_response_enabled('continue', False)
+        ar = Adw.ActionRow.new()
+        ar.set_title(_('I understand'))
+        ar_switch = Gtk.Switch.new()
+        ar_switch.set_valign(Gtk.Align.CENTER)
+        ar.add_prefix(ar_switch)
+        ar.set_activatable_widget(ar_switch)
+        ar_switch.connect('state-set', self.pass_warning, msg)
+        ar.remove_css_class('activatable')
+        msg.set_extra_child(ar)
+        msg.show()
+        self.show_cmd_warning = False
+
+    def pass_warning(self, w, state, msg):
+        msg.set_response_enabled('continue', state)
 
     def load_commands(self):
         if os.getenv('FLATPAK_ID'):
