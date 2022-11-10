@@ -25,7 +25,7 @@ msgstr ""
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:6
 #: data/io.github.fsobolev.TimeSwitch.appdata.xml.in:7
 msgid ""
-"Power off, reboot, suspend, send a notification or execute a command on "
+"Power off, reboot, suspend, send a notification or execute any command on "
 "timer."
 msgstr ""
 
