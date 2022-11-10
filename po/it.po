@@ -158,7 +158,7 @@ msgstr "Puoi chiudere la finestra, il timer funzionerà in background."
 # Translators: make sure to have a space in the end of the line.
 #: src/window.py:399
 msgid "They will be executed outside of flatpak sandbox. "
-msgstr "Verranno eseguiti al di fuori della sandbox flatpak."
+msgstr "Verranno eseguiti al di fuori della sandbox flatpak. "
 
 #: src/window.py:402
 msgid "Warning"
