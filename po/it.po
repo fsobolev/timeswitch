@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-03 23:22+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2022-11-10 18:18+0100\n"
 "Last-Translator: Albano Battistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <LL@li.org>\n"
 "Language: it\n"
@@ -27,13 +27,13 @@ msgid ""
 "Power off, reboot, suspend, send a notification or execute any command on "
 "timer."
 msgstr ""
-#"Spegni, riavvia, sospendi o invia una notifica su timer."
+"Spegni, riavvia, sospendi, invia una notifica o esegui qualsiasi comando su "
+"Timer."
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:10
 msgid "timer;shutdown;poweroff;reboot;suspend;notification;prompt;cmd;command;"
-msgstr ""
-#"timer;spegnimento;riavvio;sospensione;notifica;"
+msgstr ""timer;spegnimento;riavvio;sospensione;notifica;prompt;cmd;comando;""
 
 #: data/io.github.fsobolev.TimeSwitch.appdata.xml.in:9
 msgid ""
@@ -41,9 +41,9 @@ msgid ""
 "suspend your system, send a notification (optionally with a sound signal) or "
 "execute any command on timer."
 msgstr ""
-#"Time Switch è un semplice programma che ti permette di spegnere, riavviare o "
-#"sospendere il tuo sistema o inviare una notifica (opzionalmente con un segnale acustico)"
-#"su timer."
+"Time Switch è un semplice programma che ti permette di spegnere, riavviare o "
+"sospendere il tuo sistema, inviare una notifica (opzionalmente con un segnale acustico) o "
+"eseguire qualsiasi comando su timer."
 
 #: data/io.github.fsobolev.TimeSwitch.appdata.xml.in:10
 msgid ""
@@ -79,11 +79,11 @@ msgstr "Riceverai una notifica in"
 
 #: src/timer.py:53
 msgid "The command <b>{}</b> will be executed in"
-msgstr ""
+msgstr "Il comando <b>{}</b> verrà eseguito in"
 
 #: src/window.py:78
 msgid "About"
-msgstr ""
+msgstr "Informazioni"
 
 #. Translators: Short fot "minutes"
 #: src/window.py:139
@@ -121,7 +121,7 @@ msgstr "Notifica"
 
 #: src/window.py:213
 msgid "Notification settings"
-msgstr ""
+msgstr "Impostazioni di notifica"
 
 #: src/window.py:226
 msgid "Notification text"
@@ -133,15 +133,15 @@ msgstr "Riproduci suono"
 
 #: src/window.py:241 src/window.py:263 src/window.py:459 src/window.py:534
 msgid "Command"
-msgstr ""
+msgstr "Comando"
 
 #: src/window.py:271
 msgid "Back"
-msgstr ""
+msgstr "Indietro"
 
 #: src/window.py:288 src/window.py:467
 msgid "Add"
-msgstr ""
+msgstr "Aggiungi"
 
 #: src/window.py:300
 msgid "Start"
@@ -158,11 +158,11 @@ msgstr "Puoi chiudere la finestra, il timer funzionerà in background."
 # Translators: make sure to have a space in the end of the line.
 #: src/window.py:399
 msgid "They will be executed outside of flatpak sandbox. "
-msgstr ""
+msgstr "Verranno eseguiti al di fuori della sandbox flatpak."
 
 #: src/window.py:402
 msgid "Warning"
-msgstr ""
+msgstr "Avviso"
 
 # Translators: {} is used to pass "They will be executed outside of flatpak sandbox. "
 # in case the app is installed using flatpak. Make sure to have a space in front of it
@@ -174,47 +174,51 @@ msgid ""
 "successfully or not. Be careful, do not enter commands whose result is "
 "unknown to you."
 msgstr ""
+"I tuoi comandi verranno eseguiti come se fossero eseguiti su un prompt dei comandi. "
+"{}L'app non esegue alcun controllo se un comando è stato eseguito "
+"con successo o no. Attenzione, non inserire comandi il cui risultato sia "
+"sconosciuto."
 
 #: src/window.py:404
 msgid "Continue"
-msgstr ""
+msgstr "Continua"
 
 #: src/window.py:409
 msgid "I understand"
-msgstr ""
+msgstr "Ho capito"
 
 #: src/window.py:449
 msgid "Add command"
-msgstr ""
+msgstr "Aggiungi comando"
 
 #: src/window.py:453 src/window.py:527
 msgid "Name"
-msgstr ""
+msgstr "Nome"
 
 #: src/window.py:466 src/window.py:542 src/window.py:564
 msgid "Cancel"
-msgstr ""
+msgstr "Cancella"
 
 #: src/window.py:498 src/window.py:523
 msgid "Edit command"
-msgstr ""
+msgstr "Modifica comando"
 
 #: src/window.py:505
 msgid "Remove command"
-msgstr ""
+msgstr "Rimuovi comando"
 
 #: src/window.py:543
 msgid "Apply"
-msgstr ""
+msgstr "Applica"
 
 #: src/window.py:561
 msgid "Remove command?"
-msgstr ""
+msgstr "Rimuovere comando?"
 
 #: src/window.py:562
 msgid "Are you sure you want to remove command \"{}\"?"
-msgstr ""
+msgstr "Sei sicuro di voler rimuovere il comando \"{}\"?"
 
 #: src/window.py:565
 msgid "Remove"
-msgstr ""
+msgstr "Rimuovi"
