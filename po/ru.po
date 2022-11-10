@@ -1,9 +1,12 @@
+# Russian translation for timeswitch
+# Copyright (C) 2022 Fyodor Sobolev
+# This file is distributed under the same license as the timeswitch package.
 msgid ""
 msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-03 23:22+0300\n"
-"PO-Revision-Date: 2022-11-03 23:41+0300\n"
+"POT-Creation-Date: 2022-11-10 14:41+0300\n"
+"PO-Revision-Date: 2022-11-10 14:58+0300\n"
 "Last-Translator: Fyodor Sobolev\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -17,25 +20,27 @@ msgstr "Time Switch"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:6
 #: data/io.github.fsobolev.TimeSwitch.appdata.xml.in:7
-msgid "Power off, reboot, suspend or send a notification on timer."
+msgid ""
+"Power off, reboot, suspend, send a notification or execute any command on "
+"timer."
 msgstr ""
-"Выключайте, перезагружайте систему, включайте режим ожидания или отправляйте "
-"уведомление по таймеру."
+"Выключайте, перезагружайте систему, включайте режим ожидания, отправляйте "
+"уведомление или выполняйте любую команду по таймеру."
 
-#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:10
-msgid "timer;shutdown;poweroff;reboot;suspend;notification;"
-msgstr "таймер;выключение;перезагрузка;режим ожидания;уведомление"
+msgid "timer;shutdown;poweroff;reboot;suspend;notification;prompt;cmd;command;"
+msgstr "таймер;выключение;перезагрузка;режим ожидания;уведомление;командная строка;команда;"
 
 #: data/io.github.fsobolev.TimeSwitch.appdata.xml.in:9
 msgid ""
 "Time Switch is a simple program that allows you to power off, reboot or "
-"suspend your system, or send a notification (optionally with a sound signal) "
-"on timer."
+"suspend your system, send a notification (optionally with a sound signal) or "
+"execute any command on timer."
 msgstr ""
 "Time Switch — это простая программа, позволяющая вам выключать, "
-"перезагружать или переводить систему в режим ожидания, а также отправлять "
-"уведомление (опционально со звуковым сигналом) по таймеру."
+"перезагружать или переводить систему в режим ожидания, отправлять "
+"уведомление (опционально со звуковым сигналом), а также выполнять любую "
+"команду по таймеру."
 
 #: data/io.github.fsobolev.TimeSwitch.appdata.xml.in:10
 msgid ""
@@ -49,7 +54,7 @@ msgstr ""
 msgid "Fyodor Sobolev"
 msgstr "Фёдор Соболев"
 
-#: src/actions.py:83
+#: src/actions.py:84
 msgid "Timer has finished!"
 msgstr "Таймер истёк!"
 
@@ -69,56 +74,145 @@ msgstr "Ваше устройство перейдёт в режим ожида�
 msgid "You will receive a notification in"
 msgstr "Вы получите уведомление через"
 
-#. Translators: Short fot "minutes"
-#: src/window.py:124
+#: src/timer.py:53
+msgid "The command <b>{}</b> will be executed in"
+msgstr "Команда <b>{}</b> будет выполнена через"
+
+#: src/window.py:78
+msgid "About"
+msgstr "О приложении"
+
+#: src/window.py:139
 msgid "min"
 msgstr "мин"
 
-#. Translators: Short for "seconds"
-#: src/window.py:124
+#: src/window.py:139
 msgid "sec"
 msgstr "сек"
 
-#: src/window.py:140
+#: src/window.py:154
 msgid "Reset"
 msgstr "Сброс"
 
-#: src/window.py:148
+#: src/window.py:169
 msgid "Action"
 msgstr "Действие"
 
-#: src/window.py:153
+#: src/window.py:174
 msgid "Power Off"
 msgstr "Выключение"
 
-#: src/window.py:162
+#: src/window.py:183
 msgid "Reboot"
 msgstr "Перезагрузка"
 
-#: src/window.py:171
+#: src/window.py:192
 msgid "Suspend"
 msgstr "Режим ожидания"
 
-#: src/window.py:180
+#: src/window.py:201
 msgid "Notification"
 msgstr "Уведомление"
 
-#: src/window.py:203
+#: src/window.py:213
+msgid "Notification settings"
+msgstr "Настройки уведомления"
+
+#: src/window.py:226
 msgid "Notification text"
 msgstr "Текст уведомления"
 
-#: src/window.py:207
+#: src/window.py:230
 msgid "Play sound"
 msgstr "Звуковой сигнал"
 
-#: src/window.py:224
+#: src/window.py:241 src/window.py:459 src/window.py:534
+msgid "Command"
+msgstr "Команда"
+
+#: src/window.py:263
+msgid "Commands"
+msgstr "Команды"
+
+#: src/window.py:271
+msgid "Back"
+msgstr "Назад"
+
+#: src/window.py:288 src/window.py:467
+msgid "Add"
+msgstr "Добавить"
+
+#: src/window.py:300
 msgid "Start"
 msgstr "Старт"
 
-#: src/window.py:265
+#: src/window.py:339
 msgid "Stop"
 msgstr "Стоп"
 
-#: src/window.py:278
+#: src/window.py:351
 msgid "You can close the window, the timer will work in the background."
 msgstr "Вы можете закрыть окно, таймер будет работать в фоне."
+
+#: src/window.py:399
+msgid "They will be executed outside of flatpak sandbox. "
+msgstr "Они буду выполнены вне песочницы Flatpak. "
+
+#: src/window.py:402
+msgid "Warning"
+msgstr "Предупреждение"
+
+#: src/window.py:403
+msgid ""
+"Your commands will be executed as if they were executed on a command prompt. "
+"{}The app doesn't perform any checks whether a command was executed "
+"successfully or not. Be careful, do not enter commands whose result is "
+"unknown to you."
+msgstr ""
+"Ваши команды будут выполняться, как если бы они выполнялись в командной "
+"строке. {}Приложение никак не проверяет, выполнена ли команда успешно. "
+"Будьте осторожны, не вводите команды, результат которых вам неизвестен."
+
+#: src/window.py:404
+msgid "Continue"
+msgstr "Продолжить"
+
+#: src/window.py:409
+msgid "I understand"
+msgstr "Я понимаю"
+
+#: src/window.py:449
+msgid "Add command"
+msgstr "Добавить команду"
+
+#: src/window.py:453 src/window.py:527
+msgid "Name"
+msgstr "Имя"
+
+#: src/window.py:466 src/window.py:542 src/window.py:564
+msgid "Cancel"
+msgstr "Отмена"
+
+#: src/window.py:498 src/window.py:523
+msgid "Edit command"
+msgstr "Редактировать команду"
+
+#: src/window.py:505
+msgid "Remove command"
+msgstr "Удалить команду"
+
+#: src/window.py:543
+msgid "Apply"
+msgstr "Применить"
+
+#: src/window.py:561
+msgid "Remove command?"
+msgstr "Удалить команду?"
+
+#: src/window.py:562
+msgid "Are you sure you want to remove command \"{}\"?"
+msgstr "Вы уверены, что хотите удалить команду \"{}\"?"
+
+#: src/window.py:565
+msgid "Remove"
+msgstr "Удалить"
