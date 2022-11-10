@@ -75,6 +75,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.about_button = Gtk.Button.new()
         self.about_button.set_icon_name('help-about-symbolic')
         self.about_button.set_action_name('app.about')
+        self.about_button.set_tooltip_text(_('About'))
         self.header.pack_start(self.about_button)
 
         # Main stack
@@ -208,6 +209,8 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.notification_settings_button.set_icon_name('emblem-system-symbolic')
         self.notification_settings_button.add_css_class('flat')
         self.notification_settings_button.set_valign(Gtk.Align.CENTER)
+        self.notification_settings_button.set_tooltip_text(
+            _('Notification settings'))
         self.action_notify.add_suffix(self.notification_settings_button)
 
         self.notification_settings = Gtk.Popover.new()
@@ -492,12 +495,14 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         box = Gtk.Box.new(Gtk.Orientation.HORIZONTAL, 4)
         edit_button = Gtk.Button.new_from_icon_name('document-edit-symbolic')
         edit_button.set_valign(Gtk.Align.CENTER)
+        edit_button.set_tooltip_text(_('Edit command'))
         edit_button.connect('clicked', self.edit_command, \
             self.commands_widgets['rows'][-1])
         box.append(edit_button)
         remove_button = Gtk.Button.new_from_icon_name('user-trash-symbolic')
         remove_button.set_valign(Gtk.Align.CENTER)
         remove_button.add_css_class('destructive-action')
+        remove_button.set_tooltip_text(_('Remove command'))
         remove_button.connect('clicked', \
             self.remove_command, self.commands_widgets['rows'][-1])
         box.append(remove_button)
