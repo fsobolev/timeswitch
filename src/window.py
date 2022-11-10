@@ -47,10 +47,11 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.connect('close-request', self.on_close_request)
         self.get_application().set_accels_for_action('window.close',
             ['<primary>q', '<primary>w'])
+        self.commands_list = self.load_commands()
         self.build_ui()
 
     def build_ui(self):
-        self.set_default_size(320, 655)
+        self.set_default_size(320, 705)
         self.set_title('Time Switch')
         self.content = Gtk.Box.new(Gtk.Orientation.VERTICAL, 0)
         self.set_content(self.content)
@@ -65,18 +66,18 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.about_button.set_action_name('app.about')
         self.header.pack_start(self.about_button)
 
-        # Stack
-        self.stack = Gtk.Stack.new()
-        self.stack.set_hexpand(True)
-        self.stack.set_vexpand(True)
-        self.stack.set_transition_type(Gtk.StackTransitionType.SLIDE_LEFT_RIGHT)
-        self.stack.set_transition_duration(300)
-        self.content.append(self.stack)
+        # Main stack
+        self.main_stack = Gtk.Stack.new()
+        self.main_stack.set_hexpand(True)
+        self.main_stack.set_vexpand(True)
+        self.main_stack.set_transition_type(Gtk.StackTransitionType.SLIDE_LEFT_RIGHT)
+        self.main_stack.set_transition_duration(300)
+        self.content.append(self.main_stack)
 
         # Scrolled window
         self.scrolled_window = Gtk.ScrolledWindow.new()
         self.scrolled_window.set_min_content_width(300)
-        self.stack.add_named(self.scrolled_window, 'setup')
+        self.main_stack.add_named(self.scrolled_window, 'setup')
 
         # Setup page
         self.setup_box = Gtk.Box.new(Gtk.Orientation.VERTICAL, 2)
@@ -136,19 +137,25 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.reset_button = Gtk.Button.new()
         self.reset_button_box = Gtk.Box.new(Gtk.Orientation.HORIZONTAL, 5)
         self.reset_button_box.set_halign(Gtk.Align.CENTER)
-        self.reset_button_icon = \
-            Gtk.Image.new_from_icon_name('view-refresh-symbolic')
-        self.reset_button_box.append(self.reset_button_icon)
-        self.reset_button_label = Gtk.Label.new(_('Reset'))
-        self.reset_button_box.append(self.reset_button_label)
+        self.reset_button_box.append(Gtk.Image.new_from_icon_name( \
+            'view-refresh-symbolic'))
+        self.reset_button_box.append(Gtk.Label.new(_('Reset')))
         self.reset_button.set_child(self.reset_button_box)
         self.reset_button.connect('clicked', self.reset_timer)
         self.grid.attach(self.reset_button, 0, 2, 2, 1)
 
+        # Actions stack
+        self.actions_stack = Gtk.Stack.new()
+        self.actions_stack.set_hexpand(True)
+        self.actions_stack.set_vexpand(True)
+        self.actions_stack.set_transition_type( \
+            Gtk.StackTransitionType.SLIDE_LEFT_RIGHT)
+        self.setup_box.append(self.actions_stack)
+
         # Actions
         self.actions_group = Adw.PreferencesGroup.new()
         self.actions_group.set_title(_('Action'))
-        self.setup_box.append(self.actions_group)
+        self.actions_stack.add_named(self.actions_group, 'actions')
 
         # Poweroff
         self.action_poweroff = Adw.ActionRow.new()
@@ -215,20 +222,72 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.notification_settings_grid.attach(self.play_sound_switch,
             1, 1, 1, 1)
 
+        # Command execution
+        self.action_command = Adw.ActionRow.new()
+        self.action_command.set_title(_('Command'))
+        self.action_command_check = Gtk.CheckButton.new()
+        self.action_command_check.set_group(self.action_poweroff_check)
+        self.action_command.add_prefix(self.action_command_check)
+        self.action_command.set_activatable_widget(self.action_command_check)
+        self.action_command.connect('activated', self.show_commands)
+        self.actions_group.add(self.action_command)
+
+        self.action_command_suffix = \
+            Gtk.Image.new_from_icon_name('go-next-symbolic')
+        self.action_command_suffix.set_size_request(32, -1)
+        self.action_command.add_suffix(self.action_command_suffix)
+
+        # Commands
+        self.commands_box = Gtk.Box.new(Gtk.Orientation.VERTICAL, 6)
+        self.actions_stack.add_named(self.commands_box, 'commands')
+
+        self.commands_sw = Gtk.ScrolledWindow.new()
+        self.commands_sw.set_min_content_height(270)
+        self.commands_box.append(self.commands_sw)
+
+        self.commands_group = Adw.PreferencesGroup.new()
+        self.commands_group.set_title(_("Commands"))
+        self.commands_sw.set_child(self.commands_group)
+
+        self.back_button = Gtk.Button.new()
+        self.back_button_box = Gtk.Box.new(Gtk.Orientation.HORIZONTAL, 5)
+        self.back_button_box.set_halign(Gtk.Align.CENTER)
+        self.back_button_box.append(Gtk.Image.new_from_icon_name( \
+            'go-previous-symbolic'))
+        self.back_button_box.append(Gtk.Label.new(_('Back')))
+        self.back_button.set_child(self.back_button_box)
+        self.back_button.connect('clicked', self.show_actions)
+        self.commands_group.set_header_suffix(self.back_button)
+
+        self.commands_widgets = {'rows': [], 'checks': []}
+        for command in self.commands_list:
+            self.create_command(command)
+        if len(self.commands_widgets['rows']) > 0:
+            self.commands_widgets['rows'][0].activate()
+
+        self.add_command_button = Gtk.Button.new()
+        self.add_command_button.set_halign(Gtk.Align.CENTER)
+        self.add_command_button.add_css_class('pill')
+        self.add_command_box = Gtk.Box.new(Gtk.Orientation.HORIZONTAL, 6)
+        self.add_command_box.append(Gtk.Image.new_from_icon_name( \
+            'list-add-symbolic'))
+        self.add_command_box.append(Gtk.Label.new(_('Add')))
+        self.add_command_button.set_child(self.add_command_box)
+        self.add_command_button.connect('clicked', self.add_command)
+        self.commands_box.append(self.add_command_button)
+
         # Start timer button
         self.start_button = Gtk.Button.new()
         self.start_button.set_halign(Gtk.Align.CENTER)
         self.start_button_box = Gtk.Box.new(Gtk.Orientation.HORIZONTAL, 5)
         self.start_button_box.set_halign(Gtk.Align.CENTER)
-        self.start_button_icon = \
-            Gtk.Image.new_from_icon_name('media-playback-start-symbolic')
-        self.start_button_box.append(self.start_button_icon)
-        self.start_button_label = Gtk.Label.new(_('Start'))
-        self.start_button_box.append(self.start_button_label)
+        self.start_button_box.append(Gtk.Image.new_from_icon_name( \
+            'media-playback-start-symbolic'))
+        self.start_button_box.append(Gtk.Label.new(_('Start')))
         self.start_button.set_child(self.start_button_box)
         self.start_button.add_css_class('pill')
         self.start_button.add_css_class('suggested-action')
-        self.start_button.connect("clicked", self.start_timer)
+        self.start_button.connect('clicked', self.start_timer)
         self.setup_box.append(self.start_button)
 
         # Running page
@@ -237,7 +296,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.running_box.set_valign(Gtk.Align.CENTER)
         self.running_box.set_size_request(280, -1)
         self.running_box.set_spacing(10)
-        self.stack.add_named(self.running_box, 'running')
+        self.main_stack.add_named(self.running_box, 'running')
 
         # Description label
         self.desc_label_clamp = Adw.Clamp.new()
@@ -261,11 +320,9 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.stop_button.set_halign(Gtk.Align.CENTER)
         self.stop_button_box = Gtk.Box.new(Gtk.Orientation.HORIZONTAL, 5)
         self.stop_button_box.set_halign(Gtk.Align.CENTER)
-        self.stop_button_icon = \
-            Gtk.Image.new_from_icon_name('media-playback-stop-symbolic')
-        self.stop_button_box.append(self.stop_button_icon)
-        self.stop_button_label = Gtk.Label.new(_('Stop'))
-        self.stop_button_box.append(self.stop_button_label)
+        self.stop_button_box.append(Gtk.Image.new_from_icon_name( \
+            'media-playback-stop-symbolic'))
+        self.stop_button_box.append(Gtk.Label.new(_('Stop')))
         self.stop_button.set_child(self.stop_button_box)
         self.stop_button.add_css_class('pill')
         self.stop_button.add_css_class('destructive-action')
@@ -307,13 +364,158 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
             self.sec_spin.set_value(self.sec_spin.get_value() + value)
         return True
 
-    def reset_timer(self, _):
+    def reset_timer(self, w):
         self.hour_spin.set_value(0)
         self.min_spin.set_value(0)
         self.sec_spin.set_value(0)
         return True
 
-    def start_timer(self, _):
+    def show_actions(self, w):
+        self.actions_stack.set_visible_child_name('actions')
+        self.action_poweroff.activate()
+
+    def show_commands(self, w):
+        self.actions_stack.set_visible_child_name('commands')
+
+    def load_commands(self):
+        return []
+
+    def set_action_row_titles(self, row, title, subtitle, lines):
+        row.set_title(title)
+        row.set_title_lines(lines)
+        row.set_subtitle(subtitle)
+        row.set_subtitle_lines(lines)
+
+    def add_command(self, w):
+        msg = Adw.MessageDialog.new(self, _('Add command'), None)
+        grid = Gtk.Grid.new()
+        grid.set_row_spacing(6)
+        grid.set_column_spacing(6)
+        name_label = Gtk.Label.new(_('Name'))
+        name_label.set_halign(Gtk.Align.START)
+        grid.attach(name_label, 0, 0, 1, 1)
+        name_entry = Gtk.Entry.new()
+        name_entry.set_hexpand(True)
+        grid.attach(name_entry, 1, 0, 1, 1)
+        cmd_label = Gtk.Label.new(_('Command'))
+        cmd_label.set_halign(Gtk.Align.START)
+        grid.attach(cmd_label, 0, 1, 1, 1)
+        cmd_entry = Gtk.Entry.new()
+        cmd_entry.set_hexpand(True)
+        grid.attach(cmd_entry, 1, 1, 1, 1)
+        msg.set_extra_child(grid)
+        msg.add_response('cancel', _('Cancel'))
+        msg.add_response('add', _('Add'))
+        msg.set_response_appearance('add', Adw.ResponseAppearance.SUGGESTED)
+        msg.connect('response', self.confirm_add, \
+            name_entry.get_buffer().get_text, cmd_entry.get_buffer().get_text)
+        msg.show()
+
+    def confirm_add(self, w, response, name_fn, cmd_fn):
+        if response == 'add':
+            name = name_fn()
+            cmd = cmd_fn()
+            if len(name) < 1 or len(cmd) < 1:
+                return
+            dict = {'name': name, 'cmd': cmd}
+            self.commands_list.append(dict)
+            self.create_command(dict)
+
+    def create_command(self, command):
+        self.commands_widgets['rows'].append(Adw.ActionRow.new())
+        self.set_action_row_titles(self.commands_widgets['rows'][-1],
+            command['name'], command['cmd'], 1)
+        self.commands_widgets['checks'].append(Gtk.CheckButton.new())
+        self.commands_widgets['checks'][-1].set_group(
+            self.commands_widgets['checks'][0])
+        self.commands_widgets['rows'][-1].add_prefix(
+            self.commands_widgets['checks'][-1])
+        self.commands_widgets['rows'][-1].set_activatable_widget(
+            self.commands_widgets['checks'][-1])
+        box = Gtk.Box.new(Gtk.Orientation.HORIZONTAL, 4)
+        edit_button = Gtk.Button.new_from_icon_name('document-edit-symbolic')
+        edit_button.set_valign(Gtk.Align.CENTER)
+        edit_button.connect('clicked', self.edit_command, \
+            self.commands_widgets['rows'][-1])
+        box.append(edit_button)
+        remove_button = Gtk.Button.new_from_icon_name('user-trash-symbolic')
+        remove_button.set_valign(Gtk.Align.CENTER)
+        remove_button.add_css_class('destructive-action')
+        remove_button.connect('clicked', \
+            self.remove_command, self.commands_widgets['rows'][-1])
+        box.append(remove_button)
+        self.commands_widgets['rows'][-1].add_suffix(box)
+        self.commands_group.add(self.commands_widgets['rows'][-1])
+        self.commands_widgets['rows'][-1].activate()
+        self.disable_single_checkbutton()
+
+    def disable_single_checkbutton(self):
+        l = len(self.commands_widgets['checks'])
+        print(l)
+        if l > 1:
+            self.commands_widgets['checks'][0].set_sensitive(True)
+        elif l == 1:
+            self.commands_widgets['checks'][0].set_sensitive(False)
+
+    def edit_command(self, w, action_row):
+        index = self.commands_widgets['rows'].index(action_row)
+        msg = Adw.MessageDialog.new(self, _('Edit command'), None)
+        grid = Gtk.Grid.new()
+        grid.set_row_spacing(6)
+        grid.set_column_spacing(6)
+        name_label = Gtk.Label.new(_('Name'))
+        name_label.set_halign(Gtk.Align.START)
+        grid.attach(name_label, 0, 0, 1, 1)
+        name_entry = Gtk.Entry.new()
+        name_entry.set_buffer(Gtk.EntryBuffer.new(action_row.get_title(), -1))
+        name_entry.set_hexpand(True)
+        grid.attach(name_entry, 1, 0, 1, 1)
+        cmd_label = Gtk.Label.new(_('Command'))
+        cmd_label.set_halign(Gtk.Align.START)
+        grid.attach(cmd_label, 0, 1, 1, 1)
+        cmd_entry = Gtk.Entry.new()
+        cmd_entry.set_buffer(Gtk.EntryBuffer.new(action_row.get_subtitle(), -1))
+        cmd_entry.set_hexpand(True)
+        grid.attach(cmd_entry, 1, 1, 1, 1)
+        msg.set_extra_child(grid)
+        msg.add_response('cancel', _('Cancel'))
+        msg.add_response('apply', _('Apply'))
+        msg.set_response_appearance('apply', Adw.ResponseAppearance.SUGGESTED)
+        msg.connect('response', self.confirm_edit, index, \
+            name_entry.get_buffer().get_text, cmd_entry.get_buffer().get_text)
+        msg.show()
+
+    def confirm_edit(self, w, response, index, name_fn, cmd_fn):
+        name = name_fn()
+        cmd = cmd_fn()
+        if response == 'apply':
+            self.set_action_row_titles(self.commands_widgets['rows'][index], \
+                name, cmd, 1)
+            self.commands_list[index]['name'] = name
+            self.commands_list[index]['cmd'] = cmd
+
+    def remove_command(self, w, action_row):
+        index = self.commands_widgets['rows'].index(action_row)
+        msg = Adw.MessageDialog.new(self, _('Remove command?'), \
+            _('Are you sure you want to remove command "{}"?').format( \
+            self.commands_list[index]['name']))
+        msg.add_response('cancel', _('Cancel'))
+        msg.add_response('remove', _('Remove'))
+        msg.set_response_appearance('remove', Adw.ResponseAppearance.DESTRUCTIVE)
+        msg.connect('response', self.confirm_remove, index)
+        msg.show()
+
+    def confirm_remove(self, w, response, index):
+        if response == 'remove':
+            self.commands_group.remove(self.commands_widgets['rows'][index])
+            self.commands_widgets['rows'].pop(index)
+            self.commands_widgets['checks'].pop(index)
+            self.commands_list.pop(index)
+            if len(self.commands_widgets['rows']) > 0:
+                self.commands_widgets['rows'][0].activate()
+            self.disable_single_checkbutton()
+
+    def start_timer(self, w):
         if self.hour_spin.get_value_as_int() == \
                 self.min_spin.get_value_as_int() == \
                 self.sec_spin.get_value_as_int() == 0:
@@ -328,6 +530,18 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
             action = ('notification',
                 self.notification_text.get_buffer().get_text(),
                 self.play_sound_switch.get_active())
+        elif self.action_command_check.get_active():
+            name = ''
+            cmd = ''
+            for c in self.commands_widgets['checks']:
+                if c.get_active():
+                    index = self.commands_widgets['checks'].index(c)
+                    name = self.commands_list[index]['name']
+                    cmd = self.commands_list[index]['cmd']
+                    break
+            if not name:
+                return
+            action = ('command', name, cmd)
         self.timer = Timer(
             self.hour_spin.get_value_as_int(),
             self.min_spin.get_value_as_int(),
@@ -337,9 +551,9 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
             self.desc_label,
             self.finish)
         self.timer.run()
-        self.stack.set_visible_child_name('running')
+        self.main_stack.set_visible_child_name('running')
 
-    def stop_timer(self, _):
+    def stop_timer(self, w):
         self.timer.stop = True
         self.finish()
 
@@ -350,14 +564,14 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
             GLib.usleep(2_000_000)
             self.get_application().quit()
         else:
-            self.stack.set_visible_child_name('setup')
+            self.main_stack.set_visible_child_name('setup')
 
-    def on_window_show(self, _):
+    def on_window_show(self, w):
         self.quit_on_finish = False
         if self.timer:
-            self.stack.set_visible_child_name('running')
+            self.main_stack.set_visible_child_name('running')
 
-    def on_close_request(self, _):
+    def on_close_request(self, w):
         if self.timer:
             self.quit_on_finish = True
         else:

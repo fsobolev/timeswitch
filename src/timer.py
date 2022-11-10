@@ -48,6 +48,10 @@ class Timer:
             self.desc_label.set_text(_('You will receive a notification in'))
             self.notification_text = action[1]
             self.play_sound = action[2]
+        elif self.action == 'command':
+            self.desc_label.set_markup(_(
+                'The command <b>{}</b> will be executed in').format(action[1]))
+            self.cmd = action[2]
         self.timer_label = timer_label
         self.finish_fn = finish_fn
         self.stop = False
@@ -79,3 +83,5 @@ class Timer:
             action_suspend()
         elif self.action == 'notification':
             action_notify(self.notification_text, self.play_sound)
+        elif self.action == 'command':
+            action_command(self.cmd)

@@ -29,6 +29,7 @@
 # SPDX-License-Identifier: MIT
 
 import os
+import subprocess
 import gi
 gi.require_version('GSound', '1.0')
 from gi.repository import Gio, GLib, GSound
@@ -90,4 +91,8 @@ def action_notify(text, play_sound):
         gsound.init()
         gsound.play_full({GSound.ATTR_EVENT_ID: 'complete',
             GSound.ATTR_MEDIA_ROLE: 'alarm'})
-        
+
+def action_command(cmd):
+    if os.getenv('FLATPAK_ID'):
+        cmd = 'flatpak-spawn --host ' + cmd
+    subprocess.Popen(cmd, shell=True)
