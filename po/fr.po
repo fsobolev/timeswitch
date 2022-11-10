@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-03 23:22+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2022-11-10 14:21+0300\n"
+"PO-Revision-Date: 2022-11-10 16:20+0100\n"
 "Last-Translator: Irénée Thirion <irenee.thirion@e.email>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -29,25 +29,32 @@ msgid ""
 "Power off, reboot, suspend, send a notification or execute any command on "
 "timer."
 msgstr ""
-#"Éteignez, redémarrez, mettez en veille ou recevez une notification sur "
-#"minuterie"
+"Éteignez, redémarrez, mettez en veille, recevez une notification ou exécutez "
+"une commande sur minuterie."
 
-#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+# "Éteignez, redémarrez, mettez en veille ou recevez une notification sur "
+# "minuterie"
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:10
 msgid "timer;shutdown;poweroff;reboot;suspend;notification;prompt;cmd;command;"
 msgstr ""
-#"minuteur;éteindre;redémarrer;mettre en veille;notification;reboot;arrêter;"
+"minuteur;éteindre;extinction;redémarrer;arrêt;mettre en veille;notification;"
+"commande;cmd;exécuter;"
 
+# "minuteur;éteindre;redémarrer;mettre en veille;notification;reboot;arrêter;"
 #: data/io.github.fsobolev.TimeSwitch.appdata.xml.in:9
 msgid ""
 "Time Switch is a simple program that allows you to power off, reboot or "
 "suspend your system, send a notification (optionally with a sound signal) or "
-"execute any command on timer."
+"execute a command on timer."
 msgstr ""
-#"Time Switch est un programme simple qui vous permet d’éteindre, de "
-#"redémarrer ou de mettre en veille votre système, ou d’envoyer une "
-#"notification (éventuellement avec un signal sonore) sur minuterie."
+"Time Switch est un programme simple qui vous permet d’éteindre, de "
+"redémarrer ou de mettre en veille votre système, d’envoyer une notification "
+"(éventuellement avec un signal sonore) ou d’exécuter une commande quelconque "
+"sur minuterie."
 
+# "Time Switch est un programme simple qui vous permet d’éteindre, de "
+# "redémarrer ou de mettre en veille votre système, ou d’envoyer une "
+# "notification (éventuellement avec un signal sonore) sur minuterie."
 #: data/io.github.fsobolev.TimeSwitch.appdata.xml.in:10
 msgid ""
 "The app is built for GNOME and uses LibAdwaita, but it works in any desktop "
@@ -82,18 +89,16 @@ msgstr "Vous recevrez une notification dans"
 
 #: src/timer.py:53
 msgid "The command <b>{}</b> will be executed in"
-msgstr ""
+msgstr "La commande <b>{}</b> sera exécutée dans"
 
 #: src/window.py:78
 msgid "About"
-msgstr ""
+msgstr "À propos"
 
-#. Translators: Short fot "minutes"
 #: src/window.py:139
 msgid "min"
 msgstr "min"
 
-#. Translators: Short for "seconds"
 #: src/window.py:139
 msgid "sec"
 msgstr "sec"
@@ -124,7 +129,7 @@ msgstr "Notification"
 
 #: src/window.py:213
 msgid "Notification settings"
-msgstr ""
+msgstr "Paramètres de notification"
 
 #: src/window.py:226
 msgid "Notification text"
@@ -134,17 +139,21 @@ msgstr "Texte de la notification"
 msgid "Play sound"
 msgstr "Jouer un son"
 
-#: src/window.py:241 src/window.py:263 src/window.py:459 src/window.py:534
+#: src/window.py:241 src/window.py:459 src/window.py:534
 msgid "Command"
-msgstr ""
+msgstr "Commande"
+
+#: src/window.py:263
+msgid "Commands"
+msgstr "Commandes"
 
 #: src/window.py:271
 msgid "Back"
-msgstr ""
+msgstr "Retour"
 
 #: src/window.py:288 src/window.py:467
 msgid "Add"
-msgstr ""
+msgstr "Ajouter"
 
 #: src/window.py:300
 msgid "Start"
@@ -163,10 +172,12 @@ msgstr ""
 #: src/window.py:399
 msgid "They will be executed outside of flatpak sandbox. "
 msgstr ""
+"Elles seront exécutées en-dehors de l’environnement d’exécution confiné "
+"flatpak. "
 
 #: src/window.py:402
 msgid "Warning"
-msgstr ""
+msgstr "Avertissement"
 
 # Translators: {} is used to pass "They will be executed outside of flatpak sandbox. "
 # in case the app is installed using flatpak. Make sure to have a space in front of it
@@ -178,47 +189,51 @@ msgid ""
 "successfully or not. Be careful, do not enter commands whose result is "
 "unknown to you."
 msgstr ""
+"Vos commandes seront exécutées comme si elles étaient lancées depuis une "
+"invite de commande. {}L’application n’effectue aucune vérification pour "
+"savoir si une commande a été exécutée avec succès ou non. Soyez prudent, "
+"n’entrez pas de commandes dont le résultat vous est inconnu."
 
 #: src/window.py:404
 msgid "Continue"
-msgstr ""
+msgstr "Continuer"
 
 #: src/window.py:409
 msgid "I understand"
-msgstr ""
+msgstr "Je comprends"
 
 #: src/window.py:449
 msgid "Add command"
-msgstr ""
+msgstr "Ajouter une commande"
 
 #: src/window.py:453 src/window.py:527
 msgid "Name"
-msgstr ""
+msgstr "Nom"
 
 #: src/window.py:466 src/window.py:542 src/window.py:564
 msgid "Cancel"
-msgstr ""
+msgstr "Annuler"
 
 #: src/window.py:498 src/window.py:523
 msgid "Edit command"
-msgstr ""
+msgstr "Modifier la commande"
 
 #: src/window.py:505
 msgid "Remove command"
-msgstr ""
+msgstr "Supprimer la commande"
 
 #: src/window.py:543
 msgid "Apply"
-msgstr ""
+msgstr "Appliquer"
 
 #: src/window.py:561
 msgid "Remove command?"
-msgstr ""
+msgstr "Supprimer la commande ?"
 
 #: src/window.py:562
 msgid "Are you sure you want to remove command \"{}\"?"
-msgstr ""
+msgstr "Êtes-vous sûr de vouloir supprimer la commande « {} » ?"
 
 #: src/window.py:565
 msgid "Remove"
-msgstr ""
+msgstr "Supprimer"
