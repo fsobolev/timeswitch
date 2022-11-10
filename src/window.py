@@ -30,6 +30,8 @@
 
 from gi.repository import Adw, Gtk, GLib
 from .timer import Timer
+import json
+import os
 
 
 class TimeSwitchWindow(Adw.ApplicationWindow):
@@ -378,7 +380,19 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.actions_stack.set_visible_child_name('commands')
 
     def load_commands(self):
-        return []
+        if os.getenv('FLATPAK_ID'):
+            config_dir = os.getenv('XDG_CONFIG_HOME')
+        else:
+            config_dir = os.getenv('HOME') + '/.config'
+        file_path = config_dir + '/timeswitch/config.json'
+        if os.path.exists(file_path):
+            self.show_cmd_warning = False
+            with open(file_path, 'r') as f:
+                data = json.load(f)
+                return data['commands']
+        else:
+            self.show_cmd_warning = True
+            return []
 
     def set_action_row_titles(self, row, title, subtitle, lines):
         row.set_title(title)
