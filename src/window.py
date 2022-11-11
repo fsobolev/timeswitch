@@ -50,7 +50,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.get_application().set_accels_for_action('window.close',
             ['<primary>q', '<primary>w'])
 
-        if os.getenv('FLATPAK_ID'):
+        if os.getenv('XDG_CONFIG_HOME'):
             self.config_dir = os.getenv('XDG_CONFIG_HOME') + '/timeswitch'
         else:
             self.config_dir = os.getenv('HOME') + '/.config/timeswitch'
