@@ -55,9 +55,10 @@ class Timer:
         self.timer_label = timer_label
         self.finish_fn = finish_fn
         self.stop = False
+        GObject.timeout_add_seconds(1, self.run)
 
     def run(self):
-        if self.stop: return
+        if self.stop: return False
         if self.duration > 0:
             self.s = self.duration
             self.h = self.s // 3600
@@ -69,10 +70,11 @@ class Timer:
                 ':{0:0>2}'.format(self.m) +
                 ':{0:0>2}'.format(self.s))
             self.duration -= 1
-            GObject.timeout_add_seconds(1, self.run)
+            return True
         else:
             self.act()
             self.finish_fn()
+            return False
 
     def act(self):
         if self.action == 'poweroff':
