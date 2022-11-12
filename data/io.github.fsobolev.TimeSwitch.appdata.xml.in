@@ -26,6 +26,14 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="2022.11.12" date="2022-11-12" type="stable">
+      <description>
+        <ul>
+          <li>The app can now execute user-defined commands</li>
+          <li>Added German translation (thanks to @RoepLuke)</li>
+        </ul>
+      </description>
+    </release>
     <release version="2022.11.8" date="2022-11-08" type="stable">
       <description>
         <ul>
