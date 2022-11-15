@@ -1,7 +1,6 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Spanish translation for Time Switch
+# Copyright (C) 2022 Fyodor Sobolev
+# This file is distributed under the same license as the timeswitch package.
 # David Delgado <david.delta@protonmail.com>, 2022.
 #
 msgid ""
@@ -136,13 +135,9 @@ msgstr "Texto de notificación"
 msgid "Play sound"
 msgstr "Reproducir sonido"
 
-#: src/window.py:241 src/window.py:459 src/window.py:534
+#: src/window.py:241 src/window.py:263 src/window.py:459 src/window.py:534
 msgid "Command"
 msgstr "Comando"
-
-#: src/window.py:263
-msgid "Commands"
-msgstr "Comandos"
 
 #: src/window.py:271
 msgid "Back"
@@ -167,7 +162,7 @@ msgstr "Puedes cerrar la ventana, el temporizador funcionará en segundo plano."
 # Translators: make sure to have a space in the end of the line.
 #: src/window.py:399
 msgid "They will be executed outside of flatpak sandbox. "
-msgstr "Se ejecutarán fuera del entorno aislado de flatpak."
+msgstr "Se ejecutarán fuera del entorno aislado de flatpak. "
 
 #: src/window.py:402
 msgid "Warning"
