@@ -102,7 +102,7 @@ msgstr "seg"
 
 #: src/window.py:154
 msgid "Reset"
-msgstr "Reiniciar"
+msgstr "Restablecer"
 
 #: src/window.py:169
 msgid "Action"
