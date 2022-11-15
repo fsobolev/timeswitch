@@ -26,6 +26,13 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="2022.11.15" date="2022-11-15" type="stable">
+      <description>
+        <ul>
+          <li>Added Spanish translation (thanks to @DeltaVeintiuno)</li>
+        </ul>
+      </description>
+    </release>
     <release version="2022.11.12" date="2022-11-12" type="stable">
       <description>
         <ul>
