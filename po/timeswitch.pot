@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) 2022 Fyodor Sobolev
+# This file is distributed under the same license as the timeswitch package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
@@ -8,19 +8,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-10 14:21+0300\n"
+"POT-Creation-Date: 2022-11-15 23:33+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:3
 #: data/io.github.fsobolev.TimeSwitch.appdata.xml.in:6
 msgid "Time Switch"
-msgstr ""
+msgstr "Time Switch"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:6
 #: data/io.github.fsobolev.TimeSwitch.appdata.xml.in:7
@@ -38,7 +38,7 @@ msgstr ""
 msgid ""
 "Time Switch is a simple program that allows you to power off, reboot or "
 "suspend your system, send a notification (optionally with a sound signal) or "
-"execute a command on timer."
+"execute any command on timer."
 msgstr ""
 
 #: data/io.github.fsobolev.TimeSwitch.appdata.xml.in:10
@@ -49,7 +49,7 @@ msgstr ""
 
 #: data/io.github.fsobolev.TimeSwitch.appdata.xml.in:15
 msgid "Fyodor Sobolev"
-msgstr ""
+msgstr "Fyodor Sobolev"
 
 #: src/actions.py:84
 msgid "Timer has finished!"
@@ -84,7 +84,7 @@ msgstr ""
 msgid "min"
 msgstr ""
 
-# Translators: Short for "seconds"
+# Translators: Short fot "seconds"
 #: src/window.py:139
 msgid "sec"
 msgstr ""
@@ -125,12 +125,8 @@ msgstr ""
 msgid "Play sound"
 msgstr ""
 
-#: src/window.py:241 src/window.py:459 src/window.py:534
+#: src/window.py:241 src/window.py:263 src/window.py:459 src/window.py:534
 msgid "Command"
-msgstr ""
-
-#: src/window.py:263
-msgid "Commands"
 msgstr ""
 
 #: src/window.py:271
