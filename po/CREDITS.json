@@ -1,20 +1,26 @@
 {
-    "Russian": [
-        "Fyodor Sobolev https://github.com/fsobolev"
-    ],
-    "French": [
-        "Irénée Thirion <irenee.thirion@e.email>"
-    ],
-    "Italian": [
-        "Albano Battistella <albano_battistella@hotmail.com>"
-    ],
-    "Swedish": [
-        "Åke Engelbrektson <eson@svenskasprakfiler.se>"
-    ],
-    "German": [
-        "Luke Röper <contact@roeper-luke.de>"
-    ],
-    "Spanish": [
-        "David Delgado <david.delta@proton.me>"
-    ]
+    "Fyodor Sobolev": {
+        "lang": "Russian",
+        "url": "https://github.com/fsobolev"
+    },
+    "Irénée Thirion": {
+        "lang": "French",
+        "email": "irenee.thirion@e.email"
+    },
+    "Albano Battistella": {
+        "lang": "Italian",
+        "email": "albano_battistella@hotmail.com"
+    },
+    "Åke Engelbrektson": {
+        "lang": "Swedish",
+        "email": "eson@svenskasprakfiler.se"
+    },
+    "Luke Röper": {
+    	"lang": "German",
+    	"email": "contact@roeper-luke.de"
+    },
+    "David Delgado": {
+    	"lang": "Spanish",
+    	"email": "david.delta@proton.me"
+    }
 }

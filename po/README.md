@@ -7,21 +7,22 @@ If you have never worked with `.po` files before, you can find some help in [get
 
 After editing a file with translation, add language code to `LINGUAS` file. Please keep it alphabetically sorted!
 
-Now, it's time for the world to know your name, hero! Edit `CREDITS.json`. Here you need to specify your language, name and, optionally, email or URL. Example:
+Now, it's time for the world to know your name, hero! Edit `CREDITS.json`. Here you need to specify your name, language and, optionally, email or URL. Example:
 
 ```
-"Mandalorian": [
-    "Jango Fett <jango@galaxyfarfar.away>"
-]
+"Jango Fett": {
+    "lang": "Mandalorian",
+    "email": "jango@galaxyfarfar.away"
+}
 ```
 
-If you are contributing to existing translation, you can add your name like this:
+If you made multiple translations, use an array to list all languages:
 
 ```
-"Mandalorian": [
-    "Jango Fett <jango@galaxyfarfar.away>",
-    "Boba Fett https://github.com/bobafromstarwars"
-]
+"C-3PO": {
+    "lang": ["Ewokese", "Wookieespeak", "Jawaese"],
+    "url": "https://free.droids"
+}
 ```
 
 While editing `CREDITS.json`, don't worry about the order, the app will sort it like it needs. But be aware of commas!

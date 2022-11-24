@@ -36,17 +36,21 @@ def get_translator_credits():
     translator_credits=''
     try:
         with open(f'{pkgdatadir}/CREDITS.json', 'r') as f:
-            credits = json.load(f)
-            for lang in sorted(credits.keys()):
-                for translator in sorted(credits[lang]):
-                    url_start = translator.rfind('http')
-                    email_start = translator.rfind('<')
-                    index = max(url_start, email_start)
-                    if index > 0:
-                        translator_credits += \
-                        f'{translator[:index]}({lang}) {translator[index:]}\n'
-                    else:
-                        translator_credits += f'{translator} ({lang})\n'
+            credits_json = json.load(f)
+            for translator in sorted(credits_json.keys()):
+                data = credits_json[translator]
+                translator_credits += f'{translator} ('
+                if type(data['lang']) == list:
+                    data['lang'].sort()
+                    translator_credits += ', '.join(data['lang'])
+                else:
+                    translator_credits += data['lang']
+                translator_credits += ')'
+                if 'url' in data.keys():
+                    translator_credits += f" {data['url']}"
+                elif 'email' in data.keys():
+                    translator_credits += f" <{data['email']}>"
+                translator_credits += '\n'
             translator_credits = translator_credits.rstrip('\n')
             return translator_credits
     except Exception as e:
