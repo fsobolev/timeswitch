@@ -28,7 +28,7 @@
 #
 # SPDX-License-Identifier: MIT
 
-from gi.repository import Adw, Gtk, GLib
+from gi.repository import Adw, Gtk, GLib, Gio
 from .timer import Timer
 import json
 import os
@@ -58,6 +58,8 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
             os.makedirs(self.config_dir)
         self.config_file_path = self.config_dir + '/config.json'
         self.commands_list = self.load_commands()
+
+        self.settings = Gio.Settings.new('io.github.fsobolev.TimeSwitch')
 
         self.build_ui()
 
@@ -124,6 +126,8 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
 
         self.sec_spin = self.create_spinbutton(59)
         self.spins_box.append(self.sec_spin)
+
+        self.load_last_timer_state()
 
         # Buttons for faster timer increase
         self.grid = Gtk.Grid.new()
@@ -370,6 +374,12 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         spin.set_text('{0:0>2}'.format(spin.get_value_as_int()))
         return True
 
+    def load_last_timer_state(self):
+        (h, m, s) = self.settings.get_value('last-timer').unpack()
+        self.hour_spin.set_value(h)
+        self.min_spin.set_value(m)
+        self.sec_spin.set_value(s)
+
     def on_add_button_click(self, button, value):
         if value >= 60:
             self.min_spin.set_value(
@@ -583,6 +593,10 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
                 self.min_spin.get_value_as_int() == \
                 self.sec_spin.get_value_as_int() == 0:
             return
+        self.settings.set_value('last-timer', GLib.Variant.new_tuple( \
+            GLib.Variant.new_int32(self.hour_spin.get_value_as_int()), \
+            GLib.Variant.new_int32(self.min_spin.get_value_as_int()), \
+            GLib.Variant.new_int32(self.sec_spin.get_value_as_int())))
         if self.action_poweroff_check.get_active():
             action = ('poweroff',)
         elif self.action_reboot_check.get_active():
