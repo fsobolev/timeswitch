@@ -26,6 +26,13 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="2022.12.04" date="2022-12-04" type="stable">
+      <description>
+        <ul>
+          <li>New icon, thanks Igor Dyatlov (https://github.com/igor-dyatlov)!</li>
+        </ul>
+      </description>
+    </release>
     <release version="2022.12.03" date="2022-12-03" type="stable">
       <description>
         <ul>

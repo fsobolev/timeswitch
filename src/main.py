@@ -64,11 +64,12 @@ class TimeSwitchApplication(Adw.Application):
                                 application_name='Time Switch',
                                 application_icon='io.github.fsobolev.TimeSwitch',
                                 developer_name='Fyodor Sobolev',
-                                version='2022.12.03',
+                                version='2022.12.04',
                                 copyright='© 2022 Fyodor Sobolev',
                                 website='https://github.com/fsobolev/timeswitch',
                                 issue_url='https://github.com/fsobolev/timeswitch/issues',
                                 license_type=Gtk.License.MIT_X11,
+                                artists=('Igor Dyatlov https://github.com/igor-dyatlov',),
                                 translator_credits=get_translator_credits())
         about.present()
 
