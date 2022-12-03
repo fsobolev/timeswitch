@@ -26,6 +26,13 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="2022.12.03" date="2022-12-03" type="stable">
+      <description>
+        <ul>
+          <li>The app will now remember last used timer value.</li>
+        </ul>
+      </description>
+    </release>
     <release version="2022.11.15" date="2022-11-15" type="stable">
       <description>
         <ul>
