@@ -39,37 +39,37 @@
             <rect height="152" width="192"/>
         </clipPath>
         <g id="i" clip-path="url(#h)">
-            <path d="m 70 36 c 22.089844 0 40 17.910156 40 40 s -17.910156 40 -40 40 s -40 -17.910156 -40 -40 s 17.910156 -40 40 -40 m 0 -3 c -23.710938 0 -43 19.289062 -43 43 s 19.289062 43 43 43 s 43 -19.289062 43 -43 s -19.289062 -43 -43 -43 z m 0 0"/>
+            <path d="m 72 36 c 22.089844 0 40 17.910156 40 40 s -17.910156 40 -40 40 s -40 -17.910156 -40 -40 s 17.910156 -40 40 -40 m 0 -3 c -23.710938 0 -43 19.289062 -43 43 s 19.289062 43 43 43 s 43 -19.289062 43 -43 s -19.289062 -43 -43 -43 z m 0 0"/>
         </g>
         <clipPath id="j">
-            <path d="m 0 0 h 88 v 72 h -88 z m 0 0"/>
+            <path d="m 0 0 h 90 v 72 h -90 z m 0 0"/>
         </clipPath>
         <clipPath id="k">
-            <path d="m 36 44 h 90 v 84 h -90 z m 0 0"/>
+            <path d="m 38 44 h 90 v 84 h -90 z m 0 0"/>
         </clipPath>
         <clipPath id="l">
-            <path d="m 0 0 h 88 v 72 h -88 z m 0 0"/>
+            <path d="m 0 0 h 90 v 72 h -90 z m 0 0"/>
         </clipPath>
         <clipPath id="m">
-            <path d="m 36 44 h 90 v 84 h -90 z m 0 0"/>
+            <path d="m 38 44 h 90 v 84 h -90 z m 0 0"/>
         </clipPath>
         <clipPath id="n">
-            <path d="m 0 0 h 76 v 84 h -76 z m 0 0"/>
+            <path d="m 0 0 h 78 v 84 h -78 z m 0 0"/>
         </clipPath>
         <clipPath id="o">
-            <path d="m 48 32 h 80 v 90 h -80 z m 0 0"/>
+            <path d="m 50 32 h 78 v 90 h -78 z m 0 0"/>
         </clipPath>
         <clipPath id="p">
-            <path d="m 36 0 h 90 v 72 h -90 z m 0 0"/>
+            <path d="m 38 0 h 90 v 72 h -90 z m 0 0"/>
         </clipPath>
         <clipPath id="q">
-            <path d="m 0 44 h 88 v 84 h -88 z m 0 0"/>
+            <path d="m 0 44 h 90 v 84 h -90 z m 0 0"/>
         </clipPath>
         <clipPath id="r">
-            <path d="m 48 0 h 80 v 84 h -80 z m 0 0"/>
+            <path d="m 50 0 h 78 v 84 h -78 z m 0 0"/>
         </clipPath>
         <clipPath id="s">
-            <path d="m 0 32 h 76 v 90 h -76 z m 0 0"/>
+            <path d="m 0 32 h 78 v 90 h -78 z m 0 0"/>
         </clipPath>
         <clipPath id="t">
             <path d="m 0 0 h 128 v 128 h -128 z m 0 0"/>
@@ -83,7 +83,7 @@
             <rect height="152" width="192"/>
         </clipPath>
         <g id="w" clip-path="url(#v)">
-            <path d="m 70 106 c -7.179688 0 -13 -5.246094 -13 -12.425781 v -36 c 0 -7.179688 5.820312 -12.574219 13 -12.574219 s 13 5.394531 13 12.574219 v 36 c 0 7.179687 -5.820312 12.425781 -13 12.425781 z m 0 0"/>
+            <path d="m 72 106 c -7.179688 0 -13 -5.246094 -13 -12.425781 v -36 c 0 -7.179688 5.820312 -12.574219 13 -12.574219 s 13 5.394531 13 12.574219 v 36 c 0 7.179687 -5.820312 12.425781 -13 12.425781 z m 0 0"/>
         </g>
         <clipPath id="x">
             <path d="m 0 0 h 128 v 128 h -128 z m 0 0"/>
@@ -97,7 +97,7 @@
             <rect height="152" width="192"/>
         </clipPath>
         <g id="A" clip-path="url(#z)">
-            <path d="m 70 30 l -6 -10 h 12 z m 0 0"/>
+            <path d="m 72 30 l -6 -10 h 12 z m 0 0"/>
         </g>
         <clipPath id="B">
             <rect height="128" width="128"/>
@@ -111,62 +111,62 @@
                     <g clip-path="url(#B)">
                         <path d="m 115.988281 56.003906 l 4.011719 49.996094 c 0.273438 4.328125 -3.785156 10 -8.011719 10 h -95.988281 c -4.226562 0 -8.273438 -5.679688 -8 -10 l 4.011719 -49.996094 c 2.921875 -33.996094 22.933593 -48.003906 51.972656 -48.003906 s 48.109375 18.007812 52.003906 48.003906 z m 0 0" fill="url(#b)"/>
                         <path d="m 115.988281 52.003906 l 4 51.996094 c 0.269531 4.332031 -3.773437 8 -8 8 h -95.976562 c -4.226563 0 -8.269531 -3.679688 -8 -8 l 4 -51.996094 c 2.921875 -33.996094 22.933593 -48.003906 51.972656 -48.003906 s 48.109375 18.007812 52.003906 48.003906 z m 0 0" fill="#99c1f1"/>
-                        <path d="m 102 58 c 0 22.089844 -17.910156 40 -40 40 s -40 -17.910156 -40 -40 s 17.910156 -40 40 -40 s 40 17.910156 40 40 z m 0 0" fill="#ffffff"/>
+                        <path d="m 104 58 c 0 22.089844 -17.910156 40 -40 40 s -40 -17.910156 -40 -40 s 17.910156 -40 40 -40 s 40 17.910156 40 40 z m 0 0" fill="#ffffff"/>
                         <g clip-path="url(#f)">
                             <g mask="url(#g)">
                                 <use transform="matrix(1 0 0 1 -8 -16)" xlink:href="#i"/>
                             </g>
                         </g>
-                        <path d="m 62 18 c 22.089844 0 40 17.910156 40 40 s -17.910156 40 -40 40 s -40 -17.910156 -40 -40 s 17.910156 -40 40 -40 m 0 -3 c -23.710938 0 -43 19.289062 -43 43 s 19.289062 43 43 43 s 43 -19.289062 43 -43 s -19.289062 -43 -43 -43 z m 0 0" fill="#62a0ea"/>
-                        <path d="m -292 188 v 8.230469" fill="none" stroke="#62a0ea" stroke-miterlimit="10" stroke-width="3" transform="matrix(1 0 0 1 354 -172)"/>
-                        <path d="m -292 263.769531 v 8.230469" fill="none" stroke="#62a0ea" stroke-miterlimit="10" stroke-width="3" transform="matrix(1 0 0 1 354 -172)"/>
-                        <path d="m -250 230 h -8.230469" fill="none" stroke="#62a0ea" stroke-miterlimit="10" stroke-width="3" transform="matrix(1 0 0 1 354 -172)"/>
-                        <path d="m -325.769531 230 h -8.230469" fill="none" stroke="#62a0ea" stroke-miterlimit="10" stroke-width="3" transform="matrix(1 0 0 1 354 -172)"/>
-                        <path d="m -292 188 v 8.230469" fill="none" stroke="#62a0ea" stroke-miterlimit="10" stroke-width="3" transform="matrix(1 0 0 1 354 -172)"/>
-                        <path d="m -292 263.769531 v 8.230469" fill="none" stroke="#62a0ea" stroke-miterlimit="10" stroke-width="3" transform="matrix(1 0 0 1 354 -172)"/>
+                        <path d="m 64 18 c 22.089844 0 40 17.910156 40 40 s -17.910156 40 -40 40 s -40 -17.910156 -40 -40 s 17.910156 -40 40 -40 m 0 -3 c -23.710938 0 -43 19.289062 -43 43 s 19.289062 43 43 43 s 43 -19.289062 43 -43 s -19.289062 -43 -43 -43 z m 0 0" fill="#62a0ea"/>
+                        <path d="m -292 188 v 8.230469" fill="none" stroke="#62a0ea" stroke-miterlimit="10" stroke-width="3" transform="matrix(1 0 0 1 356 -172)"/>
+                        <path d="m -292 263.769531 v 8.230469" fill="none" stroke="#62a0ea" stroke-miterlimit="10" stroke-width="3" transform="matrix(1 0 0 1 356 -172)"/>
+                        <path d="m -250 230 h -8.230469" fill="none" stroke="#62a0ea" stroke-miterlimit="10" stroke-width="3" transform="matrix(1 0 0 1 356 -172)"/>
+                        <path d="m -325.769531 230 h -8.230469" fill="none" stroke="#62a0ea" stroke-miterlimit="10" stroke-width="3" transform="matrix(1 0 0 1 356 -172)"/>
+                        <path d="m -292 188 v 8.230469" fill="none" stroke="#62a0ea" stroke-miterlimit="10" stroke-width="3" transform="matrix(1 0 0 1 356 -172)"/>
+                        <path d="m -292 263.769531 v 8.230469" fill="none" stroke="#62a0ea" stroke-miterlimit="10" stroke-width="3" transform="matrix(1 0 0 1 356 -172)"/>
                         <g clip-path="url(#j)">
-                            <path d="m -313 193.628906 l 4.109375 7.121094" fill="none" stroke="#62a0ea" stroke-miterlimit="10" stroke-width="3" transform="matrix(1 0 0 1 354 -172)"/>
+                            <path d="m -313 193.628906 l 4.109375 7.121094" fill="none" stroke="#62a0ea" stroke-miterlimit="10" stroke-width="3" transform="matrix(1 0 0 1 356 -172)"/>
                         </g>
                         <g clip-path="url(#k)">
-                            <path d="m -275.109375 259.25 l 4.109375 7.121094" fill="none" stroke="#62a0ea" stroke-miterlimit="10" stroke-width="3" transform="matrix(1 0 0 1 354 -172)"/>
+                            <path d="m -275.109375 259.25 l 4.109375 7.121094" fill="none" stroke="#62a0ea" stroke-miterlimit="10" stroke-width="3" transform="matrix(1 0 0 1 356 -172)"/>
                         </g>
                         <g clip-path="url(#l)">
-                            <path d="m -313 193.628906 l 4.109375 7.121094" fill="none" stroke="#62a0ea" stroke-miterlimit="10" stroke-width="3" transform="matrix(1 0 0 1 354 -172)"/>
+                            <path d="m -313 193.628906 l 4.109375 7.121094" fill="none" stroke="#62a0ea" stroke-miterlimit="10" stroke-width="3" transform="matrix(1 0 0 1 356 -172)"/>
                         </g>
                         <g clip-path="url(#m)">
-                            <path d="m -275.109375 259.25 l 4.109375 7.121094" fill="none" stroke="#62a0ea" stroke-miterlimit="10" stroke-width="3" transform="matrix(1 0 0 1 354 -172)"/>
+                            <path d="m -275.109375 259.25 l 4.109375 7.121094" fill="none" stroke="#62a0ea" stroke-miterlimit="10" stroke-width="3" transform="matrix(1 0 0 1 356 -172)"/>
                         </g>
                         <g clip-path="url(#n)">
-                            <path d="m -328.371094 209 l 7.121094 4.109375" fill="none" stroke="#62a0ea" stroke-miterlimit="10" stroke-width="3" transform="matrix(1 0 0 1 354 -172)"/>
+                            <path d="m -328.371094 209 l 7.121094 4.109375" fill="none" stroke="#62a0ea" stroke-miterlimit="10" stroke-width="3" transform="matrix(1 0 0 1 356 -172)"/>
                         </g>
                         <g clip-path="url(#o)">
-                            <path d="m -262.75 246.890625 l 7.121094 4.109375" fill="none" stroke="#62a0ea" stroke-miterlimit="10" stroke-width="3" transform="matrix(1 0 0 1 354 -172)"/>
+                            <path d="m -262.75 246.890625 l 7.121094 4.109375" fill="none" stroke="#62a0ea" stroke-miterlimit="10" stroke-width="3" transform="matrix(1 0 0 1 356 -172)"/>
                         </g>
                         <g clip-path="url(#p)">
-                            <path d="m -271 193.628906 l -4.109375 7.121094" fill="none" stroke="#62a0ea" stroke-miterlimit="10" stroke-width="3" transform="matrix(1 0 0 1 354 -172)"/>
+                            <path d="m -271 193.628906 l -4.109375 7.121094" fill="none" stroke="#62a0ea" stroke-miterlimit="10" stroke-width="3" transform="matrix(1 0 0 1 356 -172)"/>
                         </g>
                         <g clip-path="url(#q)">
-                            <path d="m -308.890625 259.25 l -4.109375 7.121094" fill="none" stroke="#62a0ea" stroke-miterlimit="10" stroke-width="3" transform="matrix(1 0 0 1 354 -172)"/>
+                            <path d="m -308.890625 259.25 l -4.109375 7.121094" fill="none" stroke="#62a0ea" stroke-miterlimit="10" stroke-width="3" transform="matrix(1 0 0 1 356 -172)"/>
                         </g>
                         <g clip-path="url(#r)">
-                            <path d="m -255.628906 209 l -7.121094 4.109375" fill="none" stroke="#62a0ea" stroke-miterlimit="10" stroke-width="3" transform="matrix(1 0 0 1 354 -172)"/>
+                            <path d="m -255.628906 209 l -7.121094 4.109375" fill="none" stroke="#62a0ea" stroke-miterlimit="10" stroke-width="3" transform="matrix(1 0 0 1 356 -172)"/>
                         </g>
                         <g clip-path="url(#s)">
-                            <path d="m -321.25 246.890625 l -7.121094 4.109375" fill="none" stroke="#62a0ea" stroke-miterlimit="10" stroke-width="3" transform="matrix(1 0 0 1 354 -172)"/>
+                            <path d="m -321.25 246.890625 l -7.121094 4.109375" fill="none" stroke="#62a0ea" stroke-miterlimit="10" stroke-width="3" transform="matrix(1 0 0 1 356 -172)"/>
                         </g>
                         <g clip-path="url(#t)">
                             <g mask="url(#u)">
                                 <use transform="matrix(1 0 0 1 -8 -16)" xlink:href="#w"/>
                             </g>
                         </g>
-                        <path d="m 62 89 c -7.179688 0 -13 -5.246094 -13 -12.425781 v -36 c 0 -7.179688 5.820312 -12.574219 13 -12.574219 s 13 5.394531 13 12.574219 v 36 c 0 7.179687 -5.820312 12.425781 -13 12.425781 z m 0 0" fill="#deddda"/>
-                        <path d="m 62 28 v 61 c 7.179688 0 13 -5.246094 13 -12.425781 v -36 c 0 -7.179688 -5.820312 -12.574219 -13 -12.574219 z m 0 0" fill="#c0bfbc"/>
+                        <path d="m 64 89 c -7.179688 0 -13 -5.246094 -13 -12.425781 v -36 c 0 -7.179688 5.820312 -12.574219 13 -12.574219 s 13 5.394531 13 12.574219 v 36 c 0 7.179687 -5.820312 12.425781 -13 12.425781 z m 0 0" fill="#deddda"/>
+                        <path d="m 64 28 v 61 c 7.179688 0 13 -5.246094 13 -12.425781 v -36 c 0 -7.179688 -5.820312 -12.574219 -13 -12.574219 z m 0 0" fill="#c0bfbc"/>
                         <g clip-path="url(#x)">
                             <g mask="url(#y)">
                                 <use transform="matrix(1 0 0 1 -8 -16)" xlink:href="#A"/>
                             </g>
                         </g>
-                        <path d="m 62 13 l -6 -10 h 12 z m 0 0" fill="#f66151"/>
+                        <path d="m 64 13 l -6 -10 h 12 z m 0 0" fill="#f66151"/>
                     </g>
                 </g>
             </g>
@@ -189,38 +189,38 @@
     </defs>
     <path d="m 115.988281 56.003906 l 4.011719 49.996094 c 0.273438 4.328125 -3.785156 10 -8.011719 10 h -95.988281 c -4.226562 0 -8.273438 -5.679688 -8 -10 l 4.011719 -49.996094 c 2.921875 -33.996094 22.933593 -48.003906 51.972656 -48.003906 s 48.109375 18.007812 52.003906 48.003906 z m 0 0" fill="url(#b)"/>
     <path d="m 115.988281 52.003906 l 4 51.996094 c 0.269531 4.332031 -3.773437 8 -8 8 h -95.976562 c -4.226563 0 -8.269531 -3.679688 -8 -8 l 4 -51.996094 c 2.921875 -33.996094 22.933593 -48.003906 51.972656 -48.003906 s 48.109375 18.007812 52.003906 48.003906 z m 0 0" fill="#99c1f1"/>
-    <path d="m 102 58 c 0 22.089844 -17.910156 40 -40 40 s -40 -17.910156 -40 -40 s 17.910156 -40 40 -40 s 40 17.910156 40 40 z m 0 0" fill="#ffffff"/>
+    <path d="m 104 58 c 0 22.089844 -17.910156 40 -40 40 s -40 -17.910156 -40 -40 s 17.910156 -40 40 -40 s 40 17.910156 40 40 z m 0 0" fill="#ffffff"/>
     <g mask="url(#c)">
         <use transform="matrix(1 0 0 1 -8 -16)" xlink:href="#i"/>
     </g>
-    <path d="m 62 18 c 22.089844 0 40 17.910156 40 40 s -17.910156 40 -40 40 s -40 -17.910156 -40 -40 s 17.910156 -40 40 -40 m 0 -3 c -23.710938 0 -43 19.289062 -43 43 s 19.289062 43 43 43 s 43 -19.289062 43 -43 s -19.289062 -43 -43 -43 z m 0 0" fill="#62a0ea"/>
+    <path d="m 64 18 c 22.089844 0 40 17.910156 40 40 s -17.910156 40 -40 40 s -40 -17.910156 -40 -40 s 17.910156 -40 40 -40 m 0 -3 c -23.710938 0 -43 19.289062 -43 43 s 19.289062 43 43 43 s 43 -19.289062 43 -43 s -19.289062 -43 -43 -43 z m 0 0" fill="#62a0ea"/>
     <g fill="none" stroke="#62a0ea" stroke-miterlimit="10" stroke-width="3">
-        <path d="m 62 16 v 8.230469"/>
-        <path d="m 62 91.769531 v 8.230469"/>
-        <path d="m 104 58 h -8.230469"/>
-        <path d="m 28.230469 58 h -8.230469"/>
-        <path d="m 62 16 v 8.230469"/>
-        <path d="m 62 91.769531 v 8.230469"/>
-        <path d="m 41 21.628906 l 4.109375 7.121094"/>
-        <path d="m 78.890625 87.25 l 4.109375 7.121094"/>
-        <path d="m 41 21.628906 l 4.109375 7.121094"/>
-        <path d="m 78.890625 87.25 l 4.109375 7.121094"/>
-        <path d="m 25.628906 37 l 7.121094 4.109375"/>
-        <path d="m 91.25 74.890625 l 7.121094 4.109375"/>
-        <path d="m 83 21.628906 l -4.109375 7.121094"/>
-        <path d="m 45.109375 87.25 l -4.109375 7.121094"/>
-        <path d="m 98.371094 37 l -7.121094 4.109375"/>
-        <path d="m 32.75 74.890625 l -7.121094 4.109375"/>
+        <path d="m 64 16 v 8.230469"/>
+        <path d="m 64 91.769531 v 8.230469"/>
+        <path d="m 106 58 h -8.230469"/>
+        <path d="m 30.230469 58 h -8.230469"/>
+        <path d="m 64 16 v 8.230469"/>
+        <path d="m 64 91.769531 v 8.230469"/>
+        <path d="m 43 21.628906 l 4.109375 7.121094"/>
+        <path d="m 80.890625 87.25 l 4.109375 7.121094"/>
+        <path d="m 43 21.628906 l 4.109375 7.121094"/>
+        <path d="m 80.890625 87.25 l 4.109375 7.121094"/>
+        <path d="m 27.628906 37 l 7.121094 4.109375"/>
+        <path d="m 93.25 74.890625 l 7.121094 4.109375"/>
+        <path d="m 85 21.628906 l -4.109375 7.121094"/>
+        <path d="m 47.109375 87.25 l -4.109375 7.121094"/>
+        <path d="m 100.371094 37 l -7.121094 4.109375"/>
+        <path d="m 34.75 74.890625 l -7.121094 4.109375"/>
     </g>
     <g mask="url(#d)">
         <use transform="matrix(1 0 0 1 -8 -16)" xlink:href="#w"/>
     </g>
-    <path d="m 62 89 c -7.179688 0 -13 -5.246094 -13 -12.425781 v -36 c 0 -7.179688 5.820312 -12.574219 13 -12.574219 s 13 5.394531 13 12.574219 v 36 c 0 7.179687 -5.820312 12.425781 -13 12.425781 z m 0 0" fill="#deddda"/>
-    <path d="m 62 28 v 61 c 7.179688 0 13 -5.246094 13 -12.425781 v -36 c 0 -7.179688 -5.820312 -12.574219 -13 -12.574219 z m 0 0" fill="#c0bfbc"/>
+    <path d="m 64 89 c -7.179688 0 -13 -5.246094 -13 -12.425781 v -36 c 0 -7.179688 5.820312 -12.574219 13 -12.574219 s 13 5.394531 13 12.574219 v 36 c 0 7.179687 -5.820312 12.425781 -13 12.425781 z m 0 0" fill="#deddda"/>
+    <path d="m 64 28 v 61 c 7.179688 0 13 -5.246094 13 -12.425781 v -36 c 0 -7.179688 -5.820312 -12.574219 -13 -12.574219 z m 0 0" fill="#c0bfbc"/>
     <g mask="url(#e)">
         <use transform="matrix(1 0 0 1 -8 -16)" xlink:href="#A"/>
     </g>
-    <path d="m 62 13 l -6 -10 h 12 z m 0 0" fill="#f66151"/>
+    <path d="m 64 13 l -6 -10 h 12 z m 0 0" fill="#f66151"/>
     <g mask="url(#D)">
         <g clip-path="url(#H)">
             <g mask="url(#E)">
