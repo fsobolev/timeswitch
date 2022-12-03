@@ -28,7 +28,7 @@
 #
 # SPDX-License-Identifier: MIT
 
-from gi.repository import Adw, Gtk, GLib, Gio
+from gi.repository import Adw, Gtk, GLib
 from .timer import Timer
 import json
 import os
@@ -57,9 +57,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         if not os.path.isdir(self.config_dir):
             os.makedirs(self.config_dir)
         self.config_file_path = self.config_dir + '/config.json'
-        self.commands_list = self.load_commands()
-
-        self.settings = Gio.Settings.new('io.github.fsobolev.TimeSwitch')
+        (self.last_timer_value, self.commands_list) = self.load_config()
 
         self.build_ui()
 
@@ -127,7 +125,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.sec_spin = self.create_spinbutton(59)
         self.spins_box.append(self.sec_spin)
 
-        self.load_last_timer_state()
+        self.load_last_timer_value()
 
         # Buttons for faster timer increase
         self.grid = Gtk.Grid.new()
@@ -374,8 +372,8 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         spin.set_text('{0:0>2}'.format(spin.get_value_as_int()))
         return True
 
-    def load_last_timer_state(self):
-        (h, m, s) = self.settings.get_value('last-timer').unpack()
+    def load_last_timer_value(self):
+        (h, m, s) = self.last_timer_value
         self.hour_spin.set_value(h)
         self.min_spin.set_value(m)
         self.sec_spin.set_value(s)
@@ -430,20 +428,24 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
     def pass_warning(self, w, state, msg):
         msg.set_response_enabled('continue', state)
 
-    def load_commands(self):
+    def load_config(self):
         if os.path.exists(self.config_file_path):
             self.show_cmd_warning = False
             with open(self.config_file_path, 'r') as f:
                 data = json.load(f)
-                return data['commands']
+                if 'last-value' in data.keys():
+                    return (data['last-value'], data['commands'])
+                else:
+                    return ([0, 0, 0], data['commands'])
         else:
             self.show_cmd_warning = True
             return []
 
-    def save_commands(self):
+    def save_config(self):
         try:
             with open(self.config_file_path, 'w') as f:
-                data = {'commands': self.commands_list}
+                data = {'last-value': self.last_timer_value, \
+                    'commands': self.commands_list}
                 json.dump(data, f)
         except Exception as e:
             print("Can't save config file:")
@@ -489,7 +491,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
             dict = {'name': name, 'cmd': cmd}
             self.commands_list.append(dict)
             self.create_command(dict)
-            self.save_commands()
+            self.save_config()
 
     def create_command(self, command):
         self.commands_widgets['rows'].append(Adw.ActionRow.new())
@@ -564,7 +566,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
                 name, cmd, 1)
             self.commands_list[index]['name'] = name
             self.commands_list[index]['cmd'] = cmd
-            self.save_commands()
+            self.save_config()
 
     def remove_command(self, w, action_row):
         index = self.commands_widgets['rows'].index(action_row)
@@ -586,17 +588,19 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
             if len(self.commands_widgets['rows']) > 0:
                 self.commands_widgets['rows'][0].activate()
             self.disable_single_checkbutton()
-            self.save_commands()
+            self.save_config()
 
     def start_timer(self, w):
         if self.hour_spin.get_value_as_int() == \
                 self.min_spin.get_value_as_int() == \
                 self.sec_spin.get_value_as_int() == 0:
             return
-        self.settings.set_value('last-timer', GLib.Variant.new_tuple( \
-            GLib.Variant.new_int32(self.hour_spin.get_value_as_int()), \
-            GLib.Variant.new_int32(self.min_spin.get_value_as_int()), \
-            GLib.Variant.new_int32(self.sec_spin.get_value_as_int())))
+        self.last_timer_value = [ \
+            self.hour_spin.get_value_as_int(), \
+            self.min_spin.get_value_as_int(), \
+            self.sec_spin.get_value_as_int() \
+        ]
+        self.save_config()
         if self.action_poweroff_check.get_active():
             action = ('poweroff',)
         elif self.action_reboot_check.get_active():
