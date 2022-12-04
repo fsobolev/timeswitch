@@ -1,8 +1,8 @@
 # Time Switch
+![](https://github.com/fsobolev/timeswitch/raw/master/data/icons/hicolor/scalable/apps/io.github.fsobolev.TimeSwitch.svg)
+<br/>[<img src="https://flathub.org/assets/badges/flathub-badge-en.png" width=128px>](https://flathub.org/apps/details/io.github.fsobolev.TimeSwitch)
 
 Power off, reboot, suspend, send a notification or execute any command on timer.
-
-[<img src="https://flathub.org/assets/badges/flathub-badge-en.png" width=240px>](https://flathub.org/apps/details/io.github.fsobolev.TimeSwitch)
 
 <img src="data/screenshots/main.png" width=180px><img src="data/screenshots/command.png" width=180px><img src="data/screenshots/running.png" width=180px>
 
