@@ -439,7 +439,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
                     return ([0, 0, 0], data['commands'])
         else:
             self.show_cmd_warning = True
-            return []
+            return ([0, 0, 0], [])
 
     def save_config(self):
         try:
