@@ -50,6 +50,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.get_application().set_accels_for_action('window.close',
             ['<primary>q', '<primary>w'])
 
+        self.show_cmd_warning = True
         if os.getenv('XDG_CONFIG_HOME'):
             self.config_dir = os.getenv('XDG_CONFIG_HOME') + '/timeswitch'
         else:
@@ -429,17 +430,18 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         msg.set_response_enabled('continue', state)
 
     def load_config(self):
+        config_last_value = [0, 0, 0]
+        config_commands = []
         if os.path.exists(self.config_file_path):
-            self.show_cmd_warning = False
             with open(self.config_file_path, 'r') as f:
                 data = json.load(f)
                 if 'last-value' in data.keys():
-                    return (data['last-value'], data['commands'])
-                else:
-                    return ([0, 0, 0], data['commands'])
-        else:
-            self.show_cmd_warning = True
-            return ([0, 0, 0], [])
+                    config_last_value = data['last-value']
+                if 'commands' in data.keys():
+                    config_commands = data['commands']
+                    if len(config_commands) > 0:
+                        self.show_cmd_warning = False
+        return (config_last_value, config_commands)
 
     def save_config(self):
         try:
