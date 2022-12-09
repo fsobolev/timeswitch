@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-	<id>io.github.fsobolev.TimeSwitch</id>
-	<metadata_license>CC0-1.0</metadata_license>
-	<project_license>MIT</project_license>
+  <id>io.github.fsobolev.TimeSwitch</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>MIT</project_license>
   <name>Time Switch</name>
   <summary>Power off, reboot, suspend, send a notification or execute any command on timer.</summary>
-	<description>
-	  <p>Time Switch is a simple program that allows you to power off, reboot or suspend your system, send a notification (optionally with a sound signal) or execute any command on timer.</p>
-	  <p>The app is built for GNOME and uses LibAdwaita, but it works in any desktop environment.</p>
-	</description>
+  <description>
+    <p>Time Switch is a simple program that allows you to power off, reboot or suspend your system, send a notification (optionally with a sound signal) or execute any command on timer.</p>
+    <p>The app is built for GNOME and uses LibAdwaita, but it works in any desktop environment.</p>
+  </description>
   <launchable type="desktop-id">io.github.fsobolev.TimeSwitch.desktop</launchable>
   <url type="homepage">https://github.com/fsobolev/timeswitch</url>
   <url type="bugtracker">https://github.com/fsobolev/timeswitch/issues</url>
@@ -26,28 +26,28 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="2022.12.04" date="2022-12-04" type="stable">
+    <release type="stable" date="2022-12-04" version="2022.12.04">
       <description>
         <ul>
           <li>New icon, thanks @igor-dyatlov!</li>
         </ul>
       </description>
     </release>
-    <release version="2022.12.03" date="2022-12-03" type="stable">
+    <release type="stable" date="2022-12-03" version="2022.12.03">
       <description>
         <ul>
           <li>The app will now remember last used timer value.</li>
         </ul>
       </description>
     </release>
-    <release version="2022.11.15" date="2022-11-15" type="stable">
+    <release type="stable" date="2022-11-15" version="2022.11.15">
       <description>
         <ul>
           <li>Added Spanish translation (thanks to @DeltaVeintiuno)</li>
         </ul>
       </description>
     </release>
-    <release version="2022.11.12" date="2022-11-12" type="stable">
+    <release type="stable" date="2022-11-12" version="2022.11.12">
       <description>
         <ul>
           <li>The app can now execute user-defined commands</li>
@@ -55,7 +55,7 @@
         </ul>
       </description>
     </release>
-    <release version="2022.11.8" date="2022-11-08" type="stable">
+    <release type="stable" date="2022-11-08" version="2022.11.8">
       <description>
         <ul>
           <li>Added Swedish translation (thanks to @eson57)</li>
@@ -63,7 +63,7 @@
         </ul>
       </description>
     </release>
-    <release version="0.1.1" date="2022-11-06" type="stable">
+    <release type="stable" date="2022-11-06" version="0.1.1">
       <description>
         <ul>
           <li>Added Italian translation (thanks to @albanobattistella)</li>
@@ -72,9 +72,9 @@
         </ul>
       </description>
     </release>
-    <release version="0.1.0" date="2022-11-04" type="stable" />
+    <release type="stable" date="2022-11-04" version="0.1.0"/>
   </releases>
-  <content_rating type="oars-1.1" />
+  <content_rating type="oars-1.1"/>
   <supports>
     <control>pointing</control>
     <control>keyboard</control>
