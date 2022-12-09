@@ -26,6 +26,14 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release type="stable" date="2022-12-09" version="2022.12.09">
+      <description>
+        <ul>
+          <li>Added Dutch translation (thanks to @Vistaus)</li>
+          <li>Fixed a bug when the app was showing an empty window if there was no config file.</li>
+        </ul>
+      </description>
+    </release>
     <release type="stable" date="2022-12-04" version="2022.12.04">
       <description>
         <ul>
