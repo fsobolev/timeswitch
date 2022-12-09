@@ -1,0 +1,226 @@
+# Copyright (C) 2022 Fyodor Sobolev
+# This file is distributed under the same license as the timeswitch package.
+#
+# Heimen Stoffels <vistausss@fastmail.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: timeswitch\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-15 23:33+0300\n"
+"PO-Revision-Date: 2022-12-09 18:06+0100\n"
+"Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
+"Language-Team: Dutch\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 22.12.0\n"
+
+#: data/io.github.fsobolev.TimeSwitch.desktop.in:3
+#: data/io.github.fsobolev.TimeSwitch.appdata.xml.in:6
+msgid "Time Switch"
+msgstr "Tijdschakelaar"
+
+#: data/io.github.fsobolev.TimeSwitch.desktop.in:6
+#: data/io.github.fsobolev.TimeSwitch.appdata.xml.in:7
+msgid ""
+"Power off, reboot, suspend, send a notification or execute any command on "
+"timer."
+msgstr ""
+"Voer energie-acties uit, zoals uitschakelen en herstarten, toon een melding"
+" of voer een opdracht uit, allemaal op een zelfgekozen tijdstip."
+
+# Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/io.github.fsobolev.TimeSwitch.desktop.in:10
+msgid "timer;shutdown;poweroff;reboot;suspend;notification;prompt;cmd;command;"
+msgstr ""
+"tijdklok;timer;uitschakelen;herstarten;pauzestand;melding;keuze;vraag;cmd;opdr"
+"acht;commando;"
+
+#: data/io.github.fsobolev.TimeSwitch.appdata.xml.in:9
+msgid ""
+"Time Switch is a simple program that allows you to power off, reboot or "
+"suspend your system, send a notification (optionally with a sound signal) or "
+"execute any command on timer."
+msgstr ""
+"Voer energie-acties uit, zoals uitschakelen en herstarten, toon een melding"
+" (al dan niet met geluid) of voer een opdracht uit, allemaal op een"
+" zelfgekozen tijdstip."
+
+#: data/io.github.fsobolev.TimeSwitch.appdata.xml.in:10
+msgid ""
+"The app is built for GNOME and uses LibAdwaita, but it works in any desktop "
+"environment."
+msgstr ""
+"Deze toepassing is gemaakt voor GNOME en maakt gebruik van LibAdwaita, maar"
+" werkt op elke werkomgeving."
+
+#: data/io.github.fsobolev.TimeSwitch.appdata.xml.in:15
+msgid "Fyodor Sobolev"
+msgstr "Fyodor Sobolev"
+
+#: src/actions.py:84
+msgid "Timer has finished!"
+msgstr "De tijdschakelaar is geactiveerd!"
+
+#: src/timer.py:42
+msgid "Your device will be powered off in"
+msgstr "Uw apparaat wordt uitgeschakeld over"
+
+#: src/timer.py:44
+msgid "Your device will be rebooted in"
+msgstr "Uw apparaat wordt herstart over"
+
+#: src/timer.py:46
+msgid "Your device will be suspended in"
+msgstr "Uw apparaat wordt in de pauzestand gezet over"
+
+#: src/timer.py:48
+msgid "You will receive a notification in"
+msgstr "Er wordt een melding getoond over"
+
+#: src/timer.py:53
+msgid "The command <b>{}</b> will be executed in"
+msgstr "<b>{}</b> wordt uitgevoerd over"
+
+#: src/window.py:78
+msgid "About"
+msgstr "Over"
+
+# Translators: Short fot "minutes"
+#: src/window.py:139
+msgid "min"
+msgstr "min."
+
+# Translators: Short fot "seconds"
+#: src/window.py:139
+msgid "sec"
+msgstr "sec."
+
+#: src/window.py:154
+msgid "Reset"
+msgstr "Standaardwaarden"
+
+#: src/window.py:169
+msgid "Action"
+msgstr "Actie"
+
+#: src/window.py:174
+msgid "Power Off"
+msgstr "Uitschakelen"
+
+#: src/window.py:183
+msgid "Reboot"
+msgstr "Herstarten"
+
+#: src/window.py:192
+msgid "Suspend"
+msgstr "Pauzestand"
+
+#: src/window.py:201
+msgid "Notification"
+msgstr "Melding"
+
+#: src/window.py:213
+msgid "Notification settings"
+msgstr "Meldingsinstellingen"
+
+#: src/window.py:226
+msgid "Notification text"
+msgstr "Meldingstekst"
+
+#: src/window.py:230
+msgid "Play sound"
+msgstr "Geluid afspelen"
+
+#: src/window.py:241 src/window.py:263 src/window.py:459 src/window.py:534
+msgid "Command"
+msgstr "Opdracht"
+
+#: src/window.py:271
+msgid "Back"
+msgstr "Terug"
+
+#: src/window.py:288 src/window.py:467
+msgid "Add"
+msgstr "Toevoegen"
+
+#: src/window.py:300
+msgid "Start"
+msgstr "Starten"
+
+#: src/window.py:339
+msgid "Stop"
+msgstr "Stoppen"
+
+#: src/window.py:351
+msgid "You can close the window, the timer will work in the background."
+msgstr ""
+"De schakelaar wordt op de achtergrond geactiveerd. U kunt dit venster sluiten."
+
+# Translators: make sure to have a space in the end of the line.
+#: src/window.py:399
+msgid "They will be executed outside of flatpak sandbox. "
+msgstr "De opdrachten worden buiten de Flatpak-sandbox om uitgevoerd."
+
+#: src/window.py:402
+msgid "Warning"
+msgstr "Waarschuwing"
+
+# Translators: {} is used to pass "They will be executed outside of flatpak sandbox. "
+# in case the app is installed using flatpak. Make sure to have a space in front of it
+# (in the original text it's in the end of the first line)
+#: src/window.py:403
+msgid ""
+"Your commands will be executed as if they were executed on a command prompt. "
+"{}The app doesn't perform any checks whether a command was executed "
+"successfully or not. Be careful, do not enter commands whose result is "
+"unknown to you."
+msgstr ""
+"Uw opdrachten worden uitgevoerd zoals op de opdrachtregel. {}Deze toepassing"
+" voert nadien geen controle uit, dus let op welke opdrachten u invoert."
+
+#: src/window.py:404
+msgid "Continue"
+msgstr "Doorgaan"
+
+#: src/window.py:409
+msgid "I understand"
+msgstr "Ik begrijp het"
+
+#: src/window.py:449
+msgid "Add command"
+msgstr "Opdracht toevoegen"
+
+#: src/window.py:453 src/window.py:527
+msgid "Name"
+msgstr "Naam"
+
+#: src/window.py:466 src/window.py:542 src/window.py:564
+msgid "Cancel"
+msgstr "Annuleren"
+
+#: src/window.py:498 src/window.py:523
+msgid "Edit command"
+msgstr "Opdracht bewerken"
+
+#: src/window.py:505
+msgid "Remove command"
+msgstr "Opdracht verwijderen"
+
+#: src/window.py:543
+msgid "Apply"
+msgstr "Toepassen"
+
+#: src/window.py:561
+msgid "Remove command?"
+msgstr "Opdracht verwijderen?"
+
+#: src/window.py:562
+msgid "Are you sure you want to remove command \"{}\"?"
+msgstr "Weet u zeker dat u ‘{}’ wilt verwijderen?"
+
+#: src/window.py:565
+msgid "Remove"
+msgstr "Verwijderen"
