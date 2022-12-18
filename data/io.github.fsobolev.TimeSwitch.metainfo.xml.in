@@ -26,6 +26,14 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release type="stable" date="2022-12-18" version="2022.12.18">
+      <description>
+        <ul>
+          <li>The app will now remember last used action, including the command you used and whether notification should play sound.</li>
+          <li>Note: after this update the app will not restore saved timer value at the first start, but as soon as you run a timer the feature will work again.</li>
+        </ul>
+      </description>
+    </release>
     <release type="stable" date="2022-12-09" version="2022.12.09">
       <description>
         <ul>
