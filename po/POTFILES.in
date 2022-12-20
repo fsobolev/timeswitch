@@ -1,5 +1,5 @@
 data/io.github.fsobolev.TimeSwitch.desktop.in
-data/io.github.fsobolev.TimeSwitch.appdata.xml.in
+data/io.github.fsobolev.TimeSwitch.metainfo.xml.in
 data/io.github.fsobolev.TimeSwitch.gschema.xml
 src/actions.py
 src/main.py

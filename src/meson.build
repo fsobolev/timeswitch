@@ -30,7 +30,8 @@ timeswitch_sources = [
   'main.py',
   'window.py',
   'timer.py',
-  'actions.py'
+  'actions.py',
+  'player.py'
 ]
 
 install_data(timeswitch_sources, install_dir: moduledir)
