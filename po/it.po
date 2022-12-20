@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-12-20 21:29+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2022-12-20 20:22+0100\n"
 "Last-Translator: Albano Battistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <LL@li.org>\n"
 "Language: it\n"
@@ -88,7 +88,7 @@ msgstr "Il comando <b>{}</b> verrà eseguito in"
 
 #: src/timer.py:85
 msgid "The notification has been sent."
-msgstr ""
+msgstr "La notifica è stata inviata."
 
 #: src/window.py:78 src/window.py:79
 msgid "About"
@@ -142,7 +142,7 @@ msgstr "Riproduci suono"
 
 #: src/window.py:243
 msgid "Until stopped"
-msgstr ""
+msgstr "Finché non sia fermato"
 
 #: src/window.py:241 src/window.py:263 src/window.py:459 src/window.py:534
 #: src/window.py:257 src/window.py:279 src/window.py:503 src/window.py:578
