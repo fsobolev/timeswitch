@@ -38,6 +38,11 @@ class Timer:
         self.duration = self.h * 3600 + self.m * 60 + self.s
         self.action = action[0]
         self.desc_label = desc_label
+
+        # Notification
+        self.sound_repeat = False
+        self.player_cancellable = Gio.Cancellable.new()
+
         if self.action == 'poweroff':
             self.desc_label.set_text(_('Your device will be powered off in'))
         elif self.action == 'reboot':
@@ -48,6 +53,8 @@ class Timer:
             self.desc_label.set_text(_('You will receive a notification in'))
             self.notification_text = action[1]
             self.play_sound = action[2]
+            if action[2] == 2:
+                self.sound_repeat = True
         elif self.action == 'command':
             self.desc_label.set_markup(_(
                 'The command <b>{}</b> will be executed in').format(action[1]))
@@ -59,21 +66,25 @@ class Timer:
 
     def run(self):
         if self.stop: return False
+        self.s = self.duration
+        self.h = self.s // 3600
+        self.s %= 3600
+        self.m = self.s // 60
+        self.s %= 60
+        self.timer_label.set_text(
+            str(self.h) +
+            ':{0:0>2}'.format(self.m) +
+            ':{0:0>2}'.format(self.s))
         if self.duration > 0:
-            self.s = self.duration
-            self.h = self.s // 3600
-            self.s %= 3600
-            self.m = self.s // 60
-            self.s %= 60
-            self.timer_label.set_text(
-                str(self.h) +
-                ':{0:0>2}'.format(self.m) +
-                ':{0:0>2}'.format(self.s))
             self.duration -= 1
             return True
         else:
             self.act()
-            self.finish_fn()
+            if self.action == 'notification':
+                self.desc_label.set_text( \
+                    _('The notification has been sent'))
+            if not self.sound_repeat:
+                self.finish_fn()
             return False
 
     def act(self):
@@ -84,6 +95,11 @@ class Timer:
         elif self.action == 'suspend':
             action_suspend()
         elif self.action == 'notification':
-            action_notify(self.notification_text, self.play_sound)
+            action_notify(self.notification_text, self.play_sound, \
+                self.sound_repeat, self.player_cancellable)
         elif self.action == 'command':
             action_command(self.cmd)
+
+    def stop_timer(self):
+        self.stop = True
+        self.player_cancellable.cancel()

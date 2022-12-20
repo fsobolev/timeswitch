@@ -32,7 +32,8 @@ import os
 import subprocess
 import gi
 gi.require_version('GSound', '1.0')
-from gi.repository import Gio, GLib, GSound
+from gi.repository import Gio, GLib
+from .player import Player
 
 
 def action_poweroff():
@@ -80,17 +81,15 @@ def action_suspend():
         --dest=org.freedesktop.login1 /org/freedesktop/login1 \
         "org.freedesktop.login1.Manager.Suspend" boolean:true')
 
-def action_notify(text, play_sound):
+def action_notify(text, play_sound, sound_repeat, cancellable):
     if text == '': text = _('Timer has finished!')
     notification = Gio.Notification.new('Time Switch')
     notification.set_body(text)
-    notification.set_priority(Gio.NotificationPriority.HIGH)
+    notification.set_priority(Gio.NotificationPriority.URGENT)
     Gio.Application.get_default().send_notification(None, notification)
     if play_sound:
-        gsound = GSound.Context()
-        gsound.init()
-        gsound.play_full({GSound.ATTR_EVENT_ID: 'complete',
-            GSound.ATTR_MEDIA_ROLE: 'alarm'})
+        player = Player(sound_repeat, cancellable)
+        player.play()
 
 def action_command(cmd):
     if os.getenv('FLATPAK_ID'):
