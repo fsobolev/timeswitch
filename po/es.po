@@ -91,7 +91,7 @@ msgstr "El comando <b>{}</b> se ejecutará en"
 
 #: src/timer.py:85
 msgid "The notification has been sent."
-msgstr "La notificación ha sido enviado"
+msgstr "La notificación ha sido enviada"
 
 #: src/window.py:78 src/window.py:79
 msgid "About"
