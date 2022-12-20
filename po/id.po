@@ -163,7 +163,7 @@ msgstr "Anda bisa menutup jendela, pewaktu akan berjalan di latar belakang"
 # Translators: make sure to have a space in the end of the line.
 #: src/window.py:399
 msgid "They will be executed outside of flatpak sandbox. "
-msgstr "Ini akan dijalankan di luar isolasi flatpak."
+msgstr "Ini akan dijalankan di luar isolasi flatpak. "
 
 #: src/window.py:402
 msgid "Warning"
