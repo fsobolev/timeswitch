@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-12-20 21:29+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2022-12-20 20:26+0100\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: Dutch\n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:3
 #: data/io.github.fsobolev.TimeSwitch.appdata.xml.in:6
@@ -91,7 +91,7 @@ msgstr "<b>{}</b> wordt uitgevoerd over"
 
 #: src/timer.py:85
 msgid "The notification has been sent."
-msgstr ""
+msgstr "De melding is verstuurd."
 
 #: src/window.py:78 src/window.py:79
 msgid "About"
@@ -145,7 +145,7 @@ msgstr "Geluid afspelen"
 
 #: src/window.py:243
 msgid "Until stopped"
-msgstr ""
+msgstr "Tot moment van afbreken"
 
 #: src/window.py:241 src/window.py:263 src/window.py:459 src/window.py:534
 #: src/window.py:257 src/window.py:279 src/window.py:503 src/window.py:578
