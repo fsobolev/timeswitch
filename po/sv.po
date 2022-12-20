@@ -1,14 +1,14 @@
 # Swedish translation for Time Switch.
-# Copyright (C) 2022 Fyodor Sobolev
-# This file is distributed under the same license as the timeswitch package.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
 # Åke Engelbrektson <eson@svenskasprakfiler.se>, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-20 21:29+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2022-12-20 21:16+0300\n"
+"PO-Revision-Date: 2022-12-20 20:54+0100\n"
 "Last-Translator: Åke Engelbrektson <eson@svenskasprakfiler.se>\n"
 "Language-Team: \n"
 "Language: sv\n"
@@ -19,13 +19,11 @@ msgstr ""
 "X-Generator: Poedit 3.1.1\n"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:3
-#: data/io.github.fsobolev.TimeSwitch.appdata.xml.in:6
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:6
 msgid "Time Switch"
 msgstr "Time Switch"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:6
-#: data/io.github.fsobolev.TimeSwitch.appdata.xml.in:7
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:7
 msgid ""
 "Power off, reboot, suspend, send a notification or execute any command on "
@@ -35,13 +33,11 @@ msgstr ""
 "exekverbart kommando"
 
 # "Stäng av, starta om, vänteläge eller sänd ett tidsinställt meddelande."
-#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:10
 msgid "timer;shutdown;poweroff;reboot;suspend;notification;prompt;cmd;command;"
 msgstr "tidur;stäng av;starta om;vänteläge;meddelande;cmd;kommando;"
 
 # "tidur;stäng av;starta om;vänteläge;meddelande;"
-#: data/io.github.fsobolev.TimeSwitch.appdata.xml.in:9
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:9
 msgid ""
 "Time Switch is a simple program that allows you to power off, reboot or "
@@ -55,7 +51,6 @@ msgstr ""
 # "Time Switch är ett enkelt program som låter dig stänga av, starta om eller "
 # "försätta ditt system i vänteläge, eller skicka ett tidsinställt meddelande "
 # "(valfritt med ljudsignal)."
-#: data/io.github.fsobolev.TimeSwitch.appdata.xml.in:10
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:10
 msgid ""
 "The app is built for GNOME and uses LibAdwaita, but it works in any desktop "
@@ -64,131 +59,127 @@ msgstr ""
 "Appen är byggd för GNOME och använder LibAdwaita, men den fungerar i alla "
 "skrivbordsmiljöer."
 
-#: data/io.github.fsobolev.TimeSwitch.appdata.xml.in:15
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:15
 msgid "Fyodor Sobolev"
 msgstr "Fyodor Sobolev"
 
-#: src/actions.py:84 src/actions.py:85
+#: src/actions.py:85
 msgid "Timer has finished!"
 msgstr "Tiduret är klart!"
 
-#: src/timer.py:42 src/timer.py:47
+#: src/timer.py:47
 msgid "Your device will be powered off in"
 msgstr "Din enhet stängs av om"
 
-#: src/timer.py:44 src/timer.py:49
+#: src/timer.py:49
 msgid "Your device will be rebooted in"
 msgstr "Din enhet startas om, om"
 
-#: src/timer.py:46 src/timer.py:51
+#: src/timer.py:51
 msgid "Your device will be suspended in"
 msgstr "Din enhet försätts i vänteläge om"
 
-#: src/timer.py:48 src/timer.py:53
+#: src/timer.py:53
 msgid "You will receive a notification in"
 msgstr "Du får ett meddelande om"
 
-#: src/timer.py:53 src/timer.py:60
+#: src/timer.py:60
 msgid "The command <b>{}</b> will be executed in"
 msgstr "Kommandot <b>{}</b> körs om"
 
 #: src/timer.py:85
 msgid "The notification has been sent."
-msgstr ""
+msgstr "Meddelandet har skickats."
 
-#: src/window.py:78 src/window.py:79
+#: src/window.py:79
 msgid "About"
 msgstr "Om"
 
-#. Translators: Short fot "minutes"
-#: src/window.py:139 src/window.py:142
+#: src/window.py:142
 msgid "min"
 msgstr "min"
 
-#. Translators: Short for "seconds"
-#: src/window.py:139 src/window.py:142
+#: src/window.py:142
 msgid "sec"
 msgstr "sek"
 
-#: src/window.py:154 src/window.py:157
+#: src/window.py:157
 msgid "Reset"
 msgstr "Återställ"
 
-#: src/window.py:169 src/window.py:172
+#: src/window.py:172
 msgid "Action"
 msgstr "Åtgärd"
 
-#: src/window.py:174 src/window.py:177
+#: src/window.py:177
 msgid "Power Off"
 msgstr "Stäng av"
 
-#: src/window.py:183 src/window.py:186
+#: src/window.py:186
 msgid "Reboot"
 msgstr "Starta om"
 
-#: src/window.py:192 src/window.py:195
+#: src/window.py:195
 msgid "Suspend"
 msgstr "Vänteläge"
 
-#: src/window.py:201 src/window.py:204
+#: src/window.py:204
 msgid "Notification"
 msgstr "Meddelande"
 
-#: src/window.py:213 src/window.py:216
+#: src/window.py:216
 msgid "Notification settings"
 msgstr "Meddelandeinställningar"
 
-#: src/window.py:226 src/window.py:230
+#: src/window.py:230
 msgid "Notification text"
 msgstr "Meddelandetext"
 
-#: src/window.py:230 src/window.py:234
+#: src/window.py:234
 msgid "Play sound"
 msgstr "Spela ljudsignal"
 
 #: src/window.py:243
 msgid "Until stopped"
-msgstr ""
+msgstr "Tills stoppad"
 
-#: src/window.py:241 src/window.py:263 src/window.py:459 src/window.py:534
 #: src/window.py:257 src/window.py:279 src/window.py:503 src/window.py:578
 msgid "Command"
 msgstr "Kommando"
 
-#: src/window.py:271 src/window.py:287
+#: src/window.py:287
 msgid "Back"
 msgstr "Tillbaka"
 
-#: src/window.py:288 src/window.py:467 src/window.py:304 src/window.py:511
+#: src/window.py:304 src/window.py:511
 msgid "Add"
 msgstr "Lägg till"
 
-#: src/window.py:300 src/window.py:329
+#: src/window.py:329
 msgid "Start"
 msgstr "Start"
 
-#: src/window.py:339 src/window.py:368
+#: src/window.py:368
 msgid "Stop"
 msgstr "Stopp"
 
-#: src/window.py:351 src/window.py:380
+#: src/window.py:380
 msgid "You can close the window, the timer will work in the background."
 msgstr "Du kan stänga fönstret, tiduret arbetar i bakgrunden."
 
 # Translators: make sure to have a space in the end of the line.
-#: src/window.py:399 src/window.py:434
+#: src/window.py:434
 msgid "They will be executed outside of flatpak sandbox. "
 msgstr "De kommer att köras utanför flatpak-sandlådan. "
 
-#: src/window.py:402 src/window.py:437
+#: src/window.py:437
 msgid "Warning"
 msgstr "Varning"
 
 # Translators: {} is used to pass "They will be executed outside of flatpak sandbox. "
 # in case the app is installed using flatpak. Make sure to have a space in front of it
 # (in the original text it's in the end of the first line)
-#: src/window.py:403 src/window.py:438
+#: src/window.py:438
 msgid ""
 "Your commands will be executed as if they were executed on a command prompt. "
 "{}The app doesn't perform any checks whether a command was executed "
@@ -199,47 +190,46 @@ msgstr ""
 "utför inga kontroller om ett kommando har körts korrekt eller inte. Var "
 "försiktig, ange inte kommandon vars resultat är okänt för dig."
 
-#: src/window.py:404 src/window.py:439
+#: src/window.py:439
 msgid "Continue"
 msgstr "Fortsätt"
 
-#: src/window.py:409 src/window.py:444
+#: src/window.py:444
 msgid "I understand"
 msgstr "Jag förstår"
 
-#: src/window.py:449 src/window.py:493
+#: src/window.py:493
 msgid "Add command"
 msgstr "Lägg till kommando"
 
-#: src/window.py:453 src/window.py:527 src/window.py:497 src/window.py:571
+#: src/window.py:497 src/window.py:571
 msgid "Name"
 msgstr "Namn"
 
-#: src/window.py:466 src/window.py:542 src/window.py:564 src/window.py:510
-#: src/window.py:586 src/window.py:608
+#: src/window.py:510 src/window.py:586 src/window.py:608
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: src/window.py:498 src/window.py:523 src/window.py:542 src/window.py:567
+#: src/window.py:542 src/window.py:567
 msgid "Edit command"
 msgstr "Redigera kommando"
 
-#: src/window.py:505 src/window.py:549
+#: src/window.py:549
 msgid "Remove command"
 msgstr "Ta bort kommando"
 
-#: src/window.py:543 src/window.py:587
+#: src/window.py:587
 msgid "Apply"
 msgstr "Tillämpa"
 
-#: src/window.py:561 src/window.py:605
+#: src/window.py:605
 msgid "Remove command?"
 msgstr "Vill du ta bort kommandot?"
 
-#: src/window.py:562 src/window.py:606
+#: src/window.py:606
 msgid "Are you sure you want to remove command \"{}\"?"
 msgstr "Vill du verkligen ta bort kommandot \"{}\"?"
 
-#: src/window.py:565 src/window.py:609
+#: src/window.py:609
 msgid "Remove"
 msgstr "Ta bort"
