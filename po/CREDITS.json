@@ -16,19 +16,23 @@
         "email": "eson@svenskasprakfiler.se"
     },
     "Luke Röper": {
-    	"lang": "German",
-    	"email": "contact@roeper-luke.de"
+    	  "lang": "German",
+    	  "email": "contact@roeper-luke.de"
     },
     "David Delgado": {
-    	"lang": "Spanish",
-    	"email": "david.delta@proton.me"
+    	  "lang": "Spanish",
+    	  "email": "david.delta@proton.me"
     },
-        "Heimen Stoffels": {
-    	"lang": "Dutch",
-    	"email": "vistausss@fastmail.com"
+    "Heimen Stoffels": {
+    	  "lang": "Dutch",
+    	  "email": "vistausss@fastmail.com"
     },
-         "Yukidream": {
-    	"lang": "Indonesian",
-    	"email": "mashirokuratamorfo@gmail.com"
+    "Yukidream": {
+    	  "lang": "Indonesian",
+    	  "email": "mashirokuratamorfo@gmail.com"
+    },
+    "Fernando Lopes": {
+    	  "lang": "Brazilian Portuguese",
+    	  "url": "https://github.com/plasmus777"
     }
 }
