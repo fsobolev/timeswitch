@@ -82,7 +82,7 @@ class Timer:
             self.act()
             if self.action == 'notification':
                 self.desc_label.set_text( \
-                    _('The notification has been sent'))
+                    _('The notification has been sent.'))
             if not self.sound_repeat:
                 self.finish_fn()
             return False
