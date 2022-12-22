@@ -93,7 +93,7 @@ msgstr "Der Befehl <b>{}</b> wird ausgeführt in"
 
 #: src/timer.py:85
 msgid "The notification has been sent."
-msgstr ""
+msgstr "Die Benachrichtigung wurde gesendet."
 
 #: src/window.py:78 src/window.py:79
 msgid "About"
@@ -147,7 +147,7 @@ msgstr "Ton abspielen"
 
 #: src/window.py:243
 msgid "Until stopped"
-msgstr ""
+msgstr "Bis ausgeschaltet"
 
 #: src/window.py:241 src/window.py:263 src/window.py:459 src/window.py:534
 #: src/window.py:257 src/window.py:279 src/window.py:503 src/window.py:578
