@@ -7,6 +7,12 @@ If you have never worked with `.po` files before, you can find some help in [get
 
 After editing a file with translation, add language code to `LINGUAS` file. Please keep it alphabetically sorted!
 
+You can test your translation in GNOME Builder. Press `Ctrl+Alt+T` to open a terminal inside the app's environment and run:
+```
+LC_ALL=<LOCALE> /app/bin/timeswitch
+```
+where `<LOCALE>` is your locale code (e.g. `it_IT.UTF-8`).
+
 Now, it's time for the world to know your name, hero! Edit `CREDITS.json`. Here you need to specify your name, language and, optionally, email or URL. Example:
 
 ```
