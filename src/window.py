@@ -28,7 +28,7 @@
 #
 # SPDX-License-Identifier: MIT
 
-from gi.repository import Adw, Gtk, GLib, Gio
+from gi.repository import Adw, Gtk, GLib
 from .timer import Timer
 import json
 import os
