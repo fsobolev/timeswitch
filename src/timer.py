@@ -90,16 +90,21 @@ class Timer:
     def act(self):
         if self.action == 'poweroff':
             action_poweroff()
+            return;
         elif self.action == 'reboot':
             action_reboot()
+            return;
         elif self.action == 'suspend':
             action_suspend()
+            return;
         elif self.action == 'notification':
             action_notify(self.notification_text, self.play_sound, \
                 self.sound_repeat, self.player_cancellable)
+            return;
         elif self.action == 'command':
             action_command(self.cmd)
 
     def stop_timer(self):
         self.stop = True
         self.player_cancellable.cancel()
+

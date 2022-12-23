@@ -28,7 +28,7 @@
 #
 # SPDX-License-Identifier: MIT
 
-from gi.repository import Adw, Gtk, GLib
+from gi.repository import Adw, Gtk, GLib, Gio
 from .timer import Timer
 import json
 import os
@@ -710,3 +710,4 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
             self.quit_on_finish = True
         else:
             self.get_application().quit()
+
