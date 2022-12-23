@@ -710,3 +710,4 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
             self.quit_on_finish = True
         else:
             self.get_application().quit()
+

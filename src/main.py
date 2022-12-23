@@ -56,6 +56,7 @@ class TimeSwitchApplication(Adw.Application):
         win = self.props.active_window
         if not win:
             win = TimeSwitchWindow(application=self)
+            self.create_action("stop-timer", lambda *args : win.stop_timer(self))
         win.present()
 
     def on_about_action(self, widget, _):

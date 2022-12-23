@@ -86,7 +86,11 @@ def action_notify(text, play_sound, sound_repeat, cancellable):
     notification = Gio.Notification.new('Time Switch')
     notification.set_body(text)
     notification.set_priority(Gio.NotificationPriority.URGENT)
-    Gio.Application.get_default().send_notification(None, notification)
+    app = Gio.Application.get_default()
+    if sound_repeat:
+        notification.add_button(_("Stop"), "app.stop-timer")
+    app.send_notification(None, notification)
+
     if play_sound:
         player = Player(sound_repeat, cancellable)
         player.play()
