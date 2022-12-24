@@ -27,9 +27,7 @@ msgstr "Time Switch"
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:6
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:7
 msgid "Run tasks after a timer"
-msgstr ""
-"Herunterfahren, Neustarten, in Bereitschaft versetzen, eine Benachrichtigung "
-"versenden oder einen beliebigen Befehl nach dem Ablauf der Zeit ausführen."
+msgstr "Befehle nach Ablauf der Zeit ausführen"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:10
@@ -44,7 +42,7 @@ msgid ""
 "suspend your system, send a notification (optionally with a sound signal) or "
 "execute any command on timer."
 msgstr ""
-"Time Switch ist ein simples Programm, dass es dir erlaubt, beim Ablauf der "
+"Time Switch ist ein leicht zu bedienendes Programm, dass es dir erlaubt, beim Ablauf der "
 "Zeit das Gerät herunterzufahren, neuzustarten, in Bereitschaft zu versetzen, "
 "eine Benachrichtigung (optional mit Ton) zu versenden oder einen beliebigen "
 "Befehl auszuführen."
