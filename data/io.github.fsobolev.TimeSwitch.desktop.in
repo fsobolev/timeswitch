@@ -2,7 +2,7 @@
 Name=Time Switch
 Exec=timeswitch
 Icon=io.github.fsobolev.TimeSwitch
-Comment=Power off, reboot, suspend, send a notification or execute any command on timer.
+Comment=Run tasks after a timer
 Terminal=false
 Type=Application
 Categories=GTK;Utility;

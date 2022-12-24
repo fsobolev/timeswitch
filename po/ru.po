@@ -14,20 +14,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:3
-#: data/io.github.fsobolev.TimeSwitch.appdata.xml.in:6
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:6
 msgid "Time Switch"
 msgstr "Time Switch"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:6
-#: data/io.github.fsobolev.TimeSwitch.appdata.xml.in:7
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:7
-msgid ""
-"Power off, reboot, suspend, send a notification or execute any command on "
-"timer."
-msgstr ""
-"Выключайте, перезагружайте систему, включайте режим ожидания, отправляйте "
-"уведомление или выполняйте любую команду по таймеру."
+msgid "Run tasks after a timer"
+msgstr "Запускайте задачи по таймеру"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:10
 msgid "timer;shutdown;poweroff;reboot;suspend;notification;prompt;cmd;command;"
@@ -35,19 +29,17 @@ msgstr ""
 "таймер;выключение;перезагрузка;режим ожидания;уведомление;командная строка;"
 "команда;"
 
-#: data/io.github.fsobolev.TimeSwitch.appdata.xml.in:9
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:9
 msgid ""
-"Time Switch is a simple program that allows you to power off, reboot or "
+"Time Switch an easy-to-use program that allows you to power off, reboot or "
 "suspend your system, send a notification (optionally with a sound signal) or "
 "execute any command on timer."
 msgstr ""
-"Time Switch — это простая программа, позволяющая вам выключать, "
-"перезагружать или переводить систему в режим ожидания, отправлять "
-"уведомление (опционально со звуковым сигналом), а также выполнять любую "
-"команду по таймеру."
+"Time Switch — это простая в использовании программа, позволяющая вам "
+"выключать, перезагружать или переводить систему в режим ожидания, "
+"отправлять уведомление (опционально со звуковым сигналом), а также "
+"выполнять любую команду по таймеру."
 
-#: data/io.github.fsobolev.TimeSwitch.appdata.xml.in:10
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:10
 msgid ""
 "The app is built for GNOME and uses LibAdwaita, but it works in any desktop "
@@ -56,7 +48,6 @@ msgstr ""
 "Приложение создано для GNOME и использует LibAdwaita, но работает в любом "
 "окружении рабочего стола."
 
-#: data/io.github.fsobolev.TimeSwitch.appdata.xml.in:15
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:15
 msgid "Fyodor Sobolev"
 msgstr "Фёдор Соболев"

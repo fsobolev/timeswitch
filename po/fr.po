@@ -19,17 +19,13 @@ msgstr ""
 "X-Generator: Poedit 3.1.1\n"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:3
-#: data/io.github.fsobolev.TimeSwitch.appdata.xml.in:6
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:6
 msgid "Time Switch"
 msgstr "Time Switch"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:6
-#: data/io.github.fsobolev.TimeSwitch.appdata.xml.in:7
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:7
-msgid ""
-"Power off, reboot, suspend, send a notification or execute any command on "
-"timer."
+msgid "Run tasks after a timer"
 msgstr ""
 "Éteignez, redémarrez, mettez en veille, recevez une notification ou exécutez "
 "une commande sur minuterie."
@@ -43,9 +39,9 @@ msgstr ""
 "commande;cmd;exécuter;"
 
 # "minuteur;éteindre;redémarrer;mettre en veille;notification;reboot;arrêter;"
-#: data/io.github.fsobolev.TimeSwitch.appdata.xml.in:9
+#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:9
 msgid ""
-"Time Switch is a simple program that allows you to power off, reboot or "
+"Time Switch an easy-to-use program that allows you to power off, reboot or "
 "suspend your system, send a notification (optionally with a sound signal) or "
 "execute a command on timer."
 msgstr ""
@@ -57,7 +53,6 @@ msgstr ""
 # "Time Switch est un programme simple qui vous permet d’éteindre, de "
 # "redémarrer ou de mettre en veille votre système, ou d’envoyer une "
 # "notification (éventuellement avec un signal sonore) sur minuterie."
-#: data/io.github.fsobolev.TimeSwitch.appdata.xml.in:10
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:10
 msgid ""
 "The app is built for GNOME and uses LibAdwaita, but it works in any desktop "
@@ -66,7 +61,6 @@ msgstr ""
 "L’application est conçue pour GNOME et utilise LibAdwaita, mais elle "
 "fonctionne dans n’importe quel environnement de bureau."
 
-#: data/io.github.fsobolev.TimeSwitch.appdata.xml.in:15
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:15
 msgid "Fyodor Sobolev"
 msgstr "Fyodor Sobolev"

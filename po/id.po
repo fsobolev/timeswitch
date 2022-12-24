@@ -24,11 +24,8 @@ msgstr ""
 msgid "Time Switch"
 msgstr "Time Switch"
 
-#: data/io.github.fsobolev.TimeSwitch.desktop.in:6
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:7
-msgid ""
-"Power off, reboot, suspend, send a notification or execute any command on "
-"timer."
+msgid "Run tasks after a timer"
 msgstr ""
 "Matikan, mulai ulang, suspensi, mengirimkan pemberitahuan atau menjalankan "
 "perintah dengan pewaktu."
@@ -42,7 +39,7 @@ msgstr ""
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:9
 msgid ""
-"Time Switch is a simple program that allows you to power off, reboot or "
+"Time Switch an easy-to-use program that allows you to power off, reboot or "
 "suspend your system, send a notification (optionally with a sound signal) or "
 "execute any command on timer."
 msgstr ""
