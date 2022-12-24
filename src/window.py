@@ -108,6 +108,10 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.setup_box.append(self.spins_box)
 
         self.hour_spin = self.create_spinbutton(99)
+        for ctrl in self.hour_spin.observe_controllers():
+            if isinstance(ctrl, Gtk.EventControllerKey):
+                ctrl.connect('key-released', self.on_key_released)
+                break
         self.spins_box.append(self.hour_spin)
 
         self.label1 = Gtk.Label.new(':')
@@ -116,6 +120,10 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.spins_box.append(self.label1)
 
         self.min_spin = self.create_spinbutton(59)
+        for ctrl in self.min_spin.observe_controllers():
+            if isinstance(ctrl, Gtk.EventControllerKey):
+                ctrl.connect('key-released', self.on_key_released)
+                break
         self.spins_box.append(self.min_spin)
 
         self.label2 = Gtk.Label.new(':')
@@ -124,6 +132,10 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.spins_box.append(self.label2)
 
         self.sec_spin = self.create_spinbutton(59)
+        for ctrl in self.sec_spin.observe_controllers():
+            if isinstance(ctrl, Gtk.EventControllerKey):
+                ctrl.connect('key-released', self.on_key_released)
+                break
         self.spins_box.append(self.sec_spin)
 
         self.load_last_timer_value()
@@ -710,4 +722,8 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
             self.quit_on_finish = True
         else:
             self.get_application().quit()
+
+    def on_key_released(self, w, val, code, *args):
+        if code == 36 or code == 104:
+            self.start_timer(w)
 
