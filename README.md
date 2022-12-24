@@ -1,6 +1,6 @@
 <p><img src="data/icons/hicolor/scalable/apps/io.github.fsobolev.TimeSwitch.svg" width=128px align="left"><h1>Time Switch</h1>
 
-An app that executes tasks after a timer</p>
+Run tasks after a timer</p>
 
 <br/>
 
