@@ -25,33 +25,25 @@ msgstr "Tijdschakelaar"
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:6
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:7
 msgid "Run tasks after a timer"
-msgstr ""
-"Voer energie-acties uit, zoals uitschakelen en herstarten, toon een melding "
-"of voer een opdracht uit, allemaal op een zelfgekozen tijdstip."
+msgstr "Voer acties uit op een zelfgekozen tijdstip."
 
 # Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:10
 msgid "timer;shutdown;poweroff;reboot;suspend;notification;prompt;cmd;command;"
-msgstr ""
-"tijdklok;timer;uitschakelen;herstarten;pauzestand;melding;keuze;vraag;cmd;"
-"opdracht;commando;"
+msgstr "tijdklok;timer;uitschakelen;herstarten;pauzestand;melding;keuze;vraag;cmd;opdracht;commando;"
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:9
-msgid ""
-"Time Switch an easy-to-use program that allows you to power off, reboot or "
+msgid "Time Switch an easy-to-use program that allows you to power off, reboot or "
 "suspend your system, send a notification (optionally with a sound signal) or "
 "execute any command on timer."
-msgstr ""
-"Voer energie-acties uit, zoals uitschakelen en herstarten, toon een melding "
+msgstr "Voer energie-acties uit, zoals uitschakelen en herstarten, toon een melding "
 "(al dan niet met geluid) of voer een opdracht uit, allemaal op een "
 "zelfgekozen tijdstip."
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:10
-msgid ""
-"The app is built for GNOME and uses LibAdwaita, but it works in any desktop "
+msgid "The app is built for GNOME and uses LibAdwaita, but it works in any desktop "
 "environment."
-msgstr ""
-"Deze toepassing is gemaakt voor GNOME en maakt gebruik van LibAdwaita, maar "
+msgstr ""Deze toepassing is gemaakt voor GNOME en maakt gebruik van LibAdwaita, maar "
 "werkt op elke werkomgeving."
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:15
@@ -163,8 +155,7 @@ msgstr "Stoppen"
 
 #: src/window.py:351 src/window.py:380
 msgid "You can close the window, the timer will work in the background."
-msgstr ""
-"De schakelaar wordt op de achtergrond geactiveerd. U kunt dit venster "
+msgstr "De schakelaar wordt op de achtergrond geactiveerd. U kunt dit venster "
 "sluiten."
 
 # Translators: make sure to have a space in the end of the line.
@@ -180,13 +171,11 @@ msgstr "Waarschuwing"
 # in case the app is installed using flatpak. Make sure to have a space in front of it
 # (in the original text it's in the end of the first line)
 #: src/window.py:403 src/window.py:438
-msgid ""
-"Your commands will be executed as if they were executed on a command prompt. "
+msgid "Your commands will be executed as if they were executed on a command prompt. "
 "{}The app doesn't perform any checks whether a command was executed "
 "successfully or not. Be careful, do not enter commands whose result is "
 "unknown to you."
-msgstr ""
-"Uw opdrachten worden uitgevoerd zoals op de opdrachtregel. {}Deze toepassing "
+msgstr "Uw opdrachten worden uitgevoerd zoals op de opdrachtregel. {}Deze toepassing "
 "voert nadien geen controle uit, dus let op welke opdrachten u invoert."
 
 #: src/window.py:404 src/window.py:439
