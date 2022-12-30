@@ -31,7 +31,7 @@ msgstr ""
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:9
 msgid ""
-"Time Switch an easy-to-use program that allows you to power off, reboot or "
+"Time Switch is an easy-to-use program that allows you to power off, reboot or "
 "suspend your system, send a notification (optionally with a sound signal) or "
 "execute any command on timer."
 msgstr ""

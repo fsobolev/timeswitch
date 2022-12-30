@@ -33,7 +33,7 @@ msgid "timer;shutdown;poweroff;reboot;suspend;notification;prompt;cmd;command;"
 msgstr "tijdklok;timer;uitschakelen;herstarten;pauzestand;melding;keuze;vraag;cmd;opdracht;commando;"
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:9
-msgid "Time Switch an easy-to-use program that allows you to power off, reboot or "
+msgid "Time Switch is an easy-to-use program that allows you to power off, reboot or "
 "suspend your system, send a notification (optionally with a sound signal) or "
 "execute any command on timer."
 msgstr "Voer energie-acties uit, zoals uitschakelen en herstarten, toon een melding "
