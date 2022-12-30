@@ -65,7 +65,7 @@ class TimeSwitchApplication(Adw.Application):
                                 application_name='Time Switch',
                                 application_icon='io.github.fsobolev.TimeSwitch',
                                 developer_name='Fyodor Sobolev',
-                                version='2022.12.18',
+                                version='2022.12.30',
                                 copyright='© 2022 Fyodor Sobolev',
                                 website='https://github.com/fsobolev/timeswitch',
                                 issue_url='https://github.com/fsobolev/timeswitch/issues',

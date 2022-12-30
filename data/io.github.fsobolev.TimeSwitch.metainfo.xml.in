@@ -26,6 +26,17 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release type="stable" date="2022-12-30" version="2022.12.30">
+      <description>
+        <ul>
+          <li>Added ability to play notification sound until stopped (like an alarm in GNOME Clocks)</li>
+          <li>Pressing Enter when the hours, minutes or seconds entry is focused will now start a timer</li>
+          <li>Added Brazilian Portuguese translation (thanks to @plasmus777)</li>
+          <li>Added Turkish translation (thanks to @sabriunal)</li>
+          <li>Added Indonesian translation (thanks to @sekalengrengginang)</li>
+        </ul>
+      </description>
+    </release>
     <release type="stable" date="2022-12-18" version="2022.12.18">
       <description>
         <ul>
