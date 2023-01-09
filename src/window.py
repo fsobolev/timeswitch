@@ -302,6 +302,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.commands_group.set_header_suffix(self.back_button)
 
         self.commands_widgets = {'rows': [], 'checks': []}
+        self.invisible_checkbutton = Gtk.CheckButton.new()
         for command in self.commands_list:
             self.create_command(command)
         if len(self.commands_widgets['rows']) > 0:
@@ -543,7 +544,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
             command['name'], command['cmd'], 1)
         self.commands_widgets['checks'].append(Gtk.CheckButton.new())
         self.commands_widgets['checks'][-1].set_group(
-            self.commands_widgets['checks'][0])
+            self.invisible_checkbutton)
         self.commands_widgets['rows'][-1].add_prefix(
             self.commands_widgets['checks'][-1])
         self.commands_widgets['rows'][-1].set_activatable_widget(
@@ -565,14 +566,6 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.commands_widgets['rows'][-1].add_suffix(box)
         self.commands_group.add(self.commands_widgets['rows'][-1])
         self.commands_widgets['rows'][-1].activate()
-        self.disable_single_checkbutton()
-
-    def disable_single_checkbutton(self):
-        l = len(self.commands_widgets['checks'])
-        if l > 1:
-            self.commands_widgets['checks'][0].set_sensitive(True)
-        elif l == 1:
-            self.commands_widgets['checks'][0].set_sensitive(False)
 
     def edit_command(self, w, action_row):
         index = self.commands_widgets['rows'].index(action_row)
@@ -631,7 +624,6 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
             self.commands_list.pop(index)
             if len(self.commands_widgets['rows']) > 0:
                 self.commands_widgets['rows'][0].activate()
-            self.disable_single_checkbutton()
             self.save_config()
 
     def start_timer(self, w):
