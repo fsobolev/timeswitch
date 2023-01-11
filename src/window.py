@@ -68,29 +68,30 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.content = Gtk.Box.new(Gtk.Orientation.VERTICAL, 0)
         self.set_content(self.content)
 
-        # Headerbar
-        self.header = Adw.HeaderBar.new()
-        self.header.set_title_widget(Gtk.Label.new(''))
-        self.content.append(self.header)
-
-        self.about_button = Gtk.Button.new()
-        self.about_button.set_icon_name('help-about-symbolic')
-        self.about_button.set_action_name('app.about')
-        self.about_button.set_tooltip_text(_('About'))
-        self.header.pack_start(self.about_button)
-
         # Main stack
         self.main_stack = Gtk.Stack.new()
         self.main_stack.set_hexpand(True)
         self.main_stack.set_vexpand(True)
-        self.main_stack.set_transition_type(Gtk.StackTransitionType.SLIDE_LEFT_RIGHT)
-        self.main_stack.set_transition_duration(300)
+        self.main_stack.set_transition_type(Gtk.StackTransitionType.OVER_LEFT_RIGHT)
         self.content.append(self.main_stack)
+
+        # Main Stack Box
+        self.main_box = Gtk.Box.new(Gtk.Orientation.VERTICAL, 0)
+        self.main_stack.add_named(self.main_box, 'setup')
+
+        # Main Stack Headerbar
+        self.header_main = Adw.HeaderBar.new()
+        self.main_box.append(self.header_main)
+
+        self.about_button_main = Gtk.Button.new_from_icon_name('help-about-symbolic')
+        self.about_button_main.set_action_name('app.about')
+        self.about_button_main.set_tooltip_text(_('About'))
+        self.header_main.pack_start(self.about_button_main)
 
         # Scrolled window
         self.scrolled_window = Gtk.ScrolledWindow.new()
         self.scrolled_window.set_min_content_width(300)
-        self.main_stack.add_named(self.scrolled_window, 'setup')
+        self.main_box.append(self.scrolled_window)
 
         # Setup page
         self.setup_box = Gtk.Box.new(Gtk.Orientation.VERTICAL, 2)
@@ -341,19 +342,34 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.setup_box.append(self.start_button)
 
         # Running page
-        self.running_box = Gtk.Box.new(Gtk.Orientation.VERTICAL, 2)
+        self.run_page_box = Gtk.Box.new(Gtk.Orientation.VERTICAL, 0)
+        self.run_page_box.set_valign(Gtk.Align.FILL)
+        self.run_page_box.add_css_class('background')
+        self.main_stack.add_named(self.run_page_box, 'running')
+
+        # Running page headerbar
+        self.header_run = Adw.HeaderBar.new()
+        self.header_run.set_title_widget(Gtk.Label.new(''))
+        self.run_page_box.append(self.header_run)
+
+        self.about_button_run = Gtk.Button.new_from_icon_name('help-about-symbolic')
+        self.about_button_run.set_action_name('app.about')
+        self.about_button_run.set_tooltip_text(_('About'))
+        self.header_run.pack_start(self.about_button_run)
+
+        # Running timer box
+        self.running_box = Gtk.Box.new(Gtk.Orientation.VERTICAL, 10)
         self.running_box.set_halign(Gtk.Align.CENTER)
         self.running_box.set_valign(Gtk.Align.CENTER)
+        self.running_box.set_vexpand(True)
         self.running_box.set_size_request(280, -1)
-        self.running_box.set_spacing(10)
-        self.main_stack.add_named(self.running_box, 'running')
+        self.run_page_box.append(self.running_box)
 
         # Description label
         self.desc_label_clamp = Adw.Clamp.new()
         self.desc_label_clamp.set_maximum_size(280)
         self.running_box.append(self.desc_label_clamp)
         self.desc_label = Gtk.Label.new('')
-        #self.desc_label.set_halign(Gtk.Align.CENTER)
         self.desc_label.set_margin_top(6)
         self.desc_label.set_wrap(True)
         self.desc_label.set_justify(Gtk.Justification.CENTER)
