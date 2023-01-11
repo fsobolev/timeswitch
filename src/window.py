@@ -162,12 +162,11 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
 
         # Reset timer
         self.reset_button = Gtk.Button.new()
-        self.reset_button_box = Gtk.Box.new(Gtk.Orientation.HORIZONTAL, 5)
-        self.reset_button_box.set_halign(Gtk.Align.CENTER)
-        self.reset_button_box.append(Gtk.Image.new_from_icon_name( \
-            'view-refresh-symbolic'))
-        self.reset_button_box.append(Gtk.Label.new(_('Reset')))
-        self.reset_button.set_child(self.reset_button_box)
+        self.reset_button_content = Adw.ButtonContent.new()
+        self.reset_button_content.set_halign(Gtk.Align.CENTER)
+        self.reset_button_content.set_icon_name('view-refresh-symbolic')
+        self.reset_button_content.set_label(_('Reset'))
+        self.reset_button.set_child(self.reset_button_content)
         self.reset_button.connect('clicked', self.reset_timer)
         self.grid.attach(self.reset_button, 0, 2, 2, 1)
 
@@ -292,12 +291,10 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.commands_sw.set_child(self.commands_group)
 
         self.back_button = Gtk.Button.new()
-        self.back_button_box = Gtk.Box.new(Gtk.Orientation.HORIZONTAL, 5)
-        self.back_button_box.set_halign(Gtk.Align.CENTER)
-        self.back_button_box.append(Gtk.Image.new_from_icon_name( \
-            'go-previous-symbolic'))
-        self.back_button_box.append(Gtk.Label.new(_('Back')))
-        self.back_button.set_child(self.back_button_box)
+        self.back_button_content = Adw.ButtonContent.new()
+        self.back_button_content.set_icon_name('go-previous-symbolic')
+        self.back_button_content.set_label(_('Back'))
+        self.back_button.set_child(self.back_button_content)
         self.back_button.connect('clicked', self.show_actions)
         self.commands_group.set_header_suffix(self.back_button)
 
@@ -311,11 +308,10 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.add_command_button = Gtk.Button.new()
         self.add_command_button.set_halign(Gtk.Align.CENTER)
         self.add_command_button.add_css_class('pill')
-        self.add_command_box = Gtk.Box.new(Gtk.Orientation.HORIZONTAL, 6)
-        self.add_command_box.append(Gtk.Image.new_from_icon_name( \
-            'list-add-symbolic'))
-        self.add_command_box.append(Gtk.Label.new(_('Add')))
-        self.add_command_button.set_child(self.add_command_box)
+        self.add_command_button_content = Adw.ButtonContent.new()
+        self.add_command_button_content.set_icon_name('list-add-symbolic')
+        self.add_command_button_content.set_label(_('Add'))
+        self.add_command_button.set_child(self.add_command_button_content)
         self.add_command_button.connect('clicked', self.add_command)
         self.commands_box.append(self.add_command_button)
 
@@ -335,12 +331,10 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         # Start timer button
         self.start_button = Gtk.Button.new()
         self.start_button.set_halign(Gtk.Align.CENTER)
-        self.start_button_box = Gtk.Box.new(Gtk.Orientation.HORIZONTAL, 5)
-        self.start_button_box.set_halign(Gtk.Align.CENTER)
-        self.start_button_box.append(Gtk.Image.new_from_icon_name( \
-            'media-playback-start-symbolic'))
-        self.start_button_box.append(Gtk.Label.new(_('Start')))
-        self.start_button.set_child(self.start_button_box)
+        self.start_button_content = Adw.ButtonContent.new()
+        self.start_button_content.set_icon_name('media-playback-start-symbolic')
+        self.start_button_content.set_label(_('Start'))
+        self.start_button.set_child(self.start_button_content)
         self.start_button.add_css_class('pill')
         self.start_button.add_css_class('suggested-action')
         self.start_button.connect('clicked', self.start_timer)
