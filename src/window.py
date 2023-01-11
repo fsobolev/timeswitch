@@ -83,6 +83,21 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.header_main = Adw.HeaderBar.new()
         self.main_box.append(self.header_main)
 
+        self.timer_mode_box = Gtk.Box.new(Gtk.Orientation.HORIZONTAL, 4)
+        self.timer_mode_box.set_valign(Gtk.Align.CENTER)
+        self.header_main.set_title_widget(self.timer_mode_box)
+
+        self.timer_mode_image = Gtk.Image.new_from_icon_name('hourglass-symbolic')
+        self.timer_mode_box.append(self.timer_mode_image)
+
+        self.timer_mode_dropdown = Gtk.DropDown.new_from_strings( \
+            [_('Countdown'), _('Clock')] )
+        self.timer_mode_dropdown.get_first_child().add_css_class('flat')
+        self.timer_mode_dropdown.set_tooltip_text(_('Select timer mode'))
+        self.timer_mode_dropdown.connect('notify::selected-item', \
+            self.change_timer_mode)
+        self.timer_mode_box.append(self.timer_mode_dropdown)
+
         self.about_button_main = Gtk.Button.new_from_icon_name('help-about-symbolic')
         self.about_button_main.set_action_name('app.about')
         self.about_button_main.set_tooltip_text(_('About'))
@@ -444,6 +459,15 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         else:
             self.sec_spin.set_value(self.sec_spin.get_value() + value)
         return True
+
+    def change_timer_mode(self, w, pspec):
+        self.timer_mode_image.set_from_icon_name( ['hourglass', 'clock-alt'][ \
+            self.timer_mode_dropdown.get_selected() ] + '-symbolic')
+        self.reset_timer(None)
+        if self.timer_mode_dropdown.get_selected() == 0:
+            self.hour_spin.get_adjustment().set_upper(99)
+        else:
+            self.hour_spin.get_adjustment().set_upper(23)
 
     def reset_timer(self, w):
         self.hour_spin.set_value(0)
