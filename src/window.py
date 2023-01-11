@@ -63,7 +63,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.build_ui()
 
     def build_ui(self):
-        self.set_default_size(320, 712)
+        self.set_default_size(300, 712)
         self.set_title('Time Switch')
         self.content = Gtk.Box.new(Gtk.Orientation.VERTICAL, 0)
         self.set_content(self.content)
