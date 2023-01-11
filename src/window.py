@@ -374,12 +374,10 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         # Stop button
         self.stop_button = Gtk.Button.new()
         self.stop_button.set_halign(Gtk.Align.CENTER)
-        self.stop_button_box = Gtk.Box.new(Gtk.Orientation.HORIZONTAL, 5)
-        self.stop_button_box.set_halign(Gtk.Align.CENTER)
-        self.stop_button_box.append(Gtk.Image.new_from_icon_name( \
-            'media-playback-stop-symbolic'))
-        self.stop_button_box.append(Gtk.Label.new(_('Stop')))
-        self.stop_button.set_child(self.stop_button_box)
+        self.stop_button_content = Adw.ButtonContent.new()
+        self.stop_button_content.set_icon_name('media-playback-stop-symbolic')
+        self.stop_button_content.set_label(_('Stop'))
+        self.stop_button.set_child(self.stop_button_content)
         self.stop_button.add_css_class('pill')
         self.stop_button.add_css_class('destructive-action')
         self.stop_button.connect('clicked', self.stop_timer)
