@@ -371,6 +371,17 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.timer_label.add_css_class('large-text')
         self.running_box.append(self.timer_label)
 
+        # Pause button
+        self.pause_button = Gtk.Button.new()
+        self.pause_button.set_halign(Gtk.Align.CENTER)
+        self.pause_button_content = Adw.ButtonContent.new()
+        self.pause_button_content.set_icon_name('media-playback-pause-symbolic')
+        self.pause_button_content.set_label(_('Pause'))
+        self.pause_button.set_child(self.pause_button_content)
+        self.pause_button.add_css_class('pill')
+        self.pause_button.connect('clicked', self.toggle_pause)
+        self.running_box.append(self.pause_button)
+
         # Stop button
         self.stop_button = Gtk.Button.new()
         self.stop_button.set_halign(Gtk.Align.CENTER)
@@ -678,6 +689,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
             if not name:
                 return
             action = ('command', name, cmd)
+        self.pause_button.set_sensitive(True)
         self.timer = Timer(
             self.hour_spin.get_value_as_int(),
             self.min_spin.get_value_as_int(),
@@ -685,9 +697,21 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
             action,
             self.timer_label,
             self.desc_label,
+            self.pause_button,
             self.finish)
         self.timer.run()
         self.main_stack.set_visible_child_name('running')
+
+    def toggle_pause(self, w):
+        if self.timer.pause:
+            self.pause_button_content.set_icon_name('media-playback-pause-symbolic')
+            self.pause_button_content.set_label(_('Pause'))
+            self.pause_button.remove_css_class('suggested-action')
+        else:
+            self.pause_button_content.set_icon_name('media-playback-start-symbolic')
+            self.pause_button_content.set_label(_('Continue'))
+            self.pause_button.add_css_class('suggested-action')
+        self.timer.pause = not self.timer.pause
 
     def stop_timer(self, w):
         self.timer.stop_timer()

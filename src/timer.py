@@ -33,11 +33,13 @@ from .actions import *
 
 
 class Timer:
-    def __init__(self, h, m, s, action, timer_label, desc_label, finish_fn):
+    def __init__(self, h, m, s, action, timer_label, desc_label, pause_button, finish_fn):
         self.h, self.m, self.s = h, m, s
         self.duration = self.h * 3600 + self.m * 60 + self.s
         self.action = action[0]
         self.desc_label = desc_label
+        self.pause_button = pause_button
+        self.pause = False
 
         # Notification
         self.sound_repeat = False
@@ -65,6 +67,7 @@ class Timer:
         GObject.timeout_add_seconds(1, self.run)
 
     def run(self):
+        if self.pause: return True
         if self.stop: return False
         self.s = self.duration
         self.h = self.s // 3600
@@ -79,6 +82,7 @@ class Timer:
             self.duration -= 1
             return True
         else:
+            self.pause_button.set_sensitive(False)
             self.act()
             if self.action == 'notification':
                 self.desc_label.set_text( \
