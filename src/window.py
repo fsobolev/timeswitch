@@ -59,7 +59,8 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         if not os.path.isdir(self.config_dir):
             os.makedirs(self.config_dir)
         self.config_file_path = self.config_dir + '/config.json'
-        (self.last_timer_value, self.last_action, self.commands_list) = self.load_config()
+        (self.last_timer_value, self.last_action, self.commands_list, \
+            self.mode) = self.load_config()
 
         self.build_ui()
 
@@ -154,8 +155,6 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
                 ctrl.connect('key-released', self.on_key_released)
                 break
         self.spins_box.append(self.sec_spin)
-
-        self.load_last_timer_value()
 
         # Buttons for faster timer increase
         self.grid = Gtk.Grid.new()
@@ -317,10 +316,6 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
 
         self.commands_widgets = {'rows': [], 'checks': []}
         self.invisible_checkbutton = Gtk.CheckButton.new()
-        for command in self.commands_list:
-            self.create_command(command)
-        if len(self.commands_widgets['rows']) > 0:
-            self.commands_widgets['rows'][0].activate()
 
         self.add_command_button = Gtk.Button.new()
         self.add_command_button.set_halign(Gtk.Align.CENTER)
@@ -331,19 +326,6 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.add_command_button.set_child(self.add_command_button_content)
         self.add_command_button.connect('clicked', self.add_command)
         self.commands_box.append(self.add_command_button)
-
-        # Select previously used action
-        [self.action_poweroff, self.action_reboot, \
-            self.action_suspend, self.action_notify, \
-            self.action_command][self.last_action[0]].activate()
-        if self.last_action[0] == 3:
-            self.play_sound_switch.set_active(bool(self.last_action[1]))
-            self.play_until_stopped_switch.set_sensitive(bool(self.last_action[1]))
-            if self.last_action[1] > 1:
-                self.play_until_stopped_switch.set_active(True)
-        elif self.last_action[0] == 4:
-            if len(self.commands_widgets['rows']) > self.last_action[1]:
-                self.commands_widgets['rows'][self.last_action[1]].activate()
 
         # Start timer button
         self.start_button = Gtk.Button.new()
@@ -433,6 +415,28 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.warning_label.set_justify(Gtk.Justification.CENTER)
         self.warning_label_clamp.set_child(self.warning_label)
 
+        # Load config
+        self.timer_mode_dropdown.set_selected(self.mode)
+        (h, m, s) = self.last_timer_value
+        self.hour_spin.set_value(h)
+        self.min_spin.set_value(m)
+        self.sec_spin.set_value(s)
+        [self.action_poweroff, self.action_reboot, \
+            self.action_suspend, self.action_notify, \
+            self.action_command][self.last_action[0]].activate()
+        if self.last_action[0] == 3:
+            self.play_sound_switch.set_active(bool(self.last_action[1]))
+            self.play_until_stopped_switch.set_sensitive(bool(self.last_action[1]))
+            if self.last_action[1] > 1:
+                self.play_until_stopped_switch.set_active(True)
+        elif self.last_action[0] == 4:
+            if len(self.commands_widgets['rows']) > self.last_action[1]:
+                self.commands_widgets['rows'][self.last_action[1]].activate()
+        for command in self.commands_list:
+            self.create_command(command)
+        if len(self.commands_widgets['rows']) > 0:
+            self.commands_widgets['rows'][0].activate()
+
     def create_spinbutton(self, max_value):
         adj = Gtk.Adjustment.new(0.0, 0.0, max_value, 1.0, 10.0, 0.0)
         spin = Gtk.SpinButton.new(adj, 1.0, 0)
@@ -446,12 +450,6 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
     def show_leading_zeros(self, spin):
         spin.set_text('{0:0>2}'.format(spin.get_value_as_int()))
         return True
-
-    def load_last_timer_value(self):
-        (h, m, s) = self.last_timer_value
-        self.hour_spin.set_value(h)
-        self.min_spin.set_value(m)
-        self.sec_spin.set_value(s)
 
     def on_add_button_click(self, button, value):
         if value >= 60:
@@ -516,6 +514,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         config_last_timer_value = [0, 0, 0]
         config_last_action = [0, 0]
         config_commands = []
+        config_mode = 0
         if os.path.exists(self.config_file_path):
             with open(self.config_file_path, 'r') as f:
                 data = json.load(f)
@@ -527,14 +526,18 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
                     config_commands = data['commands']
                     if len(config_commands) > 0:
                         self.show_cmd_warning = False
-        return (config_last_timer_value, config_last_action, config_commands)
+                if 'mode' in data.keys():
+                    config_mode = data['mode']
+        return (config_last_timer_value, config_last_action, config_commands, \
+            config_mode)
 
     def save_config(self):
         try:
             with open(self.config_file_path, 'w') as f:
                 data = {'last-timer-value': self.last_timer_value, \
                     'last-action': self.last_action, \
-                    'commands': self.commands_list}
+                    'commands': self.commands_list, \
+                    'mode': self.timer_mode_dropdown.get_selected()}
                 json.dump(data, f)
         except Exception as e:
             print("Can't save config file:")
