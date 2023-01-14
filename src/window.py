@@ -32,6 +32,7 @@ from gi.repository import Adw, Gtk, GLib
 from .timer import Timer
 import json
 import os
+import datetime
 
 
 class TimeSwitchWindow(Adw.ApplicationWindow):
@@ -724,10 +725,22 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
                 return
             action = ('command', name, cmd)
         self.pause_button.set_sensitive(True)
+        if self.timer_mode_dropdown.get_selected() == 0:
+            time = (self.hour_spin.get_value_as_int(),
+                self.min_spin.get_value_as_int(),
+                self.sec_spin.get_value_as_int())
+        else:
+            now = datetime.datetime.now()
+            target = now.replace(hour = self.hour_spin.get_value_as_int(),
+                minute = self.min_spin.get_value_as_int(),
+                second = self.sec_spin.get_value_as_int())
+            if target < now:
+                target += datetime.timedelta(days = 1)
+            minutes, seconds = divmod((target - now).seconds, 60)
+            hours, minutes = divmod(minutes, 60)
+            time = (hours, minutes, seconds)
         self.timer = Timer(
-            self.hour_spin.get_value_as_int(),
-            self.min_spin.get_value_as_int(),
-            self.sec_spin.get_value_as_int(),
+            *time,
             action,
             self.timer_label,
             self.desc_label,
