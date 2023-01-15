@@ -6,6 +6,7 @@ Comment=Run tasks after a timer
 Terminal=false
 Type=Application
 Categories=GTK;Utility;
+# Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 Keywords=timer;shutdown;poweroff;reboot;suspend;notification;prompt;cmd;command;
 StartupNotify=true
 DBusActivatable=true
