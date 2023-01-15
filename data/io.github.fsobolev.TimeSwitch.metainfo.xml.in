@@ -26,6 +26,15 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release type="stable" date="2023-01-20" version="2023.01.20">
+      <description>
+        <ul>
+          <li>Added ability to pause timer</li>
+          <li>Added clock mode: in this mode you set clock time (in 24h format) when the timer should finish.</li>
+          <li>UI improvements</li>
+        </ul>
+      </description>
+    </release>
     <release type="stable" date="2022-12-30" version="2022.12.30">
       <description>
         <ul>
