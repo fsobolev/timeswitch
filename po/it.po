@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-20 21:29+0300\n"
+"POT-Creation-Date: 2023-01-15 05:41+0300\n"
 "PO-Revision-Date: 2022-12-24 14:22+0100\n"
 "Last-Translator: Albano Battistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <LL@li.org>\n"
@@ -27,15 +27,15 @@ msgid "Run tasks after a timer"
 msgstr "Esegui attività dopo un timer"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/io.github.fsobolev.TimeSwitch.desktop.in:10
+#: data/io.github.fsobolev.TimeSwitch.desktop.in:11
 msgid "timer;shutdown;poweroff;reboot;suspend;notification;prompt;cmd;command;"
 msgstr "timer;spegnimento;riavvio;sospensione;notifica;prompt;cmd;comando;"
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:9
 msgid ""
-"Time Switch is an easy-to-use program that allows you to power off, reboot or "
-"suspend your system, send a notification (optionally with a sound signal) or "
-"execute any command on timer."
+"Time Switch is an easy-to-use program that allows you to power off, reboot "
+"or suspend your system, send a notification (optionally with a sound signal) "
+"or execute any command on timer."
 msgstr ""
 "Time Switch è un semplice programma che ti permette di spegnere, riavviare o "
 "sospendere il tuo sistema, inviare una notifica (opzionalmente con un "
@@ -53,126 +53,153 @@ msgstr ""
 msgid "Fyodor Sobolev"
 msgstr "Fyodor Sobolev"
 
-#: src/actions.py:84 src/actions.py:85
+#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:32
+msgid "Added ability to pause timer"
+msgstr ""
+
+#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:33
+msgid ""
+"Added clock mode: in this mode you set clock time (in 24h format) when the "
+"timer should finish."
+msgstr ""
+
+#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:34
+msgid "UI improvements"
+msgstr ""
+
+#: src/actions.py:85
 msgid "Timer has finished!"
 msgstr "Timer ha finito!"
 
-#: src/timer.py:42 src/timer.py:47
-msgid "Your device will be powered off in"
-msgstr "Il tuo dispositivo verrà spento in"
-
-#: src/timer.py:44 src/timer.py:49
-msgid "Your device will be rebooted in"
-msgstr "Il tuo dispositivo verrà riavviato in"
-
-#: src/timer.py:46 src/timer.py:51
-msgid "Your device will be suspended in"
-msgstr "Il tuo dispositivo verrà sospeso in"
-
-#: src/timer.py:48 src/timer.py:53
-msgid "You will receive a notification in"
-msgstr "Riceverai una notifica in"
-
-#: src/timer.py:53 src/timer.py:60
-msgid "The command <b>{}</b> will be executed in"
-msgstr "Il comando <b>{}</b> verrà eseguito in"
-
-#: src/timer.py:85
-msgid "The notification has been sent."
-msgstr "La notifica è stata inviata."
-
-#: src/window.py:78 src/window.py:79
-msgid "About"
-msgstr "Informazioni"
-
-#. Translators: Short fot "minutes"
-#: src/window.py:139 src/window.py:142
-msgid "min"
-msgstr "min"
-
-#. Translators: Short for "seconds"
-#: src/window.py:139 src/window.py:142
-msgid "sec"
-msgstr "sec"
-
-#: src/window.py:154 src/window.py:157
-msgid "Reset"
-msgstr "Resetta"
-
-#: src/window.py:169 src/window.py:172
-msgid "Action"
-msgstr "Azione"
-
-#: src/window.py:174 src/window.py:177
-msgid "Power Off"
-msgstr "Spegni"
-
-#: src/window.py:183 src/window.py:186
-msgid "Reboot"
-msgstr "Riavvia"
-
-#: src/window.py:192 src/window.py:195
-msgid "Suspend"
-msgstr "Sospendi"
-
-#: src/window.py:201 src/window.py:204
-msgid "Notification"
-msgstr "Notifica"
-
-#: src/window.py:213 src/window.py:216
-msgid "Notification settings"
-msgstr "Impostazioni di notifica"
-
-#: src/window.py:226 src/window.py:230
-msgid "Notification text"
-msgstr "Testo di notifica"
-
-#: src/window.py:230 src/window.py:234
-msgid "Play sound"
-msgstr "Riproduci suono"
-
-#: src/window.py:243
-msgid "Until stopped"
-msgstr "Finché non sia fermato"
-
-#: src/window.py:241 src/window.py:263 src/window.py:459 src/window.py:534
-#: src/window.py:257 src/window.py:279 src/window.py:503 src/window.py:578
-msgid "Command"
-msgstr "Comando"
-
-#: src/window.py:271 src/window.py:287
-msgid "Back"
-msgstr "Indietro"
-
-#: src/window.py:288 src/window.py:467 src/window.py:304 src/window.py:511
-msgid "Add"
-msgstr "Aggiungi"
-
-#: src/window.py:300 src/window.py:329
-msgid "Start"
-msgstr "Avvia"
-
-#: src/window.py:339 src/window.py:368
+#: src/actions.py:91 src/window.py:398
 msgid "Stop"
 msgstr "Ferma"
 
-#: src/window.py:351 src/window.py:380
+#: src/timer.py:49
+msgid "Your device will be powered off in"
+msgstr "Il tuo dispositivo verrà spento in"
+
+#: src/timer.py:51
+msgid "Your device will be rebooted in"
+msgstr "Il tuo dispositivo verrà riavviato in"
+
+#: src/timer.py:53
+msgid "Your device will be suspended in"
+msgstr "Il tuo dispositivo verrà sospeso in"
+
+#: src/timer.py:55
+msgid "You will receive a notification in"
+msgstr "Riceverai una notifica in"
+
+#: src/timer.py:62
+msgid "The command <b>{}</b> will be executed in"
+msgstr "Il comando <b>{}</b> verrà eseguito in"
+
+#: src/timer.py:89
+msgid "The notification has been sent."
+msgstr "La notifica è stata inviata."
+
+#: src/window.py:96
+msgid "Countdown"
+msgstr ""
+
+#: src/window.py:96
+msgid "Clock"
+msgstr ""
+
+#: src/window.py:98
+msgid "Select timer mode"
+msgstr ""
+
+#: src/window.py:105 src/window.py:355
+msgid "About"
+msgstr "Informazioni"
+
+#: src/window.py:170
+msgid "min"
+msgstr "min"
+
+#: src/window.py:170
+msgid "sec"
+msgstr "sec"
+
+#: src/window.py:184
+msgid "Reset"
+msgstr "Resetta"
+
+#: src/window.py:199
+msgid "Action"
+msgstr "Azione"
+
+#: src/window.py:204
+msgid "Power Off"
+msgstr "Spegni"
+
+#: src/window.py:213
+msgid "Reboot"
+msgstr "Riavvia"
+
+#: src/window.py:222
+msgid "Suspend"
+msgstr "Sospendi"
+
+#: src/window.py:231
+msgid "Notification"
+msgstr "Notifica"
+
+#: src/window.py:243
+msgid "Notification settings"
+msgstr "Impostazioni di notifica"
+
+#: src/window.py:257
+msgid "Notification text"
+msgstr "Testo di notifica"
+
+#: src/window.py:261
+msgid "Play sound"
+msgstr "Riproduci suono"
+
+#: src/window.py:270
+msgid "Until stopped"
+msgstr "Finché non sia fermato"
+
+#: src/window.py:284 src/window.py:306 src/window.py:563 src/window.py:630
+msgid "Command"
+msgstr "Comando"
+
+#: src/window.py:312
+msgid "Back"
+msgstr "Indietro"
+
+#: src/window.py:325 src/window.py:571
+msgid "Add"
+msgstr "Aggiungi"
+
+#: src/window.py:335
+msgid "Start"
+msgstr "Avvia"
+
+#: src/window.py:387 src/window.py:758
+msgid "Pause"
+msgstr ""
+
+#: src/window.py:410
 msgid "You can close the window, the timer will work in the background."
 msgstr "Puoi chiudere la finestra, il timer funzionerà in background."
 
 # Translators: make sure to have a space in the end of the line.
-#: src/window.py:399 src/window.py:434
+#: src/window.py:489
 msgid "They will be executed outside of flatpak sandbox. "
 msgstr "Verranno eseguiti al di fuori della sandbox flatpak. "
 
-#: src/window.py:402 src/window.py:437
+#: src/window.py:492
 msgid "Warning"
 msgstr "Avviso"
 
 # Translators: {} is used to pass "They will be executed outside of flatpak sandbox. "
 # in case the app is installed using flatpak. Make sure to have a space in front of it
 # (in the original text it's in the end of the first line)
-#: src/window.py:403 src/window.py:438
+#: src/window.py:493
 msgid ""
 "Your commands will be executed as if they were executed on a command prompt. "
 "{}The app doesn't perform any checks whether a command was executed "
@@ -184,47 +211,46 @@ msgstr ""
 "con successo o no. Attenzione, non inserire comandi il cui risultato sia "
 "sconosciuto."
 
-#: src/window.py:404 src/window.py:439
+#: src/window.py:494 src/window.py:762
 msgid "Continue"
 msgstr "Continua"
 
-#: src/window.py:409 src/window.py:444
+#: src/window.py:499
 msgid "I understand"
 msgstr "Ho capito"
 
-#: src/window.py:449 src/window.py:493
+#: src/window.py:553
 msgid "Add command"
 msgstr "Aggiungi comando"
 
-#: src/window.py:453 src/window.py:527 src/window.py:497 src/window.py:571
+#: src/window.py:557 src/window.py:623
 msgid "Name"
 msgstr "Nome"
 
-#: src/window.py:466 src/window.py:542 src/window.py:564 src/window.py:510
-#: src/window.py:586 src/window.py:608
+#: src/window.py:570 src/window.py:638 src/window.py:660
 msgid "Cancel"
 msgstr "Cancella"
 
-#: src/window.py:498 src/window.py:523 src/window.py:542 src/window.py:567
+#: src/window.py:602 src/window.py:619
 msgid "Edit command"
 msgstr "Modifica comando"
 
-#: src/window.py:505 src/window.py:549
+#: src/window.py:609
 msgid "Remove command"
 msgstr "Rimuovi comando"
 
-#: src/window.py:543 src/window.py:587
+#: src/window.py:639
 msgid "Apply"
 msgstr "Applica"
 
-#: src/window.py:561 src/window.py:605
+#: src/window.py:657
 msgid "Remove command?"
 msgstr "Rimuovere comando?"
 
-#: src/window.py:562 src/window.py:606
+#: src/window.py:658
 msgid "Are you sure you want to remove command \"{}\"?"
 msgstr "Sei sicuro di voler rimuovere il comando \"{}\"?"
 
-#: src/window.py:565 src/window.py:609
+#: src/window.py:661
 msgid "Remove"
 msgstr "Rimuovi"

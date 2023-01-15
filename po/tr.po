@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.fsobolev.TimeSwitch\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-20 21:16+0300\n"
+"POT-Creation-Date: 2023-01-15 05:41+0300\n"
 "PO-Revision-Date: 2022-12-24 17:24+0300\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Turkish <gnometurk@gnome.org>\n"
@@ -30,7 +30,8 @@ msgid "Run tasks after a timer"
 msgstr "Görevleri bir süre sonra çalıştır"
 
 # Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/io.github.fsobolev.TimeSwitch.desktop.in:10
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/io.github.fsobolev.TimeSwitch.desktop.in:11
 msgid "timer;shutdown;poweroff;reboot;suspend;notification;prompt;cmd;command;"
 msgstr ""
 "zamanlayıcı;kapat;gücü kapat;yeniden başlat;askıya al;bildirim;işlem;komut;"
@@ -59,125 +60,155 @@ msgstr ""
 msgid "Fyodor Sobolev"
 msgstr "Fyodor Sobolev"
 
+#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:32
+msgid "Added ability to pause timer"
+msgstr ""
+
+#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:33
+msgid ""
+"Added clock mode: in this mode you set clock time (in 24h format) when the "
+"timer should finish."
+msgstr ""
+
+#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:34
+msgid "UI improvements"
+msgstr ""
+
 #: src/actions.py:85
 msgid "Timer has finished!"
 msgstr "Zamanlayıcı tamamlandı!"
 
-#: src/timer.py:47
+#: src/actions.py:91 src/window.py:398
+msgid "Stop"
+msgstr "Durdur"
+
+#: src/timer.py:49
 msgid "Your device will be powered off in"
 msgstr "Cihazın kapatılacağı süre"
 
-#: src/timer.py:49
+#: src/timer.py:51
 msgid "Your device will be rebooted in"
 msgstr "Cihazınız yeniden başlatılacağı süre"
 
-#: src/timer.py:51
+#: src/timer.py:53
 msgid "Your device will be suspended in"
 msgstr "Cihazınız askıya alınacağı süre"
 
-#: src/timer.py:53
+#: src/timer.py:55
 msgid "You will receive a notification in"
 msgstr "Bildirim alacağınız süre"
 
-#: src/timer.py:60
+#: src/timer.py:62
 msgid "The command <b>{}</b> will be executed in"
 msgstr "<b>{}</b> komutunun çalıştırılacağı süre"
 
-#: src/timer.py:85
+#: src/timer.py:89
 msgid "The notification has been sent."
 msgstr "Bildirim gönderildi."
 
-#: src/window.py:79
+#: src/window.py:96
+msgid "Countdown"
+msgstr ""
+
+#: src/window.py:96
+msgid "Clock"
+msgstr ""
+
+#: src/window.py:98
+msgid "Select timer mode"
+msgstr ""
+
+#: src/window.py:105 src/window.py:355
 msgid "About"
 msgstr "Hakkında"
 
 # Translators: Short fot "minutes"
-#: src/window.py:142
+#: src/window.py:170
 msgid "min"
 msgstr "dk"
 
 # Translators: Short fot "seconds"
-#: src/window.py:142
+#: src/window.py:170
 msgid "sec"
 msgstr "sn"
 
-#: src/window.py:157
+#: src/window.py:184
 msgid "Reset"
 msgstr "Sıfırla"
 
-#: src/window.py:172
+#: src/window.py:199
 msgid "Action"
 msgstr "Eylem"
 
-#: src/window.py:177
+#: src/window.py:204
 msgid "Power Off"
 msgstr "Gücü Kapat"
 
-#: src/window.py:186
+#: src/window.py:213
 msgid "Reboot"
 msgstr "Yeniden Başlat"
 
-#: src/window.py:195
+#: src/window.py:222
 msgid "Suspend"
 msgstr "Askıya Al"
 
-#: src/window.py:204
+#: src/window.py:231
 msgid "Notification"
 msgstr "Bildirim"
 
-#: src/window.py:216
+#: src/window.py:243
 msgid "Notification settings"
 msgstr "Bildirim ayarları"
 
-#: src/window.py:230
+#: src/window.py:257
 msgid "Notification text"
 msgstr "Bildirim metni"
 
-#: src/window.py:234
+#: src/window.py:261
 msgid "Play sound"
 msgstr "Ses çal"
 
-#: src/window.py:243
+#: src/window.py:270
 msgid "Until stopped"
 msgstr "Durdurulana kadar"
 
-#: src/window.py:257 src/window.py:279 src/window.py:503 src/window.py:578
+#: src/window.py:284 src/window.py:306 src/window.py:563 src/window.py:630
 msgid "Command"
 msgstr "Komut"
 
-#: src/window.py:287
+#: src/window.py:312
 msgid "Back"
 msgstr "Geri"
 
-#: src/window.py:304 src/window.py:511
+#: src/window.py:325 src/window.py:571
 msgid "Add"
 msgstr "Ekle"
 
-#: src/window.py:329
+#: src/window.py:335
 msgid "Start"
 msgstr "Başlat"
 
-#: src/window.py:368
-msgid "Stop"
-msgstr "Durdur"
+#: src/window.py:387 src/window.py:758
+msgid "Pause"
+msgstr ""
 
-#: src/window.py:380
+#: src/window.py:410
 msgid "You can close the window, the timer will work in the background."
 msgstr "Pencereyi kapatabilirsiniz, zamanlayıcı arka planda çalışacaktır."
 
 # Translators: make sure to have a space in the end of the line.
-#: src/window.py:434
+#: src/window.py:489
 msgid "They will be executed outside of flatpak sandbox. "
 msgstr "Flatpak sanal alanının dışında yürütülecekler. "
 
-#: src/window.py:437
+#: src/window.py:492
 msgid "Warning"
 msgstr "Uyarı"
 
 # Translators: {} is used to pass "They will be executed outside of flatpak sandbox. "
 # in case the app is installed using flatpak. Make sure to have a space in front of it
 # (in the original text it's in the end of the first line)
-#: src/window.py:438
+#: src/window.py:493
 msgid ""
 "Your commands will be executed as if they were executed on a command prompt. "
 "{}The app doesn't perform any checks whether a command was executed "
@@ -189,46 +220,46 @@ msgstr ""
 "Bu uygulama, komutun başarıyla yürütülüp yürütülmediğini kontrol etmez. "
 "Dikkatli olun ve sonucunu bilmediğiniz komutları girmeyin."
 
-#: src/window.py:439
+#: src/window.py:494 src/window.py:762
 msgid "Continue"
 msgstr "Devam Et"
 
-#: src/window.py:444
+#: src/window.py:499
 msgid "I understand"
 msgstr "Anladım"
 
-#: src/window.py:493
+#: src/window.py:553
 msgid "Add command"
 msgstr "Komut ekle"
 
-#: src/window.py:497 src/window.py:571
+#: src/window.py:557 src/window.py:623
 msgid "Name"
 msgstr "Ad"
 
-#: src/window.py:510 src/window.py:586 src/window.py:608
+#: src/window.py:570 src/window.py:638 src/window.py:660
 msgid "Cancel"
 msgstr "İptal Et"
 
-#: src/window.py:542 src/window.py:567
+#: src/window.py:602 src/window.py:619
 msgid "Edit command"
 msgstr "Komutu düzenle"
 
-#: src/window.py:549
+#: src/window.py:609
 msgid "Remove command"
 msgstr "Komutu kaldır"
 
-#: src/window.py:587
+#: src/window.py:639
 msgid "Apply"
 msgstr "Uygula"
 
-#: src/window.py:605
+#: src/window.py:657
 msgid "Remove command?"
 msgstr "Komut kaldırılsın mı?"
 
-#: src/window.py:606
+#: src/window.py:658
 msgid "Are you sure you want to remove command \"{}\"?"
 msgstr "\"{}\" komutunu kaldırmak istediğinizden emin misiniz?"
 
-#: src/window.py:609
+#: src/window.py:661
 msgid "Remove"
 msgstr "Kaldır"

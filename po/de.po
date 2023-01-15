@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-20 21:29+0300\n"
+"POT-Creation-Date: 2023-01-15 05:41+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: gregorni <gregorniehl@web.de>\n"
 "Language-Team: German <>\n"
@@ -30,7 +30,7 @@ msgid "Run tasks after a timer"
 msgstr "Befehle nach Ablauf der Zeit ausführen"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/io.github.fsobolev.TimeSwitch.desktop.in:10
+#: data/io.github.fsobolev.TimeSwitch.desktop.in:11
 msgid "timer;shutdown;poweroff;reboot;suspend;notification;prompt;cmd;command;"
 msgstr ""
 "stoppuhr;zeit;ablauf;herunterfahren;ausschalten;ruhemodus;bereitschaft;"
@@ -38,14 +38,14 @@ msgstr ""
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:9
 msgid ""
-"Time Switch is an easy-to-use program that allows you to power off, reboot or "
-"suspend your system, send a notification (optionally with a sound signal) or "
-"execute any command on timer."
+"Time Switch is an easy-to-use program that allows you to power off, reboot "
+"or suspend your system, send a notification (optionally with a sound signal) "
+"or execute any command on timer."
 msgstr ""
-"Time Switch ist ein leicht zu bedienendes Programm, dass es dir erlaubt, beim Ablauf der "
-"Zeit das Gerät herunterzufahren, neuzustarten, in Bereitschaft zu versetzen, "
-"eine Benachrichtigung (optional mit Ton) zu versenden oder einen beliebigen "
-"Befehl auszuführen."
+"Time Switch ist ein leicht zu bedienendes Programm, dass es dir erlaubt, "
+"beim Ablauf der Zeit das Gerät herunterzufahren, neuzustarten, in "
+"Bereitschaft zu versetzen, eine Benachrichtigung (optional mit Ton) zu "
+"versenden oder einen beliebigen Befehl auszuführen."
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:10
 msgid ""
@@ -59,126 +59,153 @@ msgstr ""
 msgid "Fyodor Sobolev"
 msgstr "Fyodor Sobolev"
 
-#: src/actions.py:84 src/actions.py:85
+#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:32
+msgid "Added ability to pause timer"
+msgstr ""
+
+#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:33
+msgid ""
+"Added clock mode: in this mode you set clock time (in 24h format) when the "
+"timer should finish."
+msgstr ""
+
+#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:34
+msgid "UI improvements"
+msgstr ""
+
+#: src/actions.py:85
 msgid "Timer has finished!"
 msgstr "Die Zeit ist abgelaufen!"
 
-#: src/timer.py:42 src/timer.py:47
-msgid "Your device will be powered off in"
-msgstr "Das Gerät wird heruntergefahren in"
-
-#: src/timer.py:44 src/timer.py:49
-msgid "Your device will be rebooted in"
-msgstr "Das Gerät wird neugestartet in"
-
-#: src/timer.py:46 src/timer.py:51
-msgid "Your device will be suspended in"
-msgstr "Das Gerät geht in Bereitschaft in"
-
-#: src/timer.py:48 src/timer.py:53
-msgid "You will receive a notification in"
-msgstr "Du wirst eine Benachrichtigung erhalten in"
-
-#: src/timer.py:53 src/timer.py:60
-msgid "The command <b>{}</b> will be executed in"
-msgstr "Der Befehl <b>{}</b> wird ausgeführt in"
-
-#: src/timer.py:85
-msgid "The notification has been sent."
-msgstr "Die Benachrichtigun wurde gesendet."
-
-#: src/window.py:78 src/window.py:79
-msgid "About"
-msgstr "Über"
-
-#. Translators: Short fot "minutes"
-#: src/window.py:139 src/window.py:142
-msgid "min"
-msgstr "min"
-
-#. Translators: Short for "seconds"
-#: src/window.py:139 src/window.py:142
-msgid "sec"
-msgstr "sek"
-
-#: src/window.py:154 src/window.py:157
-msgid "Reset"
-msgstr "Zurücksetzen"
-
-#: src/window.py:169 src/window.py:172
-msgid "Action"
-msgstr "Aktion"
-
-#: src/window.py:174 src/window.py:177
-msgid "Power Off"
-msgstr "Herunterfahren"
-
-#: src/window.py:183 src/window.py:186
-msgid "Reboot"
-msgstr "Neustarten"
-
-#: src/window.py:192 src/window.py:195
-msgid "Suspend"
-msgstr "Bereitschaft"
-
-#: src/window.py:201 src/window.py:204
-msgid "Notification"
-msgstr "Benachrichtigung"
-
-#: src/window.py:213 src/window.py:216
-msgid "Notification settings"
-msgstr "Benachrichtigungseinstellungen"
-
-#: src/window.py:226 src/window.py:230
-msgid "Notification text"
-msgstr "Benachrichtigungstext"
-
-#: src/window.py:230 src/window.py:234
-msgid "Play sound"
-msgstr "Ton abspielen"
-
-#: src/window.py:243
-msgid "Until stopped"
-msgstr "Bis ausgeschaltet"
-
-#: src/window.py:241 src/window.py:263 src/window.py:459 src/window.py:534
-#: src/window.py:257 src/window.py:279 src/window.py:503 src/window.py:578
-msgid "Command"
-msgstr "Befehl"
-
-#: src/window.py:271 src/window.py:287
-msgid "Back"
-msgstr "Zurück"
-
-#: src/window.py:288 src/window.py:467 src/window.py:304 src/window.py:511
-msgid "Add"
-msgstr "Hinzufügen"
-
-#: src/window.py:300 src/window.py:329
-msgid "Start"
-msgstr "Start"
-
-#: src/window.py:339 src/window.py:368
+#: src/actions.py:91 src/window.py:398
 msgid "Stop"
 msgstr "Stop"
 
-#: src/window.py:351 src/window.py:380
+#: src/timer.py:49
+msgid "Your device will be powered off in"
+msgstr "Das Gerät wird heruntergefahren in"
+
+#: src/timer.py:51
+msgid "Your device will be rebooted in"
+msgstr "Das Gerät wird neugestartet in"
+
+#: src/timer.py:53
+msgid "Your device will be suspended in"
+msgstr "Das Gerät geht in Bereitschaft in"
+
+#: src/timer.py:55
+msgid "You will receive a notification in"
+msgstr "Du wirst eine Benachrichtigung erhalten in"
+
+#: src/timer.py:62
+msgid "The command <b>{}</b> will be executed in"
+msgstr "Der Befehl <b>{}</b> wird ausgeführt in"
+
+#: src/timer.py:89
+msgid "The notification has been sent."
+msgstr "Die Benachrichtigun wurde gesendet."
+
+#: src/window.py:96
+msgid "Countdown"
+msgstr ""
+
+#: src/window.py:96
+msgid "Clock"
+msgstr ""
+
+#: src/window.py:98
+msgid "Select timer mode"
+msgstr ""
+
+#: src/window.py:105 src/window.py:355
+msgid "About"
+msgstr "Über"
+
+#: src/window.py:170
+msgid "min"
+msgstr "min"
+
+#: src/window.py:170
+msgid "sec"
+msgstr "sek"
+
+#: src/window.py:184
+msgid "Reset"
+msgstr "Zurücksetzen"
+
+#: src/window.py:199
+msgid "Action"
+msgstr "Aktion"
+
+#: src/window.py:204
+msgid "Power Off"
+msgstr "Herunterfahren"
+
+#: src/window.py:213
+msgid "Reboot"
+msgstr "Neustarten"
+
+#: src/window.py:222
+msgid "Suspend"
+msgstr "Bereitschaft"
+
+#: src/window.py:231
+msgid "Notification"
+msgstr "Benachrichtigung"
+
+#: src/window.py:243
+msgid "Notification settings"
+msgstr "Benachrichtigungseinstellungen"
+
+#: src/window.py:257
+msgid "Notification text"
+msgstr "Benachrichtigungstext"
+
+#: src/window.py:261
+msgid "Play sound"
+msgstr "Ton abspielen"
+
+#: src/window.py:270
+msgid "Until stopped"
+msgstr "Bis ausgeschaltet"
+
+#: src/window.py:284 src/window.py:306 src/window.py:563 src/window.py:630
+msgid "Command"
+msgstr "Befehl"
+
+#: src/window.py:312
+msgid "Back"
+msgstr "Zurück"
+
+#: src/window.py:325 src/window.py:571
+msgid "Add"
+msgstr "Hinzufügen"
+
+#: src/window.py:335
+msgid "Start"
+msgstr "Start"
+
+#: src/window.py:387 src/window.py:758
+msgid "Pause"
+msgstr ""
+
+#: src/window.py:410
 msgid "You can close the window, the timer will work in the background."
 msgstr "Du kannst das Fenster schließen, die Zeit läuft im Hintergrund weiter."
 
 # Translators: make sure to have a space in the end of the line.
-#: src/window.py:399 src/window.py:434
+#: src/window.py:489
 msgid "They will be executed outside of flatpak sandbox. "
 msgstr "Sie werden außerhalb der Flatpak-Sandbox ausgeführt. "
 
-#: src/window.py:402 src/window.py:437
+#: src/window.py:492
 msgid "Warning"
 msgstr "Warnung"
 
 # Translators: {} is used to pass "They will be executed outside of flatpak sandbox. "
 # in case the app is installed using flatpak. Make sure to have a space in front of it
 # (in the original text it's in the end of the first line)
-#: src/window.py:403 src/window.py:438
+#: src/window.py:493
 msgid ""
 "Your commands will be executed as if they were executed on a command prompt. "
 "{}The app doesn't perform any checks whether a command was executed "
@@ -190,47 +217,46 @@ msgstr ""
 "vorsichtig, trage keine Befehle ein, deren Ergebnis oder Auswirkungen dir "
 "unbekannt sind."
 
-#: src/window.py:404 src/window.py:439
+#: src/window.py:494 src/window.py:762
 msgid "Continue"
 msgstr "Fortfahren"
 
-#: src/window.py:409 src/window.py:444
+#: src/window.py:499
 msgid "I understand"
 msgstr "Ich verstehe"
 
-#: src/window.py:449 src/window.py:493
+#: src/window.py:553
 msgid "Add command"
 msgstr "Befehl hinzufügen"
 
-#: src/window.py:453 src/window.py:527 src/window.py:497 src/window.py:571
+#: src/window.py:557 src/window.py:623
 msgid "Name"
 msgstr "Name"
 
-#: src/window.py:466 src/window.py:542 src/window.py:564 src/window.py:510
-#: src/window.py:586 src/window.py:608
+#: src/window.py:570 src/window.py:638 src/window.py:660
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: src/window.py:498 src/window.py:523 src/window.py:542 src/window.py:567
+#: src/window.py:602 src/window.py:619
 msgid "Edit command"
 msgstr "Befehl bearbeiten"
 
-#: src/window.py:505 src/window.py:549
+#: src/window.py:609
 msgid "Remove command"
 msgstr "Befehl entfernen"
 
-#: src/window.py:543 src/window.py:587
+#: src/window.py:639
 msgid "Apply"
 msgstr "Übernehmen"
 
-#: src/window.py:561 src/window.py:605
+#: src/window.py:657
 msgid "Remove command?"
 msgstr "Befehl entfernen?"
 
-#: src/window.py:562 src/window.py:606
+#: src/window.py:658
 msgid "Are you sure you want to remove command \"{}\"?"
 msgstr "Bist du dir sicher, dass du den Befehl \"{}\" entfernen möchtest?"
 
-#: src/window.py:565 src/window.py:609
+#: src/window.py:661
 msgid "Remove"
 msgstr "Entfernen"
