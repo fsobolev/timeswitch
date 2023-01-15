@@ -674,7 +674,8 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
             self.save_config()
 
     def start_timer(self, w):
-        if self.hour_spin.get_value_as_int() == \
+        if self.timer_mode_dropdown.get_selected() == \
+                self.hour_spin.get_value_as_int() == \
                 self.min_spin.get_value_as_int() == \
                 self.sec_spin.get_value_as_int() == 0:
             return
