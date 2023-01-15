@@ -399,3 +399,4 @@ FodyWeavers.xsd
 
 # Flatpak Builder
 .flatpak-builder/
+.flatpak/
