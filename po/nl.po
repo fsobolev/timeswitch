@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-15 05:41+0300\n"
-"PO-Revision-Date: 2022-12-20 20:26+0100\n"
+"PO-Revision-Date: 2023-01-15 14:17+0100\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: Dutch\n"
 "Language: nl\n"
@@ -59,17 +59,18 @@ msgstr "Fyodor Sobolev"
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:32
 msgid "Added ability to pause timer"
-msgstr ""
+msgstr "Nieuw: mogelijkheid om de tijdklok te onderbreken"
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:33
 msgid ""
 "Added clock mode: in this mode you set clock time (in 24h format) when the "
 "timer should finish."
 msgstr ""
+"Nieuw klokmodus: stel in (in 24-uursformaat) wanneer de tijdklok moet afgaan"
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:34
 msgid "UI improvements"
-msgstr ""
+msgstr "Verbeterd: vormgeving"
 
 #: src/actions.py:85
 msgid "Timer has finished!"
@@ -105,15 +106,15 @@ msgstr "De melding is verstuurd."
 
 #: src/window.py:96
 msgid "Countdown"
-msgstr ""
+msgstr "Aftellen"
 
 #: src/window.py:96
 msgid "Clock"
-msgstr ""
+msgstr "Klok"
 
 #: src/window.py:98
 msgid "Select timer mode"
-msgstr ""
+msgstr "Kies de tijdklokmodus"
 
 #: src/window.py:105 src/window.py:355
 msgid "About"
@@ -187,7 +188,7 @@ msgstr "Starten"
 
 #: src/window.py:387 src/window.py:758
 msgid "Pause"
-msgstr ""
+msgstr "Onderbreken"
 
 #: src/window.py:410
 msgid "You can close the window, the timer will work in the background."
