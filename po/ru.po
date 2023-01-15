@@ -55,17 +55,19 @@ msgstr "Фёдор Соболев"
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:32
 msgid "Added ability to pause timer"
-msgstr ""
+msgstr "Добавлена возможность поставить таймер на паузу"
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:33
 msgid ""
 "Added clock mode: in this mode you set clock time (in 24h format) when the "
 "timer should finish."
 msgstr ""
+"Добавлен режим часов: в этом режиме вы устанавливаете время (в 24-часовом "
+"формате), в которое таймер должен завершиться"
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:34
 msgid "UI improvements"
-msgstr ""
+msgstr "Улучшения интерфейса"
 
 #: src/actions.py:85
 msgid "Timer has finished!"
@@ -101,15 +103,15 @@ msgstr "Уведомление было отправлено."
 
 #: src/window.py:96
 msgid "Countdown"
-msgstr ""
+msgstr "Отсчёт"
 
 #: src/window.py:96
 msgid "Clock"
-msgstr ""
+msgstr "Часы"
 
 #: src/window.py:98
 msgid "Select timer mode"
-msgstr ""
+msgstr "Выберите режим таймера"
 
 #: src/window.py:105 src/window.py:355
 msgid "About"
@@ -181,7 +183,7 @@ msgstr "Старт"
 
 #: src/window.py:387 src/window.py:758
 msgid "Pause"
-msgstr ""
+msgstr "Пауза"
 
 #: src/window.py:410
 msgid "You can close the window, the timer will work in the background."
