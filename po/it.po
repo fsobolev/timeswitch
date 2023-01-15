@@ -1,14 +1,14 @@
 # ITALIAN TRANSLATION FOR TIMESWITCH.
 # Copyright (C) 2022 Fyodor Sobolev
 # This file is distributed under the same license as the timeswitch package.
-# ALBANO BATTISTELLA <ALBANO_BATTISTELLA@HOTMAIL.COM>, 2022.
+# ALBANO BATTISTELLA <ALBANO_BATTISTELLA@HOTMAIL.COM>, 2022,2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-15 05:41+0300\n"
-"PO-Revision-Date: 2022-12-24 14:22+0100\n"
+"PO-Revision-Date: 2023-01-15 10:22+0100\n"
 "Last-Translator: Albano Battistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <LL@li.org>\n"
 "Language: it\n"
@@ -55,17 +55,19 @@ msgstr "Fyodor Sobolev"
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:32
 msgid "Added ability to pause timer"
-msgstr ""
+msgstr "Aggiunta la possibilità di mettere in pausa il timer"
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:33
 msgid ""
 "Added clock mode: in this mode you set clock time (in 24h format) when the "
 "timer should finish."
 msgstr ""
+"Aggiunta modalità orologio: in questa modalità si imposta l'ora dell'orologio (in formato 24h) quando il "
+"timer dovrebbe finire."
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:34
 msgid "UI improvements"
-msgstr ""
+msgstr "Miglioramenti dell'interfaccia utente"
 
 #: src/actions.py:85
 msgid "Timer has finished!"
@@ -101,15 +103,15 @@ msgstr "La notifica è stata inviata."
 
 #: src/window.py:96
 msgid "Countdown"
-msgstr ""
+msgstr "Conto alla rovescia"
 
 #: src/window.py:96
 msgid "Clock"
-msgstr ""
+msgstr "Orologio"
 
 #: src/window.py:98
 msgid "Select timer mode"
-msgstr ""
+msgstr "Seleziona la modalità timer"
 
 #: src/window.py:105 src/window.py:355
 msgid "About"
@@ -181,7 +183,7 @@ msgstr "Avvia"
 
 #: src/window.py:387 src/window.py:758
 msgid "Pause"
-msgstr ""
+msgstr "Pausa"
 
 #: src/window.py:410
 msgid "You can close the window, the timer will work in the background."
