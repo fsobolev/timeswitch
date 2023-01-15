@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-15 05:41+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2023-01-15 10:29+0100\n"
 "Last-Translator: Irénée Thirion <irenee.thirion@e.email>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:3
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:6
@@ -26,9 +26,7 @@ msgstr "Time Switch"
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:6
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:7
 msgid "Run tasks after a timer"
-msgstr ""
-"Éteignez, redémarrez, mettez en veille, recevez une notification ou exécutez "
-"une commande sur minuterie."
+msgstr "Exécutez des tâches sur minuterie"
 
 # "Éteignez, redémarrez, mettez en veille ou recevez une notification sur "
 # "minuterie"
@@ -41,7 +39,6 @@ msgstr ""
 
 # "minuteur;éteindre;redémarrer;mettre en veille;notification;reboot;arrêter;"
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:9
-#, fuzzy
 msgid ""
 "Time Switch is an easy-to-use program that allows you to power off, reboot "
 "or suspend your system, send a notification (optionally with a sound signal) "
@@ -69,17 +66,19 @@ msgstr "Fyodor Sobolev"
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:32
 msgid "Added ability to pause timer"
-msgstr ""
+msgstr "Ajout de la possibilité de mettre le minuteur en pause"
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:33
 msgid ""
 "Added clock mode: in this mode you set clock time (in 24h format) when the "
 "timer should finish."
 msgstr ""
+"Ajout du mode Horloge : dans ce mode vous définissez l’heure (au format 24 "
+"h) à laquelle le minuteur doit s’arrêter."
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:34
 msgid "UI improvements"
-msgstr ""
+msgstr "Améliorations de l’interface"
 
 #: src/actions.py:85
 msgid "Timer has finished!"
@@ -111,19 +110,19 @@ msgstr "La commande <b>{}</b> sera exécutée dans"
 
 #: src/timer.py:89
 msgid "The notification has been sent."
-msgstr ""
+msgstr "Notification envoyée."
 
 #: src/window.py:96
 msgid "Countdown"
-msgstr ""
+msgstr "Décompte"
 
 #: src/window.py:96
 msgid "Clock"
-msgstr ""
+msgstr "Horloge"
 
 #: src/window.py:98
 msgid "Select timer mode"
-msgstr ""
+msgstr "Sélectionnez le mode de minuterie"
 
 #: src/window.py:105 src/window.py:355
 msgid "About"
@@ -175,7 +174,7 @@ msgstr "Jouer un son"
 
 #: src/window.py:270
 msgid "Until stopped"
-msgstr ""
+msgstr "Jusqu’à l’arrêt"
 
 #: src/window.py:284 src/window.py:306 src/window.py:563 src/window.py:630
 msgid "Command"
@@ -195,7 +194,7 @@ msgstr "Commencer"
 
 #: src/window.py:387 src/window.py:758
 msgid "Pause"
-msgstr ""
+msgstr "Pause"
 
 #: src/window.py:410
 msgid "You can close the window, the timer will work in the background."
