@@ -1,15 +1,15 @@
 # Turkish translation for io.github.fsobolev.TimeSwitch
-# Copyright (C) 2022 io.github.fsobolev.TimeSwitch's COPYRIGHT HOLDER
+# Copyright (C) 2022, 2023 io.github.fsobolev.TimeSwitch's COPYRIGHT HOLDER
 # This file is distributed under the same license as the io.github.fsobolev.TimeSwitch package.
 #
-# Sabri Ünal <libreajans@gmail.com>, 2022.
+# Sabri Ünal <libreajans@gmail.com>, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: io.github.fsobolev.TimeSwitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-15 05:41+0300\n"
-"PO-Revision-Date: 2022-12-24 17:24+0300\n"
+"PO-Revision-Date: 2023-01-15 14:14+0300\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Turkish <gnometurk@gnome.org>\n"
 "Language: tr\n"
@@ -62,17 +62,19 @@ msgstr "Fyodor Sobolev"
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:32
 msgid "Added ability to pause timer"
-msgstr ""
+msgstr "Zamanlayıcıyı duraklatma özelliği eklendi"
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:33
 msgid ""
 "Added clock mode: in this mode you set clock time (in 24h format) when the "
 "timer should finish."
 msgstr ""
+"Saat kipi eklendi: bu kipte, zamanlayıcının bitmesi gereken saati (24 saat "
+"biçiminde) ayarlayabilirsiniz."
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:34
 msgid "UI improvements"
-msgstr ""
+msgstr "Arayüz iyileştirmeleri"
 
 #: src/actions.py:85
 msgid "Timer has finished!"
@@ -108,15 +110,15 @@ msgstr "Bildirim gönderildi."
 
 #: src/window.py:96
 msgid "Countdown"
-msgstr ""
+msgstr "Geri sayım"
 
 #: src/window.py:96
 msgid "Clock"
-msgstr ""
+msgstr "Saat"
 
 #: src/window.py:98
 msgid "Select timer mode"
-msgstr ""
+msgstr "Zamanlayıcı kipini seç"
 
 #: src/window.py:105 src/window.py:355
 msgid "About"
@@ -190,7 +192,7 @@ msgstr "Başlat"
 
 #: src/window.py:387 src/window.py:758
 msgid "Pause"
-msgstr ""
+msgstr "Duraklat"
 
 #: src/window.py:410
 msgid "You can close the window, the timer will work in the background."
