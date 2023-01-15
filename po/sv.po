@@ -1,14 +1,14 @@
 # Swedish translation for Time Switch.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Åke Engelbrektson <eson@svenskasprakfiler.se>, 2022.
+# Åke Engelbrektson <eson@svenskasprakfiler.se>, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-15 05:41+0300\n"
-"PO-Revision-Date: 2022-12-25 20:54+0100\n"
+"PO-Revision-Date: 2023-01-15 08:24+0100\n"
 "Last-Translator: Åke Engelbrektson <eson@svenskasprakfiler.se>\n"
 "Language-Team: \n"
 "Language: sv\n"
@@ -108,15 +108,15 @@ msgstr "Meddelandet har skickats."
 
 #: src/window.py:96
 msgid "Countdown"
-msgstr ""
+msgstr "Nedräkning"
 
 #: src/window.py:96
 msgid "Clock"
-msgstr ""
+msgstr "Klocka"
 
 #: src/window.py:98
 msgid "Select timer mode"
-msgstr ""
+msgstr "Välj tidursläge"
 
 #: src/window.py:105 src/window.py:355
 msgid "About"
@@ -188,7 +188,7 @@ msgstr "Start"
 
 #: src/window.py:387 src/window.py:758
 msgid "Pause"
-msgstr ""
+msgstr "Paus"
 
 #: src/window.py:410
 msgid "You can close the window, the timer will work in the background."
