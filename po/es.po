@@ -1,17 +1,17 @@
 # Spanish translation for Time Switch
 # Copyright (C) 2022 Fyodor Sobolev
 # This file is distributed under the same license as the timeswitch package.
-# David Delgado <delta_veintiuno@proton.me>, 2022.
+# David Delgado <david_veintiuno@proton.me>, 2022-2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-15 05:41+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2023-01-17 12:11+0100\n"
 "Last-Translator: David Delgado <delta_veintiuno@proton.me>\n"
-"Language-Team: Spanish - Spain <delta_veintiuno@proton.me>\n"
-"Language: es_ES\n"
+"Language-Team: Spanish; Castilian <delta_veintiuno@proton.me>\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -37,15 +37,14 @@ msgstr ""
 "comando;"
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:9
-#, fuzzy
 msgid ""
 "Time Switch is an easy-to-use program that allows you to power off, reboot "
 "or suspend your system, send a notification (optionally with a sound signal) "
 "or execute any command on timer."
 msgstr ""
-"Time Switch es un simple programa que te permite apagar, reiniciar, "
-"suspender tu sistema, mandar una notificación (opcionalmente con sonido) o "
-"ejecutar un comando con un temporizador."
+"Time Switch es un simple programa que te permite apagar, reiniciar \n"
+"o suspender tu sistema, mandar una notificación (opcionalmente con sonido)\n"
+"o ejecutar cualquier comando con un temporizador."
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:10
 msgid ""
@@ -61,17 +60,19 @@ msgstr "Fyodor Sobolev"
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:32
 msgid "Added ability to pause timer"
-msgstr ""
+msgstr "Se ha añadido la posibilidad de pausar el temporizador"
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:33
 msgid ""
 "Added clock mode: in this mode you set clock time (in 24h format) when the "
 "timer should finish."
 msgstr ""
+"Añadido el modo reloj: en este modo se establece la hora del reloj (en "
+"formato 24h) a la que debe finalizar el temporizador."
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:34
 msgid "UI improvements"
-msgstr ""
+msgstr "Mejoras en la interfaz"
 
 #: src/actions.py:85
 msgid "Timer has finished!"
@@ -107,15 +108,15 @@ msgstr "La notificación ha sido enviada"
 
 #: src/window.py:96
 msgid "Countdown"
-msgstr ""
+msgstr "Cuenta atrás "
 
 #: src/window.py:96
 msgid "Clock"
-msgstr ""
+msgstr "Reloj"
 
 #: src/window.py:98
 msgid "Select timer mode"
-msgstr ""
+msgstr "Selecionar modo del temporizador"
 
 #: src/window.py:105 src/window.py:355
 msgid "About"
@@ -169,7 +170,7 @@ msgstr "Reproducir sonido"
 
 #: src/window.py:270
 msgid "Until stopped"
-msgstr "Hasta que se detenga"
+msgstr "Hasta detenerse"
 
 #: src/window.py:284 src/window.py:306 src/window.py:563 src/window.py:630
 msgid "Command"
@@ -189,7 +190,7 @@ msgstr "Iniciar"
 
 #: src/window.py:387 src/window.py:758
 msgid "Pause"
-msgstr ""
+msgstr "Pausar"
 
 #: src/window.py:410
 msgid "You can close the window, the timer will work in the background."
