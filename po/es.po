@@ -42,8 +42,8 @@ msgid ""
 "or suspend your system, send a notification (optionally with a sound signal) "
 "or execute any command on timer."
 msgstr ""
-"Time Switch es un simple programa que te permite apagar, reiniciar \n"
-"o suspender tu sistema, mandar una notificación (opcionalmente con sonido)\n"
+"Time Switch es un simple programa que te permite apagar, reiniciar"
+"o suspender tu sistema, mandar una notificación (opcionalmente con sonido)"
 "o ejecutar cualquier comando con un temporizador."
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:10
