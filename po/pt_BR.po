@@ -2,14 +2,14 @@
 # Copyright (C) 2022 Fyodor Sobolev
 # This file is distributed under the same license as the timeswitch package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# Fernando Lopes <fefehex12@gmail.com>, 2022.
+# Fernando Lopes <fefehex12@gmail.com>, 2022-2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-15 05:41+0300\n"
-"PO-Revision-Date: 2022-12-20 17:31-0300\n"
+"PO-Revision-Date: 2023-01-18 10:07-0300\n"
 "Last-Translator: Fernando Lopes <fefehex12@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <fefehex12@gmail.com>\n"
 "Language: pt_BR\n"
@@ -63,17 +63,19 @@ msgstr "Fyodor Sobolev"
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:32
 msgid "Added ability to pause timer"
-msgstr ""
+msgstr "Adicionada a capacidade de pausar o temporizador"
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:33
 msgid ""
 "Added clock mode: in this mode you set clock time (in 24h format) when the "
 "timer should finish."
 msgstr ""
+"Modo relógio adicionado: neste modo você determina a hora do relógio (no "
+"formato de 24h) em que o temporizador deve terminar."
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:34
 msgid "UI improvements"
-msgstr ""
+msgstr "Melhorias na IU"
 
 #: src/actions.py:85
 msgid "Timer has finished!"
@@ -109,15 +111,15 @@ msgstr "A notificação foi enviada."
 
 #: src/window.py:96
 msgid "Countdown"
-msgstr ""
+msgstr "Contagem regressiva"
 
 #: src/window.py:96
 msgid "Clock"
-msgstr ""
+msgstr "Relógio"
 
 #: src/window.py:98
 msgid "Select timer mode"
-msgstr ""
+msgstr "Selecione o modo do temporizador"
 
 #: src/window.py:105 src/window.py:355
 msgid "About"
@@ -135,7 +137,7 @@ msgstr "seg"
 
 #: src/window.py:184
 msgid "Reset"
-msgstr "Resetar"
+msgstr "Reiniciar"
 
 #: src/window.py:199
 msgid "Action"
@@ -191,7 +193,7 @@ msgstr "Iniciar"
 
 #: src/window.py:387 src/window.py:758
 msgid "Pause"
-msgstr ""
+msgstr "Pausar"
 
 #: src/window.py:410
 msgid "You can close the window, the timer will work in the background."
@@ -206,7 +208,7 @@ msgstr "Eles serão executados fora das restrições do flatpak. "
 
 #: src/window.py:492
 msgid "Warning"
-msgstr "Aviso"
+msgstr "Atenção"
 
 # Translators: {} is used to pass "They will be executed outside of flatpak sandbox. "
 # in case the app is installed using flatpak. Make sure to have a space in front of it
@@ -218,9 +220,9 @@ msgid ""
 "successfully or not. Be careful, do not enter commands whose result is "
 "unknown to you."
 msgstr ""
-"Seus comandos serão executados como se estivessem em um prompt de comando. {}"
-"O aplicativo não verifica se um comando foi executado com sucesso ou não. "
-"Seja cuidadoso, não execute comandos com resultados desconhecidos. "
+"Seus comandos serão executados como se estivessem em um terminal. {}O "
+"aplicativo não verifica se um comando foi executado com sucesso ou não. "
+"Tenha cuidado, não execute comandos com resultados desconhecidos. "
 
 #: src/window.py:494 src/window.py:762
 msgid "Continue"
