@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-15 05:41+0300\n"
-"PO-Revision-Date: 2023-01-18 10:07-0300\n"
+"PO-Revision-Date: 2023-01-18 10:22-0300\n"
 "Last-Translator: Fernando Lopes <fefehex12@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <fefehex12@gmail.com>\n"
 "Language: pt_BR\n"
@@ -75,7 +75,7 @@ msgstr ""
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:34
 msgid "UI improvements"
-msgstr "Melhorias na IU"
+msgstr "Melhorias na interface de usuário"
 
 #: src/actions.py:85
 msgid "Timer has finished!"
