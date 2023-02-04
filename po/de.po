@@ -68,8 +68,8 @@ msgid ""
 "Added clock mode: in this mode you set clock time (in 24h format) when the "
 "timer should finish."
 msgstr ""
-"Uhrmodus hinzugefügt: In diesem Modus legen Sie eine Uhrzeit (im 24-Std-Format) "
-"fest, um die der Timer enden soll."
+"Uhrmodus hinzugefügt: In diesem Modus legen Sie eine Uhrzeit (im 24-Std-"
+"Format) fest, um die der Timer enden soll."
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:34
 msgid "UI improvements"

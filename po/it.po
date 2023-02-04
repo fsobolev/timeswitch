@@ -62,8 +62,8 @@ msgid ""
 "Added clock mode: in this mode you set clock time (in 24h format) when the "
 "timer should finish."
 msgstr ""
-"Aggiunta modalità orologio: in questa modalità si imposta l'ora dell'orologio (in formato 24h) quando il "
-"timer dovrebbe finire."
+"Aggiunta modalità orologio: in questa modalità si imposta l'ora "
+"dell'orologio (in formato 24h) quando il timer dovrebbe finire."
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:34
 msgid "UI improvements"
