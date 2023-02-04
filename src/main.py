@@ -59,7 +59,7 @@ class TimeSwitchApplication(Adw.Application):
             self.create_action("stop-timer", lambda *args : win.stop_timer(self))
         win.present()
 
-    def on_about_action(self, widget, _):
+    def on_about_action(self, widget, args):
         """Callback for the app.about action."""
         about = Adw.AboutWindow(transient_for=self.props.active_window,
                                 application_name='Time Switch',
@@ -71,7 +71,7 @@ class TimeSwitchApplication(Adw.Application):
                                 issue_url='https://github.com/fsobolev/timeswitch/issues',
                                 license_type=Gtk.License.MIT_X11,
                                 artists=('Igor Dyatlov https://github.com/igor-dyatlov',),
-                                translator_credits=get_translator_credits())
+                                translator_credits=_('Translators on Weblate ❤️') + 'https://hosted.weblate.org/projects/timeswitch/timeswitch/\n' + get_translator_credits())
         about.present()
 
     def create_action(self, name, callback, shortcuts=None):
