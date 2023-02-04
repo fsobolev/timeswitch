@@ -1,7 +1,7 @@
 # Copyright (C) 2022 Fyodor Sobolev
 # This file is distributed under the same license as the timeswitch package.
 #
-# Heimen Stoffels <vistausss@fastmail.com>, 2022.
+# Heimen Stoffels <vistausss@fastmail.com>, 2022, 2023.
 # J. Lavoie <j.lavoie@net-c.ca>, 2023.
 msgid ""
 msgstr ""
@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-15 05:41+0300\n"
 "PO-Revision-Date: 2023-02-06 09:38+0000\n"
-"Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
+"Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/timeswitch/"
 "timeswitch/nl/>\n"
 "Language: nl\n"
@@ -68,7 +68,7 @@ msgid ""
 "Added clock mode: in this mode you set clock time (in 24h format) when the "
 "timer should finish."
 msgstr ""
-"Nieuw klokmodus: stel in (in 24-uursformaat) wanneer de tijdklok moet afgaan"
+"Nieuwe klokmodus: stel in (in 24-uursformaat) wanneer de tijdklok moet afgaan"
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:34
 msgid "UI improvements"
