@@ -22,7 +22,13 @@ The easiest way to build the development version of Time Switch is by using GNOM
 
 ## Translations
 
-See [instruction](po/README.md) on how to translate the app to your language.
+<a href="https://hosted.weblate.org/engage/timeswitch/">
+<img src="https://hosted.weblate.org/widgets/timeswitch/-/88x31-white.png" alt="Translation status" />
+</a>
+
+The app is being translated using Weblate (click the image above to join).
+
+In case you don't want to use Weblate, follow this [instruction](po/README.md).
 
 ## Code of Conduct
 
