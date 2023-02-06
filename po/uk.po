@@ -7,28 +7,35 @@ msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-15 05:41+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2023-02-07 15:36+0000\n"
+"Last-Translator: Dan <denqwerta@gmail.com>\n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/timeswitch/"
+"timeswitch/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.16-dev\n"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:3
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:6
 msgid "Time Switch"
-msgstr ""
+msgstr "Time Switch"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:6
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:7
 msgid "Run tasks after a timer"
-msgstr ""
+msgstr "Запуск завдань за таймером"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:11
 msgid "timer;shutdown;poweroff;reboot;suspend;notification;prompt;cmd;command;"
 msgstr ""
+"таймер;завершення "
+"роботи;вимкнення;перезавантаження;призупинення;сповіщення;підказка;командний "
+"рядок;команда;"
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:9
 msgid ""
@@ -36,158 +43,165 @@ msgid ""
 "or suspend your system, send a notification (optionally with a sound signal) "
 "or execute any command on timer."
 msgstr ""
+"Time Switch — це проста у використанні програма, яка дозволяє вимкнути, "
+"перезавантажити або призупинити систему, надіслати сповіщення (за бажанням "
+"із звуковим сигналом) або виконати будь-яку команду за таймером."
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:10
 msgid ""
 "The app is built for GNOME and uses LibAdwaita, but it works in any desktop "
 "environment."
 msgstr ""
+"Застосунок побудований для GNOME і використовує LibAdwaita, але працює в "
+"будь-якому робочому середовищі."
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:15
 msgid "Fyodor Sobolev"
-msgstr ""
+msgstr "Федір Соболєв"
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:32
 msgid "Added ability to pause timer"
-msgstr ""
+msgstr "Додана можливість призупинити таймер"
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:33
 msgid ""
 "Added clock mode: in this mode you set clock time (in 24h format) when the "
 "timer should finish."
 msgstr ""
+"Додано режим годинника: у цьому режимі ви встановлюєте час (у форматі 24 "
+"години), коли таймер має завершитися."
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:34
 msgid "UI improvements"
-msgstr ""
+msgstr "Покращення інтерфейсу"
 
 #: src/actions.py:85
 msgid "Timer has finished!"
-msgstr ""
+msgstr "Таймер закінчився!"
 
 #: src/actions.py:91 src/window.py:398
 msgid "Stop"
-msgstr ""
+msgstr "Стоп"
 
 #: src/timer.py:49
 msgid "Your device will be powered off in"
-msgstr ""
+msgstr "Ваш пристрій буде вимкнено через"
 
 #: src/timer.py:51
 msgid "Your device will be rebooted in"
-msgstr ""
+msgstr "Ваш пристрій буде перезавантажено в"
 
 #: src/timer.py:53
 msgid "Your device will be suspended in"
-msgstr ""
+msgstr "Ваш пристрій буде призупинено в"
 
 #: src/timer.py:55
 msgid "You will receive a notification in"
-msgstr ""
+msgstr "Ви отримаєте сповіщення в"
 
 #: src/timer.py:62
 msgid "The command <b>{}</b> will be executed in"
-msgstr ""
+msgstr "Команда <b>{}</b> буде виконана в"
 
 #: src/timer.py:89
 msgid "The notification has been sent."
-msgstr ""
+msgstr "Повідомлення надіслано."
 
 #: src/window.py:96
 msgid "Countdown"
-msgstr ""
+msgstr "Зворотний відлік"
 
 #: src/window.py:96
 msgid "Clock"
-msgstr ""
+msgstr "Годинник"
 
 #: src/window.py:98
 msgid "Select timer mode"
-msgstr ""
+msgstr "Виберіть режим таймера"
 
 #: src/window.py:105 src/window.py:355
 msgid "About"
-msgstr ""
+msgstr "Про застосунок"
 
 #: src/window.py:170
 msgid "min"
-msgstr ""
+msgstr "хв"
 
 #: src/window.py:170
 msgid "sec"
-msgstr ""
+msgstr "сек"
 
 #: src/window.py:184
 msgid "Reset"
-msgstr ""
+msgstr "Скинути"
 
 #: src/window.py:199
 msgid "Action"
-msgstr ""
+msgstr "Дія"
 
 #: src/window.py:204
 msgid "Power Off"
-msgstr ""
+msgstr "Вимкнення"
 
 #: src/window.py:213
 msgid "Reboot"
-msgstr ""
+msgstr "Перезавантажити"
 
 #: src/window.py:222
 msgid "Suspend"
-msgstr ""
+msgstr "Призупинити"
 
 #: src/window.py:231
 msgid "Notification"
-msgstr ""
+msgstr "Сповіщення"
 
 #: src/window.py:243
 msgid "Notification settings"
-msgstr ""
+msgstr "Налаштування сповіщень"
 
 #: src/window.py:257
 msgid "Notification text"
-msgstr ""
+msgstr "Текст сповіщення"
 
 #: src/window.py:261
 msgid "Play sound"
-msgstr ""
+msgstr "Увімкнути звук"
 
 #: src/window.py:270
 msgid "Until stopped"
-msgstr ""
+msgstr "Доки не зупиниться"
 
 #: src/window.py:284 src/window.py:306 src/window.py:563 src/window.py:630
 msgid "Command"
-msgstr ""
+msgstr "Команда"
 
 #: src/window.py:312
 msgid "Back"
-msgstr ""
+msgstr "Назад"
 
 #: src/window.py:325 src/window.py:571
 msgid "Add"
-msgstr ""
+msgstr "Додати"
 
 #: src/window.py:335
 msgid "Start"
-msgstr ""
+msgstr "Старт"
 
 #: src/window.py:387 src/window.py:758
 msgid "Pause"
-msgstr ""
+msgstr "Пауза"
 
 #: src/window.py:410
 msgid "You can close the window, the timer will work in the background."
-msgstr ""
+msgstr "Ви можете закрити вікно, таймер працюватиме у фоновому режимі."
 
 #: src/window.py:489
 msgid "They will be executed outside of flatpak sandbox. "
-msgstr ""
+msgstr "Вони будуть виконані за межами пісочниці flatpak. "
 
 #: src/window.py:492
 msgid "Warning"
-msgstr ""
+msgstr "Попередження"
 
 #: src/window.py:493
 msgid ""
@@ -196,47 +210,51 @@ msgid ""
 "successfully or not. Be careful, do not enter commands whose result is "
 "unknown to you."
 msgstr ""
+"Ваші команди буде виконано так, ніби їх було виконано у командному рядку. {}"
+"Застосунок не виконує жодних перевірок того, чи була команда виконана "
+"успішно, чи ні. Будьте обережні, не вводьте команди, результат яких вам "
+"невідомий."
 
 #: src/window.py:494 src/window.py:762
 msgid "Continue"
-msgstr ""
+msgstr "Продовжити"
 
 #: src/window.py:499
 msgid "I understand"
-msgstr ""
+msgstr "Я розумію"
 
 #: src/window.py:553
 msgid "Add command"
-msgstr ""
+msgstr "Додати команду"
 
 #: src/window.py:557 src/window.py:623
 msgid "Name"
-msgstr ""
+msgstr "Ім'я"
 
 #: src/window.py:570 src/window.py:638 src/window.py:660
 msgid "Cancel"
-msgstr ""
+msgstr "Скасувати"
 
 #: src/window.py:602 src/window.py:619
 msgid "Edit command"
-msgstr ""
+msgstr "Редагувати команду"
 
 #: src/window.py:609
 msgid "Remove command"
-msgstr ""
+msgstr "Видалити команду"
 
 #: src/window.py:639
 msgid "Apply"
-msgstr ""
+msgstr "Застосувати"
 
 #: src/window.py:657
 msgid "Remove command?"
-msgstr ""
+msgstr "Видалити команду?"
 
 #: src/window.py:658
 msgid "Are you sure you want to remove command \"{}\"?"
-msgstr ""
+msgstr "Ви впевнені, що хочете видалити команду \"{}\"?"
 
 #: src/window.py:661
 msgid "Remove"
-msgstr ""
+msgstr "Видалити"
