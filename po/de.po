@@ -4,13 +4,14 @@
 # Luke Röper <contact@roeper-luke.de>, 2022.
 # gregorni <gregorniehl@web.de>, 2022.
 # J. Lavoie <j.lavoie@net-c.ca>, 2023.
+# RoepLuke <contact@roeper-luke.de>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-15 05:41+0300\n"
-"PO-Revision-Date: 2023-02-06 09:38+0000\n"
-"Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
+"PO-Revision-Date: 2023-02-07 15:36+0000\n"
+"Last-Translator: RoepLuke <contact@roeper-luke.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/timeswitch/"
 "timeswitch/de/>\n"
 "Language: de\n"
@@ -106,7 +107,7 @@ msgstr "Der Befehl <b>{}</b> wird ausgeführt in"
 
 #: src/timer.py:89
 msgid "The notification has been sent."
-msgstr "Die Benachrichtigun wurde gesendet."
+msgstr "Die Benachrichtigung wurde gesendet."
 
 #: src/window.py:96
 msgid "Countdown"
