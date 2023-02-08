@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the timeswitch package.
 # Irénée Thirion <irenee.thirion@e.email>, 2022.
 # J. Lavoie <j.lavoie@net-c.ca>, 2023.
+# "J. Lavoie" <j.lavoie@net-c.ca>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-15 05:41+0300\n"
-"PO-Revision-Date: 2023-02-06 09:38+0000\n"
-"Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
+"PO-Revision-Date: 2023-02-09 14:39+0000\n"
+"Last-Translator: \"J. Lavoie\" <j.lavoie@net-c.ca>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/timeswitch/"
 "timeswitch/fr/>\n"
 "Language: fr\n"
@@ -95,7 +96,7 @@ msgstr "Votre appareil sera éteint dans"
 
 #: src/timer.py:51
 msgid "Your device will be rebooted in"
-msgstr "Votre appareil sera redémarrer dans"
+msgstr "Votre appareil sera redémarré dans"
 
 #: src/timer.py:53
 msgid "Your device will be suspended in"
