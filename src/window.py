@@ -87,8 +87,8 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.main_box.append(self.header_main)
 
         self.timer_mode_box = Gtk.Box.new(Gtk.Orientation.HORIZONTAL, 4)
-        self.timer_mode_box.set_margin_start(10)
-        self.timer_mode_box.set_margin_end(10)
+        self.timer_mode_box.set_margin_start(6)
+        self.timer_mode_box.set_margin_end(6)
         self.timer_mode_box.set_valign(Gtk.Align.CENTER)
         self.header_main.pack_start(self.timer_mode_box)
 
