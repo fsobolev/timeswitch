@@ -60,12 +60,12 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
             os.makedirs(self.config_dir)
         self.config_file_path = self.config_dir + '/config.json'
         (self.last_timer_value, self.last_action, self.commands_list, \
-            self.mode) = self.load_config()
+            self.mode, self.window_size) = self.load_config()
 
         self.build_ui()
 
     def build_ui(self):
-        self.set_default_size(360, 712)
+        self.set_default_size(*self.window_size)
         self.set_title('Time Switch')
         self.content = Gtk.Box.new(Gtk.Orientation.VERTICAL, 0)
         self.set_content(self.content)
@@ -529,6 +529,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         config_last_action = [0, 0]
         config_commands = []
         config_mode = 0
+        config_size = (360, 712)
         if os.path.exists(self.config_file_path):
             with open(self.config_file_path, 'r') as f:
                 data = json.load(f)
@@ -542,8 +543,10 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
                         self.show_cmd_warning = False
                 if 'mode' in data.keys():
                     config_mode = data['mode']
+                if 'window-size' in data.keys():
+                    config_size = data['window-size']
         return (config_last_timer_value, config_last_action, config_commands, \
-            config_mode)
+            config_mode, config_size)
 
     def save_config(self):
         try:
@@ -551,7 +554,8 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
                 data = {'last-timer-value': self.last_timer_value, \
                     'last-action': self.last_action, \
                     'commands': self.commands_list, \
-                    'mode': self.timer_mode_dropdown.get_selected()}
+                    'mode': self.timer_mode_dropdown.get_selected(),
+                    'window-size': self.get_default_size()}
                 json.dump(data, f)
         except Exception as e:
             print("Can't save config file:")
@@ -797,6 +801,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
             self.main_stack.set_visible_child_name('running')
 
     def on_close_request(self, w):
+        self.save_config()
         if self.timer:
             self.quit_on_finish = True
         else:
