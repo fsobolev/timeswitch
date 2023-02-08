@@ -28,7 +28,7 @@
 #
 # SPDX-License-Identifier: MIT
 
-from gi.repository import Adw, Gtk, GLib
+from gi.repository import Adw, Gtk, GLib, Gio
 from .timer import Timer
 import json
 import os
@@ -65,7 +65,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.build_ui()
 
     def build_ui(self):
-        self.set_default_size(300, 712)
+        self.set_default_size(360, 712)
         self.set_title('Time Switch')
         self.content = Gtk.Box.new(Gtk.Orientation.VERTICAL, 0)
         self.set_content(self.content)
@@ -83,11 +83,14 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
 
         # Main Stack Headerbar
         self.header_main = Adw.HeaderBar.new()
+        self.header_main.set_title_widget(Gtk.Label.new(''))
         self.main_box.append(self.header_main)
 
         self.timer_mode_box = Gtk.Box.new(Gtk.Orientation.HORIZONTAL, 4)
+        self.timer_mode_box.set_margin_start(10)
+        self.timer_mode_box.set_margin_end(10)
         self.timer_mode_box.set_valign(Gtk.Align.CENTER)
-        self.header_main.set_title_widget(self.timer_mode_box)
+        self.header_main.pack_start(self.timer_mode_box)
 
         self.timer_mode_image = Gtk.Image.new_from_icon_name('hourglass-symbolic')
         self.timer_mode_box.append(self.timer_mode_image)
@@ -100,10 +103,14 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
             self.change_timer_mode)
         self.timer_mode_box.append(self.timer_mode_dropdown)
 
-        self.about_button_main = Gtk.Button.new_from_icon_name('help-about-symbolic')
-        self.about_button_main.set_action_name('app.about')
-        self.about_button_main.set_tooltip_text(_('About'))
-        self.header_main.pack_start(self.about_button_main)
+        self.main_menu_button = Gtk.MenuButton.new()
+        self.main_menu_button.set_icon_name('open-menu-symbolic')
+        self.header_main.pack_end(self.main_menu_button)
+        self.main_menu = Gio.Menu.new()
+        self.main_menu.append(_('Keyboard Shortcuts'), 'win.shortcuts')
+        self.main_menu.append(_('About'), 'app.about')
+        self.main_menu.append(_('Quit'), 'win.quit')
+        self.main_menu_button.set_menu_model(self.main_menu)
 
         # Scrolled window
         self.scrolled_window = Gtk.ScrolledWindow.new()
@@ -186,13 +193,20 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.reset_button.connect('clicked', self.reset_timer)
         self.grid.attach(self.reset_button, 0, 2, 2, 1)
 
+        # Stack clamp
+        self.stack_clamp = Adw.Clamp.new()
+        self.stack_clamp.set_maximum_size(500)
+        self.stack_clamp.set_margin_start(15)
+        self.stack_clamp.set_margin_end(15)
+        self.setup_box.append(self.stack_clamp)
+
         # Actions stack
         self.actions_stack = Gtk.Stack.new()
         self.actions_stack.set_hexpand(True)
         self.actions_stack.set_vexpand(True)
         self.actions_stack.set_transition_type( \
             Gtk.StackTransitionType.SLIDE_LEFT_RIGHT)
-        self.setup_box.append(self.actions_stack)
+        self.stack_clamp.set_child(self.actions_stack)
 
         # Actions
         self.actions_group = Adw.PreferencesGroup.new()
@@ -350,10 +364,10 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.header_run.set_title_widget(Gtk.Label.new(''))
         self.run_page_box.append(self.header_run)
 
-        self.about_button_run = Gtk.Button.new_from_icon_name('help-about-symbolic')
-        self.about_button_run.set_action_name('app.about')
-        self.about_button_run.set_tooltip_text(_('About'))
-        self.header_run.pack_start(self.about_button_run)
+        self.run_menu_button = Gtk.MenuButton.new()
+        self.run_menu_button.set_icon_name('open-menu-symbolic')
+        self.header_run.pack_end(self.run_menu_button)
+        self.run_menu_button.set_menu_model(self.main_menu)
 
         # Running timer box
         self.running_box = Gtk.Box.new(Gtk.Orientation.VERTICAL, 10)
