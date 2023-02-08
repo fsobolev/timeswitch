@@ -57,7 +57,9 @@ class TimeSwitchApplication(Adw.Application):
         win = self.props.active_window
         if not win:
             win = TimeSwitchWindow(application=self)
-            self.create_action("stop-timer", lambda *args : win.stop_timer(self))
+            self.create_action('stop-timer', \
+                lambda *args : win.stop_timer(self))
+            self.create_action('quit', self.on_quit_action, ['<primary>Q'])
         win.present()
 
     def on_about_action(self, widget, args):
@@ -74,6 +76,27 @@ class TimeSwitchApplication(Adw.Application):
                                 artists=('Igor Dyatlov https://github.com/igor-dyatlov',),
                                 translator_credits=_('Translators on Weblate ❤️') + 'https://hosted.weblate.org/projects/timeswitch/timeswitch/\n' + get_translator_credits())
         about.present()
+
+    def on_quit_action(self, widget, args):
+        def on_response(w, response):
+            if response == 'quit':
+                win.close()
+                self.quit()
+
+        win = self.props.active_window
+        if win.timer:
+            dialog = Adw.MessageDialog.new(win, '', \
+                _('Are you sure you want to stop the timer and quit?'))
+            dialog.add_response('cancel', _('Cancel'))
+            dialog.set_close_response('cancel')
+            dialog.add_response('quit', _('Quit'))
+            dialog.set_default_response('quit')
+            dialog.set_response_appearance('quit', \
+                Adw.ResponseAppearance.DESTRUCTIVE)
+            dialog.connect('response', on_response)
+            dialog.show()
+        else:
+            win.close()
 
     def create_action(self, name, callback, shortcuts=None):
         """Add an application action.

@@ -49,7 +49,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.connect('show', self.on_window_show)
         self.connect('close-request', self.on_close_request)
         self.get_application().set_accels_for_action('window.close',
-            ['<primary>q', '<primary>w'])
+            ['<primary>w'])
 
         self.show_cmd_warning = True
         if os.getenv('XDG_CONFIG_HOME'):
@@ -109,7 +109,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.main_menu = Gio.Menu.new()
         self.main_menu.append(_('Keyboard Shortcuts'), 'win.shortcuts')
         self.main_menu.append(_('About'), 'app.about')
-        self.main_menu.append(_('Quit'), 'win.quit')
+        self.main_menu.append(_('Quit'), 'app.quit')
         self.main_menu_button.set_menu_model(self.main_menu)
 
         # Scrolled window
