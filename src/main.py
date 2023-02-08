@@ -42,9 +42,10 @@ from .translator_credits import get_translator_credits
 class TimeSwitchApplication(Adw.Application):
     """The main application singleton class."""
 
-    def __init__(self):
+    def __init__(self, version):
         super().__init__(application_id='io.github.fsobolev.TimeSwitch',
                          flags=Gio.ApplicationFlags.FLAGS_NONE)
+        self.version = version
         self.create_action('about', self.on_about_action)
 
     def do_activate(self):
@@ -64,9 +65,9 @@ class TimeSwitchApplication(Adw.Application):
         about = Adw.AboutWindow(transient_for=self.props.active_window,
                                 application_name='Time Switch',
                                 application_icon='io.github.fsobolev.TimeSwitch',
-                                developer_name='Fyodor Sobolev',
-                                version='2023.01.28',
-                                copyright='© 2022 Fyodor Sobolev',
+                                developer_name=_('Fyodor Sobolev'),
+                                version=self.version,
+                                copyright='© 2022 ' + _('Fyodor Sobolev'),
                                 website='https://github.com/fsobolev/timeswitch',
                                 issue_url='https://github.com/fsobolev/timeswitch/issues',
                                 license_type=Gtk.License.MIT_X11,
@@ -92,5 +93,5 @@ class TimeSwitchApplication(Adw.Application):
 
 def main(version):
     """The application's entry point."""
-    app = TimeSwitchApplication()
+    app = TimeSwitchApplication(version)
     return app.run(sys.argv)
