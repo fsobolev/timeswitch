@@ -529,7 +529,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         config_last_action = [0, 0]
         config_commands = []
         config_mode = 0
-        config_size = (360, 712)
+        config_size = (330, 712)
         if os.path.exists(self.config_file_path):
             with open(self.config_file_path, 'r') as f:
                 data = json.load(f)
