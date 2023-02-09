@@ -1,0 +1,242 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022 Fyodor Sobolev
+# This file is distributed under the same license as the timeswitch package.
+# poi <erbaotao@outlook.com>, 2023.
+msgid ""
+msgstr ""
+"Project-Id-Version: timeswitch\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-15 05:41+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: zh_Hans\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/io.github.fsobolev.TimeSwitch.desktop.in:3
+#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:6
+msgid "Time Switch"
+msgstr ""
+
+#: data/io.github.fsobolev.TimeSwitch.desktop.in:6
+#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:7
+msgid "Run tasks after a timer"
+msgstr ""
+
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/io.github.fsobolev.TimeSwitch.desktop.in:11
+msgid "timer;shutdown;poweroff;reboot;suspend;notification;prompt;cmd;command;"
+msgstr ""
+
+#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:9
+msgid ""
+"Time Switch is an easy-to-use program that allows you to power off, reboot "
+"or suspend your system, send a notification (optionally with a sound signal) "
+"or execute any command on timer."
+msgstr ""
+
+#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:10
+msgid ""
+"The app is built for GNOME and uses LibAdwaita, but it works in any desktop "
+"environment."
+msgstr ""
+
+#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:15
+msgid "Fyodor Sobolev"
+msgstr ""
+
+#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:32
+msgid "Added ability to pause timer"
+msgstr ""
+
+#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:33
+msgid ""
+"Added clock mode: in this mode you set clock time (in 24h format) when the "
+"timer should finish."
+msgstr ""
+
+#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:34
+msgid "UI improvements"
+msgstr ""
+
+#: src/actions.py:85
+msgid "Timer has finished!"
+msgstr ""
+
+#: src/actions.py:91 src/window.py:398
+msgid "Stop"
+msgstr ""
+
+#: src/timer.py:49
+msgid "Your device will be powered off in"
+msgstr ""
+
+#: src/timer.py:51
+msgid "Your device will be rebooted in"
+msgstr ""
+
+#: src/timer.py:53
+msgid "Your device will be suspended in"
+msgstr ""
+
+#: src/timer.py:55
+msgid "You will receive a notification in"
+msgstr ""
+
+#: src/timer.py:62
+msgid "The command <b>{}</b> will be executed in"
+msgstr ""
+
+#: src/timer.py:89
+msgid "The notification has been sent."
+msgstr ""
+
+#: src/window.py:96
+msgid "Countdown"
+msgstr ""
+
+#: src/window.py:96
+msgid "Clock"
+msgstr ""
+
+#: src/window.py:98
+msgid "Select timer mode"
+msgstr ""
+
+#: src/window.py:105 src/window.py:355
+msgid "About"
+msgstr ""
+
+#: src/window.py:170
+msgid "min"
+msgstr ""
+
+#: src/window.py:170
+msgid "sec"
+msgstr ""
+
+#: src/window.py:184
+msgid "Reset"
+msgstr ""
+
+#: src/window.py:199
+msgid "Action"
+msgstr ""
+
+#: src/window.py:204
+msgid "Power Off"
+msgstr ""
+
+#: src/window.py:213
+msgid "Reboot"
+msgstr ""
+
+#: src/window.py:222
+msgid "Suspend"
+msgstr ""
+
+#: src/window.py:231
+msgid "Notification"
+msgstr ""
+
+#: src/window.py:243
+msgid "Notification settings"
+msgstr ""
+
+#: src/window.py:257
+msgid "Notification text"
+msgstr ""
+
+#: src/window.py:261
+msgid "Play sound"
+msgstr ""
+
+#: src/window.py:270
+msgid "Until stopped"
+msgstr ""
+
+#: src/window.py:284 src/window.py:306 src/window.py:563 src/window.py:630
+msgid "Command"
+msgstr ""
+
+#: src/window.py:312
+msgid "Back"
+msgstr ""
+
+#: src/window.py:325 src/window.py:571
+msgid "Add"
+msgstr ""
+
+#: src/window.py:335
+msgid "Start"
+msgstr ""
+
+#: src/window.py:387 src/window.py:758
+msgid "Pause"
+msgstr ""
+
+#: src/window.py:410
+msgid "You can close the window, the timer will work in the background."
+msgstr ""
+
+#: src/window.py:489
+msgid "They will be executed outside of flatpak sandbox. "
+msgstr ""
+
+#: src/window.py:492
+msgid "Warning"
+msgstr ""
+
+#: src/window.py:493
+msgid ""
+"Your commands will be executed as if they were executed on a command prompt. "
+"{}The app doesn't perform any checks whether a command was executed "
+"successfully or not. Be careful, do not enter commands whose result is "
+"unknown to you."
+msgstr ""
+
+#: src/window.py:494 src/window.py:762
+msgid "Continue"
+msgstr ""
+
+#: src/window.py:499
+msgid "I understand"
+msgstr ""
+
+#: src/window.py:553
+msgid "Add command"
+msgstr ""
+
+#: src/window.py:557 src/window.py:623
+msgid "Name"
+msgstr ""
+
+#: src/window.py:570 src/window.py:638 src/window.py:660
+msgid "Cancel"
+msgstr ""
+
+#: src/window.py:602 src/window.py:619
+msgid "Edit command"
+msgstr ""
+
+#: src/window.py:609
+msgid "Remove command"
+msgstr ""
+
+#: src/window.py:639
+msgid "Apply"
+msgstr ""
+
+#: src/window.py:657
+msgid "Remove command?"
+msgstr ""
+
+#: src/window.py:658
+msgid "Are you sure you want to remove command \"{}\"?"
+msgstr ""
+
+#: src/window.py:661
+msgid "Remove"
+msgstr ""
