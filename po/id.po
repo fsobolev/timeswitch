@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the timeswitch package.
 # yukidream <mashirokuratamorfo@gmail.com>, 2022.
 # J. Lavoie <j.lavoie@net-c.ca>, 2023.
+# yukidream <ahawaribagus@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-15 05:41+0300\n"
-"PO-Revision-Date: 2023-02-06 09:38+0000\n"
-"Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
+"PO-Revision-Date: 2023-02-11 07:18+0000\n"
+"Last-Translator: yukidream <ahawaribagus@gmail.com>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/timeswitch/"
 "timeswitch/id/>\n"
 "Language: id\n"
@@ -45,9 +46,10 @@ msgid ""
 "or suspend your system, send a notification (optionally with a sound signal) "
 "or execute any command on timer."
 msgstr ""
-"Time Switch adalah program sederhana yang memungkinkan anda untuk mematikan,"
-"memulai ulang, atau mensuspensi sistem anda,mengirim pemberitahuan.(dengan "
-"opsi sinyal suara).atau menjalankan perintah apapun dengan pewaktu"
+"Time Switch adalah program sederhana yang memungkinkan anda untuk "
+"mematikan,memulai ulang, atau mensuspensi sistem anda,mengirim "
+"pemberitahuan.(dengan opsi sinyal suara),atau menjalankan perintah apapun "
+"dengan pewaktu."
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:10
 msgid ""
@@ -63,7 +65,7 @@ msgstr "Fyodor Sobolev"
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:32
 msgid "Added ability to pause timer"
-msgstr ""
+msgstr "Menambahkan fitur untuk menjeda pewaktu"
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:33
 msgid ""
@@ -73,7 +75,7 @@ msgstr ""
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:34
 msgid "UI improvements"
-msgstr ""
+msgstr "Peningkatan antarmuka"
 
 #: src/actions.py:85
 msgid "Timer has finished!"
@@ -85,7 +87,7 @@ msgstr "Berhenti"
 
 #: src/timer.py:49
 msgid "Your device will be powered off in"
-msgstr "Perangkat anda akan dimatikan dalam "
+msgstr "Perangkat anda akan dimatikan dalam"
 
 #: src/timer.py:51
 msgid "Your device will be rebooted in"
@@ -109,15 +111,15 @@ msgstr "Pemberitahuan telah dikirim."
 
 #: src/window.py:96
 msgid "Countdown"
-msgstr ""
+msgstr "Hitung mundur"
 
 #: src/window.py:96
 msgid "Clock"
-msgstr ""
+msgstr "Jam"
 
 #: src/window.py:98
 msgid "Select timer mode"
-msgstr ""
+msgstr "Memilih mode pewaktu"
 
 #: src/window.py:105 src/window.py:355
 msgid "About"
@@ -126,12 +128,12 @@ msgstr "Tentang"
 # Translators: Short fot "minutes"
 #: src/window.py:170
 msgid "min"
-msgstr "min"
+msgstr "men"
 
 # Translators: Short fot "seconds"
 #: src/window.py:170
 msgid "sec"
-msgstr "s"
+msgstr "det"
 
 #: src/window.py:184
 msgid "Reset"
@@ -191,11 +193,11 @@ msgstr "Mulai"
 
 #: src/window.py:387 src/window.py:758
 msgid "Pause"
-msgstr ""
+msgstr "Jeda"
 
 #: src/window.py:410
 msgid "You can close the window, the timer will work in the background."
-msgstr "Anda bisa menutup jendela, pewaktu akan berjalan di latar belakang"
+msgstr "Anda bisa menutup jendela, pewaktu akan berjalan di latar belakang."
 
 # Translators: make sure to have a space in the end of the line.
 #: src/window.py:489
