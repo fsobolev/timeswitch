@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the timeswitch package.
 # David Delgado <david_veintiuno@proton.me>, 2022-2023.
 # J. Lavoie <j.lavoie@net-c.ca>, 2023.
+# gallegonovato <fran-carro@hotmail.es>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-15 05:41+0300\n"
-"PO-Revision-Date: 2023-02-06 09:38+0000\n"
-"Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
+"PO-Revision-Date: 2023-02-12 17:38+0000\n"
+"Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/timeswitch/"
 "timeswitch/es/>\n"
 "Language: es\n"
@@ -105,11 +106,11 @@ msgstr "El comando <b>{}</b> se ejecutará en"
 
 #: src/timer.py:89
 msgid "The notification has been sent."
-msgstr "La notificación ha sido enviada"
+msgstr "La notificación ha sido enviada."
 
 #: src/window.py:96
 msgid "Countdown"
-msgstr "Cuenta atrás "
+msgstr "Cuenta atrás"
 
 #: src/window.py:96
 msgid "Clock"
