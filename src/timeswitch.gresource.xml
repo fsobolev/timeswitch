@@ -2,5 +2,6 @@
 <gresources>
   <gresource prefix="/io/github/fsobolev/TimeSwitch">
     <file alias="style.css">../data/css/timeswitch.css</file>
+    <file>shortcuts_dialog.ui</file>
   </gresource>
 </gresources>

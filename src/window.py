@@ -107,7 +107,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.main_menu_button.set_icon_name('open-menu-symbolic')
         self.header_main.pack_end(self.main_menu_button)
         self.main_menu = Gio.Menu.new()
-        self.main_menu.append(_('Keyboard Shortcuts'), 'win.shortcuts')
+        self.main_menu.append(_('Keyboard Shortcuts'), 'app.shortcuts')
         self.main_menu.append(_('About'), 'app.about')
         self.main_menu.append(_('Quit'), 'app.quit')
         self.main_menu_button.set_menu_model(self.main_menu)

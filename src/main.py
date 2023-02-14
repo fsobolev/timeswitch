@@ -47,6 +47,9 @@ class TimeSwitchApplication(Adw.Application):
                          flags=Gio.ApplicationFlags.FLAGS_NONE)
         self.version = version
         self.create_action('about', self.on_about_action)
+        self.create_action('shortcuts', self.on_shortcuts_action, \
+            ['<primary>question'])
+        self.create_action('quit', self.on_quit_action, ['<primary>Q'])
 
     def do_activate(self):
         """Called when the application is activated.
@@ -59,8 +62,21 @@ class TimeSwitchApplication(Adw.Application):
             win = TimeSwitchWindow(application=self)
             self.create_action('stop-timer', \
                 lambda *args : win.stop_timer(self))
-            self.create_action('quit', self.on_quit_action, ['<primary>Q'])
         win.present()
+
+    def on_shortcuts_action(self, widget, args):
+        self.shortcuts_win = None
+        for w in self.get_windows():
+            if type(w) == Gtk.ShortcutsWindow:
+                self.shortcuts_win = w
+                break
+        if not self.shortcuts_win:
+            builder = Gtk.Builder.new_from_resource( \
+                '/io/github/fsobolev/TimeSwitch/shortcuts_dialog.ui')
+            self.shortcuts_win = builder.get_object('dialog')
+            self.shortcuts_win.set_modal(True)
+            self.shortcuts_win.set_transient_for(self.props.active_window)
+        self.shortcuts_win.present()
 
     def on_about_action(self, widget, args):
         """Callback for the app.about action."""
