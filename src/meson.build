@@ -32,7 +32,8 @@ timeswitch_sources = [
   'main_window_shortcuts.py',
   'timer.py',
   'actions.py',
-  'player.py'
+  'player.py',
+  'config.py'
 ]
 
 install_data(timeswitch_sources, install_dir: moduledir)
