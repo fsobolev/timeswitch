@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Åke Engelbrektson <eson@svenskasprakfiler.se>, 2022, 2023.
 # J. Lavoie <j.lavoie@net-c.ca>, 2023.
+# tygyh <jonis9898@hotmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-15 05:41+0300\n"
-"PO-Revision-Date: 2023-02-06 09:38+0000\n"
-"Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
+"PO-Revision-Date: 2023-02-12 17:38+0000\n"
+"Last-Translator: Åke Engelbrektson <eson@svenskasprakfiler.se>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/timeswitch/"
 "timeswitch/sv/>\n"
 "Language: sv\n"
@@ -63,17 +64,19 @@ msgstr "Fjodor Sobolev"
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:32
 msgid "Added ability to pause timer"
-msgstr ""
+msgstr "Lade till möjlighet att pausa tiduret"
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:33
 msgid ""
 "Added clock mode: in this mode you set clock time (in 24h format) when the "
 "timer should finish."
 msgstr ""
+"Lade till klockläge. I det här läget kan du ställa in klocktiden (i "
+"24-timmarsformat) när tiduret ska avsluta."
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:34
 msgid "UI improvements"
-msgstr ""
+msgstr "UI-förbättringar"
 
 #: src/actions.py:85
 msgid "Timer has finished!"
@@ -89,7 +92,7 @@ msgstr "Din enhet stängs av om"
 
 #: src/timer.py:51
 msgid "Your device will be rebooted in"
-msgstr "Din enhet startas om, om"
+msgstr "Din enhet startas om"
 
 #: src/timer.py:53
 msgid "Your device will be suspended in"

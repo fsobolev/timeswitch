@@ -1,274 +1,246 @@
-# French translation for Time Switch.
+# SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2022 Fyodor Sobolev
 # This file is distributed under the same license as the timeswitch package.
-# Irénée Thirion <irenee.thirion@e.email>, 2022.
-# J. Lavoie <j.lavoie@net-c.ca>, 2023.
-# "J. Lavoie" <j.lavoie@net-c.ca>, 2023.
+# poi <erbaotao@outlook.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-15 05:41+0300\n"
-"PO-Revision-Date: 2023-02-09 14:39+0000\n"
-"Last-Translator: \"J. Lavoie\" <j.lavoie@net-c.ca>\n"
-"Language-Team: French <https://hosted.weblate.org/projects/timeswitch/"
-"timeswitch/fr/>\n"
-"Language: fr\n"
+"PO-Revision-Date: 2023-02-11 07:18+0000\n"
+"Last-Translator: poi <erbaotao@outlook.com>\n"
+"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
+"timeswitch/timeswitch/zh_Hans/>\n"
+"Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 4.16-dev\n"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:3
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:6
 msgid "Time Switch"
-msgstr "Time Switch"
+msgstr "定时开关"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:6
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:7
 msgid "Run tasks after a timer"
-msgstr "Exécutez des tâches sur minuterie"
+msgstr "定时运行任务"
 
-# "Éteignez, redémarrez, mettez en veille ou recevez une notification sur "
-# "minuterie"
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:11
 msgid "timer;shutdown;poweroff;reboot;suspend;notification;prompt;cmd;command;"
-msgstr ""
-"minuteur;éteindre;extinction;redémarrer;arrêt;mettre en veille;notification;"
-"commande;cmd;exécuter;"
+msgstr "定时器;关机;重启;休眠;通知;提示符;cmd;命令;"
 
-# "minuteur;éteindre;redémarrer;mettre en veille;notification;reboot;arrêter;"
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:9
 msgid ""
 "Time Switch is an easy-to-use program that allows you to power off, reboot "
 "or suspend your system, send a notification (optionally with a sound signal) "
 "or execute any command on timer."
-msgstr ""
-"Time Switch est un programme simple qui vous permet d’éteindre, de "
-"redémarrer ou de mettre en veille votre système, d’envoyer une notification "
-"(éventuellement avec un signal sonore) ou d’exécuter une commande quelconque "
-"sur minuterie."
+msgstr "定时开关是一个可以方便地定时关机、重启、休眠、发送通知或执行某命令的程序。"
 
-# "Time Switch est un programme simple qui vous permet d’éteindre, de "
-# "redémarrer ou de mettre en veille votre système, ou d’envoyer une "
-# "notification (éventuellement avec un signal sonore) sur minuterie."
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:10
 msgid ""
 "The app is built for GNOME and uses LibAdwaita, but it works in any desktop "
 "environment."
-msgstr ""
-"L’application est conçue pour GNOME et utilise LibAdwaita, mais elle "
-"fonctionne dans n’importe quel environnement de bureau."
+msgstr "本应用为 GNOME 构建，使用 LibAdwaita 库，但无论什么桌面环境也都能用。"
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:15
 msgid "Fyodor Sobolev"
-msgstr "Fiodor Sobolev"
+msgstr "费奥多尔·索博列夫（Фёдор Соболев）"
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:32
 msgid "Added ability to pause timer"
-msgstr "Ajout de la possibilité de mettre le minuteur en pause"
+msgstr "加入暂停计时器的功能"
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:33
 msgid ""
 "Added clock mode: in this mode you set clock time (in 24h format) when the "
 "timer should finish."
-msgstr ""
-"Ajout du mode Horloge : dans ce mode vous définissez l’heure (au format 24 "
-"h) à laquelle le minuteur doit s’arrêter."
+msgstr "加入按点儿模式：以 24 小时制设定时刻，到点儿计时器停止。"
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:34
 msgid "UI improvements"
-msgstr "Améliorations de l’interface"
+msgstr "界面改进"
 
 #: src/actions.py:85
 msgid "Timer has finished!"
-msgstr "Le minuteur a terminé !"
+msgstr "到点啦！"
 
 #: src/actions.py:91 src/window.py:398
 msgid "Stop"
-msgstr "Arrêter"
+msgstr "停止"
 
 #: src/timer.py:49
 msgid "Your device will be powered off in"
-msgstr "Votre appareil sera éteint dans"
+msgstr "距关机还有"
 
 #: src/timer.py:51
 msgid "Your device will be rebooted in"
-msgstr "Votre appareil sera redémarré dans"
+msgstr "距重启还有"
 
 #: src/timer.py:53
 msgid "Your device will be suspended in"
-msgstr "Votre appareil sera mis en veille dans"
+msgstr "距休眠还有"
 
 #: src/timer.py:55
 msgid "You will receive a notification in"
-msgstr "Vous recevrez une notification dans"
+msgstr "距接到通知还有"
 
 #: src/timer.py:62
 msgid "The command <b>{}</b> will be executed in"
-msgstr "La commande <b>{}</b> sera exécutée dans"
+msgstr "距命令 <b>{}</b> 执行还有"
 
 #: src/timer.py:89
 msgid "The notification has been sent."
-msgstr "Notification envoyée."
+msgstr "通知发出了。"
 
 #: src/window.py:96
 msgid "Countdown"
-msgstr "Décompte"
+msgstr "倒计时"
 
 #: src/window.py:96
 msgid "Clock"
-msgstr "Horloge"
+msgstr "按点儿"
 
 #: src/window.py:98
 msgid "Select timer mode"
-msgstr "Sélectionnez le mode de minuterie"
+msgstr "选择计时器模式"
 
 #: src/window.py:105 src/window.py:355
 msgid "About"
-msgstr "À propos"
+msgstr "关于应用"
 
 #: src/window.py:170
 msgid "min"
-msgstr "min"
+msgstr "分"
 
 #: src/window.py:170
 msgid "sec"
-msgstr "s"
+msgstr "秒"
 
 #: src/window.py:184
 msgid "Reset"
-msgstr "Réinitialiser"
+msgstr "重启"
 
 #: src/window.py:199
 msgid "Action"
-msgstr "Action"
+msgstr "动作"
 
 #: src/window.py:204
 msgid "Power Off"
-msgstr "Éteindre"
+msgstr "关机"
 
 #: src/window.py:213
 msgid "Reboot"
-msgstr "Redémarrer"
+msgstr "重启"
 
 #: src/window.py:222
 msgid "Suspend"
-msgstr "Mettre en veille"
+msgstr "休眠"
 
 #: src/window.py:231
 msgid "Notification"
-msgstr "Notification"
+msgstr "通知"
 
 #: src/window.py:243
 msgid "Notification settings"
-msgstr "Paramètres de notification"
+msgstr "通知设置"
 
 #: src/window.py:257
 msgid "Notification text"
-msgstr "Texte de la notification"
+msgstr "通知文本"
 
 #: src/window.py:261
 msgid "Play sound"
-msgstr "Jouer un son"
+msgstr "播放声音"
 
 #: src/window.py:270
 msgid "Until stopped"
-msgstr "Jusqu’à l’arrêt"
+msgstr "直到停止"
 
 #: src/window.py:284 src/window.py:306 src/window.py:563 src/window.py:630
 msgid "Command"
-msgstr "Commande"
+msgstr "命令"
 
 #: src/window.py:312
 msgid "Back"
-msgstr "Retour"
+msgstr "返回"
 
 #: src/window.py:325 src/window.py:571
 msgid "Add"
-msgstr "Ajouter"
+msgstr "新增"
 
 #: src/window.py:335
 msgid "Start"
-msgstr "Commencer"
+msgstr "开始"
 
 #: src/window.py:387 src/window.py:758
 msgid "Pause"
-msgstr "Pause"
+msgstr "暂停"
 
 #: src/window.py:410
 msgid "You can close the window, the timer will work in the background."
-msgstr ""
-"Vous pouvez fermer la fenêtre, le minuteur fonctionnera en arrière-plan."
+msgstr "窗口可以关，计时器后台运行。"
 
-# Translators: make sure to have a space in the end of the line.
 #: src/window.py:489
 msgid "They will be executed outside of flatpak sandbox. "
-msgstr ""
-"Elles seront exécutées en-dehors de l’environnement d’exécution confiné "
-"flatpak. "
+msgstr "会在 flatpak 沙箱之外执行它们。 "
 
 #: src/window.py:492
 msgid "Warning"
-msgstr "Avertissement"
+msgstr "注意"
 
-# Translators: {} is used to pass "They will be executed outside of flatpak sandbox. "
-# in case the app is installed using flatpak. Make sure to have a space in front of it
-# (in the original text it's in the end of the first line)
 #: src/window.py:493
 msgid ""
 "Your commands will be executed as if they were executed on a command prompt. "
 "{}The app doesn't perform any checks whether a command was executed "
 "successfully or not. Be careful, do not enter commands whose result is "
 "unknown to you."
-msgstr ""
-"Vos commandes seront exécutées comme si elles étaient lancées depuis une "
-"invite de commande. {}L’application n’effectue aucune vérification pour "
-"savoir si une commande a été exécutée avec succès ou non. Soyez prudent, "
-"n’entrez pas de commandes dont le résultat vous est inconnu."
+msgstr "应用会像您在命令提示符里执行命令一样执行您的命令。 "
+"{}应用不会检测命令执没执行成功。注意，不要输入您不知道效果的命令。"
 
 #: src/window.py:494 src/window.py:762
 msgid "Continue"
-msgstr "Continuer"
+msgstr "继续"
 
 #: src/window.py:499
 msgid "I understand"
-msgstr "Je comprends"
+msgstr "明白了"
 
 #: src/window.py:553
 msgid "Add command"
-msgstr "Ajouter une commande"
+msgstr "新增命令"
 
 #: src/window.py:557 src/window.py:623
 msgid "Name"
-msgstr "Nom"
+msgstr "名称"
 
 #: src/window.py:570 src/window.py:638 src/window.py:660
 msgid "Cancel"
-msgstr "Annuler"
+msgstr "取消"
 
 #: src/window.py:602 src/window.py:619
 msgid "Edit command"
-msgstr "Modifier la commande"
+msgstr "修改命令"
 
 #: src/window.py:609
 msgid "Remove command"
-msgstr "Supprimer la commande"
+msgstr "移除命令"
 
 #: src/window.py:639
 msgid "Apply"
-msgstr "Appliquer"
+msgstr "应用"
 
 #: src/window.py:657
 msgid "Remove command?"
-msgstr "Supprimer la commande ?"
+msgstr "移除命令吗？"
 
 #: src/window.py:658
 msgid "Are you sure you want to remove command \"{}\"?"
-msgstr "Êtes-vous sûr·e de vouloir supprimer la commande « {} » ?"
+msgstr "您确实想移除命令“{}”吗？"
 
 #: src/window.py:661
 msgid "Remove"
-msgstr "Supprimer"
+msgstr "移除"
