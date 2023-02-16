@@ -107,6 +107,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
 
         self.main_menu_button = Gtk.MenuButton.new()
         self.main_menu_button.set_icon_name('open-menu-symbolic')
+        self.main_menu_button.set_tooltip_text(_('Main menu'))
         self.header_main.pack_end(self.main_menu_button)
         self.main_menu = Gio.Menu.new()
         self.main_menu.append(_('Keyboard Shortcuts'), 'app.shortcuts')
@@ -368,6 +369,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
 
         self.run_menu_button = Gtk.MenuButton.new()
         self.run_menu_button.set_icon_name('open-menu-symbolic')
+        self.run_menu_button.set_tooltip_text(_('Main menu'))
         self.header_run.pack_end(self.run_menu_button)
         self.run_menu_button.set_menu_model(self.main_menu)
 
