@@ -439,6 +439,10 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.hour_spin.set_value(h)
         self.min_spin.set_value(m)
         self.sec_spin.set_value(s)
+        for command in self.commands_list:
+            self.create_command(command)
+        if len(self.commands_widgets['rows']) > 0:
+            self.commands_widgets['rows'][0].activate()
         [self.action_poweroff, self.action_reboot, \
             self.action_suspend, self.action_notify, \
             self.action_command][self.last_action[0]].activate()
@@ -450,10 +454,6 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         elif self.last_action[0] == 4:
             if len(self.commands_widgets['rows']) > self.last_action[1]:
                 self.commands_widgets['rows'][self.last_action[1]].activate()
-        for command in self.commands_list:
-            self.create_command(command)
-        if len(self.commands_widgets['rows']) > 0:
-            self.commands_widgets['rows'][0].activate()
 
     def create_spinbutton(self, max_value):
         adj = Gtk.Adjustment.new(0.0, 0.0, max_value, 1.0, 10.0, 0.0)
