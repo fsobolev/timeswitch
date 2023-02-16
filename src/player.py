@@ -28,6 +28,8 @@
 #
 # SPDX-License-Identifier: MIT
 
+import gi
+gi.require_version('GSound', '1.0')
 from gi.repository import GSound
 
 class Player:

@@ -30,8 +30,6 @@
 
 import os
 import subprocess
-import gi
-gi.require_version('GSound', '1.0')
 from gi.repository import Gio, GLib
 from .player import Player
 
@@ -96,6 +94,6 @@ def action_notify(text, play_sound, sound_repeat, cancellable):
         player.play()
 
 def action_command(cmd):
-    if os.getenv('FLATPAK_ID'):
+    if os.path.exists('/.flatpak-info'):
         cmd = 'flatpak-spawn --host ' + cmd
     subprocess.Popen(cmd, shell=True)

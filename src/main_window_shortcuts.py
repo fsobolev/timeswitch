@@ -26,7 +26,7 @@
 # use or other dealings in this Software without prior written
 # authorization.
 #
-# SPDX-License-Identifier: MIT)
+# SPDX-License-Identifier: MIT
 
 from gi.repository import Gio
 

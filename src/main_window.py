@@ -29,10 +29,10 @@
 # SPDX-License-Identifier: MIT
 
 from gi.repository import Adw, Gtk, GLib, Gio
+from .config import TimeSwitchConfig
 from .timer import Timer
-from .window_shortcuts import set_shortcuts
-import json
-import os
+from .main_window_shortcuts import set_shortcuts
+from .cmd_warning import WarningDialog
 import datetime
 
 
@@ -43,6 +43,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         super().__init__(**kwargs)
         self.timer = None
         self.set_hide_on_close(True)
+        self.config = TimeSwitchConfig()
         set_shortcuts(self)
 
         # If timer has finished and the window is hidden, the app must quit
@@ -53,21 +54,11 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.get_application().set_accels_for_action('window.close',
             ['<primary>w'])
 
-        self.show_cmd_warning = True
-        if os.getenv('XDG_CONFIG_HOME'):
-            self.config_dir = os.getenv('XDG_CONFIG_HOME') + '/timeswitch'
-        else:
-            self.config_dir = os.getenv('HOME') + '/.config/timeswitch'
-        if not os.path.isdir(self.config_dir):
-            os.makedirs(self.config_dir)
-        self.config_file_path = self.config_dir + '/config.json'
-        (self.last_timer_value, self.last_action, self.commands_list, \
-            self.mode, self.window_size) = self.load_config()
-
+        self.config.load()
         self.build_ui()
 
     def build_ui(self):
-        self.set_default_size(*self.window_size)
+        self.set_default_size(*self.config.window_size)
         self.set_title('Time Switch')
         self.content = Gtk.Box.new(Gtk.Orientation.VERTICAL, 0)
         self.set_content(self.content)
@@ -434,26 +425,28 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.warning_label_clamp.set_child(self.warning_label)
 
         # Load config
-        self.timer_mode_dropdown.set_selected(self.mode)
-        (h, m, s) = self.last_timer_value
+        self.timer_mode_dropdown.set_selected(self.config.mode)
+        (h, m, s) = self.config.last_timer_value
         self.hour_spin.set_value(h)
         self.min_spin.set_value(m)
         self.sec_spin.set_value(s)
         [self.action_poweroff, self.action_reboot, \
             self.action_suspend, self.action_notify, \
-            self.action_command][self.last_action[0]].activate()
-        if self.last_action[0] == 3:
-            self.play_sound_switch.set_active(bool(self.last_action[1]))
-            self.play_until_stopped_switch.set_sensitive(bool(self.last_action[1]))
-            if self.last_action[1] > 1:
-                self.play_until_stopped_switch.set_active(True)
-        elif self.last_action[0] == 4:
-            if len(self.commands_widgets['rows']) > self.last_action[1]:
-                self.commands_widgets['rows'][self.last_action[1]].activate()
-        for command in self.commands_list:
+            self.action_command][self.config.last_action[0]].activate()
+        for command in self.config.commands:
             self.create_command(command)
         if len(self.commands_widgets['rows']) > 0:
             self.commands_widgets['rows'][0].activate()
+        if self.config.last_action[0] == 3:
+            self.play_sound_switch.set_active(bool(self.config.last_action[1]))
+            self.play_until_stopped_switch.set_sensitive( \
+                bool(self.config.last_action[1]))
+            if self.config.last_action[1] > 1:
+                self.play_until_stopped_switch.set_active(True)
+        elif self.config.last_action[0] == 4:
+            if len(self.commands_widgets['rows']) > self.config.last_action[1]:
+                self.commands_widgets['rows'][ \
+                self.config.last_action[1]].activate()
 
     def create_spinbutton(self, max_value):
         adj = Gtk.Adjustment.new(0.0, 0.0, max_value, 1.0, 10.0, 0.0)
@@ -498,72 +491,9 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
 
     def show_commands(self, w):
         self.actions_stack.set_visible_child_name('commands')
-        if self.show_cmd_warning:
-            self.show_warning_message()
-
-    def show_warning_message(self):
-        if os.getenv('FLATPAK_ID'):
-            flatpak_warning = \
-                _('They will be executed outside of flatpak sandbox. ')
-        else:
-            flatpak_warning = ''
-        msg = Adw.MessageDialog.new(self, _('Warning'), \
-            _("Your commands will be executed as if they were executed on a command prompt. {}The app doesn't perform any checks whether a command was executed successfully or not. Be careful, do not enter commands whose result is unknown to you.").format(flatpak_warning))
-        msg.add_response('continue', _('Continue'))
-        msg.set_response_appearance('continue', \
-            Adw.ResponseAppearance.SUGGESTED)
-        msg.set_response_enabled('continue', False)
-        ar = Adw.ActionRow.new()
-        ar.set_title(_('I understand'))
-        ar_switch = Gtk.Switch.new()
-        ar_switch.set_valign(Gtk.Align.CENTER)
-        ar.add_prefix(ar_switch)
-        ar.set_activatable_widget(ar_switch)
-        ar_switch.connect('state-set', self.pass_warning, msg)
-        ar.remove_css_class('activatable')
-        msg.set_extra_child(ar)
-        msg.show()
-        self.show_cmd_warning = False
-
-    def pass_warning(self, w, state, msg):
-        msg.set_response_enabled('continue', state)
-
-    def load_config(self):
-        config_last_timer_value = [0, 0, 0]
-        config_last_action = [0, 0]
-        config_commands = []
-        config_mode = 0
-        config_size = (330, 712)
-        if os.path.exists(self.config_file_path):
-            with open(self.config_file_path, 'r') as f:
-                data = json.load(f)
-                if 'last-timer-value' in data.keys():
-                    config_last_timer_value = data['last-timer-value']
-                if 'last-action' in data.keys():
-                    config_last_action = data['last-action']
-                if 'commands' in data.keys():
-                    config_commands = data['commands']
-                    if len(config_commands) > 0:
-                        self.show_cmd_warning = False
-                if 'mode' in data.keys():
-                    config_mode = data['mode']
-                if 'window-size' in data.keys():
-                    config_size = data['window-size']
-        return (config_last_timer_value, config_last_action, config_commands, \
-            config_mode, config_size)
-
-    def save_config(self):
-        try:
-            with open(self.config_file_path, 'w') as f:
-                data = {'last-timer-value': self.last_timer_value, \
-                    'last-action': self.last_action, \
-                    'commands': self.commands_list, \
-                    'mode': self.timer_mode_dropdown.get_selected(),
-                    'window-size': self.get_default_size()}
-                json.dump(data, f)
-        except Exception as e:
-            print("Can't save config file:")
-            print(e)
+        if self.config.show_cmd_warning:
+            msg = WarningDialog(self)
+            msg.show()
 
     def set_action_row_titles(self, row, title, subtitle, lines):
         row.set_title(title)
@@ -603,9 +533,9 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
             if len(name) < 1 or len(cmd) < 1:
                 return
             dict = {'name': name, 'cmd': cmd}
-            self.commands_list.append(dict)
+            self.config.commands.append(dict)
             self.create_command(dict)
-            self.save_config()
+            self.config.save()
 
     def create_command(self, command):
         self.commands_widgets['rows'].append(Adw.ActionRow.new())
@@ -670,15 +600,15 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         if response == 'apply':
             self.set_action_row_titles(self.commands_widgets['rows'][index], \
                 name, cmd, 1)
-            self.commands_list[index]['name'] = name
-            self.commands_list[index]['cmd'] = cmd
-            self.save_config()
+            self.config.commands[index]['name'] = name
+            self.config.commands[index]['cmd'] = cmd
+            self.config.save()
 
     def remove_command(self, w, action_row):
         index = self.commands_widgets['rows'].index(action_row)
         msg = Adw.MessageDialog.new(self, _('Remove command?'), \
             _('Are you sure you want to remove command "{}"?').format( \
-            self.commands_list[index]['name']))
+            self.config.commands[index]['name']))
         msg.add_response('cancel', _('Cancel'))
         msg.add_response('remove', _('Remove'))
         msg.set_response_appearance('remove', Adw.ResponseAppearance.DESTRUCTIVE)
@@ -690,10 +620,10 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
             self.commands_group.remove(self.commands_widgets['rows'][index])
             self.commands_widgets['rows'].pop(index)
             self.commands_widgets['checks'].pop(index)
-            self.commands_list.pop(index)
+            self.config.commands.pop(index)
             if len(self.commands_widgets['rows']) > 0:
                 self.commands_widgets['rows'][0].activate()
-            self.save_config()
+            self.config.save()
 
     def start_timer(self, w):
         if self.timer_mode_dropdown.get_selected() == \
@@ -701,7 +631,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
                 self.min_spin.get_value_as_int() == \
                 self.sec_spin.get_value_as_int() == 0:
             return
-        self.last_timer_value = [ \
+        self.config.last_timer_value = [ \
             self.hour_spin.get_value_as_int(), \
             self.min_spin.get_value_as_int(), \
             self.sec_spin.get_value_as_int() \
@@ -711,22 +641,24 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
             self.action_command_check]
         for c in range(len(checkbuttons)):
             if checkbuttons[c].get_active():
-                self.last_action[0] = c
+                self.config.last_action[0] = c
                 if c == 3:
                     if not self.play_sound_switch.get_active():
                         self.play_until_stopped_switch.set_active(False)
-                    self.last_action[1] = \
+                    self.config.last_action[1] = \
                         int(self.play_sound_switch.get_active()) + \
                         int(self.play_until_stopped_switch.get_active())
                 elif c == 4:
                     for cc in range(len(self.commands_widgets['checks'])):
                         if self.commands_widgets['checks'][cc].get_active():
-                            self.last_action[1] = cc
+                            self.config.last_action[1] = cc
                             break
                 else:
-                    self.last_action[1] = 0
+                    self.config.last_action[1] = 0
                 break
-        self.save_config()
+        self.config.mode = self.timer_mode_dropdown.get_selected()
+        self.config.window_size = self.get_default_size()
+        self.config.save()
         if self.action_poweroff_check.get_active():
             action = ('poweroff',)
         elif self.action_reboot_check.get_active():
@@ -744,8 +676,8 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
             for c in self.commands_widgets['checks']:
                 if c.get_active():
                     index = self.commands_widgets['checks'].index(c)
-                    name = self.commands_list[index]['name']
-                    cmd = self.commands_list[index]['cmd']
+                    name = self.config.commands[index]['name']
+                    cmd = self.config.commands[index]['cmd']
                     break
             if not name:
                 return
@@ -805,7 +737,8 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
             self.main_stack.set_visible_child_name('running')
 
     def on_close_request(self, w):
-        self.save_config()
+        self.config.window_size = self.get_default_size()
+        self.config.save()
         if self.timer:
             self.quit_on_finish = True
         else:
