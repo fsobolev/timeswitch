@@ -30,7 +30,7 @@
 
 from gi.repository import Adw, Gtk, GLib, Gio
 from .timer import Timer
-from .window_shortcuts import set_shortcuts
+from .main_window_shortcuts import set_shortcuts
 import json
 import os
 import datetime
@@ -502,7 +502,10 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
             self.show_warning_message()
 
     def show_warning_message(self):
-        if os.getenv('FLATPAK_ID'):
+        def pass_warning(w, state, msg):
+            msg.set_response_enabled('continue', state)
+
+        if os.path.exists('/.flatpak-info'):
             flatpak_warning = \
                 _('They will be executed outside of flatpak sandbox. ')
         else:
@@ -519,14 +522,11 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         ar_switch.set_valign(Gtk.Align.CENTER)
         ar.add_prefix(ar_switch)
         ar.set_activatable_widget(ar_switch)
-        ar_switch.connect('state-set', self.pass_warning, msg)
+        ar_switch.connect('state-set', pass_warning, msg)
         ar.remove_css_class('activatable')
         msg.set_extra_child(ar)
         msg.show()
         self.show_cmd_warning = False
-
-    def pass_warning(self, w, state, msg):
-        msg.set_response_enabled('continue', state)
 
     def load_config(self):
         config_last_timer_value = [0, 0, 0]

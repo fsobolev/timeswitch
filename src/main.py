@@ -35,7 +35,7 @@ gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
 
 from gi.repository import Gtk, Gio, Adw
-from .window import TimeSwitchWindow
+from .main_window import TimeSwitchWindow
 from .translator_credits import get_translator_credits
 
 
