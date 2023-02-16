@@ -77,18 +77,6 @@
                         </child>
                         <child>
                             <object class='GtkShortcutsShortcut'>
-                                <property name='title' translatable='yes'>Play sound</property>
-                                <property name='accelerator'>&lt;Ctrl&gt;B</property>
-                            </object>
-                        </child>
-                        <child>
-                            <object class='GtkShortcutsShortcut'>
-                                <property name='title' translatable='yes'>Until stopped</property>
-                                <property name='accelerator'>&lt;Ctrl&gt;U</property>
-                            </object>
-                        </child>
-                        <child>
-                            <object class='GtkShortcutsShortcut'>
                                 <property name='title' translatable='yes'>Command</property>
                                 <property name='accelerator'>&lt;Ctrl&gt;C</property>
                             </object>
@@ -108,6 +96,12 @@
                             <object class='GtkShortcutsShortcut'>
                                 <property name='title' translatable='yes'>Add command</property>
                                 <property name='accelerator'>&lt;Ctrl&gt;A</property>
+                            </object>
+                        </child>
+                        <child>
+                            <object class='GtkShortcutsShortcut'>
+                                <property name='title' translatable='yes'>Edit selected command</property>
+                                <property name='accelerator'>&lt;Ctrl&gt;E</property>
                             </object>
                         </child>
                         <child>

@@ -30,6 +30,7 @@
 
 from gi.repository import Adw, Gtk, GLib, Gio
 from .timer import Timer
+from .window_shortcuts import set_shortcuts
 import json
 import os
 import datetime
@@ -42,6 +43,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         super().__init__(**kwargs)
         self.timer = None
         self.set_hide_on_close(True)
+        set_shortcuts(self)
 
         # If timer has finished and the window is hidden, the app must quit
         self.quit_on_finish = False # Sets to True when window is hidden

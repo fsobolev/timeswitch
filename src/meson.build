@@ -29,6 +29,7 @@ timeswitch_sources = [
   '__init__.py',
   'main.py',
   'window.py',
+  'window_shortcuts.py',
   'timer.py',
   'actions.py',
   'player.py'
