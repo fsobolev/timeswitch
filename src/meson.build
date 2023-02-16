@@ -27,13 +27,14 @@ configure_file(
 
 timeswitch_sources = [
   '__init__.py',
+  'actions.py',
+  'cmd_warning.py',
+  'config.py',
   'main.py',
   'main_window.py',
   'main_window_shortcuts.py',
-  'timer.py',
-  'actions.py',
   'player.py',
-  'config.py'
+  'timer.py'
 ]
 
 install_data(timeswitch_sources, install_dir: moduledir)

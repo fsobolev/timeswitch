@@ -32,7 +32,7 @@ from gi.repository import Adw, Gtk, GLib, Gio
 from .config import TimeSwitchConfig
 from .timer import Timer
 from .main_window_shortcuts import set_shortcuts
-import os
+from .cmd_warning import WarningDialog
 import datetime
 
 
@@ -492,34 +492,8 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
     def show_commands(self, w):
         self.actions_stack.set_visible_child_name('commands')
         if self.config.show_cmd_warning:
-            self.show_warning_message()
-
-    def show_warning_message(self):
-        def pass_warning(w, state, msg):
-            msg.set_response_enabled('continue', state)
-
-        if os.path.exists('/.flatpak-info'):
-            flatpak_warning = \
-                _('They will be executed outside of flatpak sandbox. ')
-        else:
-            flatpak_warning = ''
-        msg = Adw.MessageDialog.new(self, _('Warning'), \
-            _("Your commands will be executed as if they were executed on a command prompt. {}The app doesn't perform any checks whether a command was executed successfully or not. Be careful, do not enter commands whose result is unknown to you.").format(flatpak_warning))
-        msg.add_response('continue', _('Continue'))
-        msg.set_response_appearance('continue', \
-            Adw.ResponseAppearance.SUGGESTED)
-        msg.set_response_enabled('continue', False)
-        ar = Adw.ActionRow.new()
-        ar.set_title(_('I understand'))
-        ar_switch = Gtk.Switch.new()
-        ar_switch.set_valign(Gtk.Align.CENTER)
-        ar.add_prefix(ar_switch)
-        ar.set_activatable_widget(ar_switch)
-        ar_switch.connect('state-set', pass_warning, msg)
-        ar.remove_css_class('activatable')
-        msg.set_extra_child(ar)
-        msg.show()
-        self.config.show_cmd_warning = False
+            msg = WarningDialog(self)
+            msg.show()
 
     def set_action_row_titles(self, row, title, subtitle, lines):
         row.set_title(title)
