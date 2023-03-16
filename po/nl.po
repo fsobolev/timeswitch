@@ -3,13 +3,14 @@
 #
 # Heimen Stoffels <vistausss@fastmail.com>, 2022, 2023.
 # J. Lavoie <j.lavoie@net-c.ca>, 2023.
+# Philip Goto <philip.goto@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-15 05:41+0300\n"
-"PO-Revision-Date: 2023-02-06 09:38+0000\n"
-"Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
+"PO-Revision-Date: 2023-03-17 10:41+0000\n"
+"Last-Translator: Philip Goto <philip.goto@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/timeswitch/"
 "timeswitch/nl/>\n"
 "Language: nl\n"
@@ -17,25 +18,26 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.16-dev\n"
+"X-Generator: Weblate 4.16.2-dev\n"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:3
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:6
 msgid "Time Switch"
-msgstr "Tijdschakelaar"
+msgstr "Time Switch"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:6
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:7
 msgid "Run tasks after a timer"
-msgstr "Voer acties uit op een zelfgekozen tijdstip."
+msgstr "Voer acties uit volgens een timer"
 
 # Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:11
 msgid "timer;shutdown;poweroff;reboot;suspend;notification;prompt;cmd;command;"
 msgstr ""
-"tijdklok;timer;uitschakelen;herstarten;pauzestand;melding;keuze;vraag;cmd;"
-"opdracht;commando;"
+"timer;shutdown;poweroff;reboot;suspend;notification;prompt;cmd;command;tijdkl"
+"ok;timer;uitschakelen;herstarten;pauzestand;melding;keuze;vraag;opdracht;comm"
+"ando;"
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:9
 msgid ""
@@ -52,8 +54,8 @@ msgid ""
 "The app is built for GNOME and uses LibAdwaita, but it works in any desktop "
 "environment."
 msgstr ""
-"Deze toepassing is gemaakt voor GNOME en maakt gebruik van LibAdwaita, maar "
-"werkt op elke werkomgeving."
+"Deze app is gemaakt voor GNOME en maakt gebruik van LibAdwaita, maar werkt "
+"op elke werkomgeving."
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:15
 msgid "Fyodor Sobolev"
@@ -130,11 +132,11 @@ msgstr "min."
 # Translators: Short fot "seconds"
 #: src/window.py:170
 msgid "sec"
-msgstr "s"
+msgstr "sec."
 
 #: src/window.py:184
 msgid "Reset"
-msgstr "Standaardwaarden"
+msgstr "Resetten"
 
 #: src/window.py:199
 msgid "Action"
