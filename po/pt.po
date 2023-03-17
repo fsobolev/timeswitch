@@ -1,24 +1,22 @@
+# SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2022 Fyodor Sobolev
 # This file is distributed under the same license as the timeswitch package.
-#
-# Heimen Stoffels <vistausss@fastmail.com>, 2022, 2023.
-# J. Lavoie <j.lavoie@net-c.ca>, 2023.
-# Philip Goto <philip.goto@gmail.com>, 2023.
+# ssantos <ssantos@web.de>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-15 05:41+0300\n"
-"PO-Revision-Date: 2023-03-17 10:41+0000\n"
-"Last-Translator: Philip Goto <philip.goto@gmail.com>\n"
-"Language-Team: Dutch <https://hosted.weblate.org/projects/timeswitch/"
-"timeswitch/nl/>\n"
-"Language: nl\n"
+"PO-Revision-Date: 2023-02-20 19:36+0000\n"
+"Last-Translator: ssantos <ssantos@web.de>\n"
+"Language-Team: Portuguese <https://hosted.weblate.org/projects/timeswitch/"
+"timeswitch/pt/>\n"
+"Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.16.2-dev\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.16-dev\n"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:3
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:6
@@ -28,15 +26,13 @@ msgstr "Time Switch"
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:6
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:7
 msgid "Run tasks after a timer"
-msgstr "Voer acties uit volgens een timer"
+msgstr "Execute tarefas após um temporizador"
 
-# Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:11
 msgid "timer;shutdown;poweroff;reboot;suspend;notification;prompt;cmd;command;"
 msgstr ""
-"timer;shutdown;poweroff;reboot;suspend;notification;prompt;cmd;command;tijdkl"
-"ok;timer;uitschakelen;herstarten;pauzestand;melding;keuze;vraag;opdracht;comm"
+"temporizador;encerrar;desligar;reiniciar;suspender;notificação;prompt;cmd;com"
 "ando;"
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:9
@@ -45,17 +41,17 @@ msgid ""
 "or suspend your system, send a notification (optionally with a sound signal) "
 "or execute any command on timer."
 msgstr ""
-"Voer energie-acties uit, zoals uitschakelen en herstarten, toon een melding "
-"(al dan niet met geluid) of voer een opdracht uit, allemaal op een "
-"zelfgekozen tijdstip."
+"Time Switch é uma aplicação simples que permite desligar, reiniciar ou "
+"suspender o sistema, enviar uma notificação (opcionalmente com efeito sonoro)"
+" ou executar qualquer comando com um temporizador."
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:10
 msgid ""
 "The app is built for GNOME and uses LibAdwaita, but it works in any desktop "
 "environment."
 msgstr ""
-"Deze app is gemaakt voor GNOME en maakt gebruik van LibAdwaita, maar werkt "
-"op elke werkomgeving."
+"A app foi criada para o GNOME e utiliza LibAdwaita, mas funciona em qualquer "
+"ambiente de desktop."
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:15
 msgid "Fyodor Sobolev"
@@ -63,155 +59,150 @@ msgstr "Fyodor Sobolev"
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:32
 msgid "Added ability to pause timer"
-msgstr "Nieuw: mogelijkheid om de tijdklok te onderbreken"
+msgstr "Adicionada a capacidade de pausar o temporizador"
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:33
 msgid ""
 "Added clock mode: in this mode you set clock time (in 24h format) when the "
 "timer should finish."
 msgstr ""
-"Nieuwe klokmodus: stel in (in 24-uursformaat) wanneer de tijdklok moet afgaan"
+"Modo relógio adicionado: neste modo determina a hora do relógio (no formato "
+"de 24h) em que o temporizador deve terminar."
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:34
 msgid "UI improvements"
-msgstr "Verbeterd: vormgeving"
+msgstr "Melhorias na interface de utilizador"
 
 #: src/actions.py:85
 msgid "Timer has finished!"
-msgstr "De tijdschakelaar is geactiveerd!"
+msgstr "O temporizador terminou!"
 
 #: src/actions.py:91 src/window.py:398
 msgid "Stop"
-msgstr "Stoppen"
+msgstr "Parar"
 
 #: src/timer.py:49
 msgid "Your device will be powered off in"
-msgstr "Uw apparaat wordt uitgeschakeld over"
+msgstr "O seu aparelho será desligado em"
 
 #: src/timer.py:51
 msgid "Your device will be rebooted in"
-msgstr "Uw apparaat wordt herstart over"
+msgstr "O seu aparelho será reiniciado em"
 
 #: src/timer.py:53
 msgid "Your device will be suspended in"
-msgstr "Uw apparaat wordt in de pauzestand gezet over"
+msgstr "O seu aparelho será suspenso em"
 
 #: src/timer.py:55
 msgid "You will receive a notification in"
-msgstr "Er wordt een melding getoond over"
+msgstr "Receberá uma notificação em"
 
 #: src/timer.py:62
 msgid "The command <b>{}</b> will be executed in"
-msgstr "<b>{}</b> wordt uitgevoerd over"
+msgstr "O comando <b>{}</b> será executado em"
 
 #: src/timer.py:89
 msgid "The notification has been sent."
-msgstr "De melding is verstuurd."
+msgstr "A notificação foi enviada."
 
 #: src/window.py:96
 msgid "Countdown"
-msgstr "Aftellen"
+msgstr "Contagem regressiva"
 
 #: src/window.py:96
 msgid "Clock"
-msgstr "Klok"
+msgstr "Relógio"
 
 #: src/window.py:98
 msgid "Select timer mode"
-msgstr "Kies de tijdklokmodus"
+msgstr "Selecione o modo do temporizador"
 
 #: src/window.py:105 src/window.py:355
 msgid "About"
-msgstr "Over"
+msgstr "Sobre"
 
-# Translators: Short fot "minutes"
 #: src/window.py:170
 msgid "min"
-msgstr "min."
+msgstr "min"
 
-# Translators: Short fot "seconds"
 #: src/window.py:170
 msgid "sec"
-msgstr "sec."
+msgstr "s"
 
 #: src/window.py:184
 msgid "Reset"
-msgstr "Resetten"
+msgstr "Reiniciar"
 
 #: src/window.py:199
 msgid "Action"
-msgstr "Actie"
+msgstr "Ação"
 
 #: src/window.py:204
 msgid "Power Off"
-msgstr "Uitschakelen"
+msgstr "Desligar"
 
 #: src/window.py:213
 msgid "Reboot"
-msgstr "Herstarten"
+msgstr "Reiniciar"
 
 #: src/window.py:222
 msgid "Suspend"
-msgstr "Pauzestand"
+msgstr "Suspender"
 
 #: src/window.py:231
 msgid "Notification"
-msgstr "Melding"
+msgstr "Notificação"
 
 #: src/window.py:243
 msgid "Notification settings"
-msgstr "Meldingsinstellingen"
+msgstr "Opções de notificação"
 
 #: src/window.py:257
 msgid "Notification text"
-msgstr "Meldingstekst"
+msgstr "Texto da notificação"
 
 #: src/window.py:261
 msgid "Play sound"
-msgstr "Geluid afspelen"
+msgstr "Reproduzir som"
 
 #: src/window.py:270
 msgid "Until stopped"
-msgstr "Tot moment van afbreken"
+msgstr "Até ser encerrada"
 
 #: src/window.py:284 src/window.py:306 src/window.py:563 src/window.py:630
 msgid "Command"
-msgstr "Opdracht"
+msgstr "Comando"
 
 #: src/window.py:312
 msgid "Back"
-msgstr "Terug"
+msgstr "Voltar"
 
 #: src/window.py:325 src/window.py:571
 msgid "Add"
-msgstr "Toevoegen"
+msgstr "Adicionar"
 
 #: src/window.py:335
 msgid "Start"
-msgstr "Starten"
+msgstr "Iniciar"
 
 #: src/window.py:387 src/window.py:758
 msgid "Pause"
-msgstr "Onderbreken"
+msgstr "Pausar"
 
 #: src/window.py:410
 msgid "You can close the window, the timer will work in the background."
 msgstr ""
-"De schakelaar wordt op de achtergrond geactiveerd. U kunt dit venster "
-"sluiten."
+"A janela pode ser fechada, pois o temporizador continuará a executar em "
+"segundo plano."
 
-# Translators: make sure to have a space in the end of the line.
 #: src/window.py:489
 msgid "They will be executed outside of flatpak sandbox. "
-msgstr "De opdrachten worden buiten de Flatpak-sandbox om uitgevoerd. "
+msgstr "Eles serão executados fora das restrições do flatpak. "
 
 #: src/window.py:492
 msgid "Warning"
-msgstr "Waarschuwing"
+msgstr "Atenção"
 
-# Translators: {} is used to pass "They will be executed outside of flatpak sandbox. "
-# in case the app is installed using flatpak. Make sure to have a space in front of it
-# (in the original text it's in the end of the first line)
 #: src/window.py:493
 msgid ""
 "Your commands will be executed as if they were executed on a command prompt. "
@@ -219,49 +210,50 @@ msgid ""
 "successfully or not. Be careful, do not enter commands whose result is "
 "unknown to you."
 msgstr ""
-"Uw opdrachten worden uitgevoerd zoals op de opdrachtregel. {}Deze toepassing "
-"voert nadien geen controle uit, dus let op welke opdrachten u invoert."
+"Os seus comandos serão executados como se estivessem num terminal. {}A app "
+"não verifica se um comando foi executado com sucesso ou não. Tenha cuidado, "
+"não execute comandos com resultados desconhecidos."
 
 #: src/window.py:494 src/window.py:762
 msgid "Continue"
-msgstr "Doorgaan"
+msgstr "Continuar"
 
 #: src/window.py:499
 msgid "I understand"
-msgstr "Ik begrijp het"
+msgstr "Compreendo"
 
 #: src/window.py:553
 msgid "Add command"
-msgstr "Opdracht toevoegen"
+msgstr "Adicionar comando"
 
 #: src/window.py:557 src/window.py:623
 msgid "Name"
-msgstr "Naam"
+msgstr "Nome"
 
 #: src/window.py:570 src/window.py:638 src/window.py:660
 msgid "Cancel"
-msgstr "Annuleren"
+msgstr "Cancelar"
 
 #: src/window.py:602 src/window.py:619
 msgid "Edit command"
-msgstr "Opdracht bewerken"
+msgstr "Editar comando"
 
 #: src/window.py:609
 msgid "Remove command"
-msgstr "Opdracht verwijderen"
+msgstr "Remover comando"
 
 #: src/window.py:639
 msgid "Apply"
-msgstr "Toepassen"
+msgstr "Aplicar"
 
 #: src/window.py:657
 msgid "Remove command?"
-msgstr "Opdracht verwijderen?"
+msgstr "Remover comando?"
 
 #: src/window.py:658
 msgid "Are you sure you want to remove command \"{}\"?"
-msgstr "Weet u zeker dat u ‘{}’ wilt verwijderen?"
+msgstr "Tem certeza que quer remover o comando \"{}\"?"
 
 #: src/window.py:661
 msgid "Remove"
-msgstr "Verwijderen"
+msgstr "Remover"
