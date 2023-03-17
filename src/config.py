@@ -38,6 +38,7 @@ class TimeSwitchConfig:
         self.commands = []
         self.mode = 0
         self.window_size = (330, 712)
+        self.presets = {}
         self.show_cmd_warning = True
 
         if os.getenv('XDG_CONFIG_HOME'):
@@ -65,6 +66,8 @@ class TimeSwitchConfig:
                         self.mode = data['mode']
                     if 'window-size' in data.keys():
                         self.window_size = data['window-size']
+                    if 'presets' in data.keys():
+                        self.presets = data['presets']
             except Exception as e:
                 print("Can't read config file:")
                 print(e)
@@ -76,7 +79,8 @@ class TimeSwitchConfig:
                     'last-action': self.last_action, \
                     'commands': self.commands, \
                     'mode': self.mode, \
-                    'window-size': self.window_size}
+                    'window-size': self.window_size, \
+                    'presets': self.presets}
                 json.dump(data, f)
         except Exception as e:
             print("Can't save config file:")
