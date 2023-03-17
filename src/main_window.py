@@ -57,7 +57,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
 
         self.config.load()
         self.build_ui()
-        self.presets_manager = PresetsManager(self, self.config.presets)
+        self.presets_manager = PresetsManager(self)
 
     def build_ui(self):
         self.set_default_size(*self.config.window_size)
@@ -99,7 +99,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.timer_mode_box.append(self.timer_mode_dropdown)
 
         self.presets_menu = Gio.Menu.new()
-        self.presets_menu.append(_('Create Preset'), 'win.add-preset')
+        self.presets_menu.append(_('Create Preset'), 'win.create-preset')
         self.presets_menu.append(_('Manage Presets'), 'win.manage-presets')
         self.presets_list_section = Gio.Menu.new()
         self.presets_menu.append_section(None, self.presets_list_section)
