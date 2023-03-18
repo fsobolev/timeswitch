@@ -1,3 +1,9 @@
 .large-text {
   font-size: 42pt;
 }
+
+.move-button {
+	-gtk-icon-size: 12px;
+	min-height: 16px;
+	min-width: 22px;
+}

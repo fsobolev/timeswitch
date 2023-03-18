@@ -36,7 +36,7 @@ class ManagePresetsWindow(Adw.PreferencesWindow):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.set_title(_('Presets'))
-        self.set_default_size(360, -1)
+        self.set_default_size(420, -1)
         self.set_search_enabled(False)
         self.page = Adw.PreferencesPage.new()
         self.add(self.page)
@@ -53,11 +53,13 @@ class ManagePresetsWindow(Adw.PreferencesWindow):
         self.page.add(self.group)
         for p in self.config.presets:
             row = Adw.ActionRow.new()
+            row.set_size_request(-1, 84)
+            row.set_focusable(False)
             row.set_title(p['name'])
             subtitle = [_('Countdown'), _('Clock')][p['mode']]
             subtitle += f' {int(p["timer-value"][0])}'
             subtitle += ':{0:0>2}'.format(int(p['timer-value'][1]))
-            subtitle += ':{0:0>2} | '.format(int(p['timer-value'][2]))
+            subtitle += ':{0:0>2}\n'.format(int(p['timer-value'][2]))
             if p['action'][0] == 0:
                 subtitle += _('Power Off')
             elif p['action'][0] == 1:
@@ -77,12 +79,44 @@ class ManagePresetsWindow(Adw.PreferencesWindow):
                     subtitle += _('Command "{}"').format( \
                         self.config.commands[p['action'][1]]['name'])
             row.set_subtitle(subtitle)
+            move_box = Gtk.Box.new(Gtk.Orientation.VERTICAL, 0)
+            move_box.add_css_class('linked')
+            move_box.set_margin_top(6)
+            move_box.set_margin_bottom(6)
+            move_box.set_valign(Gtk.Align.CENTER)
+            move_up = Gtk.Button.new_from_icon_name('pan-up-symbolic')
+            move_up.set_tooltip_text(_('Move Up'))
+            move_up.add_css_class('move-button')
+            move_up.connect('clicked', self.move_preset, \
+                (self.config.presets.index(p), -1))
+            move_up.set_sensitive(self.config.presets.index(p) != 0)
+            move_box.append(move_up)
+            move_down = Gtk.Button.new_from_icon_name('pan-down-symbolic')
+            move_down.set_tooltip_text(_('Move Down'))
+            move_down.add_css_class('move-button')
+            move_down.connect('clicked', self.move_preset, \
+                (self.config.presets.index(p), 1))
+            move_down.set_sensitive( \
+                self.config.presets.index(p) < len(self.config.presets) - 1)
+            move_box.append(move_down)
+            row.add_prefix(move_box)
             delete_button = Gtk.Button.new_from_icon_name('user-trash-symbolic')
+            delete_button.set_tooltip_text(_('Delete Preset'))
             delete_button.set_valign(Gtk.Align.CENTER)
             delete_button.connect('clicked', self.delete_preset, \
                 self.config.presets.index(p))
             row.add_suffix(delete_button)
             self.group.add(row)
+
+    def move_preset(self, button, args):
+        index, offset = args
+        if (index + offset) < 0 or \
+                (index + offset) > len(self.config.presets) - 1:
+            return
+        self.config.presets[index], self.config.presets[index+offset] = \
+            self.config.presets[index+offset], self.config.presets[index]
+        self.config.save()
+        self.list_presets()
 
     def delete_preset(self, button, index):
         self.config.presets.pop(index)
