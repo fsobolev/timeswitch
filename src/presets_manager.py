@@ -84,16 +84,23 @@ class PresetsManager:
                 settings['action'][1]].activate()
 
     def create_preset(self):
+        def entry_callback(row, pspec, dialog):
+            if pspec.name == 'text':
+                dialog.set_response_enabled('save', len(row.get_text()) > 0)
+
         dialog = Adw.MessageDialog.new(self.window, _('Create Preset'), \
             _('Currently selected options will be saved in a new preset with the provided name.'))
         preset_name_row = Adw.EntryRow.new()
         preset_name_row.set_title(_('Preset Name'))
         preset_name_row.add_css_class('card')
+        preset_name_row.set_activates_default(True)
         dialog.set_extra_child(preset_name_row)
         dialog.add_response('cancel', _('Cancel'))
         dialog.add_response('save', _('Save'))
         dialog.set_response_appearance('save', Adw.ResponseAppearance.SUGGESTED)
         dialog.set_default_response('save')
+        dialog.set_response_enabled('save', False)
+        preset_name_row.connect('notify', entry_callback, dialog)
         dialog.connect('response', lambda d, response: \
             self.save_preset(preset_name_row.get_text()))
         dialog.show()
