@@ -442,6 +442,8 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         [self.action_poweroff, self.action_reboot, \
             self.action_suspend, self.action_notify, \
             self.action_command][self.config.last_action[0]].activate()
+        self.notification_text.get_buffer().set_text( \
+            self.config.notification_text, -1)
         for command in self.config.commands:
             self.create_command(command)
         if len(self.commands_widgets['rows']) > 0:
@@ -665,6 +667,8 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
                 else:
                     self.config.last_action[1] = 0
                 break
+        self.config.notification_text = \
+            self.notification_text.get_buffer().get_text()
         self.config.mode = self.timer_mode_dropdown.get_selected()
         self.config.window_size = self.get_default_size()
         self.config.save()

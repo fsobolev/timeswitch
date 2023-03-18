@@ -70,6 +70,8 @@ class PresetsManager:
         [self.window.action_poweroff, self.window.action_reboot, \
             self.window.action_suspend, self.window.action_notify, \
             self.window.action_command][settings['action'][0]].activate()
+        self.window.notification_text.get_buffer().set_text( \
+            settings['notification-text'], -1)
         if settings['action'][0] == 3:
             self.window.play_sound_switch.set_active( \
                 bool(settings['action'][1]))
@@ -134,11 +136,15 @@ class PresetsManager:
                 else:
                     action.append(0)
                 break
+        notification_text = \
+            self.window.notification_text.get_buffer().get_text() \
+            if action[0] == 3 else ""
         self.config.presets.append({ \
             'name': name, \
             'mode': mode, \
             'timer-value': timer_value, \
-            'action': action })
+            'action': action, \
+            'notification-text': notification_text})
         self.config.save()
         self.generate_presets()
 
