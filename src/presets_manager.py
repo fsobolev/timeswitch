@@ -29,19 +29,27 @@
 # SPDX-License-Identifier: MIT)
 
 from gi.repository import Adw, Gio
+from .manage_presets_window import ManagePresetsWindow
 
 class PresetsManager:
     def __init__(self, window):
         self.window = window
         self.config = window.config
-        self.generate_presets()
 
         action_create = Gio.SimpleAction.new('create-preset', None)
         action_create.connect('activate', lambda *args: self.create_preset())
         self.window.add_action(action_create)
 
+        self.action_manage = Gio.SimpleAction.new('manage-presets', None)
+        self.action_manage.connect('activate', lambda *args: self.manage_presets())
+        self.window.add_action(self.action_manage)
+
+        self.generate_presets()
+
     def generate_presets(self):
         self.window.presets_list_section.remove_all()
+        self.action_manage.set_enabled( \
+            len(self.config.presets) > 0)
         for i in range(len(self.config.presets)):
             self.window.remove_action(f'preset-{i}')
             action = Gio.SimpleAction.new(f'preset-{i}', None)
@@ -126,3 +134,12 @@ class PresetsManager:
             'action': action })
         self.config.save()
         self.generate_presets()
+
+    def manage_presets(self):
+        dialog = ManagePresetsWindow()
+        dialog.set_modal(True)
+        dialog.set_transient_for(self.window)
+        dialog.config = self.config
+        dialog.list_presets()
+        dialog.show()
+        dialog.connect('close-request', lambda *args: self.generate_presets())

@@ -33,6 +33,7 @@ timeswitch_sources = [
   'main.py',
   'main_window.py',
   'main_window_shortcuts.py',
+  'manage_presets_window.py',
   'player.py',
   'presets_manager.py',
   'timer.py'
