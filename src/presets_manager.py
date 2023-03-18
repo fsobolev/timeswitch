@@ -110,9 +110,9 @@ class PresetsManager:
             return
         mode = self.window.timer_mode_dropdown.get_selected()
         timer_value = [ \
-            self.window.hour_spin.get_value(), \
-            self.window.min_spin.get_value(), \
-            self.window.sec_spin.get_value() ]
+            self.window.hour_spin.get_value_as_int(), \
+            self.window.min_spin.get_value_as_int(), \
+            self.window.sec_spin.get_value_as_int() ]
         action = []
         checkbuttons = [self.window.action_poweroff_check, \
             self.window.action_reboot_check, \

@@ -57,9 +57,9 @@ class ManagePresetsWindow(Adw.PreferencesWindow):
             row.set_focusable(False)
             row.set_title(p['name'])
             subtitle = [_('Countdown'), _('Clock')][p['mode']]
-            subtitle += f' {int(p["timer-value"][0])}'
-            subtitle += ':{0:0>2}'.format(int(p['timer-value'][1]))
-            subtitle += ':{0:0>2}\n'.format(int(p['timer-value'][2]))
+            subtitle += f' {p["timer-value"][0]}'
+            subtitle += ':{0:0>2}'.format(p['timer-value'][1])
+            subtitle += ':{0:0>2}\n'.format(p['timer-value'][2])
             if p['action'][0] == 0:
                 subtitle += _('Power Off')
             elif p['action'][0] == 1:
