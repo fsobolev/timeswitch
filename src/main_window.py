@@ -375,7 +375,11 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.run_menu_button.set_icon_name('open-menu-symbolic')
         self.run_menu_button.set_tooltip_text(_('Main menu'))
         self.header_run.pack_end(self.run_menu_button)
-        self.run_menu_button.set_menu_model(self.main_menu)
+        self.run_menu = Gio.Menu.new()
+        self.run_menu.append(_('Keyboard Shortcuts'), 'app.shortcuts')
+        self.run_menu.append(_('About'), 'app.about')
+        self.run_menu.append(_('Quit'), 'app.quit')
+        self.run_menu_button.set_menu_model(self.run_menu)
 
         # Running timer box
         self.running_box = Gtk.Box.new(Gtk.Orientation.VERTICAL, 10)
