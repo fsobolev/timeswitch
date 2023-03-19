@@ -4,7 +4,7 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>MIT</project_license>
   <name>Time Switch</name>
-  <summary>Run tasks after a timer</summary>
+  <summary>Set a task to run after a timer</summary>
   <description>
     <p>Time Switch is an easy-to-use program that allows you to power off, reboot or suspend your system, send a notification (optionally with a sound signal) or execute any command on timer.</p>
     <p>The app is built for GNOME and uses LibAdwaita, but it works in any desktop environment.</p>
@@ -27,7 +27,7 @@
   </screenshots>
   <releases>
     <release type="stable" date="2023-01-28" version="2023.01.28">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Added ability to pause timer</li>
           <li>Added clock mode: in this mode you set clock time (in 24h format) when the timer should finish.</li>

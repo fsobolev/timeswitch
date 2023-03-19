@@ -2,6 +2,9 @@ data/io.github.fsobolev.TimeSwitch.desktop.in
 data/io.github.fsobolev.TimeSwitch.metainfo.xml.in
 data/io.github.fsobolev.TimeSwitch.gschema.xml
 src/actions.py
+src/cmd_warning.py
 src/main.py
+src/main_window.py
+src/manage_presets_window.py
+src/presets_manager.py
 src/timer.py
-src/window.py

@@ -2,7 +2,7 @@
 Name=Time Switch
 Exec=timeswitch
 Icon=io.github.fsobolev.TimeSwitch
-Comment=Run tasks after a timer
+Comment=Set a task to run after a timer
 Terminal=false
 Type=Application
 Categories=GTK;Utility;
