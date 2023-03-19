@@ -26,6 +26,17 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release type="stable" date="2023-03-19" version="2023.03.x">
+      <description translatable="no">
+        <ul>
+          <li>Added ability to create presets to allow saving and restoring settings</li>
+          <li>New shortcuts were added to make the app easier to use with keyboard</li>
+          <li>When running in the background, the app shows timer information in GNOME Shell (requires GNOME 44+)</li>
+          <li>The app will now remember window size and notification text</li>
+          <li>Small UI improvements</li>
+        </ul>
+      </description>
+    </release>
     <release type="stable" date="2023-01-28" version="2023.01.28">
       <description translatable="no">
         <ul>
@@ -35,6 +46,80 @@
         </ul>
       </description>
     </release>
+    <release type="stable" date="2022-12-30" version="2022.12.30">
+      <description translatable="no">
+        <ul>
+          <li>Added ability to play notification sound until stopped (like an alarm in GNOME Clocks)</li>
+          <li>Pressing Enter when the hours, minutes or seconds entry is focused will now start a timer</li>
+          <li>Added Brazilian Portuguese translation (thanks to @plasmus777)</li>
+          <li>Added Turkish translation (thanks to @sabriunal)</li>
+          <li>Added Indonesian translation (thanks to @sekalengrengginang)</li>
+        </ul>
+      </description>
+    </release>
+    <release type="stable" date="2022-12-18" version="2022.12.18">
+      <description translatable="no">
+        <ul>
+          <li>The app will now remember last used action, including the command you used and whether notification should play sound.</li>
+          <li>Note: after this update the app will not restore saved timer value at the first start, but as soon as you run a timer the feature will work again.</li>
+        </ul>
+      </description>
+    </release>
+    <release type="stable" date="2022-12-09" version="2022.12.09">
+      <description translatable="no">
+        <ul>
+          <li>Added Dutch translation (thanks to @Vistaus)</li>
+          <li>Fixed a bug when the app was showing an empty window if there was no config file.</li>
+        </ul>
+      </description>
+    </release>
+    <release type="stable" date="2022-12-04" version="2022.12.04">
+      <description translatable="no">
+        <ul>
+          <li>New icon, thanks @igor-dyatlov!</li>
+        </ul>
+      </description>
+    </release>
+    <release type="stable" date="2022-12-03" version="2022.12.03">
+      <description translatable="no">
+        <ul>
+          <li>The app will now remember last used timer value.</li>
+        </ul>
+      </description>
+    </release>
+    <release type="stable" date="2022-11-15" version="2022.11.15">
+      <description translatable="no">
+        <ul>
+          <li>Added Spanish translation (thanks to @DeltaVeintiuno)</li>
+        </ul>
+      </description>
+    </release>
+    <release type="stable" date="2022-11-12" version="2022.11.12">
+      <description translatable="no">
+        <ul>
+          <li>The app can now execute user-defined commands</li>
+          <li>Added German translation (thanks to @RoepLuke)</li>
+        </ul>
+      </description>
+    </release>
+    <release type="stable" date="2022-11-08" version="2022.11.8">
+      <description translatable="no">
+        <ul>
+          <li>Added Swedish translation (thanks to @eson57)</li>
+          <li>All translators are now listed in about window</li>
+        </ul>
+      </description>
+    </release>
+    <release type="stable" date="2022-11-06" version="0.1.1">
+      <description translatable="no">
+        <ul>
+          <li>Added Italian translation (thanks to @albanobattistella)</li>
+          <li>Added French translation (thanks to @rene-coty)</li>
+          <li>Ctrl+Q and Ctrl+W now close the window</li>
+        </ul>
+      </description>
+    </release>
+    <release type="stable" date="2022-11-04" version="0.1.0"/>
   </releases>
   <content_rating type="oars-1.1"/>
   <supports>
