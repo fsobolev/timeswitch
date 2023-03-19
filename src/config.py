@@ -35,9 +35,11 @@ class TimeSwitchConfig:
     def __init__(self):
         self.last_timer_value = [0, 0, 0]
         self.last_action = [0, 0]
+        self.notification_text = ""
         self.commands = []
         self.mode = 0
         self.window_size = (330, 712)
+        self.presets = []
         self.show_cmd_warning = True
 
         if os.getenv('XDG_CONFIG_HOME'):
@@ -57,6 +59,8 @@ class TimeSwitchConfig:
                         self.last_timer_value = data['last-timer-value']
                     if 'last-action' in data.keys():
                         self.last_action = data['last-action']
+                    if 'notification-text' in data.keys():
+                        self.notification_text = data['notification-text']
                     if 'commands' in data.keys():
                         self.commands = data['commands']
                         if len(self.commands) > 0:
@@ -65,6 +69,8 @@ class TimeSwitchConfig:
                         self.mode = data['mode']
                     if 'window-size' in data.keys():
                         self.window_size = data['window-size']
+                    if 'presets' in data.keys():
+                        self.presets = data['presets']
             except Exception as e:
                 print("Can't read config file:")
                 print(e)
@@ -74,9 +80,11 @@ class TimeSwitchConfig:
             with open(self.config_file_path, 'w') as f:
                 data = {'last-timer-value': self.last_timer_value, \
                     'last-action': self.last_action, \
+                    'notification-text': self.notification_text, \
                     'commands': self.commands, \
                     'mode': self.mode, \
-                    'window-size': self.window_size}
+                    'window-size': self.window_size, \
+                    'presets': self.presets}
                 json.dump(data, f)
         except Exception as e:
             print("Can't save config file:")

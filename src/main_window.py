@@ -1,4 +1,4 @@
-# window.py
+# main_window.py
 #
 # Copyright 2022 Fyodor Sobolev
 #
@@ -31,6 +31,7 @@
 from gi.repository import Adw, Gtk, GLib, Gio
 from .config import TimeSwitchConfig
 from .timer import Timer
+from .presets_manager import PresetsManager
 from .main_window_shortcuts import set_shortcuts
 from .cmd_warning import WarningDialog
 import datetime
@@ -56,6 +57,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
 
         self.config.load()
         self.build_ui()
+        self.presets_manager = PresetsManager(self)
 
     def build_ui(self):
         self.set_default_size(*self.config.window_size)
@@ -96,11 +98,18 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
             self.change_timer_mode)
         self.timer_mode_box.append(self.timer_mode_dropdown)
 
+        self.presets_menu = Gio.Menu.new()
+        self.presets_menu.append(_('Create Preset'), 'win.create-preset')
+        self.presets_menu.append(_('Manage Presets'), 'win.manage-presets')
+        self.presets_list_section = Gio.Menu.new()
+        self.presets_menu.append_section(None, self.presets_list_section)
+
         self.main_menu_button = Gtk.MenuButton.new()
         self.main_menu_button.set_icon_name('open-menu-symbolic')
         self.main_menu_button.set_tooltip_text(_('Main menu'))
         self.header_main.pack_end(self.main_menu_button)
         self.main_menu = Gio.Menu.new()
+        self.main_menu.append_submenu(_('Presets'), self.presets_menu)
         self.main_menu.append(_('Keyboard Shortcuts'), 'app.shortcuts')
         self.main_menu.append(_('About'), 'app.about')
         self.main_menu.append(_('Quit'), 'app.quit')
@@ -433,6 +442,8 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         [self.action_poweroff, self.action_reboot, \
             self.action_suspend, self.action_notify, \
             self.action_command][self.config.last_action[0]].activate()
+        self.notification_text.get_buffer().set_text( \
+            self.config.notification_text, -1)
         for command in self.config.commands:
             self.create_command(command)
         if len(self.commands_widgets['rows']) > 0:
@@ -656,6 +667,8 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
                 else:
                     self.config.last_action[1] = 0
                 break
+        self.config.notification_text = \
+            self.notification_text.get_buffer().get_text()
         self.config.mode = self.timer_mode_dropdown.get_selected()
         self.config.window_size = self.get_default_size()
         self.config.save()
