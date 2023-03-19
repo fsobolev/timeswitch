@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-19 17:13+0300\n"
+"POT-Creation-Date: 2023-03-19 17:21+0300\n"
 "PO-Revision-Date: 2023-02-11 07:18+0000\n"
 "Last-Translator: poi <erbaotao@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
@@ -62,7 +62,7 @@ msgstr "费奥多尔·索博列夫（Фёдор Соболев）"
 msgid "Timer has finished!"
 msgstr "到点啦！"
 
-#: src/actions.py:89 src/main_window.py:420
+#: src/actions.py:89 src/main_window.py:424
 msgid "Stop"
 msgstr "停止"
 
@@ -84,12 +84,12 @@ msgstr ""
 "应用会像您在命令提示符里执行命令一样执行您的命令。 {}应用不会检测命令执没执行"
 "成功。注意，不要输入您不知道效果的命令。"
 
-#: src/cmd_warning.py:50 src/main.py:106 src/main_window.py:537
-#: src/main_window.py:607 src/main_window.py:629 src/presets_manager.py:100
+#: src/cmd_warning.py:50 src/main.py:106 src/main_window.py:541
+#: src/main_window.py:611 src/main_window.py:633 src/presets_manager.py:100
 msgid "Cancel"
 msgstr "取消"
 
-#: src/cmd_warning.py:53 src/main_window.py:736
+#: src/cmd_warning.py:53 src/main_window.py:740
 msgid "Continue"
 msgstr "继续"
 
@@ -107,7 +107,7 @@ msgstr ""
 msgid "Are you sure you want to stop the timer and quit?"
 msgstr "您确实想移除命令“{}”吗？"
 
-#: src/main.py:108 src/main_window.py:115
+#: src/main.py:108 src/main_window.py:115 src/main_window.py:381
 msgid "Quit"
 msgstr ""
 
@@ -141,11 +141,11 @@ msgstr ""
 msgid "Presets"
 msgstr "重启"
 
-#: src/main_window.py:113
+#: src/main_window.py:113 src/main_window.py:379
 msgid "Keyboard Shortcuts"
 msgstr ""
 
-#: src/main_window.py:114
+#: src/main_window.py:114 src/main_window.py:380
 msgid "About"
 msgstr "关于应用"
 
@@ -197,8 +197,8 @@ msgstr "播放声音"
 msgid "Until stopped"
 msgstr "直到停止"
 
-#: src/main_window.py:304 src/main_window.py:327 src/main_window.py:530
-#: src/main_window.py:599
+#: src/main_window.py:304 src/main_window.py:327 src/main_window.py:534
+#: src/main_window.py:603
 msgid "Command"
 msgstr "命令"
 
@@ -206,7 +206,7 @@ msgstr "命令"
 msgid "Back"
 msgstr "返回"
 
-#: src/main_window.py:346 src/main_window.py:538
+#: src/main_window.py:346 src/main_window.py:542
 msgid "Add"
 msgstr "新增"
 
@@ -214,43 +214,43 @@ msgstr "新增"
 msgid "Start"
 msgstr "开始"
 
-#: src/main_window.py:409 src/main_window.py:732
+#: src/main_window.py:413 src/main_window.py:736
 msgid "Pause"
 msgstr "暂停"
 
-#: src/main_window.py:432
+#: src/main_window.py:436
 msgid "You can close the window, the timer will work in the background."
 msgstr "窗口可以关，计时器后台运行。"
 
-#: src/main_window.py:520
+#: src/main_window.py:524
 msgid "Add command"
 msgstr "新增命令"
 
-#: src/main_window.py:524 src/main_window.py:592
+#: src/main_window.py:528 src/main_window.py:596
 msgid "Name"
 msgstr "名称"
 
-#: src/main_window.py:571 src/main_window.py:588
+#: src/main_window.py:575 src/main_window.py:592
 msgid "Edit command"
 msgstr "修改命令"
 
-#: src/main_window.py:578
+#: src/main_window.py:582
 msgid "Remove command"
 msgstr "移除命令"
 
-#: src/main_window.py:608
+#: src/main_window.py:612
 msgid "Apply"
 msgstr "应用"
 
-#: src/main_window.py:626
+#: src/main_window.py:630
 msgid "Remove command?"
 msgstr "移除命令吗？"
 
-#: src/main_window.py:627
+#: src/main_window.py:631
 msgid "Are you sure you want to remove command \"{}\"?"
 msgstr "您确实想移除命令“{}”吗？"
 
-#: src/main_window.py:630
+#: src/main_window.py:634
 msgid "Remove"
 msgstr "移除"
 

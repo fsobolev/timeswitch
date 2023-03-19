@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-19 17:13+0300\n"
+"POT-Creation-Date: 2023-03-19 17:21+0300\n"
 "PO-Revision-Date: 2023-02-07 15:36+0000\n"
 "Last-Translator: Dan <denqwerta@gmail.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/timeswitch/"
@@ -69,7 +69,7 @@ msgstr "Федір Соболєв"
 msgid "Timer has finished!"
 msgstr "Таймер закінчився!"
 
-#: src/actions.py:89 src/main_window.py:420
+#: src/actions.py:89 src/main_window.py:424
 msgid "Stop"
 msgstr "Стоп"
 
@@ -93,12 +93,12 @@ msgstr ""
 "успішно, чи ні. Будьте обережні, не вводьте команди, результат яких вам "
 "невідомий."
 
-#: src/cmd_warning.py:50 src/main.py:106 src/main_window.py:537
-#: src/main_window.py:607 src/main_window.py:629 src/presets_manager.py:100
+#: src/cmd_warning.py:50 src/main.py:106 src/main_window.py:541
+#: src/main_window.py:611 src/main_window.py:633 src/presets_manager.py:100
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: src/cmd_warning.py:53 src/main_window.py:736
+#: src/cmd_warning.py:53 src/main_window.py:740
 msgid "Continue"
 msgstr "Продовжити"
 
@@ -116,7 +116,7 @@ msgstr ""
 msgid "Are you sure you want to stop the timer and quit?"
 msgstr "Ви впевнені, що хочете видалити команду \"{}\"?"
 
-#: src/main.py:108 src/main_window.py:115
+#: src/main.py:108 src/main_window.py:115 src/main_window.py:381
 msgid "Quit"
 msgstr ""
 
@@ -150,11 +150,11 @@ msgstr ""
 msgid "Presets"
 msgstr "Скинути"
 
-#: src/main_window.py:113
+#: src/main_window.py:113 src/main_window.py:379
 msgid "Keyboard Shortcuts"
 msgstr ""
 
-#: src/main_window.py:114
+#: src/main_window.py:114 src/main_window.py:380
 msgid "About"
 msgstr "Про застосунок"
 
@@ -206,8 +206,8 @@ msgstr "Увімкнути звук"
 msgid "Until stopped"
 msgstr "Доки не зупиниться"
 
-#: src/main_window.py:304 src/main_window.py:327 src/main_window.py:530
-#: src/main_window.py:599
+#: src/main_window.py:304 src/main_window.py:327 src/main_window.py:534
+#: src/main_window.py:603
 msgid "Command"
 msgstr "Команда"
 
@@ -215,7 +215,7 @@ msgstr "Команда"
 msgid "Back"
 msgstr "Назад"
 
-#: src/main_window.py:346 src/main_window.py:538
+#: src/main_window.py:346 src/main_window.py:542
 msgid "Add"
 msgstr "Додати"
 
@@ -223,43 +223,43 @@ msgstr "Додати"
 msgid "Start"
 msgstr "Старт"
 
-#: src/main_window.py:409 src/main_window.py:732
+#: src/main_window.py:413 src/main_window.py:736
 msgid "Pause"
 msgstr "Пауза"
 
-#: src/main_window.py:432
+#: src/main_window.py:436
 msgid "You can close the window, the timer will work in the background."
 msgstr "Ви можете закрити вікно, таймер працюватиме у фоновому режимі."
 
-#: src/main_window.py:520
+#: src/main_window.py:524
 msgid "Add command"
 msgstr "Додати команду"
 
-#: src/main_window.py:524 src/main_window.py:592
+#: src/main_window.py:528 src/main_window.py:596
 msgid "Name"
 msgstr "Ім'я"
 
-#: src/main_window.py:571 src/main_window.py:588
+#: src/main_window.py:575 src/main_window.py:592
 msgid "Edit command"
 msgstr "Редагувати команду"
 
-#: src/main_window.py:578
+#: src/main_window.py:582
 msgid "Remove command"
 msgstr "Видалити команду"
 
-#: src/main_window.py:608
+#: src/main_window.py:612
 msgid "Apply"
 msgstr "Застосувати"
 
-#: src/main_window.py:626
+#: src/main_window.py:630
 msgid "Remove command?"
 msgstr "Видалити команду?"
 
-#: src/main_window.py:627
+#: src/main_window.py:631
 msgid "Are you sure you want to remove command \"{}\"?"
 msgstr "Ви впевнені, що хочете видалити команду \"{}\"?"
 
-#: src/main_window.py:630
+#: src/main_window.py:634
 msgid "Remove"
 msgstr "Видалити"
 
