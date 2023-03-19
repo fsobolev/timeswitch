@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-15 05:41+0300\n"
+"POT-Creation-Date: 2023-03-19 16:18+0300\n"
 "PO-Revision-Date: 2023-03-17 10:41+0000\n"
 "Last-Translator: Philip Goto <philip.goto@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/timeswitch/"
@@ -27,7 +27,9 @@ msgstr "Time Switch"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:6
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:7
-msgid "Run tasks after a timer"
+#, fuzzy
+#| msgid "Run tasks after a timer"
+msgid "Set a task to run after a timer"
 msgstr "Voer acties uit volgens een timer"
 
 # Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
@@ -35,9 +37,9 @@ msgstr "Voer acties uit volgens een timer"
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:11
 msgid "timer;shutdown;poweroff;reboot;suspend;notification;prompt;cmd;command;"
 msgstr ""
-"timer;shutdown;poweroff;reboot;suspend;notification;prompt;cmd;command;tijdkl"
-"ok;timer;uitschakelen;herstarten;pauzestand;melding;keuze;vraag;opdracht;comm"
-"ando;"
+"timer;shutdown;poweroff;reboot;suspend;notification;prompt;cmd;command;"
+"tijdklok;timer;uitschakelen;herstarten;pauzestand;melding;keuze;vraag;"
+"opdracht;commando;"
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:9
 msgid ""
@@ -57,162 +59,36 @@ msgstr ""
 "Deze app is gemaakt voor GNOME en maakt gebruik van LibAdwaita, maar werkt "
 "op elke werkomgeving."
 
-#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:15
+#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:15 src/main.py:86
+#: src/main.py:88
 msgid "Fyodor Sobolev"
 msgstr "Fyodor Sobolev"
 
-#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:32
-msgid "Added ability to pause timer"
-msgstr "Nieuw: mogelijkheid om de tijdklok te onderbreken"
-
-#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:33
-msgid ""
-"Added clock mode: in this mode you set clock time (in 24h format) when the "
-"timer should finish."
-msgstr ""
-"Nieuwe klokmodus: stel in (in 24-uursformaat) wanneer de tijdklok moet afgaan"
-
-#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:34
-msgid "UI improvements"
-msgstr "Verbeterd: vormgeving"
-
-#: src/actions.py:85
+#. Bus name
+#. Object path
+#. Interface name
+#. Method name
+#: src/actions.py:83 src/timer.py:145
 msgid "Timer has finished!"
 msgstr "De tijdschakelaar is geactiveerd!"
 
-#: src/actions.py:91 src/window.py:398
+#: src/actions.py:89 src/main_window.py:416
 msgid "Stop"
 msgstr "Stoppen"
 
-#: src/timer.py:49
-msgid "Your device will be powered off in"
-msgstr "Uw apparaat wordt uitgeschakeld over"
-
-#: src/timer.py:51
-msgid "Your device will be rebooted in"
-msgstr "Uw apparaat wordt herstart over"
-
-#: src/timer.py:53
-msgid "Your device will be suspended in"
-msgstr "Uw apparaat wordt in de pauzestand gezet over"
-
-#: src/timer.py:55
-msgid "You will receive a notification in"
-msgstr "Er wordt een melding getoond over"
-
-#: src/timer.py:62
-msgid "The command <b>{}</b> will be executed in"
-msgstr "<b>{}</b> wordt uitgevoerd over"
-
-#: src/timer.py:89
-msgid "The notification has been sent."
-msgstr "De melding is verstuurd."
-
-#: src/window.py:96
-msgid "Countdown"
-msgstr "Aftellen"
-
-#: src/window.py:96
-msgid "Clock"
-msgstr "Klok"
-
-#: src/window.py:98
-msgid "Select timer mode"
-msgstr "Kies de tijdklokmodus"
-
-#: src/window.py:105 src/window.py:355
-msgid "About"
-msgstr "Over"
-
-# Translators: Short fot "minutes"
-#: src/window.py:170
-msgid "min"
-msgstr "min."
-
-# Translators: Short fot "seconds"
-#: src/window.py:170
-msgid "sec"
-msgstr "sec."
-
-#: src/window.py:184
-msgid "Reset"
-msgstr "Resetten"
-
-#: src/window.py:199
-msgid "Action"
-msgstr "Actie"
-
-#: src/window.py:204
-msgid "Power Off"
-msgstr "Uitschakelen"
-
-#: src/window.py:213
-msgid "Reboot"
-msgstr "Herstarten"
-
-#: src/window.py:222
-msgid "Suspend"
-msgstr "Pauzestand"
-
-#: src/window.py:231
-msgid "Notification"
-msgstr "Melding"
-
-#: src/window.py:243
-msgid "Notification settings"
-msgstr "Meldingsinstellingen"
-
-#: src/window.py:257
-msgid "Notification text"
-msgstr "Meldingstekst"
-
-#: src/window.py:261
-msgid "Play sound"
-msgstr "Geluid afspelen"
-
-#: src/window.py:270
-msgid "Until stopped"
-msgstr "Tot moment van afbreken"
-
-#: src/window.py:284 src/window.py:306 src/window.py:563 src/window.py:630
-msgid "Command"
-msgstr "Opdracht"
-
-#: src/window.py:312
-msgid "Back"
-msgstr "Terug"
-
-#: src/window.py:325 src/window.py:571
-msgid "Add"
-msgstr "Toevoegen"
-
-#: src/window.py:335
-msgid "Start"
-msgstr "Starten"
-
-#: src/window.py:387 src/window.py:758
-msgid "Pause"
-msgstr "Onderbreken"
-
-#: src/window.py:410
-msgid "You can close the window, the timer will work in the background."
-msgstr ""
-"De schakelaar wordt op de achtergrond geactiveerd. U kunt dit venster "
-"sluiten."
-
-# Translators: make sure to have a space in the end of the line.
-#: src/window.py:489
-msgid "They will be executed outside of flatpak sandbox. "
-msgstr "De opdrachten worden buiten de Flatpak-sandbox om uitgevoerd. "
-
-#: src/window.py:492
+#: src/cmd_warning.py:41
 msgid "Warning"
 msgstr "Waarschuwing"
+
+# Translators: make sure to have a space in the end of the line.
+#: src/cmd_warning.py:45
+msgid "They will be executed outside of flatpak sandbox. "
+msgstr "De opdrachten worden buiten de Flatpak-sandbox om uitgevoerd. "
 
 # Translators: {} is used to pass "They will be executed outside of flatpak sandbox. "
 # in case the app is installed using flatpak. Make sure to have a space in front of it
 # (in the original text it's in the end of the first line)
-#: src/window.py:493
+#: src/cmd_warning.py:48
 msgid ""
 "Your commands will be executed as if they were executed on a command prompt. "
 "{}The app doesn't perform any checks whether a command was executed "
@@ -222,46 +98,289 @@ msgstr ""
 "Uw opdrachten worden uitgevoerd zoals op de opdrachtregel. {}Deze toepassing "
 "voert nadien geen controle uit, dus let op welke opdrachten u invoert."
 
-#: src/window.py:494 src/window.py:762
-msgid "Continue"
-msgstr "Doorgaan"
-
-#: src/window.py:499
-msgid "I understand"
-msgstr "Ik begrijp het"
-
-#: src/window.py:553
-msgid "Add command"
-msgstr "Opdracht toevoegen"
-
-#: src/window.py:557 src/window.py:623
-msgid "Name"
-msgstr "Naam"
-
-#: src/window.py:570 src/window.py:638 src/window.py:660
+#: src/cmd_warning.py:50 src/main.py:106 src/main_window.py:533
+#: src/main_window.py:601 src/main_window.py:623 src/presets_manager.py:100
 msgid "Cancel"
 msgstr "Annuleren"
 
-#: src/window.py:602 src/window.py:619
+#: src/cmd_warning.py:53 src/main_window.py:730
+msgid "Continue"
+msgstr "Doorgaan"
+
+#: src/cmd_warning.py:58
+msgid "I understand"
+msgstr "Ik begrijp het"
+
+#: src/main.py:93
+msgid "Translators on Weblate ❤️"
+msgstr ""
+
+#: src/main.py:105
+#, fuzzy
+#| msgid "Are you sure you want to remove command \"{}\"?"
+msgid "Are you sure you want to stop the timer and quit?"
+msgstr "Weet u zeker dat u ‘{}’ wilt verwijderen?"
+
+#: src/main.py:108 src/main_window.py:115
+msgid "Quit"
+msgstr ""
+
+#: src/main_window.py:94 src/manage_presets_window.py:59
+msgid "Countdown"
+msgstr "Aftellen"
+
+#: src/main_window.py:94 src/manage_presets_window.py:59
+msgid "Clock"
+msgstr "Klok"
+
+#: src/main_window.py:96
+msgid "Select timer mode"
+msgstr "Kies de tijdklokmodus"
+
+#: src/main_window.py:102 src/presets_manager.py:93
+msgid "Create Preset"
+msgstr ""
+
+#: src/main_window.py:103
+msgid "Manage Presets"
+msgstr ""
+
+#: src/main_window.py:109 src/main_window.py:372
+msgid "Main menu"
+msgstr ""
+
+#: src/main_window.py:112 src/manage_presets_window.py:38
+#, fuzzy
+#| msgid "Reset"
+msgid "Presets"
+msgstr "Resetten"
+
+#: src/main_window.py:113
+msgid "Keyboard Shortcuts"
+msgstr ""
+
+#: src/main_window.py:114
+msgid "About"
+msgstr "Over"
+
+# Translators: Short fot "minutes"
+#: src/main_window.py:180
+msgid "min"
+msgstr "min."
+
+# Translators: Short fot "seconds"
+#: src/main_window.py:180
+msgid "sec"
+msgstr "sec."
+
+#: src/main_window.py:194
+msgid "Reset"
+msgstr "Resetten"
+
+#: src/main_window.py:216
+msgid "Action"
+msgstr "Actie"
+
+#: src/main_window.py:221 src/manage_presets_window.py:64
+msgid "Power Off"
+msgstr "Uitschakelen"
+
+#: src/main_window.py:230 src/manage_presets_window.py:66
+msgid "Reboot"
+msgstr "Herstarten"
+
+#: src/main_window.py:239
+msgid "Suspend"
+msgstr "Pauzestand"
+
+#: src/main_window.py:248 src/manage_presets_window.py:69
+msgid "Notification"
+msgstr "Melding"
+
+#: src/main_window.py:260
+msgid "Notification settings"
+msgstr "Meldingsinstellingen"
+
+#: src/main_window.py:274
+msgid "Notification text"
+msgstr "Meldingstekst"
+
+#: src/main_window.py:278
+msgid "Play sound"
+msgstr "Geluid afspelen"
+
+#: src/main_window.py:287
+msgid "Until stopped"
+msgstr "Tot moment van afbreken"
+
+#: src/main_window.py:301 src/main_window.py:323 src/main_window.py:526
+#: src/main_window.py:593
+msgid "Command"
+msgstr "Opdracht"
+
+#: src/main_window.py:329
+msgid "Back"
+msgstr "Terug"
+
+#: src/main_window.py:342 src/main_window.py:534
+msgid "Add"
+msgstr "Toevoegen"
+
+#: src/main_window.py:352
+msgid "Start"
+msgstr "Starten"
+
+#: src/main_window.py:405 src/main_window.py:726
+msgid "Pause"
+msgstr "Onderbreken"
+
+#: src/main_window.py:428
+msgid "You can close the window, the timer will work in the background."
+msgstr ""
+"De schakelaar wordt op de achtergrond geactiveerd. U kunt dit venster "
+"sluiten."
+
+#: src/main_window.py:516
+msgid "Add command"
+msgstr "Opdracht toevoegen"
+
+#: src/main_window.py:520 src/main_window.py:586
+msgid "Name"
+msgstr "Naam"
+
+#: src/main_window.py:565 src/main_window.py:582
 msgid "Edit command"
 msgstr "Opdracht bewerken"
 
-#: src/window.py:609
+#: src/main_window.py:572
 msgid "Remove command"
 msgstr "Opdracht verwijderen"
 
-#: src/window.py:639
+#: src/main_window.py:602
 msgid "Apply"
 msgstr "Toepassen"
 
-#: src/window.py:657
+#: src/main_window.py:620
 msgid "Remove command?"
 msgstr "Opdracht verwijderen?"
 
-#: src/window.py:658
+#: src/main_window.py:621
 msgid "Are you sure you want to remove command \"{}\"?"
 msgstr "Weet u zeker dat u ‘{}’ wilt verwijderen?"
 
-#: src/window.py:661
+#: src/main_window.py:624
 msgid "Remove"
 msgstr "Verwijderen"
+
+#: src/manage_presets_window.py:71
+#, fuzzy
+#| msgid "Notification text"
+msgid "Notification with sound"
+msgstr "Meldingstekst"
+
+#: src/manage_presets_window.py:73
+msgid "Notification with sound playing until stopped"
+msgstr ""
+
+#: src/manage_presets_window.py:76
+#, fuzzy
+#| msgid "Remove command"
+msgid "Unknown command"
+msgstr "Opdracht verwijderen"
+
+#: src/manage_presets_window.py:79
+#, fuzzy
+#| msgid "Command"
+msgid "Command \"{}\""
+msgstr "Opdracht"
+
+#: src/manage_presets_window.py:88
+msgid "Move Up"
+msgstr ""
+
+#: src/manage_presets_window.py:95
+msgid "Move Down"
+msgstr ""
+
+#: src/manage_presets_window.py:104
+msgid "Delete Preset"
+msgstr ""
+
+#: src/presets_manager.py:94
+msgid ""
+"Currently selected options will be saved in a new preset with the provided "
+"name."
+msgstr ""
+
+#: src/presets_manager.py:96
+msgid "Preset Name"
+msgstr ""
+
+#: src/presets_manager.py:101
+msgid "Save"
+msgstr ""
+
+#: src/timer.py:51
+msgid "Your device will be powered off in"
+msgstr "Uw apparaat wordt uitgeschakeld over"
+
+#: src/timer.py:52
+#, fuzzy
+#| msgid "Power Off"
+msgid "Power off in {}"
+msgstr "Uitschakelen"
+
+#: src/timer.py:54
+msgid "Your device will be rebooted in"
+msgstr "Uw apparaat wordt herstart over"
+
+#: src/timer.py:55
+#, fuzzy
+#| msgid "Reboot"
+msgid "Reboot in {}"
+msgstr "Herstarten"
+
+#: src/timer.py:57
+msgid "Your device will be suspended in"
+msgstr "Uw apparaat wordt in de pauzestand gezet over"
+
+#: src/timer.py:58
+#, fuzzy
+#| msgid "Suspend"
+msgid "Suspend in {}"
+msgstr "Pauzestand"
+
+#: src/timer.py:60
+msgid "You will receive a notification in"
+msgstr "Er wordt een melding getoond over"
+
+#: src/timer.py:61
+#, fuzzy
+#| msgid "Notification"
+msgid "Notification in {}"
+msgstr "Melding"
+
+#: src/timer.py:68
+msgid "The command <b>{}</b> will be executed in"
+msgstr "<b>{}</b> wordt uitgevoerd over"
+
+#: src/timer.py:69
+msgid "Command \"{}\" in {}"
+msgstr ""
+
+#: src/timer.py:111
+msgid "The notification has been sent."
+msgstr "De melding is verstuurd."
+
+#~ msgid "Added ability to pause timer"
+#~ msgstr "Nieuw: mogelijkheid om de tijdklok te onderbreken"
+
+#~ msgid ""
+#~ "Added clock mode: in this mode you set clock time (in 24h format) when "
+#~ "the timer should finish."
+#~ msgstr ""
+#~ "Nieuwe klokmodus: stel in (in 24-uursformaat) wanneer de tijdklok moet "
+#~ "afgaan"
+
+#~ msgid "UI improvements"
+#~ msgstr "Verbeterd: vormgeving"
