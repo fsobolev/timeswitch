@@ -103,12 +103,12 @@ class PresetsManager:
         dialog.set_default_response('save')
         dialog.set_response_enabled('save', False)
         preset_name_row.connect('notify', entry_callback, dialog)
-        dialog.connect('response', lambda d, response: \
-            self.save_preset(preset_name_row.get_text()))
+        dialog.connect('response', self.save_preset, preset_name_row)
         dialog.show()
 
-    def save_preset(self, name):
-        if len(name) < 1:
+    def save_preset(self, d, response, name_row):
+        name = name_row.get_text()
+        if len(name) < 1 or response != 'save':
             return
         mode = self.window.timer_mode_dropdown.get_selected()
         timer_value = [ \
