@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-19 17:13+0300\n"
-"PO-Revision-Date: 2023-03-19 14:13+0000\n"
+"PO-Revision-Date: 2023-03-19 14:19+0000\n"
 "Last-Translator: Philip Goto <philip.goto@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/timeswitch/"
 "timeswitch/nl/>\n"
@@ -114,10 +114,8 @@ msgid "Translators on Weblate ❤️"
 msgstr "Vertalers op Weblate ❤️"
 
 #: src/main.py:105
-#, fuzzy
-#| msgid "Are you sure you want to remove command \"{}\"?"
 msgid "Are you sure you want to stop the timer and quit?"
-msgstr "Weet u zeker dat u ‘{}’ wilt verwijderen?"
+msgstr "Weet u zeker dat u de timer wilt stoppen en de app sluiten?"
 
 #: src/main.py:108 src/main_window.py:115
 msgid "Quit"
@@ -274,7 +272,7 @@ msgstr "Melding met geluid"
 
 #: src/manage_presets_window.py:73
 msgid "Notification with sound playing until stopped"
-msgstr ""
+msgstr "Melding met geluid dat speelt tot het wordt gestopt"
 
 #: src/manage_presets_window.py:76
 msgid "Unknown command"
@@ -301,6 +299,8 @@ msgid ""
 "Currently selected options will be saved in a new preset with the provided "
 "name."
 msgstr ""
+"Momenteel geselecteerde opties worden opgeslagen in een nieuwe "
+"voorinstelling met de opgegeven naam"
 
 #: src/presets_manager.py:96
 msgid "Preset Name"
