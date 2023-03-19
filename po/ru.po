@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-19 16:18+0300\n"
-"PO-Revision-Date: 2023-02-04 19:47+0000\n"
+"PO-Revision-Date: 2023-03-19 14:13+0000\n"
 "Last-Translator: Fyodor Sobolev <fyodor-sobolev@protonmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/timeswitch/"
 "timeswitch/ru/>\n"
@@ -15,9 +15,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.16-dev\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.16.2-dev\n"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:3
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:6
@@ -26,10 +26,8 @@ msgstr "Time Switch"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:6
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:7
-#, fuzzy
-#| msgid "Run tasks after a timer"
 msgid "Set a task to run after a timer"
-msgstr "Запускайте задачи по таймеру"
+msgstr "Запускайте задачу по таймеру"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:11
@@ -108,17 +106,15 @@ msgstr "Я понимаю"
 
 #: src/main.py:93
 msgid "Translators on Weblate ❤️"
-msgstr ""
+msgstr "Переводчики на Weblate ❤️"
 
 #: src/main.py:105
-#, fuzzy
-#| msgid "Are you sure you want to remove command \"{}\"?"
 msgid "Are you sure you want to stop the timer and quit?"
-msgstr "Вы уверены, что хотите удалить команду \"{}\"?"
+msgstr "Вы уверены, что хотите остановить таймер и выйти?"
 
 #: src/main.py:108 src/main_window.py:115
 msgid "Quit"
-msgstr ""
+msgstr "Выход"
 
 #: src/main_window.py:94 src/manage_presets_window.py:59
 msgid "Countdown"
@@ -134,25 +130,23 @@ msgstr "Выберите режим таймера"
 
 #: src/main_window.py:102 src/presets_manager.py:93
 msgid "Create Preset"
-msgstr ""
+msgstr "Создать предустановку"
 
 #: src/main_window.py:103
 msgid "Manage Presets"
-msgstr ""
+msgstr "Управление предустановками"
 
 #: src/main_window.py:109 src/main_window.py:372
 msgid "Main menu"
-msgstr ""
+msgstr "Главное меню"
 
 #: src/main_window.py:112 src/manage_presets_window.py:38
-#, fuzzy
-#| msgid "Reset"
 msgid "Presets"
-msgstr "Сброс"
+msgstr "Предустановки"
 
 #: src/main_window.py:113
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Сочетания клавиш"
 
 #: src/main_window.py:114
 msgid "About"
@@ -264,92 +258,80 @@ msgid "Remove"
 msgstr "Удалить"
 
 #: src/manage_presets_window.py:71
-#, fuzzy
-#| msgid "Notification text"
 msgid "Notification with sound"
-msgstr "Текст уведомления"
+msgstr "Оповещение со звуком"
 
 #: src/manage_presets_window.py:73
 msgid "Notification with sound playing until stopped"
-msgstr ""
+msgstr "Оповещение со звуком, играющим пока не будет остановлен"
 
 #: src/manage_presets_window.py:76
-#, fuzzy
-#| msgid "Remove command"
 msgid "Unknown command"
-msgstr "Удалить команду"
+msgstr "Неизвестная команда"
 
 #: src/manage_presets_window.py:79
-#, fuzzy
-#| msgid "Command"
 msgid "Command \"{}\""
-msgstr "Команда"
+msgstr "Команда \"{}\""
 
 #: src/manage_presets_window.py:88
 msgid "Move Up"
-msgstr ""
+msgstr "Переместить выше"
 
 #: src/manage_presets_window.py:95
 msgid "Move Down"
-msgstr ""
+msgstr "Переместить ниже"
 
 #: src/manage_presets_window.py:104
 msgid "Delete Preset"
-msgstr ""
+msgstr "Удалить предустановку"
 
 #: src/presets_manager.py:94
 msgid ""
 "Currently selected options will be saved in a new preset with the provided "
 "name."
 msgstr ""
+"Выбранные на данный момент опции будут сохранены в новую предустановку под "
+"следующим именем."
 
 #: src/presets_manager.py:96
 msgid "Preset Name"
-msgstr ""
+msgstr "Имя предустановки"
 
 #: src/presets_manager.py:101
 msgid "Save"
-msgstr ""
+msgstr "Сохранить"
 
 #: src/timer.py:51
 msgid "Your device will be powered off in"
 msgstr "Ваше устройство будет выключено через"
 
 #: src/timer.py:52
-#, fuzzy
-#| msgid "Power Off"
 msgid "Power off in {}"
-msgstr "Выключение"
+msgstr "Выключение через {}"
 
 #: src/timer.py:54
 msgid "Your device will be rebooted in"
 msgstr "Ваше устройство будет перезагружено через"
 
 #: src/timer.py:55
-#, fuzzy
-#| msgid "Reboot"
 msgid "Reboot in {}"
-msgstr "Перезагрузка"
+msgstr "Перезагрузка через {}"
 
 #: src/timer.py:57
 msgid "Your device will be suspended in"
 msgstr "Ваше устройство перейдёт в режим ожидания через"
 
 #: src/timer.py:58
-#, fuzzy
-#| msgid "Suspend"
 msgid "Suspend in {}"
-msgstr "Режим ожидания"
+msgstr "Режим ожидания через {}"
 
 #: src/timer.py:60
 msgid "You will receive a notification in"
 msgstr "Вы получите уведомление через"
 
 #: src/timer.py:61
-#, fuzzy
-#| msgid "Notification"
 msgid "Notification in {}"
-msgstr "Уведомление"
+msgstr "Уведомление через {}"
 
 #: src/timer.py:68
 msgid "The command <b>{}</b> will be executed in"
@@ -357,7 +339,7 @@ msgstr "Команда <b>{}</b> будет выполнена через"
 
 #: src/timer.py:69
 msgid "Command \"{}\" in {}"
-msgstr ""
+msgstr "Команда \"{}\" через {}"
 
 #: src/timer.py:111
 msgid "The notification has been sent."
