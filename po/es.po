@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-19 17:21+0300\n"
-"PO-Revision-Date: 2023-03-19 15:50+0000\n"
+"PO-Revision-Date: 2023-03-20 19:41+0000\n"
 "Last-Translator: David Delgado <david.delta@proton.me>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/timeswitch/"
 "timeswitch/es/>\n"
@@ -166,7 +166,7 @@ msgstr "min"
 # Translators: Short for "seconds"
 #: src/main_window.py:180
 msgid "sec"
-msgstr "s"
+msgstr "seg"
 
 #: src/main_window.py:194
 msgid "Reset"
@@ -330,10 +330,8 @@ msgid "Your device will be suspended in"
 msgstr "Tu dispositivo se suspenderá en"
 
 #: src/timer.py:58
-#, fuzzy
-#| msgid "Suspend"
 msgid "Suspend in {}"
-msgstr "Suspender"
+msgstr "Suspendiendo en {}"
 
 #: src/timer.py:60
 msgid "You will receive a notification in"
@@ -349,7 +347,7 @@ msgstr "El comando <b>{}</b> se ejecutará en"
 
 #: src/timer.py:69
 msgid "Command \"{}\" in {}"
-msgstr ""
+msgstr "Comando \"{}\" en {}"
 
 #: src/timer.py:111
 msgid "The notification has been sent."
