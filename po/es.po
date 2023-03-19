@@ -4,13 +4,14 @@
 # David Delgado <david_veintiuno@proton.me>, 2022-2023.
 # J. Lavoie <j.lavoie@net-c.ca>, 2023.
 # gallegonovato <fran-carro@hotmail.es>, 2023.
+# David Delgado <david.delta@proton.me>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-19 17:21+0300\n"
-"PO-Revision-Date: 2023-02-12 17:38+0000\n"
-"Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
+"PO-Revision-Date: 2023-03-19 15:30+0000\n"
+"Last-Translator: David Delgado <david.delta@proton.me>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/timeswitch/"
 "timeswitch/es/>\n"
 "Language: es\n"
@@ -18,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.16-dev\n"
+"X-Generator: Weblate 4.16.2-dev\n"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:3
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:6
@@ -147,7 +148,7 @@ msgstr ""
 
 #: src/main_window.py:109 src/main_window.py:376
 msgid "Main menu"
-msgstr ""
+msgstr "Menú principal"
 
 #: src/main_window.py:112 src/manage_presets_window.py:38
 #, fuzzy
