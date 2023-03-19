@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.fsobolev.TimeSwitch\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-19 16:18+0300\n"
+"POT-Creation-Date: 2023-03-19 17:13+0300\n"
 "PO-Revision-Date: 2023-02-06 09:38+0000\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/timeswitch/"
@@ -72,7 +72,7 @@ msgstr "Fjodor Sobolev"
 msgid "Timer has finished!"
 msgstr "Zamanlayıcı tamamlandı!"
 
-#: src/actions.py:89 src/main_window.py:416
+#: src/actions.py:89 src/main_window.py:420
 msgid "Stop"
 msgstr "Durdur"
 
@@ -99,12 +99,12 @@ msgstr ""
 "komutun başarıyla yürütülüp yürütülmediğini kontrol etmez. Dikkatli olun ve "
 "sonucunu bilmediğiniz komutları girmeyin."
 
-#: src/cmd_warning.py:50 src/main.py:106 src/main_window.py:533
-#: src/main_window.py:601 src/main_window.py:623 src/presets_manager.py:100
+#: src/cmd_warning.py:50 src/main.py:106 src/main_window.py:537
+#: src/main_window.py:607 src/main_window.py:629 src/presets_manager.py:100
 msgid "Cancel"
 msgstr "İptal Et"
 
-#: src/cmd_warning.py:53 src/main_window.py:730
+#: src/cmd_warning.py:53 src/main_window.py:736
 msgid "Continue"
 msgstr "Devam Et"
 
@@ -146,7 +146,7 @@ msgstr ""
 msgid "Manage Presets"
 msgstr ""
 
-#: src/main_window.py:109 src/main_window.py:372
+#: src/main_window.py:109 src/main_window.py:376
 msgid "Main menu"
 msgstr ""
 
@@ -186,88 +186,88 @@ msgstr "Eylem"
 msgid "Power Off"
 msgstr "Gücü Kapat"
 
-#: src/main_window.py:230 src/manage_presets_window.py:66
+#: src/main_window.py:231 src/manage_presets_window.py:66
 msgid "Reboot"
 msgstr "Yeniden Başlat"
 
-#: src/main_window.py:239
+#: src/main_window.py:241
 msgid "Suspend"
 msgstr "Askıya Al"
 
-#: src/main_window.py:248 src/manage_presets_window.py:69
+#: src/main_window.py:250 src/manage_presets_window.py:69
 msgid "Notification"
 msgstr "Bildirim"
 
-#: src/main_window.py:260
+#: src/main_window.py:263
 msgid "Notification settings"
 msgstr "Bildirim ayarları"
 
-#: src/main_window.py:274
+#: src/main_window.py:277
 msgid "Notification text"
 msgstr "Bildirim metni"
 
-#: src/main_window.py:278
+#: src/main_window.py:281
 msgid "Play sound"
 msgstr "Ses çal"
 
-#: src/main_window.py:287
+#: src/main_window.py:290
 msgid "Until stopped"
 msgstr "Durdurulana kadar"
 
-#: src/main_window.py:301 src/main_window.py:323 src/main_window.py:526
-#: src/main_window.py:593
+#: src/main_window.py:304 src/main_window.py:327 src/main_window.py:530
+#: src/main_window.py:599
 msgid "Command"
 msgstr "Komut"
 
-#: src/main_window.py:329
+#: src/main_window.py:333
 msgid "Back"
 msgstr "Geri"
 
-#: src/main_window.py:342 src/main_window.py:534
+#: src/main_window.py:346 src/main_window.py:538
 msgid "Add"
 msgstr "Ekle"
 
-#: src/main_window.py:352
+#: src/main_window.py:356
 msgid "Start"
 msgstr "Başlat"
 
-#: src/main_window.py:405 src/main_window.py:726
+#: src/main_window.py:409 src/main_window.py:732
 msgid "Pause"
 msgstr "Duraklat"
 
-#: src/main_window.py:428
+#: src/main_window.py:432
 msgid "You can close the window, the timer will work in the background."
 msgstr "Pencereyi kapatabilirsiniz, zamanlayıcı arka planda çalışacaktır."
 
-#: src/main_window.py:516
+#: src/main_window.py:520
 msgid "Add command"
 msgstr "Komut ekle"
 
-#: src/main_window.py:520 src/main_window.py:586
+#: src/main_window.py:524 src/main_window.py:592
 msgid "Name"
 msgstr "Ad"
 
-#: src/main_window.py:565 src/main_window.py:582
+#: src/main_window.py:571 src/main_window.py:588
 msgid "Edit command"
 msgstr "Komutu düzenle"
 
-#: src/main_window.py:572
+#: src/main_window.py:578
 msgid "Remove command"
 msgstr "Komutu kaldır"
 
-#: src/main_window.py:602
+#: src/main_window.py:608
 msgid "Apply"
 msgstr "Uygula"
 
-#: src/main_window.py:620
+#: src/main_window.py:626
 msgid "Remove command?"
 msgstr "Komut kaldırılsın mı?"
 
-#: src/main_window.py:621
+#: src/main_window.py:627
 msgid "Are you sure you want to remove command \"{}\"?"
 msgstr "\"{}\" komutunu kaldırmak istediğinizden emin misiniz?"
 
-#: src/main_window.py:624
+#: src/main_window.py:630
 msgid "Remove"
 msgstr "Kaldır"
 

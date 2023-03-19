@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-19 16:18+0300\n"
+"POT-Creation-Date: 2023-03-19 17:13+0300\n"
 "PO-Revision-Date: 2023-03-19 14:13+0000\n"
 "Last-Translator: Philip Goto <philip.goto@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/timeswitch/"
@@ -70,7 +70,7 @@ msgstr "Fyodor Sobolev"
 msgid "Timer has finished!"
 msgstr "De tijdschakelaar is geactiveerd!"
 
-#: src/actions.py:89 src/main_window.py:416
+#: src/actions.py:89 src/main_window.py:420
 msgid "Stop"
 msgstr "Stoppen"
 
@@ -96,12 +96,12 @@ msgstr ""
 "Uw opdrachten worden uitgevoerd zoals op de opdrachtregel. {}Deze toepassing "
 "voert nadien geen controle uit, dus let op welke opdrachten u invoert."
 
-#: src/cmd_warning.py:50 src/main.py:106 src/main_window.py:533
-#: src/main_window.py:601 src/main_window.py:623 src/presets_manager.py:100
+#: src/cmd_warning.py:50 src/main.py:106 src/main_window.py:537
+#: src/main_window.py:607 src/main_window.py:629 src/presets_manager.py:100
 msgid "Cancel"
 msgstr "Annuleren"
 
-#: src/cmd_warning.py:53 src/main_window.py:730
+#: src/cmd_warning.py:53 src/main_window.py:736
 msgid "Continue"
 msgstr "Doorgaan"
 
@@ -143,7 +143,7 @@ msgstr "Voorinstelling aanmaken"
 msgid "Manage Presets"
 msgstr "Voorinstellingen beheren"
 
-#: src/main_window.py:109 src/main_window.py:372
+#: src/main_window.py:109 src/main_window.py:376
 msgid "Main menu"
 msgstr "Hoofdmenu"
 
@@ -181,90 +181,90 @@ msgstr "Actie"
 msgid "Power Off"
 msgstr "Uitschakelen"
 
-#: src/main_window.py:230 src/manage_presets_window.py:66
+#: src/main_window.py:231 src/manage_presets_window.py:66
 msgid "Reboot"
 msgstr "Herstarten"
 
-#: src/main_window.py:239
+#: src/main_window.py:241
 msgid "Suspend"
 msgstr "Pauzestand"
 
-#: src/main_window.py:248 src/manage_presets_window.py:69
+#: src/main_window.py:250 src/manage_presets_window.py:69
 msgid "Notification"
 msgstr "Melding"
 
-#: src/main_window.py:260
+#: src/main_window.py:263
 msgid "Notification settings"
 msgstr "Meldingsinstellingen"
 
-#: src/main_window.py:274
+#: src/main_window.py:277
 msgid "Notification text"
 msgstr "Meldingstekst"
 
-#: src/main_window.py:278
+#: src/main_window.py:281
 msgid "Play sound"
 msgstr "Geluid afspelen"
 
-#: src/main_window.py:287
+#: src/main_window.py:290
 msgid "Until stopped"
 msgstr "Tot moment van afbreken"
 
-#: src/main_window.py:301 src/main_window.py:323 src/main_window.py:526
-#: src/main_window.py:593
+#: src/main_window.py:304 src/main_window.py:327 src/main_window.py:530
+#: src/main_window.py:599
 msgid "Command"
 msgstr "Opdracht"
 
-#: src/main_window.py:329
+#: src/main_window.py:333
 msgid "Back"
 msgstr "Terug"
 
-#: src/main_window.py:342 src/main_window.py:534
+#: src/main_window.py:346 src/main_window.py:538
 msgid "Add"
 msgstr "Toevoegen"
 
-#: src/main_window.py:352
+#: src/main_window.py:356
 msgid "Start"
 msgstr "Starten"
 
-#: src/main_window.py:405 src/main_window.py:726
+#: src/main_window.py:409 src/main_window.py:732
 msgid "Pause"
 msgstr "Onderbreken"
 
-#: src/main_window.py:428
+#: src/main_window.py:432
 msgid "You can close the window, the timer will work in the background."
 msgstr ""
 "De schakelaar wordt op de achtergrond geactiveerd. U kunt dit venster "
 "sluiten."
 
-#: src/main_window.py:516
+#: src/main_window.py:520
 msgid "Add command"
 msgstr "Opdracht toevoegen"
 
-#: src/main_window.py:520 src/main_window.py:586
+#: src/main_window.py:524 src/main_window.py:592
 msgid "Name"
 msgstr "Naam"
 
-#: src/main_window.py:565 src/main_window.py:582
+#: src/main_window.py:571 src/main_window.py:588
 msgid "Edit command"
 msgstr "Opdracht bewerken"
 
-#: src/main_window.py:572
+#: src/main_window.py:578
 msgid "Remove command"
 msgstr "Opdracht verwijderen"
 
-#: src/main_window.py:602
+#: src/main_window.py:608
 msgid "Apply"
 msgstr "Toepassen"
 
-#: src/main_window.py:620
+#: src/main_window.py:626
 msgid "Remove command?"
 msgstr "Opdracht verwijderen?"
 
-#: src/main_window.py:621
+#: src/main_window.py:627
 msgid "Are you sure you want to remove command \"{}\"?"
 msgstr "Weet u zeker dat u ‘{}’ wilt verwijderen?"
 
-#: src/main_window.py:624
+#: src/main_window.py:630
 msgid "Remove"
 msgstr "Verwijderen"
 

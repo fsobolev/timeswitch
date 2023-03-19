@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-19 16:18+0300\n"
+"POT-Creation-Date: 2023-03-19 17:13+0300\n"
 "PO-Revision-Date: 2023-02-16 07:26+0000\n"
 "Last-Translator: Fernando Lopes <fefehex12@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
@@ -70,7 +70,7 @@ msgstr "Fyodor Sobolev"
 msgid "Timer has finished!"
 msgstr "O temporizador terminou!"
 
-#: src/actions.py:89 src/main_window.py:416
+#: src/actions.py:89 src/main_window.py:420
 msgid "Stop"
 msgstr "Parar"
 
@@ -97,12 +97,12 @@ msgstr ""
 "aplicativo não verifica se um comando foi executado com sucesso ou não. "
 "Tenha cuidado, não execute comandos com resultados desconhecidos."
 
-#: src/cmd_warning.py:50 src/main.py:106 src/main_window.py:533
-#: src/main_window.py:601 src/main_window.py:623 src/presets_manager.py:100
+#: src/cmd_warning.py:50 src/main.py:106 src/main_window.py:537
+#: src/main_window.py:607 src/main_window.py:629 src/presets_manager.py:100
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: src/cmd_warning.py:53 src/main_window.py:730
+#: src/cmd_warning.py:53 src/main_window.py:736
 msgid "Continue"
 msgstr "Continuar"
 
@@ -144,7 +144,7 @@ msgstr ""
 msgid "Manage Presets"
 msgstr ""
 
-#: src/main_window.py:109 src/main_window.py:372
+#: src/main_window.py:109 src/main_window.py:376
 msgid "Main menu"
 msgstr ""
 
@@ -184,90 +184,90 @@ msgstr "Ação"
 msgid "Power Off"
 msgstr "Desligar"
 
-#: src/main_window.py:230 src/manage_presets_window.py:66
+#: src/main_window.py:231 src/manage_presets_window.py:66
 msgid "Reboot"
 msgstr "Reiniciar"
 
-#: src/main_window.py:239
+#: src/main_window.py:241
 msgid "Suspend"
 msgstr "Suspender"
 
-#: src/main_window.py:248 src/manage_presets_window.py:69
+#: src/main_window.py:250 src/manage_presets_window.py:69
 msgid "Notification"
 msgstr "Notificação"
 
-#: src/main_window.py:260
+#: src/main_window.py:263
 msgid "Notification settings"
 msgstr "Opções de notificação"
 
-#: src/main_window.py:274
+#: src/main_window.py:277
 msgid "Notification text"
 msgstr "Texto da notificação"
 
-#: src/main_window.py:278
+#: src/main_window.py:281
 msgid "Play sound"
 msgstr "Reproduzir som"
 
-#: src/main_window.py:287
+#: src/main_window.py:290
 msgid "Until stopped"
 msgstr "Até ser encerrada"
 
-#: src/main_window.py:301 src/main_window.py:323 src/main_window.py:526
-#: src/main_window.py:593
+#: src/main_window.py:304 src/main_window.py:327 src/main_window.py:530
+#: src/main_window.py:599
 msgid "Command"
 msgstr "Comando"
 
-#: src/main_window.py:329
+#: src/main_window.py:333
 msgid "Back"
 msgstr "Voltar"
 
-#: src/main_window.py:342 src/main_window.py:534
+#: src/main_window.py:346 src/main_window.py:538
 msgid "Add"
 msgstr "Adicionar"
 
-#: src/main_window.py:352
+#: src/main_window.py:356
 msgid "Start"
 msgstr "Iniciar"
 
-#: src/main_window.py:405 src/main_window.py:726
+#: src/main_window.py:409 src/main_window.py:732
 msgid "Pause"
 msgstr "Pausar"
 
-#: src/main_window.py:428
+#: src/main_window.py:432
 msgid "You can close the window, the timer will work in the background."
 msgstr ""
 "A janela pode ser fechada, pois o temporizador continuará a executar em "
 "segundo plano."
 
-#: src/main_window.py:516
+#: src/main_window.py:520
 msgid "Add command"
 msgstr "Adicionar comando"
 
-#: src/main_window.py:520 src/main_window.py:586
+#: src/main_window.py:524 src/main_window.py:592
 msgid "Name"
 msgstr "Nome"
 
-#: src/main_window.py:565 src/main_window.py:582
+#: src/main_window.py:571 src/main_window.py:588
 msgid "Edit command"
 msgstr "Editar comando"
 
-#: src/main_window.py:572
+#: src/main_window.py:578
 msgid "Remove command"
 msgstr "Remover comando"
 
-#: src/main_window.py:602
+#: src/main_window.py:608
 msgid "Apply"
 msgstr "Aplicar"
 
-#: src/main_window.py:620
+#: src/main_window.py:626
 msgid "Remove command?"
 msgstr "Remover comando?"
 
-#: src/main_window.py:621
+#: src/main_window.py:627
 msgid "Are you sure you want to remove command \"{}\"?"
 msgstr "Você tem certeza que quer remover o comando \"{}\"?"
 
-#: src/main_window.py:624
+#: src/main_window.py:630
 msgid "Remove"
 msgstr "Remover"
 
