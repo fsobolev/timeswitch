@@ -514,11 +514,11 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
             msg = WarningDialog(self)
             msg.show()
 
-    def set_action_row_titles(self, row, title, subtitle, lines):
+    def set_action_row_titles(self, row, title, subtitle):
         row.set_title(title)
-        row.set_title_lines(lines)
+        row.set_title_lines(1)
         row.set_subtitle(subtitle)
-        row.set_subtitle_lines(lines)
+        row.set_subtitle_lines(1)
 
     def add_command(self, w):
         msg = Adw.MessageDialog.new(self, _('Add command'), None)
@@ -557,35 +557,28 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
             self.config.save()
 
     def create_command(self, command):
-        self.commands_widgets['rows'].append(Adw.ActionRow.new())
-        self.set_action_row_titles(self.commands_widgets['rows'][-1],
-            command['name'], command['cmd'], 1)
+        row = Adw.ActionRow.new()
+        self.commands_widgets['rows'].append(row)
+        self.set_action_row_titles(row, command['name'], command['cmd'])
         checkbutton = Gtk.CheckButton.new()
         checkbutton.set_can_focus(False)
+        checkbutton.set_group(self.invisible_checkbutton)
         self.commands_widgets['checks'].append(checkbutton)
-        self.commands_widgets['checks'][-1].set_group(
-            self.invisible_checkbutton)
-        self.commands_widgets['rows'][-1].add_prefix(
-            self.commands_widgets['checks'][-1])
-        self.commands_widgets['rows'][-1].set_activatable_widget(
-            self.commands_widgets['checks'][-1])
-        box = Gtk.Box.new(Gtk.Orientation.HORIZONTAL, 4)
+        row.add_prefix(checkbutton)
+        row.set_activatable_widget(checkbutton)
         edit_button = Gtk.Button.new_from_icon_name('document-edit-symbolic')
         edit_button.set_valign(Gtk.Align.CENTER)
         edit_button.set_tooltip_text(_('Edit command'))
-        edit_button.connect('clicked', self.edit_command, \
-            self.commands_widgets['rows'][-1])
-        box.append(edit_button)
+        edit_button.connect('clicked', self.edit_command, row)
+        row.add_suffix(edit_button)
         remove_button = Gtk.Button.new_from_icon_name('user-trash-symbolic')
         remove_button.set_valign(Gtk.Align.CENTER)
         remove_button.add_css_class('destructive-action')
         remove_button.set_tooltip_text(_('Remove command'))
-        remove_button.connect('clicked', \
-            self.remove_command, self.commands_widgets['rows'][-1])
-        box.append(remove_button)
-        self.commands_widgets['rows'][-1].add_suffix(box)
-        self.commands_group.add(self.commands_widgets['rows'][-1])
-        self.commands_widgets['rows'][-1].activate()
+        remove_button.connect('clicked', self.remove_command, row)
+        row.add_suffix(remove_button)
+        self.commands_group.add(row)
+        row.activate()
 
     def edit_command(self, w, action_row):
         index = self.commands_widgets['rows'].index(action_row)
@@ -620,7 +613,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         cmd = cmd_fn()
         if response == 'apply':
             self.set_action_row_titles(self.commands_widgets['rows'][index], \
-                name, cmd, 1)
+                name, cmd)
             self.config.commands[index]['name'] = name
             self.config.commands[index]['cmd'] = cmd
             self.config.save()
