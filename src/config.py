@@ -39,7 +39,7 @@ class TimeSwitchConfig:
         self.commands = []
         self.mode = 0
         self.window_size = (330, 712)
-        self.presets = {}
+        self.presets = []
         self.show_cmd_warning = True
 
         if os.getenv('XDG_CONFIG_HOME'):
