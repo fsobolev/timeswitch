@@ -220,6 +220,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.action_poweroff = Adw.ActionRow.new()
         self.action_poweroff.set_title(_('Power Off'))
         self.action_poweroff_check = Gtk.CheckButton.new()
+        self.action_poweroff_check.set_can_focus(False)
         self.action_poweroff.add_prefix(self.action_poweroff_check)
         self.action_poweroff.set_activatable_widget(self.action_poweroff_check)
         self.action_poweroff.activate()
@@ -229,6 +230,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.action_reboot = Adw.ActionRow.new()
         self.action_reboot.set_title(_('Reboot'))
         self.action_reboot_check = Gtk.CheckButton.new()
+        self.action_reboot_check.set_can_focus(False)
         self.action_reboot_check.set_group(self.action_poweroff_check)
         self.action_reboot.add_prefix(self.action_reboot_check)
         self.action_reboot.set_activatable_widget(self.action_reboot_check)
@@ -247,6 +249,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.action_notify = Adw.ActionRow.new()
         self.action_notify.set_title(_('Notification'))
         self.action_notify_check = Gtk.CheckButton.new()
+        self.action_notify_check.set_can_focus(False)
         self.action_notify_check.set_group(self.action_poweroff_check)
         self.action_notify.add_prefix(self.action_notify_check)
         self.action_notify.set_activatable_widget(self.action_notify_check)
@@ -300,6 +303,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.action_command = Adw.ActionRow.new()
         self.action_command.set_title(_('Command'))
         self.action_command_check = Gtk.CheckButton.new()
+        self.action_command_check.set_can_focus(False)
         self.action_command_check.set_group(self.action_poweroff_check)
         self.action_command.add_prefix(self.action_command_check)
         self.action_command.set_activatable_widget(self.action_command_check)
@@ -552,7 +556,9 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.commands_widgets['rows'].append(Adw.ActionRow.new())
         self.set_action_row_titles(self.commands_widgets['rows'][-1],
             command['name'], command['cmd'], 1)
-        self.commands_widgets['checks'].append(Gtk.CheckButton.new())
+        checkbutton = Gtk.CheckButton.new()
+        checkbutton.set_can_focus(False)
+        self.commands_widgets['checks'].append(checkbutton)
         self.commands_widgets['checks'][-1].set_group(
             self.invisible_checkbutton)
         self.commands_widgets['rows'][-1].add_prefix(
