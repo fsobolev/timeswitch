@@ -7,4 +7,5 @@ src/main.py
 src/main_window.py
 src/manage_presets_window.py
 src/presets_manager.py
+src/shortcuts_dialog.ui
 src/timer.py
