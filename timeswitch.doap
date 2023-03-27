@@ -5,7 +5,7 @@
          xmlns="http://usefulinc.com/ns/doap#">
 
   <name xml:lang="en">Time Switch</name>
-  <shortdesc xml:lang="en">Run tasks after a timer</shortdesc>
+  <shortdesc xml:lang="en">Set a task to run after a timer</shortdesc>
   <description xml:lang="en">Time Switch is an easy-to-use program that allows you to power off, reboot or suspend your system, send a notification (optionally with a sound signal) or execute any command on timer.</description>
   <homepage rdf:resource="https://github.com/fsobolev/timeswitch" />
   <bug-database rdf:resource="https://github.com/fsobolev/timeswitch/issues"/>
