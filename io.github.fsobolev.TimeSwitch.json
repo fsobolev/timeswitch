@@ -12,7 +12,7 @@
         "--talk-name=org.freedesktop.Flatpak",
         "--talk-name=org.gnome.SessionManager",
         "--system-talk-name=org.freedesktop.login1",
-    	"--socket=pulseaudio"
+        "--socket=pulseaudio"
     ],
     "cleanup" : [
         "/include",
@@ -26,7 +26,7 @@
         "*.a"
     ],
     "modules" : [
-    	{
+        {
             "name": "gsound",
             "buildsystem": "meson",
             "sources": [
@@ -76,7 +76,6 @@
                 }
             ]
         },
-
         {
             "name" : "timeswitch",
             "builddir" : true,
