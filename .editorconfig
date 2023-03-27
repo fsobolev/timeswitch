@@ -1,0 +1,7 @@
+[*.{py,json}]
+indent_style = space
+indent_size = 4
+
+[{*.{xml,css,md},meson.build}]
+indent_style = space
+indent_size = 2
