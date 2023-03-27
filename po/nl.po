@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-27 21:14+0300\n"
-"PO-Revision-Date: 2023-03-19 14:22+0000\n"
+"PO-Revision-Date: 2023-03-28 07:59+0000\n"
 "Last-Translator: Philip Goto <philip.goto@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/timeswitch/"
 "timeswitch/nl/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.16.2-dev\n"
+"X-Generator: Weblate 4.17-dev\n"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:3
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:6
@@ -315,65 +315,55 @@ msgstr "Opslaan"
 
 #: src/shortcuts_dialog.ui:15
 msgid "Focus hours entry"
-msgstr ""
+msgstr "Uurinvoer focussen"
 
 #: src/shortcuts_dialog.ui:21
 msgid "Focus minutes entry"
-msgstr ""
+msgstr "Minuutinvoer focussen"
 
 #: src/shortcuts_dialog.ui:27
 msgid "Focus seconds entry"
-msgstr ""
+msgstr "Seconde-invoer focussen"
 
 #: src/shortcuts_dialog.ui:39
 msgid "Change mode"
-msgstr ""
+msgstr "Modus wisselen"
 
 #: src/shortcuts_dialog.ui:45
-#, fuzzy
-#| msgid "Start"
 msgid "Start timer"
-msgstr "Starten"
+msgstr "Timer starten"
 
 #: src/shortcuts_dialog.ui:91
-#, fuzzy
-#| msgid "Remove command"
 msgid "Select command"
-msgstr "Opdracht verwijderen"
+msgstr "Opdracht selecteren"
 
 #: src/shortcuts_dialog.ui:103
-#, fuzzy
-#| msgid "Edit command"
 msgid "Edit selected command"
-msgstr "Opdracht bewerken"
+msgstr "Geselecteerde opdracht bewerken"
 
 #: src/shortcuts_dialog.ui:109
-#, fuzzy
-#| msgid "Remove command"
 msgid "Remove selected command"
-msgstr "Opdracht verwijderen"
+msgstr "Geselecteerde opdracht verwijderen"
 
 #: src/shortcuts_dialog.ui:126
 msgid "Toggle pause"
-msgstr ""
+msgstr "Pauze omschakelen"
 
 #: src/shortcuts_dialog.ui:143
 msgid "Close Main Window"
-msgstr ""
+msgstr "Hoofdvenster sluiten"
 
 #: src/shortcuts_dialog.ui:149
 msgid "Force Quit"
-msgstr ""
+msgstr "Geforceerd afsluiten"
 
 #: src/shortcuts_dialog.ui:155
-#, fuzzy
-#| msgid "Keyboard Shortcuts"
 msgid "Shortcuts"
 msgstr "Sneltoetsen"
 
 #: src/shortcuts_dialog.ui:161
 msgid "Open Menu"
-msgstr ""
+msgstr "Menu openen"
 
 #: src/timer.py:51
 msgid "Your device will be powered off in"
