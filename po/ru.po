@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-19 17:21+0300\n"
-"PO-Revision-Date: 2023-03-19 15:28+0000\n"
+"PO-Revision-Date: 2023-03-27 11:41+0000\n"
 "Last-Translator: Fyodor Sobolev <fyodor-sobolev@protonmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/timeswitch/"
 "timeswitch/ru/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.16.2-dev\n"
+"X-Generator: Weblate 4.17-dev\n"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:3
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:6
@@ -146,7 +146,7 @@ msgstr "Предустановки"
 
 #: src/main_window.py:113 src/main_window.py:379
 msgid "Keyboard Shortcuts"
-msgstr "Сочетания клавиш"
+msgstr "Комбинации клавиш"
 
 #: src/main_window.py:114 src/main_window.py:380
 msgid "About"
