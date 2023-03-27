@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-15 05:41+0300\n"
+"POT-Creation-Date: 2023-03-19 17:21+0300\n"
 "PO-Revision-Date: 2023-02-11 07:18+0000\n"
 "Last-Translator: yukidream <ahawaribagus@gmail.com>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/timeswitch/"
@@ -27,7 +27,9 @@ msgstr "Time Switch"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:6
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:7
-msgid "Run tasks after a timer"
+#, fuzzy
+#| msgid "Run tasks after a timer"
+msgid "Set a task to run after a timer"
 msgstr ""
 "Matikan, mulai ulang, suspensi, mengirimkan pemberitahuan atau menjalankan "
 "perintah dengan pewaktu."
@@ -46,10 +48,9 @@ msgid ""
 "or suspend your system, send a notification (optionally with a sound signal) "
 "or execute any command on timer."
 msgstr ""
-"Time Switch adalah program sederhana yang memungkinkan anda untuk "
-"mematikan,memulai ulang, atau mensuspensi sistem anda,mengirim "
-"pemberitahuan.(dengan opsi sinyal suara),atau menjalankan perintah apapun "
-"dengan pewaktu."
+"Time Switch adalah program sederhana yang memungkinkan anda untuk mematikan,"
+"memulai ulang, atau mensuspensi sistem anda,mengirim pemberitahuan.(dengan "
+"opsi sinyal suara),atau menjalankan perintah apapun dengan pewaktu."
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:10
 msgid ""
@@ -59,159 +60,36 @@ msgstr ""
 "Aplikasi ini dibuat untuk GNOME dan menggunakan LibAdwaita, tetapi aplikasi "
 "ini bisa bekerja di lingkungan desktop apa pun."
 
-#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:15
+#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:15 src/main.py:86
+#: src/main.py:88
 msgid "Fyodor Sobolev"
 msgstr "Fyodor Sobolev"
 
-#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:32
-msgid "Added ability to pause timer"
-msgstr "Menambahkan fitur untuk menjeda pewaktu"
-
-#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:33
-msgid ""
-"Added clock mode: in this mode you set clock time (in 24h format) when the "
-"timer should finish."
-msgstr ""
-
-#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:34
-msgid "UI improvements"
-msgstr "Peningkatan antarmuka"
-
-#: src/actions.py:85
+#. Bus name
+#. Object path
+#. Interface name
+#. Method name
+#: src/actions.py:83 src/timer.py:145
 msgid "Timer has finished!"
 msgstr "Pewaktu telah selesai!"
 
-#: src/actions.py:91 src/window.py:398
+#: src/actions.py:89 src/main_window.py:424
 msgid "Stop"
 msgstr "Berhenti"
 
-#: src/timer.py:49
-msgid "Your device will be powered off in"
-msgstr "Perangkat anda akan dimatikan dalam"
-
-#: src/timer.py:51
-msgid "Your device will be rebooted in"
-msgstr "Perangkat anda akan memulai ulang dalam"
-
-#: src/timer.py:53
-msgid "Your device will be suspended in"
-msgstr "Perangkat anda akan disuspensi dalam"
-
-#: src/timer.py:55
-msgid "You will receive a notification in"
-msgstr "Anda akan menerima pemberitahuan dalam"
-
-#: src/timer.py:62
-msgid "The command <b>{}</b> will be executed in"
-msgstr "Perintah <b>{}</b> akan dijalankan dalam"
-
-#: src/timer.py:89
-msgid "The notification has been sent."
-msgstr "Pemberitahuan telah dikirim."
-
-#: src/window.py:96
-msgid "Countdown"
-msgstr "Hitung mundur"
-
-#: src/window.py:96
-msgid "Clock"
-msgstr "Jam"
-
-#: src/window.py:98
-msgid "Select timer mode"
-msgstr "Memilih mode pewaktu"
-
-#: src/window.py:105 src/window.py:355
-msgid "About"
-msgstr "Tentang"
-
-# Translators: Short fot "minutes"
-#: src/window.py:170
-msgid "min"
-msgstr "men"
-
-# Translators: Short fot "seconds"
-#: src/window.py:170
-msgid "sec"
-msgstr "det"
-
-#: src/window.py:184
-msgid "Reset"
-msgstr "Mengatur ulang"
-
-#: src/window.py:199
-msgid "Action"
-msgstr "Aksi"
-
-#: src/window.py:204
-msgid "Power Off"
-msgstr "Matikan"
-
-#: src/window.py:213
-msgid "Reboot"
-msgstr "Mulai Ulang"
-
-#: src/window.py:222
-msgid "Suspend"
-msgstr "Suspensi"
-
-#: src/window.py:231
-msgid "Notification"
-msgstr "Pemberitahuan"
-
-#: src/window.py:243
-msgid "Notification settings"
-msgstr "Pengaturan pemberitahuan"
-
-#: src/window.py:257
-msgid "Notification text"
-msgstr "Teks notifikasi"
-
-#: src/window.py:261
-msgid "Play sound"
-msgstr "Memutar suara"
-
-#: src/window.py:270
-msgid "Until stopped"
-msgstr "Sampai berhenti"
-
-#: src/window.py:284 src/window.py:306 src/window.py:563 src/window.py:630
-msgid "Command"
-msgstr "Perintah"
-
-#: src/window.py:312
-msgid "Back"
-msgstr "Kembali"
-
-#: src/window.py:325 src/window.py:571
-msgid "Add"
-msgstr "Tambah"
-
-#: src/window.py:335
-msgid "Start"
-msgstr "Mulai"
-
-#: src/window.py:387 src/window.py:758
-msgid "Pause"
-msgstr "Jeda"
-
-#: src/window.py:410
-msgid "You can close the window, the timer will work in the background."
-msgstr "Anda bisa menutup jendela, pewaktu akan berjalan di latar belakang."
-
-# Translators: make sure to have a space in the end of the line.
-#: src/window.py:489
-msgid "They will be executed outside of flatpak sandbox. "
-msgstr "Ini akan dijalankan di luar isolasi flatpak. "
-
-#: src/window.py:492
+#: src/cmd_warning.py:41
 msgid "Warning"
 msgstr "Peringatan"
+
+# Translators: make sure to have a space in the end of the line.
+#: src/cmd_warning.py:45
+msgid "They will be executed outside of flatpak sandbox. "
+msgstr "Ini akan dijalankan di luar isolasi flatpak. "
 
 # Translators: {} is used to pass "They will be executed outside of flatpak sandbox. "
 # in case the app is installed using flatpak. Make sure to have a space in front of it
 # (in the original text it's in the end of the first line)
-#: src/window.py:493
+#: src/cmd_warning.py:48
 msgid ""
 "Your commands will be executed as if they were executed on a command prompt. "
 "{}The app doesn't perform any checks whether a command was executed "
@@ -223,46 +101,280 @@ msgstr ""
 "atau tidak. Berhati-hatilah, jangan memasukkan perintah yang hasilnya tidak "
 "jelas."
 
-#: src/window.py:494 src/window.py:762
-msgid "Continue"
-msgstr "Lanjutkan"
-
-#: src/window.py:499
-msgid "I understand"
-msgstr "Saya paham"
-
-#: src/window.py:553
-msgid "Add command"
-msgstr "Tambahkan perintah"
-
-#: src/window.py:557 src/window.py:623
-msgid "Name"
-msgstr "Nama"
-
-#: src/window.py:570 src/window.py:638 src/window.py:660
+#: src/cmd_warning.py:50 src/main.py:106 src/main_window.py:541
+#: src/main_window.py:611 src/main_window.py:633 src/presets_manager.py:100
 msgid "Cancel"
 msgstr "Batal"
 
-#: src/window.py:602 src/window.py:619
+#: src/cmd_warning.py:53 src/main_window.py:740
+msgid "Continue"
+msgstr "Lanjutkan"
+
+#: src/cmd_warning.py:58
+msgid "I understand"
+msgstr "Saya paham"
+
+#: src/main.py:93
+msgid "Translators on Weblate ❤️"
+msgstr ""
+
+#: src/main.py:105
+#, fuzzy
+#| msgid "Are you sure you want to remove command \"{}\"?"
+msgid "Are you sure you want to stop the timer and quit?"
+msgstr "Apakah anda yakin ingin menghapus perintah.\"{}\"?"
+
+#: src/main.py:108 src/main_window.py:115 src/main_window.py:381
+msgid "Quit"
+msgstr ""
+
+#: src/main_window.py:94 src/manage_presets_window.py:59
+msgid "Countdown"
+msgstr "Hitung mundur"
+
+#: src/main_window.py:94 src/manage_presets_window.py:59
+msgid "Clock"
+msgstr "Jam"
+
+#: src/main_window.py:96
+msgid "Select timer mode"
+msgstr "Memilih mode pewaktu"
+
+#: src/main_window.py:102 src/presets_manager.py:93
+msgid "Create Preset"
+msgstr ""
+
+#: src/main_window.py:103
+msgid "Manage Presets"
+msgstr ""
+
+#: src/main_window.py:109 src/main_window.py:376
+msgid "Main menu"
+msgstr ""
+
+#: src/main_window.py:112 src/manage_presets_window.py:38
+#, fuzzy
+#| msgid "Reset"
+msgid "Presets"
+msgstr "Mengatur ulang"
+
+#: src/main_window.py:113 src/main_window.py:379
+msgid "Keyboard Shortcuts"
+msgstr ""
+
+#: src/main_window.py:114 src/main_window.py:380
+msgid "About"
+msgstr "Tentang"
+
+# Translators: Short fot "minutes"
+#: src/main_window.py:180
+msgid "min"
+msgstr "men"
+
+# Translators: Short fot "seconds"
+#: src/main_window.py:180
+msgid "sec"
+msgstr "det"
+
+#: src/main_window.py:194
+msgid "Reset"
+msgstr "Mengatur ulang"
+
+#: src/main_window.py:216
+msgid "Action"
+msgstr "Aksi"
+
+#: src/main_window.py:221 src/manage_presets_window.py:64
+msgid "Power Off"
+msgstr "Matikan"
+
+#: src/main_window.py:231 src/manage_presets_window.py:66
+msgid "Reboot"
+msgstr "Mulai Ulang"
+
+#: src/main_window.py:241
+msgid "Suspend"
+msgstr "Suspensi"
+
+#: src/main_window.py:250 src/manage_presets_window.py:69
+msgid "Notification"
+msgstr "Pemberitahuan"
+
+#: src/main_window.py:263
+msgid "Notification settings"
+msgstr "Pengaturan pemberitahuan"
+
+#: src/main_window.py:277
+msgid "Notification text"
+msgstr "Teks notifikasi"
+
+#: src/main_window.py:281
+msgid "Play sound"
+msgstr "Memutar suara"
+
+#: src/main_window.py:290
+msgid "Until stopped"
+msgstr "Sampai berhenti"
+
+#: src/main_window.py:304 src/main_window.py:327 src/main_window.py:534
+#: src/main_window.py:603
+msgid "Command"
+msgstr "Perintah"
+
+#: src/main_window.py:333
+msgid "Back"
+msgstr "Kembali"
+
+#: src/main_window.py:346 src/main_window.py:542
+msgid "Add"
+msgstr "Tambah"
+
+#: src/main_window.py:356
+msgid "Start"
+msgstr "Mulai"
+
+#: src/main_window.py:413 src/main_window.py:736
+msgid "Pause"
+msgstr "Jeda"
+
+#: src/main_window.py:436
+msgid "You can close the window, the timer will work in the background."
+msgstr "Anda bisa menutup jendela, pewaktu akan berjalan di latar belakang."
+
+#: src/main_window.py:524
+msgid "Add command"
+msgstr "Tambahkan perintah"
+
+#: src/main_window.py:528 src/main_window.py:596
+msgid "Name"
+msgstr "Nama"
+
+#: src/main_window.py:575 src/main_window.py:592
 msgid "Edit command"
 msgstr "Menyunting perintah"
 
-#: src/window.py:609
+#: src/main_window.py:582
 msgid "Remove command"
 msgstr "Menghapus perintah"
 
-#: src/window.py:639
+#: src/main_window.py:612
 msgid "Apply"
 msgstr "Menerapkan"
 
-#: src/window.py:657
+#: src/main_window.py:630
 msgid "Remove command?"
 msgstr "Menghapus perintah?"
 
-#: src/window.py:658
+#: src/main_window.py:631
 msgid "Are you sure you want to remove command \"{}\"?"
 msgstr "Apakah anda yakin ingin menghapus perintah.\"{}\"?"
 
-#: src/window.py:661
+#: src/main_window.py:634
 msgid "Remove"
 msgstr "Hapus"
+
+#: src/manage_presets_window.py:71
+#, fuzzy
+#| msgid "Notification text"
+msgid "Notification with sound"
+msgstr "Teks notifikasi"
+
+#: src/manage_presets_window.py:73
+msgid "Notification with sound playing until stopped"
+msgstr ""
+
+#: src/manage_presets_window.py:76
+#, fuzzy
+#| msgid "Remove command"
+msgid "Unknown command"
+msgstr "Menghapus perintah"
+
+#: src/manage_presets_window.py:79
+#, fuzzy
+#| msgid "Command"
+msgid "Command \"{}\""
+msgstr "Perintah"
+
+#: src/manage_presets_window.py:88
+msgid "Move Up"
+msgstr ""
+
+#: src/manage_presets_window.py:95
+msgid "Move Down"
+msgstr ""
+
+#: src/manage_presets_window.py:104
+msgid "Delete Preset"
+msgstr ""
+
+#: src/presets_manager.py:94
+msgid ""
+"Currently selected options will be saved in a new preset with the provided "
+"name."
+msgstr ""
+
+#: src/presets_manager.py:96
+msgid "Preset Name"
+msgstr ""
+
+#: src/presets_manager.py:101
+msgid "Save"
+msgstr ""
+
+#: src/timer.py:51
+msgid "Your device will be powered off in"
+msgstr "Perangkat anda akan dimatikan dalam"
+
+#: src/timer.py:52
+#, fuzzy
+#| msgid "Power Off"
+msgid "Power off in {}"
+msgstr "Matikan"
+
+#: src/timer.py:54
+msgid "Your device will be rebooted in"
+msgstr "Perangkat anda akan memulai ulang dalam"
+
+#: src/timer.py:55
+#, fuzzy
+#| msgid "Reboot"
+msgid "Reboot in {}"
+msgstr "Mulai Ulang"
+
+#: src/timer.py:57
+msgid "Your device will be suspended in"
+msgstr "Perangkat anda akan disuspensi dalam"
+
+#: src/timer.py:58
+#, fuzzy
+#| msgid "Suspend"
+msgid "Suspend in {}"
+msgstr "Suspensi"
+
+#: src/timer.py:60
+msgid "You will receive a notification in"
+msgstr "Anda akan menerima pemberitahuan dalam"
+
+#: src/timer.py:61
+#, fuzzy
+#| msgid "Notification"
+msgid "Notification in {}"
+msgstr "Pemberitahuan"
+
+#: src/timer.py:68
+msgid "The command <b>{}</b> will be executed in"
+msgstr "Perintah <b>{}</b> akan dijalankan dalam"
+
+#: src/timer.py:69
+msgid "Command \"{}\" in {}"
+msgstr ""
+
+#: src/timer.py:111
+msgid "The notification has been sent."
+msgstr "Pemberitahuan telah dikirim."
+
+#~ msgid "Added ability to pause timer"
+#~ msgstr "Menambahkan fitur untuk menjeda pewaktu"
+
+#~ msgid "UI improvements"
+#~ msgstr "Peningkatan antarmuka"

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-15 05:41+0300\n"
-"PO-Revision-Date: 2023-02-04 19:47+0000\n"
+"POT-Creation-Date: 2023-03-19 17:21+0300\n"
+"PO-Revision-Date: 2023-03-27 11:41+0000\n"
 "Last-Translator: Fyodor Sobolev <fyodor-sobolev@protonmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/timeswitch/"
 "timeswitch/ru/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.16-dev\n"
+"X-Generator: Weblate 4.17-dev\n"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:3
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:6
@@ -26,8 +26,8 @@ msgstr "Time Switch"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:6
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:7
-msgid "Run tasks after a timer"
-msgstr "Запускайте задачи по таймеру"
+msgid "Set a task to run after a timer"
+msgstr "Запускайте задачу по таймеру"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:11
@@ -55,155 +55,32 @@ msgstr ""
 "Приложение создано для GNOME и использует LibAdwaita, но работает в любом "
 "окружении рабочего стола."
 
-#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:15
+#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:15 src/main.py:86
+#: src/main.py:88
 msgid "Fyodor Sobolev"
 msgstr "Фёдор Соболев"
 
-#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:32
-msgid "Added ability to pause timer"
-msgstr "Добавлена возможность поставить таймер на паузу"
-
-#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:33
-msgid ""
-"Added clock mode: in this mode you set clock time (in 24h format) when the "
-"timer should finish."
-msgstr ""
-"Добавлен режим часов: в этом режиме вы устанавливаете время (в 24-часовом "
-"формате), в которое таймер должен завершиться."
-
-#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:34
-msgid "UI improvements"
-msgstr "Улучшения интерфейса"
-
-#: src/actions.py:85
+#. Bus name
+#. Object path
+#. Interface name
+#. Method name
+#: src/actions.py:83 src/timer.py:145
 msgid "Timer has finished!"
 msgstr "Таймер истёк!"
 
-#: src/actions.py:91 src/window.py:398
+#: src/actions.py:89 src/main_window.py:424
 msgid "Stop"
 msgstr "Стоп"
 
-#: src/timer.py:49
-msgid "Your device will be powered off in"
-msgstr "Ваше устройство будет выключено через"
-
-#: src/timer.py:51
-msgid "Your device will be rebooted in"
-msgstr "Ваше устройство будет перезагружено через"
-
-#: src/timer.py:53
-msgid "Your device will be suspended in"
-msgstr "Ваше устройство перейдёт в режим ожидания через"
-
-#: src/timer.py:55
-msgid "You will receive a notification in"
-msgstr "Вы получите уведомление через"
-
-#: src/timer.py:62
-msgid "The command <b>{}</b> will be executed in"
-msgstr "Команда <b>{}</b> будет выполнена через"
-
-#: src/timer.py:89
-msgid "The notification has been sent."
-msgstr "Уведомление было отправлено."
-
-#: src/window.py:96
-msgid "Countdown"
-msgstr "Отсчёт"
-
-#: src/window.py:96
-msgid "Clock"
-msgstr "Часы"
-
-#: src/window.py:98
-msgid "Select timer mode"
-msgstr "Выберите режим таймера"
-
-#: src/window.py:105 src/window.py:355
-msgid "About"
-msgstr "О приложении"
-
-#: src/window.py:170
-msgid "min"
-msgstr "мин"
-
-#: src/window.py:170
-msgid "sec"
-msgstr "сек"
-
-#: src/window.py:184
-msgid "Reset"
-msgstr "Сброс"
-
-#: src/window.py:199
-msgid "Action"
-msgstr "Действие"
-
-#: src/window.py:204
-msgid "Power Off"
-msgstr "Выключение"
-
-#: src/window.py:213
-msgid "Reboot"
-msgstr "Перезагрузка"
-
-#: src/window.py:222
-msgid "Suspend"
-msgstr "Режим ожидания"
-
-#: src/window.py:231
-msgid "Notification"
-msgstr "Уведомление"
-
-#: src/window.py:243
-msgid "Notification settings"
-msgstr "Настройки уведомления"
-
-#: src/window.py:257
-msgid "Notification text"
-msgstr "Текст уведомления"
-
-#: src/window.py:261
-msgid "Play sound"
-msgstr "Звуковой сигнал"
-
-#: src/window.py:270
-msgid "Until stopped"
-msgstr "Пока не будет остановлен"
-
-#: src/window.py:284 src/window.py:306 src/window.py:563 src/window.py:630
-msgid "Command"
-msgstr "Команда"
-
-#: src/window.py:312
-msgid "Back"
-msgstr "Назад"
-
-#: src/window.py:325 src/window.py:571
-msgid "Add"
-msgstr "Добавить"
-
-#: src/window.py:335
-msgid "Start"
-msgstr "Старт"
-
-#: src/window.py:387 src/window.py:758
-msgid "Pause"
-msgstr "Пауза"
-
-#: src/window.py:410
-msgid "You can close the window, the timer will work in the background."
-msgstr "Вы можете закрыть окно, таймер будет работать в фоне."
-
-#: src/window.py:489
-msgid "They will be executed outside of flatpak sandbox. "
-msgstr "Они буду выполнены вне песочницы Flatpak. "
-
-#: src/window.py:492
+#: src/cmd_warning.py:41
 msgid "Warning"
 msgstr "Предупреждение"
 
-#: src/window.py:493
+#: src/cmd_warning.py:45
+msgid "They will be executed outside of flatpak sandbox. "
+msgstr "Они буду выполнены вне песочницы Flatpak. "
+
+#: src/cmd_warning.py:48
 msgid ""
 "Your commands will be executed as if they were executed on a command prompt. "
 "{}The app doesn't perform any checks whether a command was executed "
@@ -214,46 +91,269 @@ msgstr ""
 "строке. {}Приложение никак не проверяет, выполнена ли команда успешно. "
 "Будьте осторожны, не вводите команды, результат которых вам неизвестен."
 
-#: src/window.py:494 src/window.py:762
-msgid "Continue"
-msgstr "Продолжить"
-
-#: src/window.py:499
-msgid "I understand"
-msgstr "Я понимаю"
-
-#: src/window.py:553
-msgid "Add command"
-msgstr "Добавить команду"
-
-#: src/window.py:557 src/window.py:623
-msgid "Name"
-msgstr "Имя"
-
-#: src/window.py:570 src/window.py:638 src/window.py:660
+#: src/cmd_warning.py:50 src/main.py:106 src/main_window.py:541
+#: src/main_window.py:611 src/main_window.py:633 src/presets_manager.py:100
 msgid "Cancel"
 msgstr "Отмена"
 
-#: src/window.py:602 src/window.py:619
+#: src/cmd_warning.py:53 src/main_window.py:740
+msgid "Continue"
+msgstr "Продолжить"
+
+#: src/cmd_warning.py:58
+msgid "I understand"
+msgstr "Я понимаю"
+
+#: src/main.py:93
+msgid "Translators on Weblate ❤️"
+msgstr "Переводчики на Weblate ❤️"
+
+#: src/main.py:105
+msgid "Are you sure you want to stop the timer and quit?"
+msgstr "Вы уверены, что хотите остановить таймер и выйти?"
+
+#: src/main.py:108 src/main_window.py:115 src/main_window.py:381
+msgid "Quit"
+msgstr "Выход"
+
+#: src/main_window.py:94 src/manage_presets_window.py:59
+msgid "Countdown"
+msgstr "Отсчёт"
+
+#: src/main_window.py:94 src/manage_presets_window.py:59
+msgid "Clock"
+msgstr "Часы"
+
+#: src/main_window.py:96
+msgid "Select timer mode"
+msgstr "Выберите режим таймера"
+
+#: src/main_window.py:102 src/presets_manager.py:93
+msgid "Create Preset"
+msgstr "Создать предустановку"
+
+#: src/main_window.py:103
+msgid "Manage Presets"
+msgstr "Управление предустановками"
+
+#: src/main_window.py:109 src/main_window.py:376
+msgid "Main menu"
+msgstr "Главное меню"
+
+#: src/main_window.py:112 src/manage_presets_window.py:38
+msgid "Presets"
+msgstr "Предустановки"
+
+#: src/main_window.py:113 src/main_window.py:379
+msgid "Keyboard Shortcuts"
+msgstr "Комбинации клавиш"
+
+#: src/main_window.py:114 src/main_window.py:380
+msgid "About"
+msgstr "О приложении"
+
+#: src/main_window.py:180
+msgid "min"
+msgstr "мин"
+
+#: src/main_window.py:180
+msgid "sec"
+msgstr "сек"
+
+#: src/main_window.py:194
+msgid "Reset"
+msgstr "Сброс"
+
+#: src/main_window.py:216
+msgid "Action"
+msgstr "Действие"
+
+#: src/main_window.py:221 src/manage_presets_window.py:64
+msgid "Power Off"
+msgstr "Выключение"
+
+#: src/main_window.py:231 src/manage_presets_window.py:66
+msgid "Reboot"
+msgstr "Перезагрузка"
+
+#: src/main_window.py:241
+msgid "Suspend"
+msgstr "Режим ожидания"
+
+#: src/main_window.py:250 src/manage_presets_window.py:69
+msgid "Notification"
+msgstr "Уведомление"
+
+#: src/main_window.py:263
+msgid "Notification settings"
+msgstr "Настройки уведомления"
+
+#: src/main_window.py:277
+msgid "Notification text"
+msgstr "Текст уведомления"
+
+#: src/main_window.py:281
+msgid "Play sound"
+msgstr "Звуковой сигнал"
+
+#: src/main_window.py:290
+msgid "Until stopped"
+msgstr "Пока не будет остановлен"
+
+#: src/main_window.py:304 src/main_window.py:327 src/main_window.py:534
+#: src/main_window.py:603
+msgid "Command"
+msgstr "Команда"
+
+#: src/main_window.py:333
+msgid "Back"
+msgstr "Назад"
+
+#: src/main_window.py:346 src/main_window.py:542
+msgid "Add"
+msgstr "Добавить"
+
+#: src/main_window.py:356
+msgid "Start"
+msgstr "Старт"
+
+#: src/main_window.py:413 src/main_window.py:736
+msgid "Pause"
+msgstr "Пауза"
+
+#: src/main_window.py:436
+msgid "You can close the window, the timer will work in the background."
+msgstr "Вы можете закрыть окно, таймер будет работать в фоне."
+
+#: src/main_window.py:524
+msgid "Add command"
+msgstr "Добавить команду"
+
+#: src/main_window.py:528 src/main_window.py:596
+msgid "Name"
+msgstr "Имя"
+
+#: src/main_window.py:575 src/main_window.py:592
 msgid "Edit command"
 msgstr "Редактировать команду"
 
-#: src/window.py:609
+#: src/main_window.py:582
 msgid "Remove command"
 msgstr "Удалить команду"
 
-#: src/window.py:639
+#: src/main_window.py:612
 msgid "Apply"
 msgstr "Применить"
 
-#: src/window.py:657
+#: src/main_window.py:630
 msgid "Remove command?"
 msgstr "Удалить команду?"
 
-#: src/window.py:658
+#: src/main_window.py:631
 msgid "Are you sure you want to remove command \"{}\"?"
 msgstr "Вы уверены, что хотите удалить команду \"{}\"?"
 
-#: src/window.py:661
+#: src/main_window.py:634
 msgid "Remove"
 msgstr "Удалить"
+
+#: src/manage_presets_window.py:71
+msgid "Notification with sound"
+msgstr "Оповещение со звуком"
+
+#: src/manage_presets_window.py:73
+msgid "Notification with sound playing until stopped"
+msgstr "Оповещение со звуком, играющем пока не будет остановлен"
+
+#: src/manage_presets_window.py:76
+msgid "Unknown command"
+msgstr "Неизвестная команда"
+
+#: src/manage_presets_window.py:79
+msgid "Command \"{}\""
+msgstr "Команда \"{}\""
+
+#: src/manage_presets_window.py:88
+msgid "Move Up"
+msgstr "Переместить выше"
+
+#: src/manage_presets_window.py:95
+msgid "Move Down"
+msgstr "Переместить ниже"
+
+#: src/manage_presets_window.py:104
+msgid "Delete Preset"
+msgstr "Удалить предустановку"
+
+#: src/presets_manager.py:94
+msgid ""
+"Currently selected options will be saved in a new preset with the provided "
+"name."
+msgstr ""
+"Выбранные на данный момент опции будут сохранены в новую предустановку под "
+"следующим именем."
+
+#: src/presets_manager.py:96
+msgid "Preset Name"
+msgstr "Имя предустановки"
+
+#: src/presets_manager.py:101
+msgid "Save"
+msgstr "Сохранить"
+
+#: src/timer.py:51
+msgid "Your device will be powered off in"
+msgstr "Ваше устройство будет выключено через"
+
+#: src/timer.py:52
+msgid "Power off in {}"
+msgstr "Выключение через {}"
+
+#: src/timer.py:54
+msgid "Your device will be rebooted in"
+msgstr "Ваше устройство будет перезагружено через"
+
+#: src/timer.py:55
+msgid "Reboot in {}"
+msgstr "Перезагрузка через {}"
+
+#: src/timer.py:57
+msgid "Your device will be suspended in"
+msgstr "Ваше устройство перейдёт в режим ожидания через"
+
+#: src/timer.py:58
+msgid "Suspend in {}"
+msgstr "Режим ожидания через {}"
+
+#: src/timer.py:60
+msgid "You will receive a notification in"
+msgstr "Вы получите уведомление через"
+
+#: src/timer.py:61
+msgid "Notification in {}"
+msgstr "Уведомление через {}"
+
+#: src/timer.py:68
+msgid "The command <b>{}</b> will be executed in"
+msgstr "Команда <b>{}</b> будет выполнена через"
+
+#: src/timer.py:69
+msgid "Command \"{}\" in {}"
+msgstr "Команда \"{}\" через {}"
+
+#: src/timer.py:111
+msgid "The notification has been sent."
+msgstr "Уведомление было отправлено."
+
+#~ msgid "Added ability to pause timer"
+#~ msgstr "Добавлена возможность поставить таймер на паузу"
+
+#~ msgid ""
+#~ "Added clock mode: in this mode you set clock time (in 24h format) when "
+#~ "the timer should finish."
+#~ msgstr ""
+#~ "Добавлен режим часов: в этом режиме вы устанавливаете время (в 24-часовом "
+#~ "формате), в которое таймер должен завершиться."
+
+#~ msgid "UI improvements"
+#~ msgstr "Улучшения интерфейса"

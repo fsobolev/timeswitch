@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-15 05:41+0300\n"
-"PO-Revision-Date: 2023-02-12 17:38+0000\n"
+"POT-Creation-Date: 2023-03-19 17:21+0300\n"
+"PO-Revision-Date: 2023-03-19 15:50+0000\n"
 "Last-Translator: Åke Engelbrektson <eson@svenskasprakfiler.se>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/timeswitch/"
 "timeswitch/sv/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.16-dev\n"
+"X-Generator: Weblate 4.16.2-dev\n"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:3
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:6
@@ -27,7 +27,7 @@ msgstr "Time Switch"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:6
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:7
-msgid "Run tasks after a timer"
+msgid "Set a task to run after a timer"
 msgstr "Kör tidsinställda uppgifter"
 
 # "Stäng av, starta om, vänteläge eller sänd ett tidsinställt meddelande."
@@ -58,159 +58,36 @@ msgstr ""
 "Appen är byggd för GNOME och använder LibAdwaita, men den fungerar i alla "
 "skrivbordsmiljöer."
 
-#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:15
+#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:15 src/main.py:86
+#: src/main.py:88
 msgid "Fyodor Sobolev"
 msgstr "Fjodor Sobolev"
 
-#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:32
-msgid "Added ability to pause timer"
-msgstr "Lade till möjlighet att pausa tiduret"
-
-#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:33
-msgid ""
-"Added clock mode: in this mode you set clock time (in 24h format) when the "
-"timer should finish."
-msgstr ""
-"Lade till klockläge. I det här läget kan du ställa in klocktiden (i "
-"24-timmarsformat) när tiduret ska avsluta."
-
-#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:34
-msgid "UI improvements"
-msgstr "UI-förbättringar"
-
-#: src/actions.py:85
+#. Bus name
+#. Object path
+#. Interface name
+#. Method name
+#: src/actions.py:83 src/timer.py:145
 msgid "Timer has finished!"
 msgstr "Tiduret är klart!"
 
-#: src/actions.py:91 src/window.py:398
+#: src/actions.py:89 src/main_window.py:424
 msgid "Stop"
 msgstr "Stopp"
 
-#: src/timer.py:49
-msgid "Your device will be powered off in"
-msgstr "Din enhet stängs av om"
-
-#: src/timer.py:51
-msgid "Your device will be rebooted in"
-msgstr "Din enhet startas om"
-
-#: src/timer.py:53
-msgid "Your device will be suspended in"
-msgstr "Din enhet försätts i vänteläge om"
-
-#: src/timer.py:55
-msgid "You will receive a notification in"
-msgstr "Du får ett meddelande om"
-
-#: src/timer.py:62
-msgid "The command <b>{}</b> will be executed in"
-msgstr "Kommandot <b>{}</b> körs om"
-
-#: src/timer.py:89
-msgid "The notification has been sent."
-msgstr "Meddelandet har skickats."
-
-#: src/window.py:96
-msgid "Countdown"
-msgstr "Nedräkning"
-
-#: src/window.py:96
-msgid "Clock"
-msgstr "Klocka"
-
-#: src/window.py:98
-msgid "Select timer mode"
-msgstr "Välj tidursläge"
-
-#: src/window.py:105 src/window.py:355
-msgid "About"
-msgstr "Om"
-
-#: src/window.py:170
-msgid "min"
-msgstr "min"
-
-#: src/window.py:170
-msgid "sec"
-msgstr "s"
-
-#: src/window.py:184
-msgid "Reset"
-msgstr "Återställ"
-
-#: src/window.py:199
-msgid "Action"
-msgstr "Åtgärd"
-
-#: src/window.py:204
-msgid "Power Off"
-msgstr "Stäng av"
-
-#: src/window.py:213
-msgid "Reboot"
-msgstr "Starta om"
-
-#: src/window.py:222
-msgid "Suspend"
-msgstr "Vänteläge"
-
-#: src/window.py:231
-msgid "Notification"
-msgstr "Meddelande"
-
-#: src/window.py:243
-msgid "Notification settings"
-msgstr "Meddelandeinställningar"
-
-#: src/window.py:257
-msgid "Notification text"
-msgstr "Meddelandetext"
-
-#: src/window.py:261
-msgid "Play sound"
-msgstr "Spela ljudsignal"
-
-#: src/window.py:270
-msgid "Until stopped"
-msgstr "Tills stoppad"
-
-#: src/window.py:284 src/window.py:306 src/window.py:563 src/window.py:630
-msgid "Command"
-msgstr "Kommando"
-
-#: src/window.py:312
-msgid "Back"
-msgstr "Tillbaka"
-
-#: src/window.py:325 src/window.py:571
-msgid "Add"
-msgstr "Lägg till"
-
-#: src/window.py:335
-msgid "Start"
-msgstr "Start"
-
-#: src/window.py:387 src/window.py:758
-msgid "Pause"
-msgstr "Paus"
-
-#: src/window.py:410
-msgid "You can close the window, the timer will work in the background."
-msgstr "Du kan stänga fönstret, tiduret arbetar i bakgrunden."
-
-# Translators: make sure to have a space in the end of the line.
-#: src/window.py:489
-msgid "They will be executed outside of flatpak sandbox. "
-msgstr "De kommer att köras utanför flatpak-sandlådan. "
-
-#: src/window.py:492
+#: src/cmd_warning.py:41
 msgid "Warning"
 msgstr "Varning"
+
+# Translators: make sure to have a space in the end of the line.
+#: src/cmd_warning.py:45
+msgid "They will be executed outside of flatpak sandbox. "
+msgstr "De kommer att köras utanför flatpak-sandlådan. "
 
 # Translators: {} is used to pass "They will be executed outside of flatpak sandbox. "
 # in case the app is installed using flatpak. Make sure to have a space in front of it
 # (in the original text it's in the end of the first line)
-#: src/window.py:493
+#: src/cmd_warning.py:48
 msgid ""
 "Your commands will be executed as if they were executed on a command prompt. "
 "{}The app doesn't perform any checks whether a command was executed "
@@ -221,46 +98,268 @@ msgstr ""
 "utför inga kontroller om ett kommando har körts korrekt eller inte. Var "
 "försiktig, ange inte kommandon vars resultat är okänt för dig."
 
-#: src/window.py:494 src/window.py:762
-msgid "Continue"
-msgstr "Fortsätt"
-
-#: src/window.py:499
-msgid "I understand"
-msgstr "Jag förstår"
-
-#: src/window.py:553
-msgid "Add command"
-msgstr "Lägg till kommando"
-
-#: src/window.py:557 src/window.py:623
-msgid "Name"
-msgstr "Namn"
-
-#: src/window.py:570 src/window.py:638 src/window.py:660
+#: src/cmd_warning.py:50 src/main.py:106 src/main_window.py:541
+#: src/main_window.py:611 src/main_window.py:633 src/presets_manager.py:100
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: src/window.py:602 src/window.py:619
+#: src/cmd_warning.py:53 src/main_window.py:740
+msgid "Continue"
+msgstr "Fortsätt"
+
+#: src/cmd_warning.py:58
+msgid "I understand"
+msgstr "Jag förstår"
+
+#: src/main.py:93
+msgid "Translators on Weblate ❤️"
+msgstr "Översättare på Weblate ❤️"
+
+#: src/main.py:105
+msgid "Are you sure you want to stop the timer and quit?"
+msgstr "Vill du verkligen stoppa tiduret och avsluta?"
+
+#: src/main.py:108 src/main_window.py:115 src/main_window.py:381
+msgid "Quit"
+msgstr "Avsluta"
+
+#: src/main_window.py:94 src/manage_presets_window.py:59
+msgid "Countdown"
+msgstr "Nedräkning"
+
+#: src/main_window.py:94 src/manage_presets_window.py:59
+msgid "Clock"
+msgstr "Klocka"
+
+#: src/main_window.py:96
+msgid "Select timer mode"
+msgstr "Välj tidursläge"
+
+#: src/main_window.py:102 src/presets_manager.py:93
+msgid "Create Preset"
+msgstr "Skapa förinställning"
+
+#: src/main_window.py:103
+msgid "Manage Presets"
+msgstr "Hantera förinställningar"
+
+#: src/main_window.py:109 src/main_window.py:376
+msgid "Main menu"
+msgstr "Huvudmeny"
+
+#: src/main_window.py:112 src/manage_presets_window.py:38
+msgid "Presets"
+msgstr "Förinställningar"
+
+#: src/main_window.py:113 src/main_window.py:379
+msgid "Keyboard Shortcuts"
+msgstr "Tangenbordsgenvägar"
+
+#: src/main_window.py:114 src/main_window.py:380
+msgid "About"
+msgstr "Om"
+
+#: src/main_window.py:180
+msgid "min"
+msgstr "min"
+
+#: src/main_window.py:180
+msgid "sec"
+msgstr "s"
+
+#: src/main_window.py:194
+msgid "Reset"
+msgstr "Återställ"
+
+#: src/main_window.py:216
+msgid "Action"
+msgstr "Åtgärd"
+
+#: src/main_window.py:221 src/manage_presets_window.py:64
+msgid "Power Off"
+msgstr "Stäng av"
+
+#: src/main_window.py:231 src/manage_presets_window.py:66
+msgid "Reboot"
+msgstr "Starta om"
+
+#: src/main_window.py:241
+msgid "Suspend"
+msgstr "Vänteläge"
+
+#: src/main_window.py:250 src/manage_presets_window.py:69
+msgid "Notification"
+msgstr "Meddelande"
+
+#: src/main_window.py:263
+msgid "Notification settings"
+msgstr "Meddelandeinställningar"
+
+#: src/main_window.py:277
+msgid "Notification text"
+msgstr "Meddelandetext"
+
+#: src/main_window.py:281
+msgid "Play sound"
+msgstr "Spela ljudsignal"
+
+#: src/main_window.py:290
+msgid "Until stopped"
+msgstr "Tills stoppad"
+
+#: src/main_window.py:304 src/main_window.py:327 src/main_window.py:534
+#: src/main_window.py:603
+msgid "Command"
+msgstr "Kommando"
+
+#: src/main_window.py:333
+msgid "Back"
+msgstr "Tillbaka"
+
+#: src/main_window.py:346 src/main_window.py:542
+msgid "Add"
+msgstr "Lägg till"
+
+#: src/main_window.py:356
+msgid "Start"
+msgstr "Start"
+
+#: src/main_window.py:413 src/main_window.py:736
+msgid "Pause"
+msgstr "Paus"
+
+#: src/main_window.py:436
+msgid "You can close the window, the timer will work in the background."
+msgstr "Du kan stänga fönstret, tiduret arbetar i bakgrunden."
+
+#: src/main_window.py:524
+msgid "Add command"
+msgstr "Lägg till kommando"
+
+#: src/main_window.py:528 src/main_window.py:596
+msgid "Name"
+msgstr "Namn"
+
+#: src/main_window.py:575 src/main_window.py:592
 msgid "Edit command"
 msgstr "Redigera kommando"
 
-#: src/window.py:609
+#: src/main_window.py:582
 msgid "Remove command"
 msgstr "Ta bort kommando"
 
-#: src/window.py:639
+#: src/main_window.py:612
 msgid "Apply"
 msgstr "Tillämpa"
 
-#: src/window.py:657
+#: src/main_window.py:630
 msgid "Remove command?"
 msgstr "Vill du ta bort kommandot?"
 
-#: src/window.py:658
+#: src/main_window.py:631
 msgid "Are you sure you want to remove command \"{}\"?"
 msgstr "Vill du verkligen ta bort kommandot \"{}\"?"
 
-#: src/window.py:661
+#: src/main_window.py:634
 msgid "Remove"
 msgstr "Ta bort"
+
+#: src/manage_presets_window.py:71
+msgid "Notification with sound"
+msgstr "Avisering med ljud"
+
+#: src/manage_presets_window.py:73
+msgid "Notification with sound playing until stopped"
+msgstr "Avisering med ljuduppspelning till det stoppas"
+
+#: src/manage_presets_window.py:76
+msgid "Unknown command"
+msgstr "Okänt kommando"
+
+#: src/manage_presets_window.py:79
+msgid "Command \"{}\""
+msgstr "Kommando \"{}\""
+
+#: src/manage_presets_window.py:88
+msgid "Move Up"
+msgstr "Flytta upp"
+
+#: src/manage_presets_window.py:95
+msgid "Move Down"
+msgstr "Flytta ner"
+
+#: src/manage_presets_window.py:104
+msgid "Delete Preset"
+msgstr "Ta bort förinställning"
+
+#: src/presets_manager.py:94
+msgid ""
+"Currently selected options will be saved in a new preset with the provided "
+"name."
+msgstr ""
+"Valda alternativ kommer att sparas i en ny förinställning med angivet namn."
+
+#: src/presets_manager.py:96
+msgid "Preset Name"
+msgstr "Förinställningsnamn"
+
+#: src/presets_manager.py:101
+msgid "Save"
+msgstr "Spara"
+
+#: src/timer.py:51
+msgid "Your device will be powered off in"
+msgstr "Din enhet stängs av om"
+
+#: src/timer.py:52
+msgid "Power off in {}"
+msgstr "Stäng av om {}"
+
+#: src/timer.py:54
+msgid "Your device will be rebooted in"
+msgstr "Din enhet startas om"
+
+#: src/timer.py:55
+msgid "Reboot in {}"
+msgstr "Starta om, om {}"
+
+#: src/timer.py:57
+msgid "Your device will be suspended in"
+msgstr "Din enhet försätts i vänteläge om"
+
+#: src/timer.py:58
+msgid "Suspend in {}"
+msgstr "Vänteläge om {}"
+
+#: src/timer.py:60
+msgid "You will receive a notification in"
+msgstr "Du får ett meddelande om"
+
+#: src/timer.py:61
+msgid "Notification in {}"
+msgstr "Avisering om {}"
+
+#: src/timer.py:68
+msgid "The command <b>{}</b> will be executed in"
+msgstr "Kommandot <b>{}</b> körs om"
+
+#: src/timer.py:69
+msgid "Command \"{}\" in {}"
+msgstr "Kommando \"{}\" om {}"
+
+#: src/timer.py:111
+msgid "The notification has been sent."
+msgstr "Meddelandet har skickats."
+
+#~ msgid "Added ability to pause timer"
+#~ msgstr "Lade till möjlighet att pausa tiduret"
+
+#~ msgid ""
+#~ "Added clock mode: in this mode you set clock time (in 24h format) when "
+#~ "the timer should finish."
+#~ msgstr ""
+#~ "Lade till klockläge. I det här läget kan du ställa in klocktiden (i 24-"
+#~ "timmarsformat) när tiduret ska avsluta."
+
+#~ msgid "UI improvements"
+#~ msgstr "UI-förbättringar"

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-15 05:41+0300\n"
-"PO-Revision-Date: 2023-02-16 07:26+0000\n"
+"POT-Creation-Date: 2023-03-19 17:21+0300\n"
+"PO-Revision-Date: 2023-03-20 19:41+0000\n"
 "Last-Translator: Fernando Lopes <fefehex12@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
 "timeswitch/timeswitch/pt_BR/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.16-dev\n"
+"X-Generator: Weblate 4.16.2-dev\n"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:3
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:6
@@ -26,8 +26,8 @@ msgstr "Time Switch"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:6
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:7
-msgid "Run tasks after a timer"
-msgstr "Execute tarefas após um temporizador"
+msgid "Set a task to run after a timer"
+msgstr "Definir tarefas a serem executadas após um temporizador"
 
 # Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
@@ -55,163 +55,36 @@ msgstr ""
 "O aplicativo foi criado para o GNOME e utiliza LibAdwaita, mas funciona em "
 "qualquer ambiente de desktop."
 
-#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:15
+#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:15 src/main.py:86
+#: src/main.py:88
 msgid "Fyodor Sobolev"
 msgstr "Fyodor Sobolev"
 
-#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:32
-msgid "Added ability to pause timer"
-msgstr "Adicionada a capacidade de pausar o temporizador"
-
-#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:33
-msgid ""
-"Added clock mode: in this mode you set clock time (in 24h format) when the "
-"timer should finish."
-msgstr ""
-"Modo relógio adicionado: neste modo você determina a hora do relógio (no "
-"formato de 24h) em que o temporizador deve terminar."
-
-#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:34
-msgid "UI improvements"
-msgstr "Melhorias na interface de usuário"
-
-#: src/actions.py:85
+#. Bus name
+#. Object path
+#. Interface name
+#. Method name
+#: src/actions.py:83 src/timer.py:145
 msgid "Timer has finished!"
 msgstr "O temporizador terminou!"
 
-#: src/actions.py:91 src/window.py:398
+#: src/actions.py:89 src/main_window.py:424
 msgid "Stop"
 msgstr "Parar"
 
-#: src/timer.py:49
-msgid "Your device will be powered off in"
-msgstr "Seu dispositivo será desligado em"
-
-#: src/timer.py:51
-msgid "Your device will be rebooted in"
-msgstr "Seu dispositivo será reiniciado em"
-
-#: src/timer.py:53
-msgid "Your device will be suspended in"
-msgstr "Seu dispositivo será suspenso em"
-
-#: src/timer.py:55
-msgid "You will receive a notification in"
-msgstr "Você receberá uma notificação em"
-
-#: src/timer.py:62
-msgid "The command <b>{}</b> will be executed in"
-msgstr "O comando <b>{}</b> será executado em"
-
-#: src/timer.py:89
-msgid "The notification has been sent."
-msgstr "A notificação foi enviada."
-
-#: src/window.py:96
-msgid "Countdown"
-msgstr "Contagem regressiva"
-
-#: src/window.py:96
-msgid "Clock"
-msgstr "Relógio"
-
-#: src/window.py:98
-msgid "Select timer mode"
-msgstr "Selecione o modo do temporizador"
-
-#: src/window.py:105 src/window.py:355
-msgid "About"
-msgstr "Sobre"
-
-# Translators: Short fot "minutes"
-#: src/window.py:170
-msgid "min"
-msgstr "min"
-
-# Translators: Short fot "seconds"
-#: src/window.py:170
-msgid "sec"
-msgstr "s"
-
-#: src/window.py:184
-msgid "Reset"
-msgstr "Reiniciar"
-
-#: src/window.py:199
-msgid "Action"
-msgstr "Ação"
-
-#: src/window.py:204
-msgid "Power Off"
-msgstr "Desligar"
-
-#: src/window.py:213
-msgid "Reboot"
-msgstr "Reiniciar"
-
-#: src/window.py:222
-msgid "Suspend"
-msgstr "Suspender"
-
-#: src/window.py:231
-msgid "Notification"
-msgstr "Notificação"
-
-#: src/window.py:243
-msgid "Notification settings"
-msgstr "Opções de notificação"
-
-#: src/window.py:257
-msgid "Notification text"
-msgstr "Texto da notificação"
-
-#: src/window.py:261
-msgid "Play sound"
-msgstr "Reproduzir som"
-
-#: src/window.py:270
-msgid "Until stopped"
-msgstr "Até ser encerrada"
-
-#: src/window.py:284 src/window.py:306 src/window.py:563 src/window.py:630
-msgid "Command"
-msgstr "Comando"
-
-#: src/window.py:312
-msgid "Back"
-msgstr "Voltar"
-
-#: src/window.py:325 src/window.py:571
-msgid "Add"
-msgstr "Adicionar"
-
-#: src/window.py:335
-msgid "Start"
-msgstr "Iniciar"
-
-#: src/window.py:387 src/window.py:758
-msgid "Pause"
-msgstr "Pausar"
-
-#: src/window.py:410
-msgid "You can close the window, the timer will work in the background."
-msgstr ""
-"A janela pode ser fechada, pois o temporizador continuará a executar em "
-"segundo plano."
-
-# Translators: make sure to have a space in the end of the line.
-#: src/window.py:489
-msgid "They will be executed outside of flatpak sandbox. "
-msgstr "Eles serão executados fora das restrições do flatpak. "
-
-#: src/window.py:492
+#: src/cmd_warning.py:41
 msgid "Warning"
 msgstr "Atenção"
+
+# Translators: make sure to have a space in the end of the line.
+#: src/cmd_warning.py:45
+msgid "They will be executed outside of flatpak sandbox. "
+msgstr "Eles serão executados fora das restrições do flatpak. "
 
 # Translators: {} is used to pass "They will be executed outside of flatpak sandbox. "
 # in case the app is installed using flatpak. Make sure to have a space in front of it
 # (in the original text it's in the end of the first line)
-#: src/window.py:493
+#: src/cmd_warning.py:48
 msgid ""
 "Your commands will be executed as if they were executed on a command prompt. "
 "{}The app doesn't perform any checks whether a command was executed "
@@ -222,46 +95,273 @@ msgstr ""
 "aplicativo não verifica se um comando foi executado com sucesso ou não. "
 "Tenha cuidado, não execute comandos com resultados desconhecidos."
 
-#: src/window.py:494 src/window.py:762
-msgid "Continue"
-msgstr "Continuar"
-
-#: src/window.py:499
-msgid "I understand"
-msgstr "Eu compreendo"
-
-#: src/window.py:553
-msgid "Add command"
-msgstr "Adicionar comando"
-
-#: src/window.py:557 src/window.py:623
-msgid "Name"
-msgstr "Nome"
-
-#: src/window.py:570 src/window.py:638 src/window.py:660
+#: src/cmd_warning.py:50 src/main.py:106 src/main_window.py:541
+#: src/main_window.py:611 src/main_window.py:633 src/presets_manager.py:100
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: src/window.py:602 src/window.py:619
+#: src/cmd_warning.py:53 src/main_window.py:740
+msgid "Continue"
+msgstr "Continuar"
+
+#: src/cmd_warning.py:58
+msgid "I understand"
+msgstr "Eu compreendo"
+
+#: src/main.py:93
+msgid "Translators on Weblate ❤️"
+msgstr "Tradutores no Weblate ❤️"
+
+#: src/main.py:105
+msgid "Are you sure you want to stop the timer and quit?"
+msgstr "Tem certeza de que quer parar o temporizador e sair?"
+
+#: src/main.py:108 src/main_window.py:115 src/main_window.py:381
+msgid "Quit"
+msgstr "Sair"
+
+#: src/main_window.py:94 src/manage_presets_window.py:59
+msgid "Countdown"
+msgstr "Contagem regressiva"
+
+#: src/main_window.py:94 src/manage_presets_window.py:59
+msgid "Clock"
+msgstr "Relógio"
+
+#: src/main_window.py:96
+msgid "Select timer mode"
+msgstr "Selecione o modo do temporizador"
+
+#: src/main_window.py:102 src/presets_manager.py:93
+msgid "Create Preset"
+msgstr "Criar Predefinição"
+
+#: src/main_window.py:103
+msgid "Manage Presets"
+msgstr "Gerenciar Predefinições"
+
+#: src/main_window.py:109 src/main_window.py:376
+msgid "Main menu"
+msgstr "Menu principal"
+
+#: src/main_window.py:112 src/manage_presets_window.py:38
+msgid "Presets"
+msgstr "Predefinições"
+
+#: src/main_window.py:113 src/main_window.py:379
+msgid "Keyboard Shortcuts"
+msgstr "Atalhos de Teclado"
+
+#: src/main_window.py:114 src/main_window.py:380
+msgid "About"
+msgstr "Sobre"
+
+# Translators: Short fot "minutes"
+#: src/main_window.py:180
+msgid "min"
+msgstr "min"
+
+# Translators: Short fot "seconds"
+#: src/main_window.py:180
+msgid "sec"
+msgstr "s"
+
+#: src/main_window.py:194
+msgid "Reset"
+msgstr "Reiniciar"
+
+#: src/main_window.py:216
+msgid "Action"
+msgstr "Ação"
+
+#: src/main_window.py:221 src/manage_presets_window.py:64
+msgid "Power Off"
+msgstr "Desligar"
+
+#: src/main_window.py:231 src/manage_presets_window.py:66
+msgid "Reboot"
+msgstr "Reiniciar"
+
+#: src/main_window.py:241
+msgid "Suspend"
+msgstr "Suspender"
+
+#: src/main_window.py:250 src/manage_presets_window.py:69
+msgid "Notification"
+msgstr "Notificação"
+
+#: src/main_window.py:263
+msgid "Notification settings"
+msgstr "Opções de notificação"
+
+#: src/main_window.py:277
+msgid "Notification text"
+msgstr "Texto da notificação"
+
+#: src/main_window.py:281
+msgid "Play sound"
+msgstr "Reproduzir som"
+
+#: src/main_window.py:290
+msgid "Until stopped"
+msgstr "Até ser encerrada"
+
+#: src/main_window.py:304 src/main_window.py:327 src/main_window.py:534
+#: src/main_window.py:603
+msgid "Command"
+msgstr "Comando"
+
+#: src/main_window.py:333
+msgid "Back"
+msgstr "Voltar"
+
+#: src/main_window.py:346 src/main_window.py:542
+msgid "Add"
+msgstr "Adicionar"
+
+#: src/main_window.py:356
+msgid "Start"
+msgstr "Iniciar"
+
+#: src/main_window.py:413 src/main_window.py:736
+msgid "Pause"
+msgstr "Pausar"
+
+#: src/main_window.py:436
+msgid "You can close the window, the timer will work in the background."
+msgstr ""
+"A janela pode ser fechada, pois o temporizador continuará a executar em "
+"segundo plano."
+
+#: src/main_window.py:524
+msgid "Add command"
+msgstr "Adicionar comando"
+
+#: src/main_window.py:528 src/main_window.py:596
+msgid "Name"
+msgstr "Nome"
+
+#: src/main_window.py:575 src/main_window.py:592
 msgid "Edit command"
 msgstr "Editar comando"
 
-#: src/window.py:609
+#: src/main_window.py:582
 msgid "Remove command"
 msgstr "Remover comando"
 
-#: src/window.py:639
+#: src/main_window.py:612
 msgid "Apply"
 msgstr "Aplicar"
 
-#: src/window.py:657
+#: src/main_window.py:630
 msgid "Remove command?"
 msgstr "Remover comando?"
 
-#: src/window.py:658
+#: src/main_window.py:631
 msgid "Are you sure you want to remove command \"{}\"?"
 msgstr "Você tem certeza que quer remover o comando \"{}\"?"
 
-#: src/window.py:661
+#: src/main_window.py:634
 msgid "Remove"
 msgstr "Remover"
+
+#: src/manage_presets_window.py:71
+msgid "Notification with sound"
+msgstr "Notificação com som"
+
+#: src/manage_presets_window.py:73
+msgid "Notification with sound playing until stopped"
+msgstr "Notificação com reprodução de som até encerrar"
+
+#: src/manage_presets_window.py:76
+msgid "Unknown command"
+msgstr "Comando desconhecido"
+
+#: src/manage_presets_window.py:79
+msgid "Command \"{}\""
+msgstr "Comando \"{}\""
+
+#: src/manage_presets_window.py:88
+msgid "Move Up"
+msgstr "Mover para Cima"
+
+#: src/manage_presets_window.py:95
+msgid "Move Down"
+msgstr "Mover para Baixo"
+
+#: src/manage_presets_window.py:104
+msgid "Delete Preset"
+msgstr "Apagar Predefinição"
+
+#: src/presets_manager.py:94
+msgid ""
+"Currently selected options will be saved in a new preset with the provided "
+"name."
+msgstr ""
+"As opções selecionadas no momento serão salvas em uma nova predefinição com "
+"o nome fornecido."
+
+#: src/presets_manager.py:96
+msgid "Preset Name"
+msgstr "Nome da Predefinição"
+
+#: src/presets_manager.py:101
+msgid "Save"
+msgstr "Salvar"
+
+#: src/timer.py:51
+msgid "Your device will be powered off in"
+msgstr "Seu dispositivo será desligado em"
+
+#: src/timer.py:52
+msgid "Power off in {}"
+msgstr "Desligar o computador em {}"
+
+#: src/timer.py:54
+msgid "Your device will be rebooted in"
+msgstr "Seu dispositivo será reiniciado em"
+
+#: src/timer.py:55
+msgid "Reboot in {}"
+msgstr "Reiniciar o computador em {}"
+
+#: src/timer.py:57
+msgid "Your device will be suspended in"
+msgstr "Seu dispositivo será suspenso em"
+
+#: src/timer.py:58
+msgid "Suspend in {}"
+msgstr "Suspender o computador em {}"
+
+#: src/timer.py:60
+msgid "You will receive a notification in"
+msgstr "Você receberá uma notificação em"
+
+#: src/timer.py:61
+msgid "Notification in {}"
+msgstr "Notificação em {}"
+
+#: src/timer.py:68
+msgid "The command <b>{}</b> will be executed in"
+msgstr "O comando <b>{}</b> será executado em"
+
+#: src/timer.py:69
+msgid "Command \"{}\" in {}"
+msgstr "Comando \"{}\" executado em {}"
+
+#: src/timer.py:111
+msgid "The notification has been sent."
+msgstr "A notificação foi enviada."
+
+#~ msgid "Added ability to pause timer"
+#~ msgstr "Adicionada a capacidade de pausar o temporizador"
+
+#~ msgid ""
+#~ "Added clock mode: in this mode you set clock time (in 24h format) when "
+#~ "the timer should finish."
+#~ msgstr ""
+#~ "Modo relógio adicionado: neste modo você determina a hora do relógio (no "
+#~ "formato de 24h) em que o temporizador deve terminar."
+
+#~ msgid "UI improvements"
+#~ msgstr "Melhorias na interface de usuário"
