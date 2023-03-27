@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-27 21:14+0300\n"
-"PO-Revision-Date: 2023-03-27 18:48+0000\n"
+"PO-Revision-Date: 2023-03-28 07:59+0000\n"
 "Last-Translator: Fyodor Sobolev <fyodor-sobolev@protonmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/timeswitch/"
 "timeswitch/ru/>\n"
@@ -349,8 +349,6 @@ msgid "Force Quit"
 msgstr "Принудительное завершение"
 
 #: src/shortcuts_dialog.ui:155
-#, fuzzy
-#| msgid "Keyboard Shortcuts"
 msgid "Shortcuts"
 msgstr "Комбинации клавиш"
 
