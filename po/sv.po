@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-19 17:21+0300\n"
+"POT-Creation-Date: 2023-03-27 21:14+0300\n"
 "PO-Revision-Date: 2023-03-19 15:50+0000\n"
 "Last-Translator: Åke Engelbrektson <eson@svenskasprakfiler.se>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/timeswitch/"
@@ -71,7 +71,7 @@ msgstr "Fjodor Sobolev"
 msgid "Timer has finished!"
 msgstr "Tiduret är klart!"
 
-#: src/actions.py:89 src/main_window.py:424
+#: src/actions.py:89 src/main_window.py:424 src/shortcuts_dialog.ui:132
 msgid "Stop"
 msgstr "Stopp"
 
@@ -99,11 +99,11 @@ msgstr ""
 "försiktig, ange inte kommandon vars resultat är okänt för dig."
 
 #: src/cmd_warning.py:50 src/main.py:106 src/main_window.py:541
-#: src/main_window.py:611 src/main_window.py:633 src/presets_manager.py:100
+#: src/main_window.py:604 src/main_window.py:626 src/presets_manager.py:100
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: src/cmd_warning.py:53 src/main_window.py:740
+#: src/cmd_warning.py:53 src/main_window.py:733
 msgid "Continue"
 msgstr "Fortsätt"
 
@@ -167,7 +167,7 @@ msgstr "min"
 msgid "sec"
 msgstr "s"
 
-#: src/main_window.py:194
+#: src/main_window.py:194 src/shortcuts_dialog.ui:33
 msgid "Reset"
 msgstr "Återställ"
 
@@ -176,18 +176,21 @@ msgid "Action"
 msgstr "Åtgärd"
 
 #: src/main_window.py:221 src/manage_presets_window.py:64
+#: src/shortcuts_dialog.ui:56
 msgid "Power Off"
 msgstr "Stäng av"
 
 #: src/main_window.py:231 src/manage_presets_window.py:66
+#: src/shortcuts_dialog.ui:62
 msgid "Reboot"
 msgstr "Starta om"
 
-#: src/main_window.py:241
+#: src/main_window.py:241 src/shortcuts_dialog.ui:68
 msgid "Suspend"
 msgstr "Vänteläge"
 
 #: src/main_window.py:250 src/manage_presets_window.py:69
+#: src/shortcuts_dialog.ui:74
 msgid "Notification"
 msgstr "Meddelande"
 
@@ -208,11 +211,11 @@ msgid "Until stopped"
 msgstr "Tills stoppad"
 
 #: src/main_window.py:304 src/main_window.py:327 src/main_window.py:534
-#: src/main_window.py:603
+#: src/main_window.py:596 src/shortcuts_dialog.ui:80
 msgid "Command"
 msgstr "Kommando"
 
-#: src/main_window.py:333
+#: src/main_window.py:333 src/shortcuts_dialog.ui:115
 msgid "Back"
 msgstr "Tillbaka"
 
@@ -224,7 +227,7 @@ msgstr "Lägg till"
 msgid "Start"
 msgstr "Start"
 
-#: src/main_window.py:413 src/main_window.py:736
+#: src/main_window.py:413 src/main_window.py:729
 msgid "Pause"
 msgstr "Paus"
 
@@ -232,35 +235,35 @@ msgstr "Paus"
 msgid "You can close the window, the timer will work in the background."
 msgstr "Du kan stänga fönstret, tiduret arbetar i bakgrunden."
 
-#: src/main_window.py:524
+#: src/main_window.py:524 src/shortcuts_dialog.ui:97
 msgid "Add command"
 msgstr "Lägg till kommando"
 
-#: src/main_window.py:528 src/main_window.py:596
+#: src/main_window.py:528 src/main_window.py:589
 msgid "Name"
 msgstr "Namn"
 
-#: src/main_window.py:575 src/main_window.py:592
+#: src/main_window.py:571 src/main_window.py:585
 msgid "Edit command"
 msgstr "Redigera kommando"
 
-#: src/main_window.py:582
+#: src/main_window.py:577
 msgid "Remove command"
 msgstr "Ta bort kommando"
 
-#: src/main_window.py:612
+#: src/main_window.py:605
 msgid "Apply"
 msgstr "Tillämpa"
 
-#: src/main_window.py:630
+#: src/main_window.py:623
 msgid "Remove command?"
 msgstr "Vill du ta bort kommandot?"
 
-#: src/main_window.py:631
+#: src/main_window.py:624
 msgid "Are you sure you want to remove command \"{}\"?"
 msgstr "Vill du verkligen ta bort kommandot \"{}\"?"
 
-#: src/main_window.py:634
+#: src/main_window.py:627
 msgid "Remove"
 msgstr "Ta bort"
 
@@ -306,6 +309,68 @@ msgstr "Förinställningsnamn"
 #: src/presets_manager.py:101
 msgid "Save"
 msgstr "Spara"
+
+#: src/shortcuts_dialog.ui:15
+msgid "Focus hours entry"
+msgstr ""
+
+#: src/shortcuts_dialog.ui:21
+msgid "Focus minutes entry"
+msgstr ""
+
+#: src/shortcuts_dialog.ui:27
+msgid "Focus seconds entry"
+msgstr ""
+
+#: src/shortcuts_dialog.ui:39
+msgid "Change mode"
+msgstr ""
+
+#: src/shortcuts_dialog.ui:45
+#, fuzzy
+#| msgid "Start"
+msgid "Start timer"
+msgstr "Start"
+
+#: src/shortcuts_dialog.ui:91
+#, fuzzy
+#| msgid "Remove command"
+msgid "Select command"
+msgstr "Ta bort kommando"
+
+#: src/shortcuts_dialog.ui:103
+#, fuzzy
+#| msgid "Edit command"
+msgid "Edit selected command"
+msgstr "Redigera kommando"
+
+#: src/shortcuts_dialog.ui:109
+#, fuzzy
+#| msgid "Remove command"
+msgid "Remove selected command"
+msgstr "Ta bort kommando"
+
+#: src/shortcuts_dialog.ui:126
+msgid "Toggle pause"
+msgstr ""
+
+#: src/shortcuts_dialog.ui:143
+msgid "Close Main Window"
+msgstr ""
+
+#: src/shortcuts_dialog.ui:149
+msgid "Force Quit"
+msgstr ""
+
+#: src/shortcuts_dialog.ui:155
+#, fuzzy
+#| msgid "Keyboard Shortcuts"
+msgid "Shortcuts"
+msgstr "Tangenbordsgenvägar"
+
+#: src/shortcuts_dialog.ui:161
+msgid "Open Menu"
+msgstr ""
 
 #: src/timer.py:51
 msgid "Your device will be powered off in"

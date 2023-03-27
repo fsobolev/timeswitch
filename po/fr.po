@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-19 17:21+0300\n"
+"POT-Creation-Date: 2023-03-27 21:14+0300\n"
 "PO-Revision-Date: 2023-02-09 14:39+0000\n"
 "Last-Translator: \"J. Lavoie\" <j.lavoie@net-c.ca>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/timeswitch/"
@@ -77,7 +77,7 @@ msgstr "Fiodor Sobolev"
 msgid "Timer has finished!"
 msgstr "Le minuteur a terminé !"
 
-#: src/actions.py:89 src/main_window.py:424
+#: src/actions.py:89 src/main_window.py:424 src/shortcuts_dialog.ui:132
 msgid "Stop"
 msgstr "Arrêter"
 
@@ -108,11 +108,11 @@ msgstr ""
 "n’entrez pas de commandes dont le résultat vous est inconnu."
 
 #: src/cmd_warning.py:50 src/main.py:106 src/main_window.py:541
-#: src/main_window.py:611 src/main_window.py:633 src/presets_manager.py:100
+#: src/main_window.py:604 src/main_window.py:626 src/presets_manager.py:100
 msgid "Cancel"
 msgstr "Annuler"
 
-#: src/cmd_warning.py:53 src/main_window.py:740
+#: src/cmd_warning.py:53 src/main_window.py:733
 msgid "Continue"
 msgstr "Continuer"
 
@@ -180,7 +180,7 @@ msgstr "min"
 msgid "sec"
 msgstr "s"
 
-#: src/main_window.py:194
+#: src/main_window.py:194 src/shortcuts_dialog.ui:33
 msgid "Reset"
 msgstr "Réinitialiser"
 
@@ -189,18 +189,21 @@ msgid "Action"
 msgstr "Action"
 
 #: src/main_window.py:221 src/manage_presets_window.py:64
+#: src/shortcuts_dialog.ui:56
 msgid "Power Off"
 msgstr "Éteindre"
 
 #: src/main_window.py:231 src/manage_presets_window.py:66
+#: src/shortcuts_dialog.ui:62
 msgid "Reboot"
 msgstr "Redémarrer"
 
-#: src/main_window.py:241
+#: src/main_window.py:241 src/shortcuts_dialog.ui:68
 msgid "Suspend"
 msgstr "Mettre en veille"
 
 #: src/main_window.py:250 src/manage_presets_window.py:69
+#: src/shortcuts_dialog.ui:74
 msgid "Notification"
 msgstr "Notification"
 
@@ -221,11 +224,11 @@ msgid "Until stopped"
 msgstr "Jusqu’à l’arrêt"
 
 #: src/main_window.py:304 src/main_window.py:327 src/main_window.py:534
-#: src/main_window.py:603
+#: src/main_window.py:596 src/shortcuts_dialog.ui:80
 msgid "Command"
 msgstr "Commande"
 
-#: src/main_window.py:333
+#: src/main_window.py:333 src/shortcuts_dialog.ui:115
 msgid "Back"
 msgstr "Retour"
 
@@ -237,7 +240,7 @@ msgstr "Ajouter"
 msgid "Start"
 msgstr "Commencer"
 
-#: src/main_window.py:413 src/main_window.py:736
+#: src/main_window.py:413 src/main_window.py:729
 msgid "Pause"
 msgstr "Pause"
 
@@ -246,35 +249,35 @@ msgid "You can close the window, the timer will work in the background."
 msgstr ""
 "Vous pouvez fermer la fenêtre, le minuteur fonctionnera en arrière-plan."
 
-#: src/main_window.py:524
+#: src/main_window.py:524 src/shortcuts_dialog.ui:97
 msgid "Add command"
 msgstr "Ajouter une commande"
 
-#: src/main_window.py:528 src/main_window.py:596
+#: src/main_window.py:528 src/main_window.py:589
 msgid "Name"
 msgstr "Nom"
 
-#: src/main_window.py:575 src/main_window.py:592
+#: src/main_window.py:571 src/main_window.py:585
 msgid "Edit command"
 msgstr "Modifier la commande"
 
-#: src/main_window.py:582
+#: src/main_window.py:577
 msgid "Remove command"
 msgstr "Supprimer la commande"
 
-#: src/main_window.py:612
+#: src/main_window.py:605
 msgid "Apply"
 msgstr "Appliquer"
 
-#: src/main_window.py:630
+#: src/main_window.py:623
 msgid "Remove command?"
 msgstr "Supprimer la commande ?"
 
-#: src/main_window.py:631
+#: src/main_window.py:624
 msgid "Are you sure you want to remove command \"{}\"?"
 msgstr "Êtes-vous sûr·e de vouloir supprimer la commande « {} » ?"
 
-#: src/main_window.py:634
+#: src/main_window.py:627
 msgid "Remove"
 msgstr "Supprimer"
 
@@ -324,6 +327,66 @@ msgstr ""
 
 #: src/presets_manager.py:101
 msgid "Save"
+msgstr ""
+
+#: src/shortcuts_dialog.ui:15
+msgid "Focus hours entry"
+msgstr ""
+
+#: src/shortcuts_dialog.ui:21
+msgid "Focus minutes entry"
+msgstr ""
+
+#: src/shortcuts_dialog.ui:27
+msgid "Focus seconds entry"
+msgstr ""
+
+#: src/shortcuts_dialog.ui:39
+msgid "Change mode"
+msgstr ""
+
+#: src/shortcuts_dialog.ui:45
+#, fuzzy
+#| msgid "Start"
+msgid "Start timer"
+msgstr "Commencer"
+
+#: src/shortcuts_dialog.ui:91
+#, fuzzy
+#| msgid "Remove command"
+msgid "Select command"
+msgstr "Supprimer la commande"
+
+#: src/shortcuts_dialog.ui:103
+#, fuzzy
+#| msgid "Edit command"
+msgid "Edit selected command"
+msgstr "Modifier la commande"
+
+#: src/shortcuts_dialog.ui:109
+#, fuzzy
+#| msgid "Remove command"
+msgid "Remove selected command"
+msgstr "Supprimer la commande"
+
+#: src/shortcuts_dialog.ui:126
+msgid "Toggle pause"
+msgstr ""
+
+#: src/shortcuts_dialog.ui:143
+msgid "Close Main Window"
+msgstr ""
+
+#: src/shortcuts_dialog.ui:149
+msgid "Force Quit"
+msgstr ""
+
+#: src/shortcuts_dialog.ui:155
+msgid "Shortcuts"
+msgstr ""
+
+#: src/shortcuts_dialog.ui:161
+msgid "Open Menu"
 msgstr ""
 
 #: src/timer.py:51

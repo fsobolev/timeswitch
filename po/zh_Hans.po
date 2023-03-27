@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-19 17:21+0300\n"
+"POT-Creation-Date: 2023-03-27 21:14+0300\n"
 "PO-Revision-Date: 2023-02-11 07:18+0000\n"
 "Last-Translator: poi <erbaotao@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
@@ -62,7 +62,7 @@ msgstr "费奥多尔·索博列夫（Фёдор Соболев）"
 msgid "Timer has finished!"
 msgstr "到点啦！"
 
-#: src/actions.py:89 src/main_window.py:424
+#: src/actions.py:89 src/main_window.py:424 src/shortcuts_dialog.ui:132
 msgid "Stop"
 msgstr "停止"
 
@@ -85,11 +85,11 @@ msgstr ""
 "成功。注意，不要输入您不知道效果的命令。"
 
 #: src/cmd_warning.py:50 src/main.py:106 src/main_window.py:541
-#: src/main_window.py:611 src/main_window.py:633 src/presets_manager.py:100
+#: src/main_window.py:604 src/main_window.py:626 src/presets_manager.py:100
 msgid "Cancel"
 msgstr "取消"
 
-#: src/cmd_warning.py:53 src/main_window.py:740
+#: src/cmd_warning.py:53 src/main_window.py:733
 msgid "Continue"
 msgstr "继续"
 
@@ -157,7 +157,7 @@ msgstr "分"
 msgid "sec"
 msgstr "秒"
 
-#: src/main_window.py:194
+#: src/main_window.py:194 src/shortcuts_dialog.ui:33
 msgid "Reset"
 msgstr "重启"
 
@@ -166,18 +166,21 @@ msgid "Action"
 msgstr "动作"
 
 #: src/main_window.py:221 src/manage_presets_window.py:64
+#: src/shortcuts_dialog.ui:56
 msgid "Power Off"
 msgstr "关机"
 
 #: src/main_window.py:231 src/manage_presets_window.py:66
+#: src/shortcuts_dialog.ui:62
 msgid "Reboot"
 msgstr "重启"
 
-#: src/main_window.py:241
+#: src/main_window.py:241 src/shortcuts_dialog.ui:68
 msgid "Suspend"
 msgstr "休眠"
 
 #: src/main_window.py:250 src/manage_presets_window.py:69
+#: src/shortcuts_dialog.ui:74
 msgid "Notification"
 msgstr "通知"
 
@@ -198,11 +201,11 @@ msgid "Until stopped"
 msgstr "直到停止"
 
 #: src/main_window.py:304 src/main_window.py:327 src/main_window.py:534
-#: src/main_window.py:603
+#: src/main_window.py:596 src/shortcuts_dialog.ui:80
 msgid "Command"
 msgstr "命令"
 
-#: src/main_window.py:333
+#: src/main_window.py:333 src/shortcuts_dialog.ui:115
 msgid "Back"
 msgstr "返回"
 
@@ -214,7 +217,7 @@ msgstr "新增"
 msgid "Start"
 msgstr "开始"
 
-#: src/main_window.py:413 src/main_window.py:736
+#: src/main_window.py:413 src/main_window.py:729
 msgid "Pause"
 msgstr "暂停"
 
@@ -222,35 +225,35 @@ msgstr "暂停"
 msgid "You can close the window, the timer will work in the background."
 msgstr "窗口可以关，计时器后台运行。"
 
-#: src/main_window.py:524
+#: src/main_window.py:524 src/shortcuts_dialog.ui:97
 msgid "Add command"
 msgstr "新增命令"
 
-#: src/main_window.py:528 src/main_window.py:596
+#: src/main_window.py:528 src/main_window.py:589
 msgid "Name"
 msgstr "名称"
 
-#: src/main_window.py:575 src/main_window.py:592
+#: src/main_window.py:571 src/main_window.py:585
 msgid "Edit command"
 msgstr "修改命令"
 
-#: src/main_window.py:582
+#: src/main_window.py:577
 msgid "Remove command"
 msgstr "移除命令"
 
-#: src/main_window.py:612
+#: src/main_window.py:605
 msgid "Apply"
 msgstr "应用"
 
-#: src/main_window.py:630
+#: src/main_window.py:623
 msgid "Remove command?"
 msgstr "移除命令吗？"
 
-#: src/main_window.py:631
+#: src/main_window.py:624
 msgid "Are you sure you want to remove command \"{}\"?"
 msgstr "您确实想移除命令“{}”吗？"
 
-#: src/main_window.py:634
+#: src/main_window.py:627
 msgid "Remove"
 msgstr "移除"
 
@@ -300,6 +303,66 @@ msgstr ""
 
 #: src/presets_manager.py:101
 msgid "Save"
+msgstr ""
+
+#: src/shortcuts_dialog.ui:15
+msgid "Focus hours entry"
+msgstr ""
+
+#: src/shortcuts_dialog.ui:21
+msgid "Focus minutes entry"
+msgstr ""
+
+#: src/shortcuts_dialog.ui:27
+msgid "Focus seconds entry"
+msgstr ""
+
+#: src/shortcuts_dialog.ui:39
+msgid "Change mode"
+msgstr ""
+
+#: src/shortcuts_dialog.ui:45
+#, fuzzy
+#| msgid "Start"
+msgid "Start timer"
+msgstr "开始"
+
+#: src/shortcuts_dialog.ui:91
+#, fuzzy
+#| msgid "Remove command"
+msgid "Select command"
+msgstr "移除命令"
+
+#: src/shortcuts_dialog.ui:103
+#, fuzzy
+#| msgid "Edit command"
+msgid "Edit selected command"
+msgstr "修改命令"
+
+#: src/shortcuts_dialog.ui:109
+#, fuzzy
+#| msgid "Remove command"
+msgid "Remove selected command"
+msgstr "移除命令"
+
+#: src/shortcuts_dialog.ui:126
+msgid "Toggle pause"
+msgstr ""
+
+#: src/shortcuts_dialog.ui:143
+msgid "Close Main Window"
+msgstr ""
+
+#: src/shortcuts_dialog.ui:149
+msgid "Force Quit"
+msgstr ""
+
+#: src/shortcuts_dialog.ui:155
+msgid "Shortcuts"
+msgstr ""
+
+#: src/shortcuts_dialog.ui:161
+msgid "Open Menu"
 msgstr ""
 
 #: src/timer.py:51
