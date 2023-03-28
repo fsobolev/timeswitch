@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-27 21:14+0300\n"
-"PO-Revision-Date: 2023-03-19 15:50+0000\n"
+"PO-Revision-Date: 2023-03-28 07:59+0000\n"
 "Last-Translator: Åke Engelbrektson <eson@svenskasprakfiler.se>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/timeswitch/"
 "timeswitch/sv/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.16.2-dev\n"
+"X-Generator: Weblate 4.17-dev\n"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:3
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:6
@@ -312,65 +312,55 @@ msgstr "Spara"
 
 #: src/shortcuts_dialog.ui:15
 msgid "Focus hours entry"
-msgstr ""
+msgstr "Fokusera timpost"
 
 #: src/shortcuts_dialog.ui:21
 msgid "Focus minutes entry"
-msgstr ""
+msgstr "Fokusera minutpost"
 
 #: src/shortcuts_dialog.ui:27
 msgid "Focus seconds entry"
-msgstr ""
+msgstr "Fokusera sekundpost"
 
 #: src/shortcuts_dialog.ui:39
 msgid "Change mode"
-msgstr ""
+msgstr "Ändra läge"
 
 #: src/shortcuts_dialog.ui:45
-#, fuzzy
-#| msgid "Start"
 msgid "Start timer"
-msgstr "Start"
+msgstr "Starta tidur"
 
 #: src/shortcuts_dialog.ui:91
-#, fuzzy
-#| msgid "Remove command"
 msgid "Select command"
-msgstr "Ta bort kommando"
+msgstr "Välj kommando"
 
 #: src/shortcuts_dialog.ui:103
-#, fuzzy
-#| msgid "Edit command"
 msgid "Edit selected command"
-msgstr "Redigera kommando"
+msgstr "Redigera markerat kommando"
 
 #: src/shortcuts_dialog.ui:109
-#, fuzzy
-#| msgid "Remove command"
 msgid "Remove selected command"
-msgstr "Ta bort kommando"
+msgstr "Ta bort markerat kommando"
 
 #: src/shortcuts_dialog.ui:126
 msgid "Toggle pause"
-msgstr ""
+msgstr "Paus av/på"
 
 #: src/shortcuts_dialog.ui:143
 msgid "Close Main Window"
-msgstr ""
+msgstr "Stäng huvudfönstret"
 
 #: src/shortcuts_dialog.ui:149
 msgid "Force Quit"
-msgstr ""
+msgstr "Tvinga avslut"
 
 #: src/shortcuts_dialog.ui:155
-#, fuzzy
-#| msgid "Keyboard Shortcuts"
 msgid "Shortcuts"
-msgstr "Tangenbordsgenvägar"
+msgstr "Genvägar"
 
 #: src/shortcuts_dialog.ui:161
 msgid "Open Menu"
-msgstr ""
+msgstr "Öppna menyn"
 
 #: src/timer.py:51
 msgid "Your device will be powered off in"
