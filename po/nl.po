@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-19 17:21+0300\n"
-"PO-Revision-Date: 2023-03-19 14:22+0000\n"
+"POT-Creation-Date: 2023-03-27 21:14+0300\n"
+"PO-Revision-Date: 2023-03-28 07:59+0000\n"
 "Last-Translator: Philip Goto <philip.goto@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/timeswitch/"
 "timeswitch/nl/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.16.2-dev\n"
+"X-Generator: Weblate 4.17-dev\n"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:3
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:6
@@ -70,7 +70,7 @@ msgstr "Fyodor Sobolev"
 msgid "Timer has finished!"
 msgstr "De tijdschakelaar is geactiveerd!"
 
-#: src/actions.py:89 src/main_window.py:424
+#: src/actions.py:89 src/main_window.py:424 src/shortcuts_dialog.ui:132
 msgid "Stop"
 msgstr "Stoppen"
 
@@ -97,11 +97,11 @@ msgstr ""
 "nadien geen controle uit, dus let op welke opdrachten u invoert."
 
 #: src/cmd_warning.py:50 src/main.py:106 src/main_window.py:541
-#: src/main_window.py:611 src/main_window.py:633 src/presets_manager.py:100
+#: src/main_window.py:604 src/main_window.py:626 src/presets_manager.py:100
 msgid "Cancel"
 msgstr "Annuleren"
 
-#: src/cmd_warning.py:53 src/main_window.py:740
+#: src/cmd_warning.py:53 src/main_window.py:733
 msgid "Continue"
 msgstr "Doorgaan"
 
@@ -167,7 +167,7 @@ msgstr "min."
 msgid "sec"
 msgstr "sec."
 
-#: src/main_window.py:194
+#: src/main_window.py:194 src/shortcuts_dialog.ui:33
 msgid "Reset"
 msgstr "Resetten"
 
@@ -176,18 +176,21 @@ msgid "Action"
 msgstr "Actie"
 
 #: src/main_window.py:221 src/manage_presets_window.py:64
+#: src/shortcuts_dialog.ui:56
 msgid "Power Off"
 msgstr "Uitschakelen"
 
 #: src/main_window.py:231 src/manage_presets_window.py:66
+#: src/shortcuts_dialog.ui:62
 msgid "Reboot"
 msgstr "Herstarten"
 
-#: src/main_window.py:241
+#: src/main_window.py:241 src/shortcuts_dialog.ui:68
 msgid "Suspend"
 msgstr "Pauzestand"
 
 #: src/main_window.py:250 src/manage_presets_window.py:69
+#: src/shortcuts_dialog.ui:74
 msgid "Notification"
 msgstr "Melding"
 
@@ -208,11 +211,11 @@ msgid "Until stopped"
 msgstr "Tot moment van afbreken"
 
 #: src/main_window.py:304 src/main_window.py:327 src/main_window.py:534
-#: src/main_window.py:603
+#: src/main_window.py:596 src/shortcuts_dialog.ui:80
 msgid "Command"
 msgstr "Opdracht"
 
-#: src/main_window.py:333
+#: src/main_window.py:333 src/shortcuts_dialog.ui:115
 msgid "Back"
 msgstr "Terug"
 
@@ -224,7 +227,7 @@ msgstr "Toevoegen"
 msgid "Start"
 msgstr "Starten"
 
-#: src/main_window.py:413 src/main_window.py:736
+#: src/main_window.py:413 src/main_window.py:729
 msgid "Pause"
 msgstr "Onderbreken"
 
@@ -234,35 +237,35 @@ msgstr ""
 "De schakelaar wordt op de achtergrond geactiveerd. U kunt dit venster "
 "sluiten."
 
-#: src/main_window.py:524
+#: src/main_window.py:524 src/shortcuts_dialog.ui:97
 msgid "Add command"
 msgstr "Opdracht toevoegen"
 
-#: src/main_window.py:528 src/main_window.py:596
+#: src/main_window.py:528 src/main_window.py:589
 msgid "Name"
 msgstr "Naam"
 
-#: src/main_window.py:575 src/main_window.py:592
+#: src/main_window.py:571 src/main_window.py:585
 msgid "Edit command"
 msgstr "Opdracht bewerken"
 
-#: src/main_window.py:582
+#: src/main_window.py:577
 msgid "Remove command"
 msgstr "Opdracht verwijderen"
 
-#: src/main_window.py:612
+#: src/main_window.py:605
 msgid "Apply"
 msgstr "Toepassen"
 
-#: src/main_window.py:630
+#: src/main_window.py:623
 msgid "Remove command?"
 msgstr "Opdracht verwijderen?"
 
-#: src/main_window.py:631
+#: src/main_window.py:624
 msgid "Are you sure you want to remove command \"{}\"?"
 msgstr "Weet u zeker dat u ‘{}’ wilt verwijderen?"
 
-#: src/main_window.py:634
+#: src/main_window.py:627
 msgid "Remove"
 msgstr "Verwijderen"
 
@@ -309,6 +312,58 @@ msgstr "Naam van voorinstelling"
 #: src/presets_manager.py:101
 msgid "Save"
 msgstr "Opslaan"
+
+#: src/shortcuts_dialog.ui:15
+msgid "Focus hours entry"
+msgstr "Uurinvoer focussen"
+
+#: src/shortcuts_dialog.ui:21
+msgid "Focus minutes entry"
+msgstr "Minuutinvoer focussen"
+
+#: src/shortcuts_dialog.ui:27
+msgid "Focus seconds entry"
+msgstr "Seconde-invoer focussen"
+
+#: src/shortcuts_dialog.ui:39
+msgid "Change mode"
+msgstr "Modus wisselen"
+
+#: src/shortcuts_dialog.ui:45
+msgid "Start timer"
+msgstr "Timer starten"
+
+#: src/shortcuts_dialog.ui:91
+msgid "Select command"
+msgstr "Opdracht selecteren"
+
+#: src/shortcuts_dialog.ui:103
+msgid "Edit selected command"
+msgstr "Geselecteerde opdracht bewerken"
+
+#: src/shortcuts_dialog.ui:109
+msgid "Remove selected command"
+msgstr "Geselecteerde opdracht verwijderen"
+
+#: src/shortcuts_dialog.ui:126
+msgid "Toggle pause"
+msgstr "Pauze omschakelen"
+
+#: src/shortcuts_dialog.ui:143
+msgid "Close Main Window"
+msgstr "Hoofdvenster sluiten"
+
+#: src/shortcuts_dialog.ui:149
+msgid "Force Quit"
+msgstr "Geforceerd afsluiten"
+
+#: src/shortcuts_dialog.ui:155
+msgid "Shortcuts"
+msgstr "Sneltoetsen"
+
+#: src/shortcuts_dialog.ui:161
+msgid "Open Menu"
+msgstr "Menu openen"
 
 #: src/timer.py:51
 msgid "Your device will be powered off in"

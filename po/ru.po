@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-19 17:21+0300\n"
-"PO-Revision-Date: 2023-03-27 11:41+0000\n"
+"POT-Creation-Date: 2023-03-27 21:14+0300\n"
+"PO-Revision-Date: 2023-03-28 07:59+0000\n"
 "Last-Translator: Fyodor Sobolev <fyodor-sobolev@protonmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/timeswitch/"
 "timeswitch/ru/>\n"
@@ -68,7 +68,7 @@ msgstr "Фёдор Соболев"
 msgid "Timer has finished!"
 msgstr "Таймер истёк!"
 
-#: src/actions.py:89 src/main_window.py:424
+#: src/actions.py:89 src/main_window.py:424 src/shortcuts_dialog.ui:132
 msgid "Stop"
 msgstr "Стоп"
 
@@ -92,11 +92,11 @@ msgstr ""
 "Будьте осторожны, не вводите команды, результат которых вам неизвестен."
 
 #: src/cmd_warning.py:50 src/main.py:106 src/main_window.py:541
-#: src/main_window.py:611 src/main_window.py:633 src/presets_manager.py:100
+#: src/main_window.py:604 src/main_window.py:626 src/presets_manager.py:100
 msgid "Cancel"
 msgstr "Отмена"
 
-#: src/cmd_warning.py:53 src/main_window.py:740
+#: src/cmd_warning.py:53 src/main_window.py:733
 msgid "Continue"
 msgstr "Продолжить"
 
@@ -160,7 +160,7 @@ msgstr "мин"
 msgid "sec"
 msgstr "сек"
 
-#: src/main_window.py:194
+#: src/main_window.py:194 src/shortcuts_dialog.ui:33
 msgid "Reset"
 msgstr "Сброс"
 
@@ -169,18 +169,21 @@ msgid "Action"
 msgstr "Действие"
 
 #: src/main_window.py:221 src/manage_presets_window.py:64
+#: src/shortcuts_dialog.ui:56
 msgid "Power Off"
 msgstr "Выключение"
 
 #: src/main_window.py:231 src/manage_presets_window.py:66
+#: src/shortcuts_dialog.ui:62
 msgid "Reboot"
 msgstr "Перезагрузка"
 
-#: src/main_window.py:241
+#: src/main_window.py:241 src/shortcuts_dialog.ui:68
 msgid "Suspend"
 msgstr "Режим ожидания"
 
 #: src/main_window.py:250 src/manage_presets_window.py:69
+#: src/shortcuts_dialog.ui:74
 msgid "Notification"
 msgstr "Уведомление"
 
@@ -201,11 +204,11 @@ msgid "Until stopped"
 msgstr "Пока не будет остановлен"
 
 #: src/main_window.py:304 src/main_window.py:327 src/main_window.py:534
-#: src/main_window.py:603
+#: src/main_window.py:596 src/shortcuts_dialog.ui:80
 msgid "Command"
 msgstr "Команда"
 
-#: src/main_window.py:333
+#: src/main_window.py:333 src/shortcuts_dialog.ui:115
 msgid "Back"
 msgstr "Назад"
 
@@ -217,7 +220,7 @@ msgstr "Добавить"
 msgid "Start"
 msgstr "Старт"
 
-#: src/main_window.py:413 src/main_window.py:736
+#: src/main_window.py:413 src/main_window.py:729
 msgid "Pause"
 msgstr "Пауза"
 
@@ -225,35 +228,35 @@ msgstr "Пауза"
 msgid "You can close the window, the timer will work in the background."
 msgstr "Вы можете закрыть окно, таймер будет работать в фоне."
 
-#: src/main_window.py:524
+#: src/main_window.py:524 src/shortcuts_dialog.ui:97
 msgid "Add command"
 msgstr "Добавить команду"
 
-#: src/main_window.py:528 src/main_window.py:596
+#: src/main_window.py:528 src/main_window.py:589
 msgid "Name"
 msgstr "Имя"
 
-#: src/main_window.py:575 src/main_window.py:592
+#: src/main_window.py:571 src/main_window.py:585
 msgid "Edit command"
 msgstr "Редактировать команду"
 
-#: src/main_window.py:582
+#: src/main_window.py:577
 msgid "Remove command"
 msgstr "Удалить команду"
 
-#: src/main_window.py:612
+#: src/main_window.py:605
 msgid "Apply"
 msgstr "Применить"
 
-#: src/main_window.py:630
+#: src/main_window.py:623
 msgid "Remove command?"
 msgstr "Удалить команду?"
 
-#: src/main_window.py:631
+#: src/main_window.py:624
 msgid "Are you sure you want to remove command \"{}\"?"
 msgstr "Вы уверены, что хотите удалить команду \"{}\"?"
 
-#: src/main_window.py:634
+#: src/main_window.py:627
 msgid "Remove"
 msgstr "Удалить"
 
@@ -300,6 +303,58 @@ msgstr "Имя предустановки"
 #: src/presets_manager.py:101
 msgid "Save"
 msgstr "Сохранить"
+
+#: src/shortcuts_dialog.ui:15
+msgid "Focus hours entry"
+msgstr "Выделить поле для ввода часа"
+
+#: src/shortcuts_dialog.ui:21
+msgid "Focus minutes entry"
+msgstr "Выделить поле для ввода минут"
+
+#: src/shortcuts_dialog.ui:27
+msgid "Focus seconds entry"
+msgstr "Выделить поле для ввода секунд"
+
+#: src/shortcuts_dialog.ui:39
+msgid "Change mode"
+msgstr "Изменить режим"
+
+#: src/shortcuts_dialog.ui:45
+msgid "Start timer"
+msgstr "Запустить таймер"
+
+#: src/shortcuts_dialog.ui:91
+msgid "Select command"
+msgstr "Выбрать команду"
+
+#: src/shortcuts_dialog.ui:103
+msgid "Edit selected command"
+msgstr "Редактировать выбранную команду"
+
+#: src/shortcuts_dialog.ui:109
+msgid "Remove selected command"
+msgstr "Удалить выбранную команду"
+
+#: src/shortcuts_dialog.ui:126
+msgid "Toggle pause"
+msgstr "Переключить паузу"
+
+#: src/shortcuts_dialog.ui:143
+msgid "Close Main Window"
+msgstr "Закрыть главное окно"
+
+#: src/shortcuts_dialog.ui:149
+msgid "Force Quit"
+msgstr "Принудительное завершение"
+
+#: src/shortcuts_dialog.ui:155
+msgid "Shortcuts"
+msgstr "Комбинации клавиш"
+
+#: src/shortcuts_dialog.ui:161
+msgid "Open Menu"
+msgstr "Открыть меню"
 
 #: src/timer.py:51
 msgid "Your device will be powered off in"

@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-19 17:21+0300\n"
-"PO-Revision-Date: 2023-03-19 15:28+0000\n"
+"POT-Creation-Date: 2023-03-27 21:14+0300\n"
+"PO-Revision-Date: 2023-03-28 07:59+0000\n"
 "Last-Translator: gregorni <gregorniehl@web.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/timeswitch/"
 "timeswitch/de/>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.16.2-dev\n"
+"X-Generator: Weblate 4.17-dev\n"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:3
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:6
@@ -70,7 +70,7 @@ msgstr "Fjodor Sobolev"
 msgid "Timer has finished!"
 msgstr "Die Zeit ist abgelaufen!"
 
-#: src/actions.py:89 src/main_window.py:424
+#: src/actions.py:89 src/main_window.py:424 src/shortcuts_dialog.ui:132
 msgid "Stop"
 msgstr "Stop"
 
@@ -99,11 +99,11 @@ msgstr ""
 "unbekannt sind."
 
 #: src/cmd_warning.py:50 src/main.py:106 src/main_window.py:541
-#: src/main_window.py:611 src/main_window.py:633 src/presets_manager.py:100
+#: src/main_window.py:604 src/main_window.py:626 src/presets_manager.py:100
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: src/cmd_warning.py:53 src/main_window.py:740
+#: src/cmd_warning.py:53 src/main_window.py:733
 msgid "Continue"
 msgstr "Fortfahren"
 
@@ -169,7 +169,7 @@ msgstr "min"
 msgid "sec"
 msgstr "s"
 
-#: src/main_window.py:194
+#: src/main_window.py:194 src/shortcuts_dialog.ui:33
 msgid "Reset"
 msgstr "Zurücksetzen"
 
@@ -178,18 +178,21 @@ msgid "Action"
 msgstr "Aktion"
 
 #: src/main_window.py:221 src/manage_presets_window.py:64
+#: src/shortcuts_dialog.ui:56
 msgid "Power Off"
 msgstr "Herunterfahren"
 
 #: src/main_window.py:231 src/manage_presets_window.py:66
+#: src/shortcuts_dialog.ui:62
 msgid "Reboot"
 msgstr "Neustarten"
 
-#: src/main_window.py:241
+#: src/main_window.py:241 src/shortcuts_dialog.ui:68
 msgid "Suspend"
 msgstr "Bereitschaft"
 
 #: src/main_window.py:250 src/manage_presets_window.py:69
+#: src/shortcuts_dialog.ui:74
 msgid "Notification"
 msgstr "Benachrichtigung"
 
@@ -210,11 +213,11 @@ msgid "Until stopped"
 msgstr "Bis ausgeschaltet"
 
 #: src/main_window.py:304 src/main_window.py:327 src/main_window.py:534
-#: src/main_window.py:603
+#: src/main_window.py:596 src/shortcuts_dialog.ui:80
 msgid "Command"
 msgstr "Befehl"
 
-#: src/main_window.py:333
+#: src/main_window.py:333 src/shortcuts_dialog.ui:115
 msgid "Back"
 msgstr "Zurück"
 
@@ -226,7 +229,7 @@ msgstr "Hinzufügen"
 msgid "Start"
 msgstr "Start"
 
-#: src/main_window.py:413 src/main_window.py:736
+#: src/main_window.py:413 src/main_window.py:729
 msgid "Pause"
 msgstr "Pausieren"
 
@@ -234,35 +237,35 @@ msgstr "Pausieren"
 msgid "You can close the window, the timer will work in the background."
 msgstr "Du kannst das Fenster schließen, die Zeit läuft im Hintergrund weiter."
 
-#: src/main_window.py:524
+#: src/main_window.py:524 src/shortcuts_dialog.ui:97
 msgid "Add command"
 msgstr "Befehl hinzufügen"
 
-#: src/main_window.py:528 src/main_window.py:596
+#: src/main_window.py:528 src/main_window.py:589
 msgid "Name"
 msgstr "Name"
 
-#: src/main_window.py:575 src/main_window.py:592
+#: src/main_window.py:571 src/main_window.py:585
 msgid "Edit command"
 msgstr "Befehl bearbeiten"
 
-#: src/main_window.py:582
+#: src/main_window.py:577
 msgid "Remove command"
 msgstr "Befehl entfernen"
 
-#: src/main_window.py:612
+#: src/main_window.py:605
 msgid "Apply"
 msgstr "Übernehmen"
 
-#: src/main_window.py:630
+#: src/main_window.py:623
 msgid "Remove command?"
 msgstr "Befehl entfernen?"
 
-#: src/main_window.py:631
+#: src/main_window.py:624
 msgid "Are you sure you want to remove command \"{}\"?"
 msgstr "Bist du dir sicher, dass du den Befehl „{}“ entfernen möchtest?"
 
-#: src/main_window.py:634
+#: src/main_window.py:627
 msgid "Remove"
 msgstr "Entfernen"
 
@@ -308,6 +311,58 @@ msgstr "Name des Speicherwerts"
 #: src/presets_manager.py:101
 msgid "Save"
 msgstr "Speichern"
+
+#: src/shortcuts_dialog.ui:15
+msgid "Focus hours entry"
+msgstr "Stunden-Eingabe fokussieren"
+
+#: src/shortcuts_dialog.ui:21
+msgid "Focus minutes entry"
+msgstr "Minuten-Eingabe fokussieren"
+
+#: src/shortcuts_dialog.ui:27
+msgid "Focus seconds entry"
+msgstr "Sekunden-Eingabe fokussieren"
+
+#: src/shortcuts_dialog.ui:39
+msgid "Change mode"
+msgstr "Modus ändern"
+
+#: src/shortcuts_dialog.ui:45
+msgid "Start timer"
+msgstr "Timer starten"
+
+#: src/shortcuts_dialog.ui:91
+msgid "Select command"
+msgstr "Befehl auswählen"
+
+#: src/shortcuts_dialog.ui:103
+msgid "Edit selected command"
+msgstr "Ausgewählten Befehl bearbeiten"
+
+#: src/shortcuts_dialog.ui:109
+msgid "Remove selected command"
+msgstr "Ausgewählten Befehl entfernen"
+
+#: src/shortcuts_dialog.ui:126
+msgid "Toggle pause"
+msgstr "Pausieren/Fortsetzen"
+
+#: src/shortcuts_dialog.ui:143
+msgid "Close Main Window"
+msgstr "Hauptfenster schließen"
+
+#: src/shortcuts_dialog.ui:149
+msgid "Force Quit"
+msgstr "Beenden erzwingen"
+
+#: src/shortcuts_dialog.ui:155
+msgid "Shortcuts"
+msgstr "Tastenkürzel"
+
+#: src/shortcuts_dialog.ui:161
+msgid "Open Menu"
+msgstr "Menü öffnen"
 
 #: src/timer.py:51
 msgid "Your device will be powered off in"
