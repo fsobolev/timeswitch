@@ -8,6 +8,10 @@ Set a task to run after a timer</p>
 <a href="https://aur.archlinux.org/packages/timeswitch-git"><img src="https://camo.githubusercontent.com/f4b1ed57afad4fc0cc6f7acbfdf76be7bebaa104563e1e756ba7b91095eec461/68747470733a2f2f692e696d6775722e636f6d2f3958416a6330482e706e67" height=48px></a>
 <a href="https://matrix.to/#/#sable-burrow:matrix.org"><img src="https://camo.githubusercontent.com/870f80ce7fd32ac263ec68010d5ee1439e66ee11433858601680debf7f916d47/68747470733a2f2f692e696d6775722e636f6d2f6373496f72374f2e706e67" height=48px></a>
 
+> 🚧 **The app is in maintanance mode**
+>
+> New feature requests will most likely be rejected. Bugs, if found, will be fixed. The app on Flathub will be updated whenever there will be a new 100% complete translation added.
+
 **Time Switch** is an easy to use program that allows you to power off, reboot or suspend your system, send a notification (optionally with a sound signal) or execute any command on timer. The app is built for GNOME and uses LibAdwaita, but it works in any desktop environment.
 
 <p align="center">
