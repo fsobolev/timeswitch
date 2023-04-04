@@ -102,7 +102,6 @@ class ManagePresetsWindow(Adw.PreferencesWindow):
             row.add_prefix(move_box)
             delete_button = Gtk.Button.new_from_icon_name('user-trash-symbolic')
             delete_button.set_tooltip_text(_('Delete Preset'))
-            delete_button.add_css_class('destructive-action')
             delete_button.set_valign(Gtk.Align.CENTER)
             delete_button.connect('clicked', self.delete_preset, \
                 self.config.presets.index(p))
