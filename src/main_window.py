@@ -573,7 +573,6 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         row.add_suffix(edit_button)
         remove_button = Gtk.Button.new_from_icon_name('user-trash-symbolic')
         remove_button.set_valign(Gtk.Align.CENTER)
-        remove_button.add_css_class('destructive-action')
         remove_button.set_tooltip_text(_('Remove command'))
         remove_button.connect('clicked', self.remove_command, row)
         row.add_suffix(remove_button)

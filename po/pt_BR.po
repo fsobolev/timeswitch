@@ -3,13 +3,15 @@
 # This file is distributed under the same license as the timeswitch package.
 # Fernando Lopes <fefehex12@gmail.com>, 2022-2023.
 # J. Lavoie <j.lavoie@net-c.ca>, 2023.
+# Fernando Lopes <118869201+plasmus777@users.noreply.github.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-27 21:14+0300\n"
-"PO-Revision-Date: 2023-03-20 19:41+0000\n"
-"Last-Translator: Fernando Lopes <fefehex12@gmail.com>\n"
+"PO-Revision-Date: 2023-04-05 18:52+0000\n"
+"Last-Translator: Fernando Lopes <118869201+plasmus777@users.noreply.github."
+"com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
 "timeswitch/timeswitch/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -17,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.16.2-dev\n"
+"X-Generator: Weblate 4.17-dev\n"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:3
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:6
@@ -314,65 +316,55 @@ msgstr "Salvar"
 
 #: src/shortcuts_dialog.ui:15
 msgid "Focus hours entry"
-msgstr ""
+msgstr "Entrada de horas em foco"
 
 #: src/shortcuts_dialog.ui:21
 msgid "Focus minutes entry"
-msgstr ""
+msgstr "Entrada de minutos em foco"
 
 #: src/shortcuts_dialog.ui:27
 msgid "Focus seconds entry"
-msgstr ""
+msgstr "Entrada de segundos em foco"
 
 #: src/shortcuts_dialog.ui:39
 msgid "Change mode"
-msgstr ""
+msgstr "Alterar modo"
 
 #: src/shortcuts_dialog.ui:45
-#, fuzzy
-#| msgid "Start"
 msgid "Start timer"
-msgstr "Iniciar"
+msgstr "Iniciar temporizador"
 
 #: src/shortcuts_dialog.ui:91
-#, fuzzy
-#| msgid "Remove command"
 msgid "Select command"
-msgstr "Remover comando"
+msgstr "Selecionar comando"
 
 #: src/shortcuts_dialog.ui:103
-#, fuzzy
-#| msgid "Edit command"
 msgid "Edit selected command"
-msgstr "Editar comando"
+msgstr "Editar comando selecionado"
 
 #: src/shortcuts_dialog.ui:109
-#, fuzzy
-#| msgid "Remove command"
 msgid "Remove selected command"
-msgstr "Remover comando"
+msgstr "Remover comando selecionado"
 
 #: src/shortcuts_dialog.ui:126
 msgid "Toggle pause"
-msgstr ""
+msgstr "Alternar pausa"
 
 #: src/shortcuts_dialog.ui:143
 msgid "Close Main Window"
-msgstr ""
+msgstr "Fechar a Janela Principal"
 
 #: src/shortcuts_dialog.ui:149
 msgid "Force Quit"
-msgstr ""
+msgstr "Forçar Saída"
 
 #: src/shortcuts_dialog.ui:155
-#, fuzzy
-#| msgid "Keyboard Shortcuts"
 msgid "Shortcuts"
-msgstr "Atalhos de Teclado"
+msgstr "Atalhos"
 
 #: src/shortcuts_dialog.ui:161
 msgid "Open Menu"
-msgstr ""
+msgstr "Abrir Menu"
 
 #: src/timer.py:51
 msgid "Your device will be powered off in"

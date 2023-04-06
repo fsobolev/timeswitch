@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-27 21:14+0300\n"
-"PO-Revision-Date: 2023-02-20 19:36+0000\n"
+"PO-Revision-Date: 2023-04-05 18:52+0000\n"
 "Last-Translator: ssantos <ssantos@web.de>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/timeswitch/"
 "timeswitch/pt/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.16-dev\n"
+"X-Generator: Weblate 4.17-dev\n"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:3
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:6
@@ -25,10 +25,8 @@ msgstr "Time Switch"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:6
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:7
-#, fuzzy
-#| msgid "Run tasks after a timer"
 msgid "Set a task to run after a timer"
-msgstr "Execute tarefas após um temporizador"
+msgstr "Definir tarefas a serem executadas após um temporizador"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:11
@@ -106,17 +104,15 @@ msgstr "Compreendo"
 
 #: src/main.py:93
 msgid "Translators on Weblate ❤️"
-msgstr ""
+msgstr "Tradutores no Weblate ❤️"
 
 #: src/main.py:105
-#, fuzzy
-#| msgid "Are you sure you want to remove command \"{}\"?"
 msgid "Are you sure you want to stop the timer and quit?"
-msgstr "Tem certeza que quer remover o comando \"{}\"?"
+msgstr "Tem certeza de que quer parar o temporizador e sair?"
 
 #: src/main.py:108 src/main_window.py:115 src/main_window.py:381
 msgid "Quit"
-msgstr ""
+msgstr "Sair"
 
 #: src/main_window.py:94 src/manage_presets_window.py:59
 msgid "Countdown"
@@ -132,25 +128,23 @@ msgstr "Selecione o modo do temporizador"
 
 #: src/main_window.py:102 src/presets_manager.py:93
 msgid "Create Preset"
-msgstr ""
+msgstr "Criar Predefinição"
 
 #: src/main_window.py:103
 msgid "Manage Presets"
-msgstr ""
+msgstr "Gerir Predefinições"
 
 #: src/main_window.py:109 src/main_window.py:376
 msgid "Main menu"
-msgstr ""
+msgstr "Menu principal"
 
 #: src/main_window.py:112 src/manage_presets_window.py:38
-#, fuzzy
-#| msgid "Reset"
 msgid "Presets"
-msgstr "Reiniciar"
+msgstr "Predefinições"
 
 #: src/main_window.py:113 src/main_window.py:379
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Atalhos de Teclado"
 
 #: src/main_window.py:114 src/main_window.py:380
 msgid "About"
@@ -267,152 +261,132 @@ msgid "Remove"
 msgstr "Remover"
 
 #: src/manage_presets_window.py:71
-#, fuzzy
-#| msgid "Notification text"
 msgid "Notification with sound"
-msgstr "Texto da notificação"
+msgstr "Notificação com som"
 
 #: src/manage_presets_window.py:73
 msgid "Notification with sound playing until stopped"
-msgstr ""
+msgstr "Notificação com reprodução de som até encerrar"
 
 #: src/manage_presets_window.py:76
-#, fuzzy
-#| msgid "Remove command"
 msgid "Unknown command"
-msgstr "Remover comando"
+msgstr "Comando desconhecido"
 
 #: src/manage_presets_window.py:79
-#, fuzzy
-#| msgid "Command"
 msgid "Command \"{}\""
-msgstr "Comando"
+msgstr "Comando \"{}\""
 
 #: src/manage_presets_window.py:88
 msgid "Move Up"
-msgstr ""
+msgstr "Mover para Cima"
 
 #: src/manage_presets_window.py:95
 msgid "Move Down"
-msgstr ""
+msgstr "Mover para Baixo"
 
 #: src/manage_presets_window.py:104
 msgid "Delete Preset"
-msgstr ""
+msgstr "Apagar Predefinição"
 
 #: src/presets_manager.py:94
 msgid ""
 "Currently selected options will be saved in a new preset with the provided "
 "name."
 msgstr ""
+"As opções selecionadas no momento serão salvas numa nova predefinição com o "
+"nome fornecido."
 
 #: src/presets_manager.py:96
 msgid "Preset Name"
-msgstr ""
+msgstr "Nome da Predefinição"
 
 #: src/presets_manager.py:101
 msgid "Save"
-msgstr ""
+msgstr "Salvar"
 
 #: src/shortcuts_dialog.ui:15
 msgid "Focus hours entry"
-msgstr ""
+msgstr "Entrada de horas em foco"
 
 #: src/shortcuts_dialog.ui:21
 msgid "Focus minutes entry"
-msgstr ""
+msgstr "Entrada de minutos em foco"
 
 #: src/shortcuts_dialog.ui:27
 msgid "Focus seconds entry"
-msgstr ""
+msgstr "Entrada de segundos em foco"
 
 #: src/shortcuts_dialog.ui:39
 msgid "Change mode"
-msgstr ""
+msgstr "Alterar modo"
 
 #: src/shortcuts_dialog.ui:45
-#, fuzzy
-#| msgid "Start"
 msgid "Start timer"
-msgstr "Iniciar"
+msgstr "Iniciar temporizador"
 
 #: src/shortcuts_dialog.ui:91
-#, fuzzy
-#| msgid "Remove command"
 msgid "Select command"
-msgstr "Remover comando"
+msgstr "Selecionar comando"
 
 #: src/shortcuts_dialog.ui:103
-#, fuzzy
-#| msgid "Edit command"
 msgid "Edit selected command"
-msgstr "Editar comando"
+msgstr "Editar comando selecionado"
 
 #: src/shortcuts_dialog.ui:109
-#, fuzzy
-#| msgid "Remove command"
 msgid "Remove selected command"
-msgstr "Remover comando"
+msgstr "Remover comando selecionado"
 
 #: src/shortcuts_dialog.ui:126
 msgid "Toggle pause"
-msgstr ""
+msgstr "Alternar pausa"
 
 #: src/shortcuts_dialog.ui:143
 msgid "Close Main Window"
-msgstr ""
+msgstr "Fechar a Janela Principal"
 
 #: src/shortcuts_dialog.ui:149
 msgid "Force Quit"
-msgstr ""
+msgstr "Forçar Saída"
 
 #: src/shortcuts_dialog.ui:155
 msgid "Shortcuts"
-msgstr ""
+msgstr "Atalhos"
 
 #: src/shortcuts_dialog.ui:161
 msgid "Open Menu"
-msgstr ""
+msgstr "Abrir Menu"
 
 #: src/timer.py:51
 msgid "Your device will be powered off in"
 msgstr "O seu aparelho será desligado em"
 
 #: src/timer.py:52
-#, fuzzy
-#| msgid "Power Off"
 msgid "Power off in {}"
-msgstr "Desligar"
+msgstr "Desligar o computador em {}"
 
 #: src/timer.py:54
 msgid "Your device will be rebooted in"
 msgstr "O seu aparelho será reiniciado em"
 
 #: src/timer.py:55
-#, fuzzy
-#| msgid "Reboot"
 msgid "Reboot in {}"
-msgstr "Reiniciar"
+msgstr "Reiniciar o computador em {}"
 
 #: src/timer.py:57
 msgid "Your device will be suspended in"
 msgstr "O seu aparelho será suspenso em"
 
 #: src/timer.py:58
-#, fuzzy
-#| msgid "Suspend"
 msgid "Suspend in {}"
-msgstr "Suspender"
+msgstr "Suspender o computador em {}"
 
 #: src/timer.py:60
 msgid "You will receive a notification in"
 msgstr "Receberá uma notificação em"
 
 #: src/timer.py:61
-#, fuzzy
-#| msgid "Notification"
 msgid "Notification in {}"
-msgstr "Notificação"
+msgstr "Notificação em {}"
 
 #: src/timer.py:68
 msgid "The command <b>{}</b> will be executed in"
@@ -420,7 +394,7 @@ msgstr "O comando <b>{}</b> será executado em"
 
 #: src/timer.py:69
 msgid "Command \"{}\" in {}"
-msgstr ""
+msgstr "Comando \"{}\" executado em {}"
 
 #: src/timer.py:111
 msgid "The notification has been sent."
