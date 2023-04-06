@@ -4,13 +4,14 @@
 # Irénée Thirion <irenee.thirion@e.email>, 2022.
 # J. Lavoie <j.lavoie@net-c.ca>, 2023.
 # "J. Lavoie" <j.lavoie@net-c.ca>, 2023.
+# rene-coty <irenee.thirion@e.email>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-27 21:14+0300\n"
-"PO-Revision-Date: 2023-02-09 14:39+0000\n"
-"Last-Translator: \"J. Lavoie\" <j.lavoie@net-c.ca>\n"
+"PO-Revision-Date: 2023-04-05 18:52+0000\n"
+"Last-Translator: rene-coty <irenee.thirion@e.email>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/timeswitch/"
 "timeswitch/fr/>\n"
 "Language: fr\n"
@@ -18,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.16-dev\n"
+"X-Generator: Weblate 4.17-dev\n"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:3
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:6
@@ -27,10 +28,8 @@ msgstr "Time Switch"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:6
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:7
-#, fuzzy
-#| msgid "Run tasks after a timer"
 msgid "Set a task to run after a timer"
-msgstr "Exécutez des tâches sur minuterie"
+msgstr "Définir une tâche à exécuter après minuterie"
 
 # "Éteignez, redémarrez, mettez en veille ou recevez une notification sur "
 # "minuterie"
@@ -75,7 +74,7 @@ msgstr "Fiodor Sobolev"
 #. Method name
 #: src/actions.py:83 src/timer.py:145
 msgid "Timer has finished!"
-msgstr "Le minuteur a terminé !"
+msgstr "La minuterie s’est achevée !"
 
 #: src/actions.py:89 src/main_window.py:424 src/shortcuts_dialog.ui:132
 msgid "Stop"
@@ -122,17 +121,15 @@ msgstr "Je comprends"
 
 #: src/main.py:93
 msgid "Translators on Weblate ❤️"
-msgstr ""
+msgstr "Traducteurs sur Weblate"
 
 #: src/main.py:105
-#, fuzzy
-#| msgid "Are you sure you want to remove command \"{}\"?"
 msgid "Are you sure you want to stop the timer and quit?"
-msgstr "Êtes-vous sûr·e de vouloir supprimer la commande « {} » ?"
+msgstr "Êtes-vous sûr·e de vouloir arrêter la minuterie et quitter ?"
 
 #: src/main.py:108 src/main_window.py:115 src/main_window.py:381
 msgid "Quit"
-msgstr ""
+msgstr "Quitter"
 
 #: src/main_window.py:94 src/manage_presets_window.py:59
 msgid "Countdown"
@@ -148,25 +145,23 @@ msgstr "Sélectionnez le mode de minuterie"
 
 #: src/main_window.py:102 src/presets_manager.py:93
 msgid "Create Preset"
-msgstr ""
+msgstr "Créer une pré-configuration"
 
 #: src/main_window.py:103
 msgid "Manage Presets"
-msgstr ""
+msgstr "Gérer les pré-configurations"
 
 #: src/main_window.py:109 src/main_window.py:376
 msgid "Main menu"
-msgstr ""
+msgstr "Menu principal"
 
 #: src/main_window.py:112 src/manage_presets_window.py:38
-#, fuzzy
-#| msgid "Reset"
 msgid "Presets"
-msgstr "Réinitialiser"
+msgstr "Pré-configurations"
 
 #: src/main_window.py:113 src/main_window.py:379
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Raccourcis clavier"
 
 #: src/main_window.py:114 src/main_window.py:380
 msgid "About"
@@ -282,152 +277,132 @@ msgid "Remove"
 msgstr "Supprimer"
 
 #: src/manage_presets_window.py:71
-#, fuzzy
-#| msgid "Notification text"
 msgid "Notification with sound"
-msgstr "Texte de la notification"
+msgstr "Notification sonore"
 
 #: src/manage_presets_window.py:73
 msgid "Notification with sound playing until stopped"
-msgstr ""
+msgstr "Notification avec un son joué jusqu’à son arrêt"
 
 #: src/manage_presets_window.py:76
-#, fuzzy
-#| msgid "Remove command"
 msgid "Unknown command"
-msgstr "Supprimer la commande"
+msgstr "Commande inconnue"
 
 #: src/manage_presets_window.py:79
-#, fuzzy
-#| msgid "Command"
 msgid "Command \"{}\""
-msgstr "Commande"
+msgstr "Commande « {} »"
 
 #: src/manage_presets_window.py:88
 msgid "Move Up"
-msgstr ""
+msgstr "Monter"
 
 #: src/manage_presets_window.py:95
 msgid "Move Down"
-msgstr ""
+msgstr "Descendre"
 
 #: src/manage_presets_window.py:104
 msgid "Delete Preset"
-msgstr ""
+msgstr "Supprimer la pré-configuration"
 
 #: src/presets_manager.py:94
 msgid ""
 "Currently selected options will be saved in a new preset with the provided "
 "name."
 msgstr ""
+"Les options actuellement sélectionnées seront enregistrées dans une nouvelle "
+"configuration avec le nom fourni."
 
 #: src/presets_manager.py:96
 msgid "Preset Name"
-msgstr ""
+msgstr "Nom de la pré-configuration"
 
 #: src/presets_manager.py:101
 msgid "Save"
-msgstr ""
+msgstr "Enregistrer"
 
 #: src/shortcuts_dialog.ui:15
 msgid "Focus hours entry"
-msgstr ""
+msgstr "Focus sur la saisie des heures"
 
 #: src/shortcuts_dialog.ui:21
 msgid "Focus minutes entry"
-msgstr ""
+msgstr "Focus sur la saisie des minutes"
 
 #: src/shortcuts_dialog.ui:27
 msgid "Focus seconds entry"
-msgstr ""
+msgstr "Focus sur la saisie des secondes"
 
 #: src/shortcuts_dialog.ui:39
 msgid "Change mode"
-msgstr ""
+msgstr "Changer de mode"
 
 #: src/shortcuts_dialog.ui:45
-#, fuzzy
-#| msgid "Start"
 msgid "Start timer"
-msgstr "Commencer"
+msgstr "Lancer le minuteur"
 
 #: src/shortcuts_dialog.ui:91
-#, fuzzy
-#| msgid "Remove command"
 msgid "Select command"
-msgstr "Supprimer la commande"
+msgstr "Sélectionner une commande"
 
 #: src/shortcuts_dialog.ui:103
-#, fuzzy
-#| msgid "Edit command"
 msgid "Edit selected command"
-msgstr "Modifier la commande"
+msgstr "Modifier la commande sélectionnée"
 
 #: src/shortcuts_dialog.ui:109
-#, fuzzy
-#| msgid "Remove command"
 msgid "Remove selected command"
-msgstr "Supprimer la commande"
+msgstr "Supprimer la commande sélectionnée"
 
 #: src/shortcuts_dialog.ui:126
 msgid "Toggle pause"
-msgstr ""
+msgstr "Mettre en pause"
 
 #: src/shortcuts_dialog.ui:143
 msgid "Close Main Window"
-msgstr ""
+msgstr "Fermer la fenêtre principale"
 
 #: src/shortcuts_dialog.ui:149
 msgid "Force Quit"
-msgstr ""
+msgstr "Forcer à quitter"
 
 #: src/shortcuts_dialog.ui:155
 msgid "Shortcuts"
-msgstr ""
+msgstr "Raccourcis"
 
 #: src/shortcuts_dialog.ui:161
 msgid "Open Menu"
-msgstr ""
+msgstr "Ouvrir le menu"
 
 #: src/timer.py:51
 msgid "Your device will be powered off in"
 msgstr "Votre appareil sera éteint dans"
 
 #: src/timer.py:52
-#, fuzzy
-#| msgid "Power Off"
 msgid "Power off in {}"
-msgstr "Éteindre"
+msgstr "Éteindre dans {}"
 
 #: src/timer.py:54
 msgid "Your device will be rebooted in"
 msgstr "Votre appareil sera redémarré dans"
 
 #: src/timer.py:55
-#, fuzzy
-#| msgid "Reboot"
 msgid "Reboot in {}"
-msgstr "Redémarrer"
+msgstr "Redémarrer dans {}"
 
 #: src/timer.py:57
 msgid "Your device will be suspended in"
 msgstr "Votre appareil sera mis en veille dans"
 
 #: src/timer.py:58
-#, fuzzy
-#| msgid "Suspend"
 msgid "Suspend in {}"
-msgstr "Mettre en veille"
+msgstr "Mettre en veille dans {}"
 
 #: src/timer.py:60
 msgid "You will receive a notification in"
 msgstr "Vous recevrez une notification dans"
 
 #: src/timer.py:61
-#, fuzzy
-#| msgid "Notification"
 msgid "Notification in {}"
-msgstr "Notification"
+msgstr "Notification dans {}"
 
 #: src/timer.py:68
 msgid "The command <b>{}</b> will be executed in"
@@ -435,7 +410,7 @@ msgstr "La commande <b>{}</b> sera exécutée dans"
 
 #: src/timer.py:69
 msgid "Command \"{}\" in {}"
-msgstr ""
+msgstr "Commande « {} » dans {}"
 
 #: src/timer.py:111
 msgid "The notification has been sent."
