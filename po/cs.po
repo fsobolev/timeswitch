@@ -7,23 +7,27 @@ msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-27 21:14+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2023-04-08 21:51+0000\n"
+"Last-Translator: Jan Kožíšek <hlubinix@gmail.com>\n"
+"Language-Team: Czech <https://hosted.weblate.org/projects/timeswitch/"
+"timeswitch/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 4.17-dev\n"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:3
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:6
 msgid "Time Switch"
-msgstr ""
+msgstr "Time Switch"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:6
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:7
+#, fuzzy
 msgid "Set a task to run after a timer"
-msgstr ""
+msgstr "Nastavte úkon, co se spustí po skončení časovače"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:11
@@ -36,17 +40,22 @@ msgid ""
 "or suspend your system, send a notification (optionally with a sound signal) "
 "or execute any command on timer."
 msgstr ""
+"Time Switch je jednoduchý program umožňující vypnutí, restart, uspání vašeho "
+"systému, posílání upozornění (možné zvukovým signálem) nebo spuštění daného "
+"příkazu při skončení časovače."
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:10
 msgid ""
 "The app is built for GNOME and uses LibAdwaita, but it works in any desktop "
 "environment."
 msgstr ""
+"Tato aplikace je dělaná pro prostředí GNOME a používá knihovnu LibAdwaita, "
+"přesto funguje v jakémkoliv desktopovém prostředí."
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:15 src/main.py:86
 #: src/main.py:88
 msgid "Fyodor Sobolev"
-msgstr ""
+msgstr "Fyodor Sobolev"
 
 #. Bus name
 #. Object path
