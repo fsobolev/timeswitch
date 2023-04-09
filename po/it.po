@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the timeswitch package.
 # ALBANO BATTISTELLA <ALBANO_BATTISTELLA@HOTMAIL.COM>, 2022,2023.
 # J. Lavoie <j.lavoie@net-c.ca>, 2023.
+# Davide <davide.ferracin@protonmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-27 21:14+0300\n"
-"PO-Revision-Date: 2023-02-06 09:38+0000\n"
-"Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
+"PO-Revision-Date: 2023-04-09 14:50+0000\n"
+"Last-Translator: Davide <davide.ferracin@protonmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/timeswitch/"
 "timeswitch/it/>\n"
 "Language: it\n"
@@ -17,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.16-dev\n"
+"X-Generator: Weblate 4.17-dev\n"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:3
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:6
@@ -26,10 +27,8 @@ msgstr "Time Switch"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:6
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:7
-#, fuzzy
-#| msgid "Run tasks after a timer"
 msgid "Set a task to run after a timer"
-msgstr "Esegui attività dopo un timer"
+msgstr "Impostare attività da eseguire allo scadere del tempo"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:11
@@ -110,17 +109,15 @@ msgstr "Ho capito"
 
 #: src/main.py:93
 msgid "Translators on Weblate ❤️"
-msgstr ""
+msgstr "Traduttori su Weblate ❤️"
 
 #: src/main.py:105
-#, fuzzy
-#| msgid "Are you sure you want to remove command \"{}\"?"
 msgid "Are you sure you want to stop the timer and quit?"
-msgstr "Sei sicuro/a di voler rimuovere il comando «{}»?"
+msgstr "Fermare il conto alla rovescia e uscire?"
 
 #: src/main.py:108 src/main_window.py:115 src/main_window.py:381
 msgid "Quit"
-msgstr ""
+msgstr "Esci"
 
 #: src/main_window.py:94 src/manage_presets_window.py:59
 msgid "Countdown"
@@ -136,11 +133,11 @@ msgstr "Seleziona la modalità timer"
 
 #: src/main_window.py:102 src/presets_manager.py:93
 msgid "Create Preset"
-msgstr ""
+msgstr "Nuova configurazione"
 
 #: src/main_window.py:103
 msgid "Manage Presets"
-msgstr ""
+msgstr "Gestione configurazioni"
 
 #: src/main_window.py:109 src/main_window.py:376
 msgid "Main menu"
