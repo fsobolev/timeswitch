@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-27 21:14+0300\n"
-"PO-Revision-Date: 2023-04-09 14:50+0000\n"
+"PO-Revision-Date: 2023-04-10 15:50+0000\n"
 "Last-Translator: Davide <davide.ferracin@protonmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/timeswitch/"
 "timeswitch/it/>\n"
@@ -141,17 +141,15 @@ msgstr "Gestione configurazioni"
 
 #: src/main_window.py:109 src/main_window.py:376
 msgid "Main menu"
-msgstr ""
+msgstr "Menù principale"
 
 #: src/main_window.py:112 src/manage_presets_window.py:38
-#, fuzzy
-#| msgid "Reset"
 msgid "Presets"
-msgstr "Ripristina"
+msgstr "Configurazioni"
 
 #: src/main_window.py:113 src/main_window.py:379
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Scorciatoie da tastiera"
 
 #: src/main_window.py:114 src/main_window.py:380
 msgid "About"
@@ -266,152 +264,132 @@ msgid "Remove"
 msgstr "Rimuovi"
 
 #: src/manage_presets_window.py:71
-#, fuzzy
-#| msgid "Notification text"
 msgid "Notification with sound"
-msgstr "Testo di notifica"
+msgstr "Notifiche con suono"
 
 #: src/manage_presets_window.py:73
 msgid "Notification with sound playing until stopped"
-msgstr ""
+msgstr "Notifica con suono persistente"
 
 #: src/manage_presets_window.py:76
-#, fuzzy
-#| msgid "Remove command"
 msgid "Unknown command"
-msgstr "Rimuovi comando"
+msgstr "Comando sconosciuto"
 
 #: src/manage_presets_window.py:79
-#, fuzzy
-#| msgid "Command"
 msgid "Command \"{}\""
-msgstr "Comando"
+msgstr "Comando «{}»"
 
 #: src/manage_presets_window.py:88
 msgid "Move Up"
-msgstr ""
+msgstr "Sposta in alto"
 
 #: src/manage_presets_window.py:95
 msgid "Move Down"
-msgstr ""
+msgstr "Sposta in basso"
 
 #: src/manage_presets_window.py:104
 msgid "Delete Preset"
-msgstr ""
+msgstr "Rimuovi configurazione"
 
 #: src/presets_manager.py:94
 msgid ""
 "Currently selected options will be saved in a new preset with the provided "
 "name."
 msgstr ""
+"Le opzioni attualmente selezionate saranno salvare in una nuova "
+"configurazione con il nome fornito."
 
 #: src/presets_manager.py:96
 msgid "Preset Name"
-msgstr ""
+msgstr "Nome della configurazione"
 
 #: src/presets_manager.py:101
 msgid "Save"
-msgstr ""
+msgstr "Salva"
 
 #: src/shortcuts_dialog.ui:15
 msgid "Focus hours entry"
-msgstr ""
+msgstr "Evidenzia la casella delle ore"
 
 #: src/shortcuts_dialog.ui:21
 msgid "Focus minutes entry"
-msgstr ""
+msgstr "Evidenzia la casella dei minuti"
 
 #: src/shortcuts_dialog.ui:27
 msgid "Focus seconds entry"
-msgstr ""
+msgstr "Evidenzia la casella dei secondi"
 
 #: src/shortcuts_dialog.ui:39
 msgid "Change mode"
-msgstr ""
+msgstr "Cambia modalità"
 
 #: src/shortcuts_dialog.ui:45
-#, fuzzy
-#| msgid "Start"
 msgid "Start timer"
-msgstr "Avvia"
+msgstr "Avvia conto alla rovescia"
 
 #: src/shortcuts_dialog.ui:91
-#, fuzzy
-#| msgid "Remove command"
 msgid "Select command"
-msgstr "Rimuovi comando"
+msgstr "Seleziona comando"
 
 #: src/shortcuts_dialog.ui:103
-#, fuzzy
-#| msgid "Edit command"
 msgid "Edit selected command"
-msgstr "Modifica comando"
+msgstr "Modifica il comando selezionato"
 
 #: src/shortcuts_dialog.ui:109
-#, fuzzy
-#| msgid "Remove command"
 msgid "Remove selected command"
-msgstr "Rimuovi comando"
+msgstr "Rimuove il comando selezionato"
 
 #: src/shortcuts_dialog.ui:126
 msgid "Toggle pause"
-msgstr ""
+msgstr "Mette in pausa"
 
 #: src/shortcuts_dialog.ui:143
 msgid "Close Main Window"
-msgstr ""
+msgstr "Chiude la finestra principale"
 
 #: src/shortcuts_dialog.ui:149
 msgid "Force Quit"
-msgstr ""
+msgstr "Forza l'uscita"
 
 #: src/shortcuts_dialog.ui:155
 msgid "Shortcuts"
-msgstr ""
+msgstr "Scorciatoie"
 
 #: src/shortcuts_dialog.ui:161
 msgid "Open Menu"
-msgstr ""
+msgstr "Apre il menù"
 
 #: src/timer.py:51
 msgid "Your device will be powered off in"
 msgstr "Il tuo dispositivo verrà spento in"
 
 #: src/timer.py:52
-#, fuzzy
-#| msgid "Power Off"
 msgid "Power off in {}"
-msgstr "Spegni"
+msgstr "Spegnimento tra {}"
 
 #: src/timer.py:54
 msgid "Your device will be rebooted in"
 msgstr "Il tuo dispositivo verrà riavviato in"
 
 #: src/timer.py:55
-#, fuzzy
-#| msgid "Reboot"
 msgid "Reboot in {}"
-msgstr "Riavvia"
+msgstr "Riavvio tra {}"
 
 #: src/timer.py:57
 msgid "Your device will be suspended in"
 msgstr "Il tuo dispositivo verrà sospeso in"
 
 #: src/timer.py:58
-#, fuzzy
-#| msgid "Suspend"
 msgid "Suspend in {}"
-msgstr "Sospendi"
+msgstr "Sospensione tra {}"
 
 #: src/timer.py:60
 msgid "You will receive a notification in"
 msgstr "Riceverai una notifica in"
 
 #: src/timer.py:61
-#, fuzzy
-#| msgid "Notification"
 msgid "Notification in {}"
-msgstr "Notifica"
+msgstr "Notifica tra {}"
 
 #: src/timer.py:68
 msgid "The command <b>{}</b> will be executed in"
@@ -419,7 +397,7 @@ msgstr "Il comando <b>{}</b> verrà eseguito in"
 
 #: src/timer.py:69
 msgid "Command \"{}\" in {}"
-msgstr ""
+msgstr "Comando «{}» tra {}"
 
 #: src/timer.py:111
 msgid "The notification has been sent."
