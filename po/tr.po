@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: io.github.fsobolev.TimeSwitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-27 21:14+0300\n"
-"PO-Revision-Date: 2023-04-18 17:47+0000\n"
-"Last-Translator: \"B.SITKI EVRENKAYA\" <bekirsitkievrenkaya@gmail.com>\n"
+"PO-Revision-Date: 2023-05-14 20:48+0000\n"
+"Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/timeswitch/"
 "timeswitch/tr/>\n"
 "Language: tr\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.17\n"
+"X-Generator: Weblate 4.18-dev\n"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:3
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:6
@@ -137,11 +137,11 @@ msgstr "Zamanlayıcı kipini seç"
 
 #: src/main_window.py:102 src/presets_manager.py:93
 msgid "Create Preset"
-msgstr ""
+msgstr "Önayar Oluştur"
 
 #: src/main_window.py:103
 msgid "Manage Presets"
-msgstr ""
+msgstr "Önayarları Yönet"
 
 #: src/main_window.py:109 src/main_window.py:376
 msgid "Main menu"
@@ -295,7 +295,7 @@ msgstr "Aşağı Taşı"
 
 #: src/manage_presets_window.py:104
 msgid "Delete Preset"
-msgstr ""
+msgstr "Önayarı Sil"
 
 #: src/presets_manager.py:94
 msgid ""
@@ -307,7 +307,7 @@ msgstr ""
 
 #: src/presets_manager.py:96
 msgid "Preset Name"
-msgstr ""
+msgstr "Önayar Adı"
 
 #: src/presets_manager.py:101
 msgid "Save"
@@ -315,103 +315,87 @@ msgstr "Kaydet"
 
 #: src/shortcuts_dialog.ui:15
 msgid "Focus hours entry"
-msgstr ""
+msgstr "Saat girdisine odaklan"
 
 #: src/shortcuts_dialog.ui:21
 msgid "Focus minutes entry"
-msgstr ""
+msgstr "Dakika girdisine odaklan"
 
 #: src/shortcuts_dialog.ui:27
 msgid "Focus seconds entry"
-msgstr ""
+msgstr "Saniye girdisine odaklan"
 
 #: src/shortcuts_dialog.ui:39
 msgid "Change mode"
-msgstr ""
+msgstr "Kip değiştir"
 
 #: src/shortcuts_dialog.ui:45
-#, fuzzy
-#| msgid "Start"
 msgid "Start timer"
-msgstr "Başlat"
+msgstr "Zamanlayıcıyı başlat"
 
 #: src/shortcuts_dialog.ui:91
-#, fuzzy
-#| msgid "Remove command"
 msgid "Select command"
-msgstr "Komutu kaldır"
+msgstr "Komut seç"
 
 #: src/shortcuts_dialog.ui:103
-#, fuzzy
-#| msgid "Edit command"
 msgid "Edit selected command"
-msgstr "Komutu düzenle"
+msgstr "Seçilen komutu düzenle"
 
 #: src/shortcuts_dialog.ui:109
-#, fuzzy
-#| msgid "Remove command"
 msgid "Remove selected command"
-msgstr "Komutu kaldır"
+msgstr "Seçilen komutu kaldır"
 
 #: src/shortcuts_dialog.ui:126
 msgid "Toggle pause"
-msgstr ""
+msgstr "Duraklat/Sürdür"
 
 #: src/shortcuts_dialog.ui:143
 msgid "Close Main Window"
-msgstr ""
+msgstr "Ana Pencereyi Kapat"
 
 #: src/shortcuts_dialog.ui:149
 msgid "Force Quit"
-msgstr ""
+msgstr "Çıkmaya Zorla"
 
 #: src/shortcuts_dialog.ui:155
 msgid "Shortcuts"
-msgstr ""
+msgstr "Kısayollar"
 
 #: src/shortcuts_dialog.ui:161
 msgid "Open Menu"
-msgstr ""
+msgstr "Menüyü Aç"
 
 #: src/timer.py:51
 msgid "Your device will be powered off in"
 msgstr "Cihazın kapatılacağı süre"
 
 #: src/timer.py:52
-#, fuzzy
-#| msgid "Power Off"
 msgid "Power off in {}"
-msgstr "Gücü Kapat"
+msgstr "{} içinde gücü kapat"
 
 #: src/timer.py:54
 msgid "Your device will be rebooted in"
 msgstr "Cihazınız yeniden başlatılacağı süre"
 
 #: src/timer.py:55
-#, fuzzy
-#| msgid "Reboot"
 msgid "Reboot in {}"
-msgstr "Yeniden Başlat"
+msgstr "{} içinde yeniden başlat"
 
 #: src/timer.py:57
 msgid "Your device will be suspended in"
 msgstr "Cihazınız askıya alınacağı süre"
 
 #: src/timer.py:58
-#, fuzzy
-#| msgid "Suspend"
 msgid "Suspend in {}"
-msgstr "Askıya Al"
+msgstr "{} içinde askıya al"
 
 #: src/timer.py:60
 msgid "You will receive a notification in"
 msgstr "Bildirim alacağınız süre"
 
 #: src/timer.py:61
-#, fuzzy
-#| msgid "Notification"
 msgid "Notification in {}"
-msgstr "Bildirim"
+msgstr "{} içinde bildirim"
 
 #: src/timer.py:68
 msgid "The command <b>{}</b> will be executed in"
@@ -419,7 +403,7 @@ msgstr "<b>{}</b> komutunun çalıştırılacağı süre"
 
 #: src/timer.py:69
 msgid "Command \"{}\" in {}"
-msgstr ""
+msgstr "\"{}\" komutu, {} içinde"
 
 #: src/timer.py:111
 msgid "The notification has been sent."
