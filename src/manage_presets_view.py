@@ -62,7 +62,7 @@ class ManagePresetsView(Gtk.Stack):
         self.create_button.set_label(_('Create Preset'))
         self.create_button.connect('clicked', self.create_preset)
         self.create_button.set_halign(Gtk.Align.CENTER)
-        self.create_button.set_margin_top(12)
+        self.create_button.set_margin_top(24)
         self.create_button.add_css_class('pill')
         self.group.add(self.create_button)
         
