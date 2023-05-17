@@ -28,7 +28,7 @@
 #
 # SPDX-License-Identifier: MIT
 
-from gi.repository import Adw, Gtk, GLib, Gio
+from gi.repository import Adw, Gtk, GLib, Gio, GObject
 from .config import TimeSwitchConfig
 from .timer import Timer
 from .presets_manager import PresetsManager
@@ -81,23 +81,6 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.header_main.set_title_widget(Gtk.Label.new(''))
         self.main_box.append(self.header_main)
 
-        self.timer_mode_box = Gtk.Box.new(Gtk.Orientation.HORIZONTAL, 4)
-        self.timer_mode_box.set_margin_start(6)
-        self.timer_mode_box.set_margin_end(6)
-        self.timer_mode_box.set_valign(Gtk.Align.CENTER)
-        self.header_main.pack_start(self.timer_mode_box)
-
-        self.timer_mode_image = Gtk.Image.new_from_icon_name('hourglass-symbolic')
-        self.timer_mode_box.append(self.timer_mode_image)
-
-        self.timer_mode_dropdown = Gtk.DropDown.new_from_strings( \
-            [_('Countdown'), _('Clock')] )
-        self.timer_mode_dropdown.get_first_child().add_css_class('flat')
-        self.timer_mode_dropdown.set_tooltip_text(_('Select timer mode'))
-        self.timer_mode_dropdown.connect('notify::selected-item', \
-            self.change_timer_mode)
-        self.timer_mode_box.append(self.timer_mode_dropdown)
-
         self.presets_menu = Gio.Menu.new()
         self.presets_menu.append(_('Create Preset'), 'win.create-preset')
         self.presets_menu.append(_('Manage Presets'), 'win.manage-presets')
@@ -107,7 +90,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.main_menu_button = Gtk.MenuButton.new()
         self.main_menu_button.set_icon_name('open-menu-symbolic')
         self.main_menu_button.set_tooltip_text(_('Main menu'))
-        self.header_main.pack_end(self.main_menu_button)
+        self.header_main.pack_start(self.main_menu_button)
         self.main_menu = Gio.Menu.new()
         self.main_menu.append_submenu(_('Presets'), self.presets_menu)
         self.main_menu.append(_('Keyboard Shortcuts'), 'app.shortcuts')
@@ -129,6 +112,27 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.setup_box.set_margin_top(6)
         self.setup_box.set_margin_bottom(6)
         self.scrolled_window.set_child(self.setup_box)
+
+        # Timer mode switcher
+        self.timer_mode_box = Gtk.Box.new(Gtk.Orientation.HORIZONTAL, 0)
+        self.timer_mode_box.add_css_class('linked')
+        self.timer_mode_box.set_homogeneous(True)
+        self.timer_mode_box.set_halign(Gtk.Align.CENTER)
+        self.setup_box.append(self.timer_mode_box)
+        self.countdown_mode_toggle = Gtk.ToggleButton.new()
+        self.countdown_mode_toggle.set_label(_('Countdown'))
+        self.countdown_mode_toggle.set_tooltip_text(_('Set countdown timer'))
+        self.timer_mode_box.append(self.countdown_mode_toggle)
+        self.clock_mode_toggle = Gtk.ToggleButton.new()
+        self.clock_mode_toggle.set_label(_('Clock'))
+        self.clock_mode_toggle.set_tooltip_text(_('Set time in 24h format'))
+        self.timer_mode_box.append(self.clock_mode_toggle)
+        self.countdown_mode_toggle.connect("toggled", self.change_timer_mode)
+        self.countdown_mode_toggle.bind_property("active", \
+            self.clock_mode_toggle, "active", \
+            GObject.BindingFlags.BIDIRECTIONAL | \
+            GObject.BindingFlags.SYNC_CREATE | \
+            GObject.BindingFlags.INVERT_BOOLEAN)
 
         # Main timer widget
         self.spins_box = Gtk.Box.new(Gtk.Orientation.HORIZONTAL, 0)
@@ -374,7 +378,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.run_menu_button = Gtk.MenuButton.new()
         self.run_menu_button.set_icon_name('open-menu-symbolic')
         self.run_menu_button.set_tooltip_text(_('Main menu'))
-        self.header_run.pack_end(self.run_menu_button)
+        self.header_run.pack_start(self.run_menu_button)
         self.run_menu = Gio.Menu.new()
         self.run_menu.append(_('Keyboard Shortcuts'), 'app.shortcuts')
         self.run_menu.append(_('About'), 'app.about')
@@ -442,7 +446,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.warning_label_clamp.set_child(self.warning_label)
 
         # Load config
-        self.timer_mode_dropdown.set_selected(self.config.mode)
+        self.clock_mode_toggle.set_active(bool(self.config.mode))
         (h, m, s) = self.config.last_timer_value
         self.hour_spin.set_value(h)
         self.min_spin.set_value(m)
@@ -489,14 +493,10 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
             self.sec_spin.set_value(self.sec_spin.get_value() + value)
         return True
 
-    def change_timer_mode(self, w, pspec):
-        self.timer_mode_image.set_from_icon_name( ['hourglass', 'clock-alt'][ \
-            self.timer_mode_dropdown.get_selected() ] + '-symbolic')
+    def change_timer_mode(self, w):
         self.reset_timer(None)
-        if self.timer_mode_dropdown.get_selected() == 0:
-            self.hour_spin.get_adjustment().set_upper(99)
-        else:
-            self.hour_spin.get_adjustment().set_upper(23)
+        self.hour_spin.get_adjustment().set_upper( \
+            99 if self.countdown_mode_toggle.get_active() else 23)
 
     def reset_timer(self, w):
         self.hour_spin.set_value(0)
@@ -639,7 +639,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
             self.config.save()
 
     def start_timer(self, w):
-        if self.timer_mode_dropdown.get_selected() == \
+        if self.countdown_mode_toggle.get_active and \
                 self.hour_spin.get_value_as_int() == \
                 self.min_spin.get_value_as_int() == \
                 self.sec_spin.get_value_as_int() == 0:
@@ -671,7 +671,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
                 break
         self.config.notification_text = \
             self.notification_text.get_buffer().get_text()
-        self.config.mode = self.timer_mode_dropdown.get_selected()
+        self.config.mode = bool(self.clock_mode_toggle.get_active())
         self.config.window_size = self.get_default_size()
         self.config.save()
         if self.action_poweroff_check.get_active():
@@ -698,7 +698,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
                 return
             action = ('command', name, cmd)
         self.pause_button.set_sensitive(True)
-        if self.timer_mode_dropdown.get_selected() == 0:
+        if self.countdown_mode_toggle.get_active():
             time = (self.hour_spin.get_value_as_int(),
                 self.min_spin.get_value_as_int(),
                 self.sec_spin.get_value_as_int())
