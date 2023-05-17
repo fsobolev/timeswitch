@@ -31,7 +31,7 @@
 from gi.repository import Adw, Gtk, GLib, Gio, GObject
 from .config import TimeSwitchConfig
 from .timer import Timer
-from .presets_manager import PresetsManager
+from .manage_presets_view import ManagePresetsView
 from .main_window_shortcuts import set_shortcuts
 from .cmd_warning import WarningDialog
 import datetime
@@ -57,7 +57,6 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
 
         self.config.load()
         self.build_ui()
-        self.presets_manager = PresetsManager(self)
 
     def build_ui(self):
         self.set_default_size(*self.config.window_size)
@@ -66,19 +65,20 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.set_content(self.content)
 
         # Main stack
+        # Switches between setup and running
         self.main_stack = Gtk.Stack.new()
         self.main_stack.set_hexpand(True)
         self.main_stack.set_vexpand(True)
         self.main_stack.set_transition_type(Gtk.StackTransitionType.OVER_LEFT_RIGHT)
         self.content.append(self.main_stack)
 
-        # Main Stack Box
         self.main_box = Gtk.Box.new(Gtk.Orientation.VERTICAL, 0)
         self.main_stack.add_named(self.main_box, 'setup')
 
         # Main Stack Headerbar
         self.header_main = Adw.HeaderBar.new()
-        self.header_main.set_title_widget(Gtk.Label.new(''))
+        self.setup_stack_switcher = Adw.ViewSwitcher.new()
+        self.header_main.set_title_widget(self.setup_stack_switcher)
         self.main_box.append(self.header_main)
 
         self.presets_menu = Gio.Menu.new()
@@ -92,7 +92,6 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.main_menu_button.set_tooltip_text(_('Main menu'))
         self.header_main.pack_start(self.main_menu_button)
         self.main_menu = Gio.Menu.new()
-        self.main_menu.append_submenu(_('Presets'), self.presets_menu)
         self.main_menu.append(_('Keyboard Shortcuts'), 'app.shortcuts')
         self.main_menu.append(_('About'), 'app.about')
         self.main_menu.append(_('Quit'), 'app.quit')
@@ -101,7 +100,18 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         # Scrolled window
         self.scrolled_window = Gtk.ScrolledWindow.new()
         self.scrolled_window.set_min_content_width(300)
-        self.main_box.append(self.scrolled_window)
+
+        # Setup stack
+        # Switches between timer and presets
+        self.setup_stack = Adw.ViewStack.new()
+        self.main_box.append(self.setup_stack)
+        self.setup_stack_switcher.set_stack(self.setup_stack)
+        self.setup_stack.add_titled_with_icon(self.scrolled_window, "main", \
+            _("Timer"), "hourglass-symbolic")
+        self.presets_view = ManagePresetsView(self)
+        self.presets_view.list_presets()
+        self.setup_stack.add_titled_with_icon(self.presets_view, "presets", \
+            _("Presets"), "view-list-symbolic")
 
         # Setup page
         self.setup_box = Gtk.Box.new(Gtk.Orientation.VERTICAL, 2)
@@ -112,27 +122,6 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.setup_box.set_margin_top(6)
         self.setup_box.set_margin_bottom(6)
         self.scrolled_window.set_child(self.setup_box)
-
-        # Timer mode switcher
-        self.timer_mode_box = Gtk.Box.new(Gtk.Orientation.HORIZONTAL, 0)
-        self.timer_mode_box.add_css_class('linked')
-        self.timer_mode_box.set_homogeneous(True)
-        self.timer_mode_box.set_halign(Gtk.Align.CENTER)
-        self.setup_box.append(self.timer_mode_box)
-        self.countdown_mode_toggle = Gtk.ToggleButton.new()
-        self.countdown_mode_toggle.set_label(_('Countdown'))
-        self.countdown_mode_toggle.set_tooltip_text(_('Set countdown timer'))
-        self.timer_mode_box.append(self.countdown_mode_toggle)
-        self.clock_mode_toggle = Gtk.ToggleButton.new()
-        self.clock_mode_toggle.set_label(_('Clock'))
-        self.clock_mode_toggle.set_tooltip_text(_('Set time in 24h format'))
-        self.timer_mode_box.append(self.clock_mode_toggle)
-        self.countdown_mode_toggle.connect("toggled", self.change_timer_mode)
-        self.countdown_mode_toggle.bind_property("active", \
-            self.clock_mode_toggle, "active", \
-            GObject.BindingFlags.BIDIRECTIONAL | \
-            GObject.BindingFlags.SYNC_CREATE | \
-            GObject.BindingFlags.INVERT_BOOLEAN)
 
         # Main timer widget
         self.spins_box = Gtk.Box.new(Gtk.Orientation.HORIZONTAL, 0)
@@ -169,6 +158,27 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
                 ctrl.connect('key-released', self.on_key_released)
                 break
         self.spins_box.append(self.sec_spin)
+
+        # Timer mode switcher
+        self.timer_mode_box = Gtk.Box.new(Gtk.Orientation.HORIZONTAL, 0)
+        self.timer_mode_box.add_css_class('linked')
+        self.timer_mode_box.set_homogeneous(True)
+        self.timer_mode_box.set_halign(Gtk.Align.CENTER)
+        self.setup_box.append(self.timer_mode_box)
+        self.countdown_mode_toggle = Gtk.ToggleButton.new()
+        self.countdown_mode_toggle.set_label(_('Countdown'))
+        self.countdown_mode_toggle.set_tooltip_text(_('Set countdown timer'))
+        self.timer_mode_box.append(self.countdown_mode_toggle)
+        self.clock_mode_toggle = Gtk.ToggleButton.new()
+        self.clock_mode_toggle.set_label(_('Clock'))
+        self.clock_mode_toggle.set_tooltip_text(_('Set time in 24h format'))
+        self.timer_mode_box.append(self.clock_mode_toggle)
+        self.countdown_mode_toggle.connect("toggled", self.change_timer_mode)
+        self.countdown_mode_toggle.bind_property("active", \
+            self.clock_mode_toggle, "active", \
+            GObject.BindingFlags.BIDIRECTIONAL | \
+            GObject.BindingFlags.SYNC_CREATE | \
+            GObject.BindingFlags.INVERT_BOOLEAN)
 
         # Buttons for faster timer increase
         self.grid = Gtk.Grid.new()
@@ -639,7 +649,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
             self.config.save()
 
     def start_timer(self, w):
-        if self.countdown_mode_toggle.get_active and \
+        if self.countdown_mode_toggle.get_active() and \
                 self.hour_spin.get_value_as_int() == \
                 self.min_spin.get_value_as_int() == \
                 self.sec_spin.get_value_as_int() == 0:
@@ -671,7 +681,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
                 break
         self.config.notification_text = \
             self.notification_text.get_buffer().get_text()
-        self.config.mode = bool(self.clock_mode_toggle.get_active())
+        self.config.mode = int(self.clock_mode_toggle.get_active())
         self.config.window_size = self.get_default_size()
         self.config.save()
         if self.action_poweroff_check.get_active():
