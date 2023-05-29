@@ -34,6 +34,7 @@ timeswitch_sources = [
   'main_window.py',
   'main_window_shortcuts.py',
   'manage_presets_view.py',
+  'notification_settings_window.py',
   'player.py',
   'timer.py'
 ]

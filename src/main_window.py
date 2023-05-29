@@ -29,11 +29,12 @@
 # SPDX-License-Identifier: MIT
 
 from gi.repository import Adw, Gtk, GLib, Gio, GObject
-from .config import TimeSwitchConfig
-from .timer import Timer
-from .manage_presets_view import ManagePresetsView
-from .main_window_shortcuts import set_shortcuts
 from .cmd_warning import WarningDialog
+from .config import TimeSwitchConfig
+from .main_window_shortcuts import set_shortcuts
+from .manage_presets_view import ManagePresetsView
+from .notification_settings_window import NotificationSettingsWindow
+from .timer import Timer
 import datetime
 
 
@@ -269,7 +270,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         self.action_notify.set_activatable_widget(self.action_notify_check)
         self.actions_group.add(self.action_notify)
 
-        self.notification_settings_button = Gtk.MenuButton.new()
+        self.notification_settings_button = Gtk.Button.new()
         self.notification_settings_button.set_icon_name('emblem-system-symbolic')
         self.notification_settings_button.add_css_class('flat')
         self.notification_settings_button.set_valign(Gtk.Align.CENTER)
@@ -277,41 +278,9 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
             _('Notification settings'))
         self.action_notify.add_suffix(self.notification_settings_button)
 
-        self.notification_settings = Gtk.Popover.new()
-        self.notification_settings_button.set_popover(
-            self.notification_settings)
-        self.notification_settings_button.set_direction(Gtk.ArrowType.UP)
-
-        self.notification_settings_grid = Gtk.Grid.new()
-        self.notification_settings_grid.set_column_spacing(6)
-        self.notification_settings_grid.set_row_spacing(6)
-        self.notification_settings.set_child(self.notification_settings_grid)
-
-        self.notification_text = Gtk.Entry.new()
-        self.notification_text.set_placeholder_text(_('Notification text'))
-        self.notification_settings_grid.attach(self.notification_text,
-            0, 0, 2, 1)
-
-        self.play_sound_label = Gtk.Label.new(_('Play sound'))
-        self.play_sound_label.set_halign(Gtk.Align.START)
-        self.notification_settings_grid.attach(self.play_sound_label,
-            0, 1, 1, 1)
-        self.play_sound_switch = Gtk.Switch.new()
-        self.play_sound_switch.set_halign(Gtk.Align.END)
-        self.notification_settings_grid.attach(self.play_sound_switch,
-            1, 1, 1, 1)
-
-        self.play_until_stopped_label = Gtk.Label.new(_('Until stopped'))
-        self.play_until_stopped_label.set_halign(Gtk.Align.START)
-        self.notification_settings_grid.attach(self.play_until_stopped_label,
-            0, 2, 1, 1)
-        self.play_until_stopped_switch = Gtk.Switch.new()
-        self.play_until_stopped_switch.set_halign(Gtk.Align.END)
-        self.play_sound_switch.connect('notify::active', \
-            lambda *args : self.play_until_stopped_switch.set_sensitive( \
-                self.play_sound_switch.get_active()))
-        self.notification_settings_grid.attach(self.play_until_stopped_switch,
-            1, 2, 1, 1)
+        self.notification_settings = NotificationSettingsWindow(self)
+        self.notification_settings_button.connect('clicked', \
+            lambda *args: self.notification_settings.present())
 
         # Command execution
         self.action_command = Adw.ActionRow.new()
@@ -464,18 +433,17 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
         [self.action_poweroff, self.action_reboot, \
             self.action_suspend, self.action_notify, \
             self.action_command][self.config.last_action[0]].activate()
-        self.notification_text.get_buffer().set_text( \
-            self.config.notification_text, -1)
+        self.notification_settings.notification_text.set_text( \
+            self.config.notification_text)
         for command in self.config.commands:
             self.create_command(command)
         if len(self.commands_widgets['rows']) > 0:
             self.commands_widgets['rows'][0].activate()
         if self.config.last_action[0] == 3:
-            self.play_sound_switch.set_active(bool(self.config.last_action[1]))
-            self.play_until_stopped_switch.set_sensitive( \
+            self.notification_settings.play_sound_switch.set_active( \
                 bool(self.config.last_action[1]))
             if self.config.last_action[1] > 1:
-                self.play_until_stopped_switch.set_active(True)
+                self.notification_settings.play_until_stopped_switch.set_active(True)
         elif self.config.last_action[0] == 4:
             if len(self.commands_widgets['rows']) > self.config.last_action[1]:
                 self.commands_widgets['rows'][ \
@@ -666,11 +634,11 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
             if checkbuttons[c].get_active():
                 self.config.last_action[0] = c
                 if c == 3:
-                    if not self.play_sound_switch.get_active():
-                        self.play_until_stopped_switch.set_active(False)
+                    if not self.notification_settings.play_sound_switch.get_active():
+                        self.notification_settings.play_until_stopped_switch.set_active(False)
                     self.config.last_action[1] = \
-                        int(self.play_sound_switch.get_active()) + \
-                        int(self.play_until_stopped_switch.get_active())
+                        int(self.notification_settings.play_sound_switch.get_active()) + \
+                        int(self.notification_settings.play_until_stopped_switch.get_active())
                 elif c == 4:
                     for cc in range(len(self.commands_widgets['checks'])):
                         if self.commands_widgets['checks'][cc].get_active():
@@ -680,7 +648,7 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
                     self.config.last_action[1] = 0
                 break
         self.config.notification_text = \
-            self.notification_text.get_buffer().get_text()
+            self.notification_settings.notification_text.get_text()
         self.config.mode = int(self.clock_mode_toggle.get_active())
         self.config.window_size = self.get_default_size()
         self.config.save()
@@ -692,9 +660,9 @@ class TimeSwitchWindow(Adw.ApplicationWindow):
             action = ('suspend',)
         elif self.action_notify_check.get_active():
             action = ('notification',
-                self.notification_text.get_buffer().get_text(),
-                self.play_sound_switch.get_active() + \
-                self.play_until_stopped_switch.get_active())
+                self.notification_settings.notification_text.get_text(),
+                self.notification_settings.play_sound_switch.get_active() + \
+                self.notification_settings.play_until_stopped_switch.get_active())
         elif self.action_command_check.get_active():
             name = ''
             cmd = ''

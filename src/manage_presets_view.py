@@ -80,6 +80,8 @@ class ManagePresetsView(Gtk.Stack):
             row.set_size_request(-1, 84)
             row.set_focusable(False)
             row.set_title(p['name'])
+            row.set_title_lines(1)
+            row.set_subtitle_lines(1)
             subtitle = [_('Countdown'), _('Clock')][p['mode']]
             subtitle += f' {p["timer-value"][0]}'
             subtitle += ':{0:0>2}'.format(p['timer-value'][1])
@@ -198,8 +200,8 @@ class ManagePresetsView(Gtk.Stack):
                 action.append(c)
                 if c == 3:
                     action.append( \
-                        int(self.window.play_sound_switch.get_active()) + \
-                        int(self.window.play_until_stopped_switch.get_active()))
+                        int(self.window.notification_settings.play_sound_switch.get_active()) + \
+                        int(self.window.notification_settings.play_until_stopped_switch.get_active()))
                 elif c == 4:
                     for cc in range(len(self.window.commands_widgets['checks'])):
                         if self.window.commands_widgets['checks'][cc].get_active():
@@ -209,7 +211,7 @@ class ManagePresetsView(Gtk.Stack):
                     action.append(0)
                 break
         notification_text = \
-            self.window.notification_text.get_buffer().get_text() \
+            self.window.notification_settings.notification_text.get_text() \
             if action[0] == 3 else ""
         self.config.presets.append({ \
             'name': name, \
@@ -231,15 +233,13 @@ class ManagePresetsView(Gtk.Stack):
         [self.window.action_poweroff, self.window.action_reboot, \
             self.window.action_suspend, self.window.action_notify, \
             self.window.action_command][settings['action'][0]].activate()
-        self.window.notification_text.get_buffer().set_text( \
-            settings['notification-text'], -1)
+        self.window.notification_settings.notification_text.set_text( \
+            settings['notification-text'])
         if settings['action'][0] == 3:
-            self.window.play_sound_switch.set_active( \
-                bool(settings['action'][1]))
-            self.window.play_until_stopped_switch.set_sensitive( \
+            self.window.notification_settings.play_sound_switch.set_active( \
                 bool(settings['action'][1]))
             if settings['action'][1] > 1:
-                self.window.play_until_stopped_switch.set_active(True)
+                self.window.notification_settings.play_until_stopped_switch.set_active(True)
         elif settings['action'][0] == 4:
             if len(self.window.commands_widgets['rows']) > \
                     settings['action'][1]:
