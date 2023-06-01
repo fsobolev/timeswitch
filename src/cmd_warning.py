@@ -56,6 +56,9 @@ class WarningDialog(Adw.MessageDialog):
         self.set_response_enabled('continue', False)
         ar = Adw.ActionRow.new()
         ar.set_title(_('I understand'))
+        ar.set_halign(Gtk.Align.CENTER)
+        ar.set_margin_end(24)
+        ar.set_title_lines(1)
         ar_switch = Gtk.Switch.new()
         ar_switch.set_valign(Gtk.Align.CENTER)
         ar.add_prefix(ar_switch)
@@ -72,5 +75,3 @@ class WarningDialog(Adw.MessageDialog):
     def on_response(self, w, response):
         if response == 'continue':
             self.parent.config.show_cmd_warning = False
-        else:
-            self.parent.show_actions(None)

@@ -191,24 +191,20 @@ class ManagePresetsView(Gtk.Stack):
             self.window.sec_spin.get_value_as_int() ]
         action = []
         checkbuttons = [self.window.action_poweroff_check, \
-            self.window.action_reboot_check, \
-            self.window.action_suspend_check, \
-            self.window.action_notify_check, \
-            self.window.action_command_check]
+            self.window.action_reboot_check, self.window.action_suspend_check, \
+            self.window.action_notify_check] + \
+            self.window.commands_widgets['checks']
         for c in range(len(checkbuttons)):
             if checkbuttons[c].get_active():
-                action.append(c)
+                action.append(c if c < 4 else 4)
+                if c < 3:
+                    action.append(0)
                 if c == 3:
                     action.append( \
                         int(self.window.notification_settings.play_sound_switch.get_active()) + \
                         int(self.window.notification_settings.play_until_stopped_switch.get_active()))
-                elif c == 4:
-                    for cc in range(len(self.window.commands_widgets['checks'])):
-                        if self.window.commands_widgets['checks'][cc].get_active():
-                            action.append(cc)
-                            break
                 else:
-                    action.append(0)
+                    action.append(c - 4)
                 break
         notification_text = \
             self.window.notification_settings.notification_text.get_text() \
@@ -228,11 +224,10 @@ class ManagePresetsView(Gtk.Stack):
         self.window.hour_spin.set_value(settings['timer-value'][0])
         self.window.min_spin.set_value(settings['timer-value'][1])
         self.window.sec_spin.set_value(settings['timer-value'][2])
-        if settings['action'][0] != 4:
-            self.window.actions_stack.set_visible_child_name('actions')
-        [self.window.action_poweroff, self.window.action_reboot, \
-            self.window.action_suspend, self.window.action_notify, \
-            self.window.action_command][settings['action'][0]].activate()
+        if settings['action'][0] < 4:
+            [self.window.action_poweroff, \
+                self.window.action_reboot, self.window.action_suspend, \
+                self.window.action_notify][settings['action'][0]].activate()
         self.window.notification_settings.notification_text.set_text( \
             settings['notification-text'])
         if settings['action'][0] == 3:

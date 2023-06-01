@@ -38,7 +38,7 @@ class TimeSwitchConfig:
         self.notification_text = ""
         self.commands = []
         self.mode = 0
-        self.window_size = (330, 712)
+        self.window_size = (420, 600)
         self.presets = []
         self.show_cmd_warning = True
 
