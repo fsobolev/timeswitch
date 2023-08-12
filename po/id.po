@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-27 21:14+0300\n"
-"PO-Revision-Date: 2023-08-12 13:49+0000\n"
+"PO-Revision-Date: 2023-08-13 14:50+0000\n"
 "Last-Translator: Reza Almanda <rezaalmanda27@gmail.com>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/timeswitch/"
 "timeswitch/id/>\n"
@@ -148,14 +148,12 @@ msgid "Main menu"
 msgstr "Menu utama"
 
 #: src/main_window.py:112 src/manage_presets_window.py:38
-#, fuzzy
-#| msgid "Reset"
 msgid "Presets"
-msgstr "Mengatur ulang"
+msgstr "Preset"
 
 #: src/main_window.py:113 src/main_window.py:379
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Pintasan Keyboard"
 
 #: src/main_window.py:114 src/main_window.py:380
 msgid "About"
@@ -272,152 +270,132 @@ msgid "Remove"
 msgstr "Hapus"
 
 #: src/manage_presets_window.py:71
-#, fuzzy
-#| msgid "Notification text"
 msgid "Notification with sound"
-msgstr "Teks notifikasi"
+msgstr "Pemberitahuan dengan suara"
 
 #: src/manage_presets_window.py:73
 msgid "Notification with sound playing until stopped"
-msgstr ""
+msgstr "Pemberitahuan dengan suara yang diputar hingga berhenti"
 
 #: src/manage_presets_window.py:76
-#, fuzzy
-#| msgid "Remove command"
 msgid "Unknown command"
-msgstr "Menghapus perintah"
+msgstr "Perintah yang tidak diketahui"
 
 #: src/manage_presets_window.py:79
-#, fuzzy
-#| msgid "Command"
 msgid "Command \"{}\""
-msgstr "Perintah"
+msgstr "Perintah \"{}\""
 
 #: src/manage_presets_window.py:88
 msgid "Move Up"
-msgstr ""
+msgstr "Pindah ke atas"
 
 #: src/manage_presets_window.py:95
 msgid "Move Down"
-msgstr ""
+msgstr "Pindah ke bawah"
 
 #: src/manage_presets_window.py:104
 msgid "Delete Preset"
-msgstr ""
+msgstr "Hapus Preset"
 
 #: src/presets_manager.py:94
 msgid ""
 "Currently selected options will be saved in a new preset with the provided "
 "name."
 msgstr ""
+"Opsi yang saat ini dipilih akan disimpan dalam preset baru dengan nama yang "
+"disediakan."
 
 #: src/presets_manager.py:96
 msgid "Preset Name"
-msgstr ""
+msgstr "Nama Preset"
 
 #: src/presets_manager.py:101
 msgid "Save"
-msgstr ""
+msgstr "Simpan"
 
 #: src/shortcuts_dialog.ui:15
 msgid "Focus hours entry"
-msgstr ""
+msgstr "Entri jam fokus"
 
 #: src/shortcuts_dialog.ui:21
 msgid "Focus minutes entry"
-msgstr ""
+msgstr "Entri menit fokus"
 
 #: src/shortcuts_dialog.ui:27
 msgid "Focus seconds entry"
-msgstr ""
+msgstr "Entri detik fokus"
 
 #: src/shortcuts_dialog.ui:39
 msgid "Change mode"
-msgstr ""
+msgstr "Ubah mode"
 
 #: src/shortcuts_dialog.ui:45
-#, fuzzy
-#| msgid "Start"
 msgid "Start timer"
-msgstr "Mulai"
+msgstr "Mulai timer"
 
 #: src/shortcuts_dialog.ui:91
-#, fuzzy
-#| msgid "Remove command"
 msgid "Select command"
-msgstr "Menghapus perintah"
+msgstr "Pilih perintah"
 
 #: src/shortcuts_dialog.ui:103
-#, fuzzy
-#| msgid "Edit command"
 msgid "Edit selected command"
-msgstr "Menyunting perintah"
+msgstr "Edit perintah yang dipilih"
 
 #: src/shortcuts_dialog.ui:109
-#, fuzzy
-#| msgid "Remove command"
 msgid "Remove selected command"
-msgstr "Menghapus perintah"
+msgstr "Hapus perintah yang dipilih"
 
 #: src/shortcuts_dialog.ui:126
 msgid "Toggle pause"
-msgstr ""
+msgstr "Toggle jeda"
 
 #: src/shortcuts_dialog.ui:143
 msgid "Close Main Window"
-msgstr ""
+msgstr "Tutup Jendela Utama"
 
 #: src/shortcuts_dialog.ui:149
 msgid "Force Quit"
-msgstr ""
+msgstr "Paksa Berhenti"
 
 #: src/shortcuts_dialog.ui:155
 msgid "Shortcuts"
-msgstr ""
+msgstr "Pintasan"
 
 #: src/shortcuts_dialog.ui:161
 msgid "Open Menu"
-msgstr ""
+msgstr "Buka Menu"
 
 #: src/timer.py:51
 msgid "Your device will be powered off in"
 msgstr "Perangkat anda akan dimatikan dalam"
 
 #: src/timer.py:52
-#, fuzzy
-#| msgid "Power Off"
 msgid "Power off in {}"
-msgstr "Matikan"
+msgstr "Matikan di {}"
 
 #: src/timer.py:54
 msgid "Your device will be rebooted in"
 msgstr "Perangkat anda akan memulai ulang dalam"
 
 #: src/timer.py:55
-#, fuzzy
-#| msgid "Reboot"
 msgid "Reboot in {}"
-msgstr "Mulai Ulang"
+msgstr "Nyalakan ulang di {}"
 
 #: src/timer.py:57
 msgid "Your device will be suspended in"
 msgstr "Perangkat anda akan disuspensi dalam"
 
 #: src/timer.py:58
-#, fuzzy
-#| msgid "Suspend"
 msgid "Suspend in {}"
-msgstr "Suspensi"
+msgstr "Tunda dalam {}"
 
 #: src/timer.py:60
 msgid "You will receive a notification in"
 msgstr "Anda akan menerima pemberitahuan dalam"
 
 #: src/timer.py:61
-#, fuzzy
-#| msgid "Notification"
 msgid "Notification in {}"
-msgstr "Pemberitahuan"
+msgstr "Pemberitahuan dalam {}"
 
 #: src/timer.py:68
 msgid "The command <b>{}</b> will be executed in"
@@ -425,7 +403,7 @@ msgstr "Perintah <b>{}</b> akan dijalankan dalam"
 
 #: src/timer.py:69
 msgid "Command \"{}\" in {}"
-msgstr ""
+msgstr "Perintah \"{}\" dalam {}"
 
 #: src/timer.py:111
 msgid "The notification has been sent."
