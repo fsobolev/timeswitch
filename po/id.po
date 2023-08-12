@@ -4,13 +4,14 @@
 # yukidream <mashirokuratamorfo@gmail.com>, 2022.
 # J. Lavoie <j.lavoie@net-c.ca>, 2023.
 # yukidream <ahawaribagus@gmail.com>, 2023.
+# Reza Almanda <rezaalmanda27@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-27 21:14+0300\n"
-"PO-Revision-Date: 2023-02-11 07:18+0000\n"
-"Last-Translator: yukidream <ahawaribagus@gmail.com>\n"
+"PO-Revision-Date: 2023-08-12 13:49+0000\n"
+"Last-Translator: Reza Almanda <rezaalmanda27@gmail.com>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/timeswitch/"
 "timeswitch/id/>\n"
 "Language: id\n"
@@ -18,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.16-dev\n"
+"X-Generator: Weblate 5.0-dev\n"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:3
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:6
@@ -27,12 +28,8 @@ msgstr "Time Switch"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:6
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:7
-#, fuzzy
-#| msgid "Run tasks after a timer"
 msgid "Set a task to run after a timer"
-msgstr ""
-"Matikan, mulai ulang, suspensi, mengirimkan pemberitahuan atau menjalankan "
-"perintah dengan pewaktu."
+msgstr "Atur tugas untuk dijalankan setelah pengatur waktu"
 
 # Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
@@ -116,17 +113,15 @@ msgstr "Saya paham"
 
 #: src/main.py:93
 msgid "Translators on Weblate ❤️"
-msgstr ""
+msgstr "Penerjemah di Weblate ❤️"
 
 #: src/main.py:105
-#, fuzzy
-#| msgid "Are you sure you want to remove command \"{}\"?"
 msgid "Are you sure you want to stop the timer and quit?"
-msgstr "Apakah anda yakin ingin menghapus perintah.\"{}\"?"
+msgstr "Apakah Anda yakin ingin menghentikan timer dan keluar?"
 
 #: src/main.py:108 src/main_window.py:115 src/main_window.py:381
 msgid "Quit"
-msgstr ""
+msgstr "Keluar"
 
 #: src/main_window.py:94 src/manage_presets_window.py:59
 msgid "Countdown"
@@ -142,15 +137,15 @@ msgstr "Memilih mode pewaktu"
 
 #: src/main_window.py:102 src/presets_manager.py:93
 msgid "Create Preset"
-msgstr ""
+msgstr "Buat Preset"
 
 #: src/main_window.py:103
 msgid "Manage Presets"
-msgstr ""
+msgstr "Mengelola Preset"
 
 #: src/main_window.py:109 src/main_window.py:376
 msgid "Main menu"
-msgstr ""
+msgstr "Menu utama"
 
 #: src/main_window.py:112 src/manage_presets_window.py:38
 #, fuzzy
