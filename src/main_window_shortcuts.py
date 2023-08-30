@@ -69,13 +69,8 @@ def set_shortcuts(window):
         lambda *args: select_action(window, window.action_suspend), \
         ['<primary>S'])
     create_action(window, 'notification', \
-        lambda *args: select_notification_action(window), \
+        lambda *args: select_action(window, window.action_notify), \
         ['<primary>N'])
-    create_action(window, 'command', \
-        lambda *args: select_action(window, window.action_command), \
-        ['<primary>C'])
-
-    # Commands
     for i in range(10):
         cb = lambda act, param: select_command(window, int(act.get_name()[-1]))
         create_action(window, 'select-command-' + str(i), cb, \
@@ -84,10 +79,6 @@ def set_shortcuts(window):
         lambda *args: add_command(window), ['<primary>a'])
     create_action(window, 'edit-command', \
         lambda *args: edit_command(window), ['<primary>e'])
-    create_action(window, 'remove-command', \
-        lambda *args: remove_command(window), ['<primary>d'])
-    create_action(window, 'command-back', \
-        lambda *args: command_back(window), ['<primary>BackSpace'])
 
     # Running
     create_action(window, 'toggle-pause', \
@@ -103,20 +94,10 @@ def set_shortcuts(window):
 
 def select_action(window, row):
     if not window.timer:
-        window.show_actions(None)
         row.activate()
-
-def select_notification_action(window):
-    if not window.timer:
-        window.show_actions(None)
-        window.notification_settings.popdown()
-        window.action_notify.activate()
-        window.notification_settings.popup()
-        window.notification_text.grab_focus()
 
 def select_command(window, index):
     if not window.timer:
-        window.show_commands(None)
         try:
             if index == 0:
                 index = 10
@@ -125,30 +106,15 @@ def select_command(window, index):
             pass
 
 def add_command(window):
-    if not window.timer:
-        window.show_commands(None)
-        if not window.show_cmd_warning:
+    if not window.timer and not window.show_cmd_warning:
             window.add_command(None)
 
 def edit_command(window):
-    if (not window.timer) and \
-            (window.actions_stack.get_visible_child_name() == "commands"):
-        window.show_commands(None)
+    if not window.timer:
         for row in window.commands_widgets['rows']:
             if row.get_activatable_widget().get_active():
                 window.edit_command(None, row)
-
-def remove_command(window):
-    if (not window.timer) and \
-            (window.actions_stack.get_visible_child_name() == "commands"):
-        for row in window.commands_widgets['rows']:
-            if row.get_activatable_widget().get_active():
-                window.remove_command(None, row)
-
-def command_back(window):
-    if (not window.timer) and \
-            (window.actions_stack.get_visible_child_name() == "commands"):
-        window.show_actions(None)
+                break
 
 def create_action(window, name, callback, shortcuts):
     """Add an application action.
