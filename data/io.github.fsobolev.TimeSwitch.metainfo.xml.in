@@ -12,6 +12,8 @@
   <launchable type="desktop-id">io.github.fsobolev.TimeSwitch.desktop</launchable>
   <url type="homepage">https://github.com/fsobolev/timeswitch</url>
   <url type="bugtracker">https://github.com/fsobolev/timeswitch/issues</url>
+  <url type="vcs-browser">https://github.com/fsobolev/timeswitch</url>
+  <url type="translate">https://hosted.weblate.org/engage/timeswitch/</url>
   <developer_name>Fyodor Sobolev</developer_name>
   <translation type="gettext">timeswitch</translation>
   <screenshots>
@@ -131,7 +133,6 @@
     <display_length compare="ge">300</display_length>
   </requires>
   <custom>
-    <value key="Purism::form_factor">workstation</value>
     <value key="Purism::form_factor">mobile</value>
   </custom>
 </component>
