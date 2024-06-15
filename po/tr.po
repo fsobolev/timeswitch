@@ -2,7 +2,7 @@
 # Copyright (C) 2022, 2023 io.github.fsobolev.TimeSwitch's COPYRIGHT HOLDER
 # This file is distributed under the same license as the io.github.fsobolev.TimeSwitch package.
 #
-# Sabri Ünal <libreajans@gmail.com>, 2022, 2023.
+# Sabri Ünal <libreajans@gmail.com>, 2022, 2023, 2024.
 # J. Lavoie <j.lavoie@net-c.ca>, 2023.
 # "B.SITKI EVRENKAYA" <bekirsitkievrenkaya@gmail.com>, 2023.
 msgid ""
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: io.github.fsobolev.TimeSwitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-27 21:14+0300\n"
-"PO-Revision-Date: 2023-05-14 20:48+0000\n"
+"PO-Revision-Date: 2024-01-08 14:06+0000\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/timeswitch/"
 "timeswitch/tr/>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.18-dev\n"
+"X-Generator: Weblate 5.4-dev\n"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:3
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:6
@@ -101,7 +101,7 @@ msgstr ""
 #: src/cmd_warning.py:50 src/main.py:106 src/main_window.py:541
 #: src/main_window.py:604 src/main_window.py:626 src/presets_manager.py:100
 msgid "Cancel"
-msgstr "İptal Et"
+msgstr "İptal"
 
 #: src/cmd_warning.py:53 src/main_window.py:733
 msgid "Continue"
@@ -125,7 +125,7 @@ msgstr "Çık"
 
 #: src/main_window.py:94 src/manage_presets_window.py:59
 msgid "Countdown"
-msgstr "Geri sayım"
+msgstr "Geri Sayım"
 
 #: src/main_window.py:94 src/manage_presets_window.py:59
 msgid "Clock"
@@ -145,11 +145,11 @@ msgstr "Önayarları Yönet"
 
 #: src/main_window.py:109 src/main_window.py:376
 msgid "Main menu"
-msgstr "Ana menü"
+msgstr "Ana Menü"
 
 #: src/main_window.py:112 src/manage_presets_window.py:38
 msgid "Presets"
-msgstr "Ön ayarlar"
+msgstr "Önayarlar"
 
 #: src/main_window.py:113 src/main_window.py:379
 msgid "Keyboard Shortcuts"
@@ -302,7 +302,7 @@ msgid ""
 "Currently selected options will be saved in a new preset with the provided "
 "name."
 msgstr ""
-"Şu anda seçili olan seçenekler, sağlanan isimle yeni bir ön ayara "
+"Şu anda seçili olan seçenekler, sağlanan isimle yeni bir önayara "
 "kaydedilecektir."
 
 #: src/presets_manager.py:96
