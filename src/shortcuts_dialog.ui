@@ -50,7 +50,7 @@
                 </child>
                 <child>
                     <object class='GtkShortcutsGroup'>
-                        <property name='title'>Actions</property>
+                        <property name='title'>Built-in Actions</property>
                         <child>
                             <object class='GtkShortcutsShortcut'>
                                 <property name='title' translatable='yes'>Power Off</property>
@@ -75,45 +75,27 @@
                                 <property name='accelerator'>&lt;Ctrl&gt;N</property>
                             </object>
                         </child>
-                        <child>
-                            <object class='GtkShortcutsShortcut'>
-                                <property name='title' translatable='yes'>Command</property>
-                                <property name='accelerator'>&lt;Ctrl&gt;C</property>
-                            </object>
-                        </child>
                     </object>
                 </child>
                 <child>
                     <object class='GtkShortcutsGroup'>
-                        <property name='title'>Commands</property>
+                        <property name='title'>User-defined Actions</property>
                         <child>
                             <object class='GtkShortcutsShortcut'>
-                                <property name='title' translatable='yes'>Select command</property>
+                                <property name='title' translatable='yes'>Select custom action</property>
                                 <property name='accelerator'>&lt;Ctrl&gt;1...&lt;Ctrl&gt;0</property>
                             </object>
                         </child>
                         <child>
                             <object class='GtkShortcutsShortcut'>
-                                <property name='title' translatable='yes'>Add command</property>
+                                <property name='title' translatable='yes'>Add action</property>
                                 <property name='accelerator'>&lt;Ctrl&gt;A</property>
                             </object>
                         </child>
                         <child>
                             <object class='GtkShortcutsShortcut'>
-                                <property name='title' translatable='yes'>Edit selected command</property>
+                                <property name='title' translatable='yes'>Edit selected action</property>
                                 <property name='accelerator'>&lt;Ctrl&gt;E</property>
-                            </object>
-                        </child>
-                        <child>
-                            <object class='GtkShortcutsShortcut'>
-                                <property name='title' translatable='yes'>Remove selected command</property>
-                                <property name='accelerator'>&lt;Ctrl&gt;D</property>
-                            </object>
-                        </child>
-                        <child>
-                            <object class='GtkShortcutsShortcut'>
-                                <property name='title' translatable='yes'>Back</property>
-                                <property name='accelerator'>&lt;Ctrl&gt;BackSpace</property>
                             </object>
                         </child>
                     </object>
