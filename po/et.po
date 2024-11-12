@@ -7,28 +7,33 @@ msgstr ""
 "Project-Id-Version: timeswitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-27 21:14+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2024-11-13 01:00+0000\n"
+"Last-Translator: Priit Jõerüüt <hwlate@joeruut.com>\n"
+"Language-Team: Estonian <https://hosted.weblate.org/projects/timeswitch/"
+"timeswitch/et/>\n"
 "Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.9-dev\n"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:3
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:6
 msgid "Time Switch"
-msgstr ""
+msgstr "Time Switch"
 
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:6
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:7
 msgid "Set a task to run after a timer"
-msgstr ""
+msgstr "Käivita ülesandeid taimeri alusel"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/io.github.fsobolev.TimeSwitch.desktop.in:11
 msgid "timer;shutdown;poweroff;reboot;suspend;notification;prompt;cmd;command;"
 msgstr ""
+"taimer;teavitus;teavitused;tegevus;tegevused;väljalülitamine;taaskäivitamine;"
+"rebuut;käsk;käsurida;tegevus;toiming;"
 
 #: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:9
 msgid ""
@@ -54,19 +59,19 @@ msgstr ""
 #. Method name
 #: src/actions.py:83 src/timer.py:145
 msgid "Timer has finished!"
-msgstr ""
+msgstr "Taimer on lõpetanud!"
 
 #: src/actions.py:89 src/main_window.py:424 src/shortcuts_dialog.ui:132
 msgid "Stop"
-msgstr ""
+msgstr "Peata"
 
 #: src/cmd_warning.py:41
 msgid "Warning"
-msgstr ""
+msgstr "Hoiatus"
 
 #: src/cmd_warning.py:45
 msgid "They will be executed outside of flatpak sandbox. "
-msgstr ""
+msgstr "Seda käivitatakse väljaspool flatpaki aedikut. "
 
 #: src/cmd_warning.py:48
 msgid ""
@@ -99,7 +104,7 @@ msgstr ""
 
 #: src/main.py:108 src/main_window.py:115 src/main_window.py:381
 msgid "Quit"
-msgstr ""
+msgstr "Välju"
 
 #: src/main_window.py:94 src/manage_presets_window.py:59
 msgid "Countdown"
