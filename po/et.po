@@ -1,0 +1,389 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the timeswitch package.
+# Priit Jõerüüt <hwlate@joeruut.com>, 2024.
+msgid ""
+msgstr ""
+"Project-Id-Version: timeswitch\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-27 21:14+0300\n"
+"PO-Revision-Date: 2024-11-13 01:00+0000\n"
+"Last-Translator: Priit Jõerüüt <hwlate@joeruut.com>\n"
+"Language-Team: Estonian <https://hosted.weblate.org/projects/timeswitch/"
+"timeswitch/et/>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.9-dev\n"
+
+#: data/io.github.fsobolev.TimeSwitch.desktop.in:3
+#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:6
+msgid "Time Switch"
+msgstr "Time Switch"
+
+#: data/io.github.fsobolev.TimeSwitch.desktop.in:6
+#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:7
+msgid "Set a task to run after a timer"
+msgstr "Käivita ülesandeid taimeri alusel"
+
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/io.github.fsobolev.TimeSwitch.desktop.in:11
+msgid "timer;shutdown;poweroff;reboot;suspend;notification;prompt;cmd;command;"
+msgstr ""
+"taimer;teavitus;teavitused;tegevus;tegevused;väljalülitamine;taaskäivitamine;"
+"rebuut;käsk;käsurida;tegevus;toiming;"
+
+#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:9
+msgid ""
+"Time Switch is an easy-to-use program that allows you to power off, reboot "
+"or suspend your system, send a notification (optionally with a sound signal) "
+"or execute any command on timer."
+msgstr ""
+
+#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:10
+msgid ""
+"The app is built for GNOME and uses LibAdwaita, but it works in any desktop "
+"environment."
+msgstr ""
+
+#: data/io.github.fsobolev.TimeSwitch.metainfo.xml.in:15 src/main.py:86
+#: src/main.py:88
+msgid "Fyodor Sobolev"
+msgstr ""
+
+#. Bus name
+#. Object path
+#. Interface name
+#. Method name
+#: src/actions.py:83 src/timer.py:145
+msgid "Timer has finished!"
+msgstr "Taimer on lõpetanud!"
+
+#: src/actions.py:89 src/main_window.py:424 src/shortcuts_dialog.ui:132
+msgid "Stop"
+msgstr "Peata"
+
+#: src/cmd_warning.py:41
+msgid "Warning"
+msgstr "Hoiatus"
+
+#: src/cmd_warning.py:45
+msgid "They will be executed outside of flatpak sandbox. "
+msgstr "Seda käivitatakse väljaspool flatpaki aedikut. "
+
+#: src/cmd_warning.py:48
+msgid ""
+"Your commands will be executed as if they were executed on a command prompt. "
+"{}The app doesn't perform any checks whether a command was executed "
+"successfully or not. Be careful, do not enter commands whose result is "
+"unknown to you."
+msgstr ""
+
+#: src/cmd_warning.py:50 src/main.py:106 src/main_window.py:541
+#: src/main_window.py:604 src/main_window.py:626 src/presets_manager.py:100
+msgid "Cancel"
+msgstr ""
+
+#: src/cmd_warning.py:53 src/main_window.py:733
+msgid "Continue"
+msgstr ""
+
+#: src/cmd_warning.py:58
+msgid "I understand"
+msgstr ""
+
+#: src/main.py:93
+msgid "Translators on Weblate ❤️"
+msgstr ""
+
+#: src/main.py:105
+msgid "Are you sure you want to stop the timer and quit?"
+msgstr ""
+
+#: src/main.py:108 src/main_window.py:115 src/main_window.py:381
+msgid "Quit"
+msgstr "Välju"
+
+#: src/main_window.py:94 src/manage_presets_window.py:59
+msgid "Countdown"
+msgstr ""
+
+#: src/main_window.py:94 src/manage_presets_window.py:59
+msgid "Clock"
+msgstr ""
+
+#: src/main_window.py:96
+msgid "Select timer mode"
+msgstr ""
+
+#: src/main_window.py:102 src/presets_manager.py:93
+msgid "Create Preset"
+msgstr ""
+
+#: src/main_window.py:103
+msgid "Manage Presets"
+msgstr ""
+
+#: src/main_window.py:109 src/main_window.py:376
+msgid "Main menu"
+msgstr ""
+
+#: src/main_window.py:112 src/manage_presets_window.py:38
+msgid "Presets"
+msgstr ""
+
+#: src/main_window.py:113 src/main_window.py:379
+msgid "Keyboard Shortcuts"
+msgstr ""
+
+#: src/main_window.py:114 src/main_window.py:380
+msgid "About"
+msgstr ""
+
+#: src/main_window.py:180
+msgid "min"
+msgstr ""
+
+#: src/main_window.py:180
+msgid "sec"
+msgstr ""
+
+#: src/main_window.py:194 src/shortcuts_dialog.ui:33
+msgid "Reset"
+msgstr ""
+
+#: src/main_window.py:216
+msgid "Action"
+msgstr ""
+
+#: src/main_window.py:221 src/manage_presets_window.py:64
+#: src/shortcuts_dialog.ui:56
+msgid "Power Off"
+msgstr ""
+
+#: src/main_window.py:231 src/manage_presets_window.py:66
+#: src/shortcuts_dialog.ui:62
+msgid "Reboot"
+msgstr ""
+
+#: src/main_window.py:241 src/shortcuts_dialog.ui:68
+msgid "Suspend"
+msgstr ""
+
+#: src/main_window.py:250 src/manage_presets_window.py:69
+#: src/shortcuts_dialog.ui:74
+msgid "Notification"
+msgstr ""
+
+#: src/main_window.py:263
+msgid "Notification settings"
+msgstr ""
+
+#: src/main_window.py:277
+msgid "Notification text"
+msgstr ""
+
+#: src/main_window.py:281
+msgid "Play sound"
+msgstr ""
+
+#: src/main_window.py:290
+msgid "Until stopped"
+msgstr ""
+
+#: src/main_window.py:304 src/main_window.py:327 src/main_window.py:534
+#: src/main_window.py:596 src/shortcuts_dialog.ui:80
+msgid "Command"
+msgstr ""
+
+#: src/main_window.py:333 src/shortcuts_dialog.ui:115
+msgid "Back"
+msgstr ""
+
+#: src/main_window.py:346 src/main_window.py:542
+msgid "Add"
+msgstr ""
+
+#: src/main_window.py:356
+msgid "Start"
+msgstr ""
+
+#: src/main_window.py:413 src/main_window.py:729
+msgid "Pause"
+msgstr ""
+
+#: src/main_window.py:436
+msgid "You can close the window, the timer will work in the background."
+msgstr ""
+
+#: src/main_window.py:524 src/shortcuts_dialog.ui:97
+msgid "Add command"
+msgstr ""
+
+#: src/main_window.py:528 src/main_window.py:589
+msgid "Name"
+msgstr ""
+
+#: src/main_window.py:571 src/main_window.py:585
+msgid "Edit command"
+msgstr ""
+
+#: src/main_window.py:577
+msgid "Remove command"
+msgstr ""
+
+#: src/main_window.py:605
+msgid "Apply"
+msgstr ""
+
+#: src/main_window.py:623
+msgid "Remove command?"
+msgstr ""
+
+#: src/main_window.py:624
+msgid "Are you sure you want to remove command \"{}\"?"
+msgstr ""
+
+#: src/main_window.py:627
+msgid "Remove"
+msgstr ""
+
+#: src/manage_presets_window.py:71
+msgid "Notification with sound"
+msgstr ""
+
+#: src/manage_presets_window.py:73
+msgid "Notification with sound playing until stopped"
+msgstr ""
+
+#: src/manage_presets_window.py:76
+msgid "Unknown command"
+msgstr ""
+
+#: src/manage_presets_window.py:79
+msgid "Command \"{}\""
+msgstr ""
+
+#: src/manage_presets_window.py:88
+msgid "Move Up"
+msgstr ""
+
+#: src/manage_presets_window.py:95
+msgid "Move Down"
+msgstr ""
+
+#: src/manage_presets_window.py:104
+msgid "Delete Preset"
+msgstr ""
+
+#: src/presets_manager.py:94
+msgid ""
+"Currently selected options will be saved in a new preset with the provided "
+"name."
+msgstr ""
+
+#: src/presets_manager.py:96
+msgid "Preset Name"
+msgstr ""
+
+#: src/presets_manager.py:101
+msgid "Save"
+msgstr ""
+
+#: src/shortcuts_dialog.ui:15
+msgid "Focus hours entry"
+msgstr ""
+
+#: src/shortcuts_dialog.ui:21
+msgid "Focus minutes entry"
+msgstr ""
+
+#: src/shortcuts_dialog.ui:27
+msgid "Focus seconds entry"
+msgstr ""
+
+#: src/shortcuts_dialog.ui:39
+msgid "Change mode"
+msgstr ""
+
+#: src/shortcuts_dialog.ui:45
+msgid "Start timer"
+msgstr ""
+
+#: src/shortcuts_dialog.ui:91
+msgid "Select command"
+msgstr ""
+
+#: src/shortcuts_dialog.ui:103
+msgid "Edit selected command"
+msgstr ""
+
+#: src/shortcuts_dialog.ui:109
+msgid "Remove selected command"
+msgstr ""
+
+#: src/shortcuts_dialog.ui:126
+msgid "Toggle pause"
+msgstr ""
+
+#: src/shortcuts_dialog.ui:143
+msgid "Close Main Window"
+msgstr ""
+
+#: src/shortcuts_dialog.ui:149
+msgid "Force Quit"
+msgstr ""
+
+#: src/shortcuts_dialog.ui:155
+msgid "Shortcuts"
+msgstr ""
+
+#: src/shortcuts_dialog.ui:161
+msgid "Open Menu"
+msgstr ""
+
+#: src/timer.py:51
+msgid "Your device will be powered off in"
+msgstr ""
+
+#: src/timer.py:52
+msgid "Power off in {}"
+msgstr ""
+
+#: src/timer.py:54
+msgid "Your device will be rebooted in"
+msgstr ""
+
+#: src/timer.py:55
+msgid "Reboot in {}"
+msgstr ""
+
+#: src/timer.py:57
+msgid "Your device will be suspended in"
+msgstr ""
+
+#: src/timer.py:58
+msgid "Suspend in {}"
+msgstr ""
+
+#: src/timer.py:60
+msgid "You will receive a notification in"
+msgstr ""
+
+#: src/timer.py:61
+msgid "Notification in {}"
+msgstr ""
+
+#: src/timer.py:68
+msgid "The command <b>{}</b> will be executed in"
+msgstr ""
+
+#: src/timer.py:69
+msgid "Command \"{}\" in {}"
+msgstr ""
+
+#: src/timer.py:111
+msgid "The notification has been sent."
+msgstr ""
